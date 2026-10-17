@@ -4,7 +4,7 @@
 
 - **站点地址**：<https://acagpt.github.io/JurisprudenceAtlas/>
 - **数据来源**：<https://github.com/acaGPT/Jurisprudence.wiki>
-- **当前版本**：v0.2.3
+- **当前版本**：v0.2.4
 
 ## 这个站点做什么
 
