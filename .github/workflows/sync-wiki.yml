@@ -106,17 +106,33 @@ jobs:
           done
           echo "Pages 在 10 分钟内未构建完成，仍按同步成功继续（构建可稍后完成）"
 
-      - name: 递增版本号
+      - name: 同步数据层与版本号回 main
         id: bump
-        if: steps.check.outputs.verdict == '不同步' && steps.extract.outputs.content_changed == 'true'
+        if: steps.check.outputs.verdict == '不同步'
         run: |
-          version=$(python3 tools/bump-version.py --dry-run)
-          echo "version=$version" >> "$GITHUB_OUTPUT"
-          python3 tools/bump-version.py --readme README.md
-          git add README.md
+          # 数据层必须一并回流 main，否则 main 上的 site/assets/data 永远停在上一轮，
+          # 本地 check-sync.py 的「数据层」这一级会恒判落后、失去判定意义。
+          cp /tmp/data/syllabus.json /tmp/data/meta.json \
+             /tmp/data/references.json /tmp/data/references-meta.json \
+             site/assets/data/
+          git add site/assets/data
+          if [ "${{ steps.extract.outputs.content_changed }}" = "true" ]; then
+            version=$(python3 tools/bump-version.py --dry-run)
+            echo "version=$version" >> "$GITHUB_OUTPUT"
+            python3 tools/bump-version.py --readme README.md
+            git add README.md
+            msg="同步课程 Wiki 数据层并递增版本至 ${version}（源 ${wiki_sha}）"
+          else
+            msg="同步课程 Wiki 数据层（源 ${wiki_sha}）"
+          fi
+          if git diff --cached --quiet; then
+            echo "main 侧内容与现有提交一致，跳过提交"
+            exit 0
+          fi
+          # 数据层与版本号合并为一次提交：分两次推的话，第二次会因非快进而失败
           git -c user.name="github-actions[bot]" \
               -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit -m "递增项目版本至 ${version}"
+              commit -m "$msg"
           git push origin HEAD:main
 
       - name: 创建 Release
@@ -136,10 +152,13 @@ jobs:
       - name: 复核线上同步
         if: steps.check.outputs.verdict == '不同步'
         run: |
-          # Pages 部署有延迟：推送刚落地时，线上仍可能短暂读到旧数据层。
-          # 立即查一次必然报「落后」，故轮询重试而不是一次性下结论。
+          # 复核只比「本轮刚推送的产物」与「线上 Pages」，不比 main 上的数据层快照：
+          # main 的 site/assets/data 在同步发生前仍是上一轮内容，拿它当基准会恒判
+          # 「不同步」——10 月中旬连续四次运行因此误报失败，而线上其实早已对齐。
+          # Pages 部署另有延迟，故轮询重试而不是一次性下结论。
           for attempt in 1 2 3 4 5 6; do
-            if python3 tools/check-sync.py --wiki-dir wiki --site-url "$SITE_URL"; then
+            if python3 tools/check-sync.py --wiki-dir wiki --site-url "$SITE_URL" \
+                 --meta "$PUBLISH_DIR/assets/data/meta.json"; then
               echo "线上已与 Wiki 对齐"
               exit 0
             fi
