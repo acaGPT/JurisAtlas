@@ -6,6 +6,7 @@
   "fulltext": 294,
   "locator": 69,
   "unparsed": 0,
+  "dup_items": 17,
   "channels": {
    "Open Library": 137,
    "plato.stanford.edu": 76,
@@ -59,7 +60,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/31",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-02",
@@ -74,7 +76,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL15324120W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-03",
@@ -89,7 +92,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2112568W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-04",
@@ -104,7 +108,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3292661W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-05",
@@ -119,7 +124,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2127266W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-06",
@@ -134,7 +140,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL82721W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-07",
@@ -149,7 +156,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3071075W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-classic-08",
@@ -164,7 +172,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1525/lal.2012.24.2.213",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-further-01",
@@ -180,7 +189,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.worldhistory.org/Antigone/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-further-02",
@@ -196,7 +206,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.worldhistory.org/Sophocles/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/sophocles.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-further-03",
@@ -212,7 +223,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.uchicago.edu/faculty/nussbaum",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/nussbaum.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.1-further-04",
@@ -228,7 +240,8 @@
    "access_kind": "fulltext",
    "access_url": "https://vcresearch.berkeley.edu/faculty/judith-butler",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/butler.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-01",
@@ -243,7 +256,8 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/lqr70&start_page=37&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-02",
@@ -258,7 +272,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL527570W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-03",
@@ -273,7 +288,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4901007W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-04",
@@ -288,7 +304,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2712362W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-05",
@@ -303,7 +320,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3402963W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-06",
@@ -318,7 +336,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/2219360",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-07",
@@ -333,7 +352,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1341093",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-08",
@@ -348,7 +368,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3246071W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-classic-09",
@@ -363,7 +384,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL44670311W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-further-01",
@@ -379,7 +401,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/lawphil-nature/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.2-further-02",
@@ -395,7 +418,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/law-phil/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.3-classic-01",
@@ -410,7 +434,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL9010826W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.3-classic-02",
@@ -425,7 +450,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8015986W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.4-classic-01",
@@ -440,7 +466,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4959822W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.4-classic-02",
@@ -455,7 +482,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL535699W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.4-classic-03",
@@ -470,7 +498,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL150535W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.4-classic-04",
@@ -485,7 +514,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4207089W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.4-classic-05",
@@ -500,7 +530,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/790205",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.4-further-01",
@@ -516,7 +547,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.cornell.edu/wex/common_law",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-classic-01",
@@ -531,7 +563,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4777851W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-classic-02",
@@ -546,7 +579,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL49884W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-classic-03",
@@ -561,7 +595,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL49901W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-classic-04",
@@ -576,7 +611,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4274692W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-classic-05",
@@ -591,7 +627,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/789740",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-further-01",
@@ -607,7 +644,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/property/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-further-02",
@@ -623,7 +661,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.cornell.edu/wex/legal_person",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.5-further-03",
@@ -639,7 +678,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.cornell.edu/wex/possession",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-classic-01",
@@ -654,7 +694,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1420754W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-classic-02",
@@ -669,7 +710,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1420752W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-classic-03",
@@ -684,7 +726,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1093/aristotelian/49.1.171",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-classic-04",
@@ -699,7 +742,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL5612565W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-classic-05",
@@ -714,7 +758,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2710822W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-classic-06",
@@ -729,7 +774,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL7368567W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-further-01",
@@ -745,7 +791,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/criminal-law/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-further-02",
@@ -761,7 +808,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/moral-responsibility/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PI.6-further-03",
@@ -777,7 +825,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.cornell.edu/wex/mens_rea",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-01",
@@ -792,7 +841,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL39169425W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-02",
@@ -807,7 +857,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8001545W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-03",
@@ -822,7 +873,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL14849412W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-04",
@@ -837,7 +889,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1994848W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-05",
@@ -852,7 +905,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL26776697W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-06",
@@ -867,7 +921,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL9343618W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-classic-07",
@@ -882,7 +937,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL6572896W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-further-01",
@@ -898,7 +954,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/aristotle-ethics/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/aristotle.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-further-02",
@@ -914,7 +971,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/justice/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.1-further-03",
@@ -930,7 +988,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/aristotle-politics/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.2-classic-01",
@@ -945,7 +1004,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/1497",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.2-classic-02",
@@ -960,7 +1020,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/8438",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.2-classic-03",
@@ -975,7 +1036,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/6762",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.2-classic-04",
@@ -990,7 +1052,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL24455608W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.2-further-01",
@@ -1006,7 +1069,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/ancient-political/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.2-further-02",
@@ -1022,7 +1086,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/plato-ethics-politics/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/plato.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-classic-01",
@@ -1037,7 +1102,8 @@
    "access": "New Advent",
    "access_kind": "fulltext",
    "access_url": "https://www.newadvent.org/summa/2090.htm",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-classic-02",
@@ -1052,7 +1118,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/books/OL40784494M",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-classic-03",
@@ -1067,7 +1134,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL31246583W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-further-01",
@@ -1083,7 +1151,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/aquinas-moral-political/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/aquinas.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-further-02",
@@ -1099,7 +1168,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/cicero/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/cicero.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-further-03",
@@ -1115,7 +1185,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/augustine/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/augustine.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.3-further-04",
@@ -1131,7 +1202,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/natlaw/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-classic-01",
@@ -1146,7 +1218,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/cu31924014251288",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-classic-02",
@@ -1161,7 +1234,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/3207",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-classic-03",
@@ -1176,7 +1250,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL31805824W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-classic-04",
@@ -1191,7 +1266,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/46333",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-classic-05",
@@ -1206,7 +1282,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2011485W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-classic-06",
@@ -1221,7 +1298,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL18412183W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-further-01",
@@ -1237,7 +1315,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/grotius/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/grotius.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-further-02",
@@ -1253,7 +1332,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/hobbes-moral/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/hobbes.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-further-03",
@@ -1269,7 +1349,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/locke-political/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/locke.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-further-04",
@@ -1285,7 +1366,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/rousseau/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/rousseau.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.4-further-05",
@@ -1301,7 +1383,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/contractarianism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-classic-01",
@@ -1316,7 +1399,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL15320185W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-classic-02",
@@ -1331,7 +1415,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/4705",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-classic-03",
@@ -1346,7 +1431,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/9662",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-classic-04",
@@ -1361,7 +1447,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/4280",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-classic-05",
@@ -1376,7 +1463,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/5682",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-classic-06",
@@ -1391,7 +1479,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/2182491",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-further-01",
@@ -1407,7 +1496,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/descartes/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/descartes.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-further-02",
@@ -1423,7 +1513,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/hume/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/hume.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PII.5-further-03",
@@ -1439,7 +1530,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/kant/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/kant.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.1-classic-01",
@@ -1454,7 +1546,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1338225",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.1-classic-02",
@@ -1469,7 +1562,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/797561",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.1-classic-03",
@@ -1484,7 +1578,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2650747W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.2-classic-01",
@@ -1499,7 +1594,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3246181W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.2-classic-02",
@@ -1514,7 +1610,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1338226",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.2-classic-03",
@@ -1529,7 +1626,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1338941",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.2-classic-04",
@@ -1544,7 +1642,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1340368",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.2-further-01",
@@ -1560,7 +1659,8 @@
    "access_kind": "fulltext",
    "access_url": "https://hls.harvard.edu/historical-faculty/lon-luvois-fuller-1902-1978/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/fuller.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-classic-01",
@@ -1575,7 +1675,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL12054832W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-classic-02",
@@ -1590,7 +1691,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2752915W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-classic-03",
@@ -1605,7 +1707,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1093/ajj/32.1.99",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-classic-04",
@@ -1620,7 +1723,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1929012W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-classic-05",
@@ -1635,7 +1739,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL5824468W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-classic-06",
@@ -1650,7 +1755,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8017333W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-further-01",
@@ -1666,7 +1772,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/natural-law-ethics/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-further-02",
@@ -1682,7 +1789,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/natural-law-theories/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-further-03",
@@ -1698,7 +1806,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/practical-reason/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIII.3-further-04",
@@ -1714,7 +1823,8 @@
    "access_kind": "fulltext",
    "access_url": "https://law.nd.edu/directory/john-finnis/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/finnis.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.1-classic-01",
@@ -1729,7 +1839,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL463940W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PIV.1",
+    "PIV.2"
+   ]
   },
   {
    "id": "PIV.1-classic-02",
@@ -1744,7 +1859,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1420741W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.1-classic-03",
@@ -1759,7 +1875,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL23830649W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.1-classic-04",
@@ -1774,7 +1891,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4871894W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.1-further-01",
@@ -1790,7 +1908,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/austin-john/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/austin.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.1-further-02",
@@ -1806,7 +1925,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/legalpos/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.2-classic-01",
@@ -1821,7 +1941,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL738290W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.2-classic-02",
@@ -1836,7 +1957,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL738277W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.2-classic-03",
@@ -1851,7 +1973,12 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/dli.ministry.19306",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PIV.1",
+    "PIV.2"
+   ]
   },
   {
    "id": "PIV.2-classic-04",
@@ -1866,7 +1993,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4966232W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.2-further-01",
@@ -1882,7 +2010,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/bentham/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/bentham.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-classic-01",
@@ -1897,7 +2026,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1334739",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-classic-02",
@@ -1912,7 +2042,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL17994851W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-classic-03",
@@ -1927,7 +2058,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL498058W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PIV.3",
+    "PIV.7"
+   ]
   },
   {
    "id": "PIV.3-classic-04",
@@ -1942,7 +2078,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1093/ajj/19.1.94",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-classic-05",
@@ -1957,7 +2094,8 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/uclalr10&start_page=709&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-classic-06",
@@ -1972,7 +2110,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1093/ojls/12.3.311",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-further-01",
@@ -1988,7 +2127,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/lawphil-theory/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.3-further-02",
@@ -2004,7 +2144,8 @@
    "access_kind": "fulltext",
    "access_url": "https://geschichte.univie.ac.at/en/persons/hans-kelsen",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/kelsen.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-classic-01",
@@ -2019,7 +2160,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1210113W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-classic-02",
@@ -2034,7 +2176,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3586431W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-classic-03",
@@ -2049,7 +2192,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL16642165W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-classic-04",
@@ -2064,7 +2208,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL27096071W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-classic-05",
@@ -2079,7 +2224,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL10460640W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-classic-06",
@@ -2094,7 +2240,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL43598659W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-further-01",
@@ -2110,7 +2257,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/bodin/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/bodin.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-further-02",
@@ -2126,7 +2274,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/sovereignty/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-further-03",
@@ -2142,7 +2291,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/schmitt/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/schmitt.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-further-04",
@@ -2158,7 +2308,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/arendt/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/arendt.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.4-further-05",
@@ -2174,7 +2325,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/agamben/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/agamben.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.5-classic-01",
@@ -2189,7 +2341,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1420755W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.5-classic-02",
@@ -2204,7 +2357,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2240096W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.5-classic-03",
@@ -2219,7 +2373,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL19364379W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.5-further-01",
@@ -2235,7 +2390,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-positivism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.5-further-02",
@@ -2251,7 +2407,8 @@
    "access_kind": "fulltext",
    "access_url": "https://libguides.bodleian.ox.ac.uk/c.php?g=423072&p=2888888",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/hart.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-classic-01",
@@ -2266,7 +2423,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3953957W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-classic-02",
@@ -2281,7 +2439,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.5840/monist198568335",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-classic-03",
@@ -2296,7 +2455,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3953951W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-classic-04",
@@ -2311,7 +2471,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4114256W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-classic-05",
@@ -2326,7 +2487,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3931698W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-classic-06",
@@ -2341,7 +2503,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1017/s135232520208401xh",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-further-01",
@@ -2357,7 +2520,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/authority/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-further-02",
@@ -2373,7 +2537,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-obligation/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.6-further-03",
@@ -2389,7 +2554,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.columbia.edu/faculty/joseph-raz",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/raz.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIV.7-classic-01",
@@ -2404,7 +2570,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL498029W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PIV.3",
+    "PIV.7"
+   ]
   },
   {
    "id": "PIV.7-classic-02",
@@ -2419,7 +2590,8 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/lqr50&start_page=474&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.1-classic-01",
@@ -2434,7 +2606,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2734971W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PV.1",
+    "PV.2"
+   ]
   },
   {
    "id": "PV.1-classic-02",
@@ -2449,7 +2626,12 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/txlr60&start_page=527&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PV.1",
+    "PV.3"
+   ]
   },
   {
    "id": "PV.1-classic-03",
@@ -2464,7 +2646,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL15211148W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.1-classic-04",
@@ -2479,7 +2662,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL27713963W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PV.1",
+    "PV.3"
+   ]
   },
   {
    "id": "PV.1-classic-05",
@@ -2494,7 +2682,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2734969W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.1-further-01",
@@ -2510,7 +2699,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-interpretation/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.1-further-02",
@@ -2526,7 +2716,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/ricoeur/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.1-further-03",
@@ -2542,7 +2733,8 @@
    "access_kind": "fulltext",
    "access_url": "https://law.fiu.edu/directory/stanley-fish/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/fish.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-classic-01",
@@ -2557,7 +2749,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1598947",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-classic-02",
@@ -2572,7 +2765,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1340249",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-classic-03",
@@ -2587,7 +2781,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8011690W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-classic-04",
@@ -2602,7 +2797,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL19364786W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PV.1",
+    "PV.2"
+   ]
   },
   {
    "id": "PV.2-classic-05",
@@ -2617,7 +2817,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/795152",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-further-01",
@@ -2633,7 +2834,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/law-interpretivist/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-further-02",
@@ -2649,7 +2851,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-reas-interpret/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.2-further-03",
@@ -2665,7 +2868,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.nyu.edu/news/RONALD_DWORKIN_MEMORIAM",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/dworkin.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-classic-01",
@@ -2680,7 +2884,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL36015839W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PV.1",
+    "PV.3"
+   ]
   },
   {
    "id": "PV.3-classic-02",
@@ -2695,7 +2904,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL10689204W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-classic-03",
@@ -2710,7 +2920,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2145398W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-classic-04",
@@ -2725,7 +2936,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2145396W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-classic-05",
@@ -2740,7 +2952,12 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/448194",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PV.1",
+    "PV.3"
+   ]
   },
   {
    "id": "PV.3-classic-06",
@@ -2755,7 +2972,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/448195",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-further-01",
@@ -2771,7 +2989,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/hermeneutics/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-further-02",
@@ -2787,7 +3006,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/gadamer/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/gadamer.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PV.3-further-03",
@@ -2803,7 +3023,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/ricoeur/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/ricoeur.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.1.a-classic-01",
@@ -2818,7 +3039,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/cu31924018826721",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.1.a-classic-02",
@@ -2833,7 +3055,12 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/hlr10&start_page=457&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVI.1.a",
+    "PVI.2"
+   ]
   },
   {
    "id": "PVI.1.a-classic-03",
@@ -2848,7 +3075,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1110048",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.1.a-classic-04",
@@ -2863,7 +3091,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8045473W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.1.a-classic-05",
@@ -2878,7 +3107,8 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/pitt45&start_page=1&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.1.a-classic-06",
@@ -2893,7 +3123,8 @@
    "access": "Yale 开放仓储",
    "access_kind": "fulltext",
    "access_url": "https://openyls.law.yale.edu/bitstream/handle/20.500.13051/16526/31_97YaleLJ509_March1988_.pdf",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.1.a-further-01",
@@ -2909,7 +3140,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Christopher_Columbus_Langdell",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/langdell.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-classic-01",
@@ -2924,7 +3156,12 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1322028",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVI.1.a",
+    "PVI.2"
+   ]
   },
   {
    "id": "PVI.2-classic-02",
@@ -2939,7 +3176,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1114548",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-classic-03",
@@ -2954,7 +3192,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1332182",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-classic-04",
@@ -2969,7 +3208,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL6664416W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-classic-05",
@@ -2984,7 +3224,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1321529W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-classic-06",
@@ -2999,7 +3240,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8948193W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-classic-07",
@@ -3014,7 +3256,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1017/S0008197300007650",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-further-01",
@@ -3030,7 +3273,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Oliver_Wendell_Holmes_Jr.",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/holmes.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-further-02",
@@ -3046,7 +3290,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Jerome_Frank",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/frank.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-further-03",
@@ -3062,7 +3307,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Axel_H%C3%A4gerstr%C3%B6m",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/hagerstrom.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-further-04",
@@ -3078,7 +3324,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/lawphil-naturalism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.2-further-05",
@@ -3094,7 +3341,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.cornell.edu/wex/legal_realism",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-classic-01",
@@ -3109,7 +3357,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL20157300W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-classic-02",
@@ -3124,7 +3373,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL38442319W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-classic-03",
@@ -3139,7 +3389,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL606930W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-classic-04",
@@ -3154,7 +3405,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL10439370W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-classic-05",
@@ -3169,7 +3421,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1324094",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-classic-06",
@@ -3184,7 +3437,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL527569W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-further-01",
@@ -3200,7 +3454,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Eugen_Ehrlich",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/ehrlich.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-further-02",
@@ -3216,7 +3471,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/weber/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/weber.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-further-03",
@@ -3232,7 +3488,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/solidarity/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.3-further-04",
@@ -3248,7 +3505,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/durkheim/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/durkheim.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-01",
@@ -3263,7 +3521,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1334702",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-02",
@@ -3278,7 +3537,8 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/hlr23&start_page=211&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-03",
@@ -3293,7 +3553,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/natureofjudicial00card_0",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-04",
@@ -3308,7 +3569,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1331791",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-05",
@@ -3323,7 +3585,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1116300",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-06",
@@ -3338,7 +3601,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1177631W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-classic-07",
@@ -3353,7 +3617,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL508316W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-further-01",
@@ -3369,7 +3634,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Benjamin_N._Cardozo",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/cardozo.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-further-02",
@@ -3385,7 +3651,8 @@
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/spiritofcommonla00poun",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-further-03",
@@ -3401,7 +3668,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-reas-prec/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-further-04",
@@ -3417,7 +3685,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plainshumanities.unl.edu/encyclopedia/doc/source/egp.law.043.xml",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/pound.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVI.4-further-05",
@@ -3433,7 +3702,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.lib.uchicago.edu/ead/rlg/ICU.SPCL.LLEWELLYNK.pdf",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/llewellyn.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.1-classic-01",
@@ -3448,7 +3718,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL30310W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.1-classic-02",
@@ -3463,7 +3734,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL30308W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.1-classic-03",
@@ -3478,7 +3750,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1810916W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.1-classic-04",
@@ -3493,7 +3766,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2239086W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.1-further-01",
@@ -3509,7 +3783,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/rawls/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/rawls.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.1-further-02",
@@ -3525,7 +3800,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/nozick-political/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/nozick.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.2-classic-01",
@@ -3540,7 +3816,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/2182612",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.2-classic-02",
@@ -3555,7 +3832,12 @@
    "access": "Tanner Lectures",
    "access_kind": "fulltext",
    "access_url": "https://tannerlectures.utah.edu/_resources/documents/a-to-z/s/sen80.pdf",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVII.2",
+    "PVII.7"
+   ]
   },
   {
    "id": "PVII.2-classic-03",
@@ -3570,7 +3852,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/11224",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.2-classic-04",
@@ -3585,7 +3868,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1599247",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.2-further-01",
@@ -3601,7 +3885,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/justice-distributive/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.2-further-02",
@@ -3617,7 +3902,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/capability-approach/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.2-further-03",
@@ -3633,7 +3919,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/consequentialism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-classic-01",
@@ -3648,7 +3935,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/3300",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-classic-02",
@@ -3663,7 +3951,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/67363",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-classic-03",
@@ -3678,7 +3967,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1866784W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-classic-04",
@@ -3693,7 +3983,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3336954W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-classic-05",
@@ -3708,7 +3999,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/233944",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-further-01",
@@ -3724,7 +4016,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/libertarianism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-further-02",
@@ -3740,7 +4033,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/political-obligation/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-further-03",
@@ -3756,7 +4050,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/anarchism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.3-further-04",
@@ -3772,7 +4067,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/smith-moral-political/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/smith-adam.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-classic-01",
@@ -3787,7 +4083,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL21738454W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-classic-02",
@@ -3802,7 +4099,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3529307W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-classic-03",
@@ -3817,7 +4115,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3529309W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-classic-04",
@@ -3832,7 +4131,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/233897",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-classic-05",
@@ -3847,7 +4147,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1007/BF00646210",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-further-01",
@@ -3863,7 +4164,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/egalitarianism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-further-02",
@@ -3879,7 +4181,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/equality/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.4-further-03",
@@ -3895,7 +4198,8 @@
    "access_kind": "fulltext",
    "access_url": "https://reporter.mcgill.ca/gerald-allan-cohen-1941-2009/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/cohen-ga.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-classic-01",
@@ -3910,7 +4214,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/785533",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-classic-02",
@@ -3925,7 +4230,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/786270",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-classic-03",
@@ -3940,7 +4246,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/2182586",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-classic-04",
@@ -3955,7 +4262,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL19058230M",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-classic-05",
@@ -3970,7 +4278,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1093/ojls/4.1.1",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-classic-06",
@@ -3985,7 +4294,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1007/bf00137935",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-further-01",
@@ -4001,7 +4311,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/rights/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-further-02",
@@ -4017,7 +4328,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-rights/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-further-03",
@@ -4033,7 +4345,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/civil-rights/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-further-04",
@@ -4049,7 +4362,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/rights-human/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.5-further-05",
@@ -4065,7 +4379,8 @@
    "access_kind": "fulltext",
    "access_url": "https://ccl.yale.edu/the-history-of-business-law-at-yale-archives/hohfeld-wesley-n-early-years",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/hohfeld.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.6-classic-01",
@@ -4080,7 +4395,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/34901",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.6-classic-02",
@@ -4095,7 +4411,12 @@
    "access": "直接 PDF",
    "access_kind": "fulltext",
    "access_url": "https://psi329.cankaya.edu.tr/uploads/files/Devlin,%20The%20Enforcement%20of%20Morals%20(1959",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVII.6",
+    "PVII.8"
+   ]
   },
   {
    "id": "PVII.6-classic-03",
@@ -4110,7 +4431,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4124223W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.6-classic-04",
@@ -4125,7 +4447,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3953952W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.6-further-01",
@@ -4141,7 +4464,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/mill-moral-political/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/mill.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.6-further-02",
@@ -4157,7 +4481,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/paternalism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.7-classic-01",
@@ -4172,7 +4497,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/293126",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.7-classic-02",
@@ -4187,7 +4513,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2710725W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.7-classic-03",
@@ -4202,7 +4529,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/292913",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.7-classic-04",
@@ -4217,7 +4545,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8011689W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.7-classic-05",
@@ -4232,7 +4561,12 @@
    "access": "Tanner Lectures",
    "access_kind": "fulltext",
    "access_url": "https://tannerlectures.utah.edu/equality-of-what/",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVII.2",
+    "PVII.7"
+   ]
   },
   {
    "id": "PVII.8-classic-01",
@@ -4247,7 +4581,12 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL744327W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVII.6",
+    "PVII.8"
+   ]
   },
   {
    "id": "PVII.8-classic-02",
@@ -4262,7 +4601,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1420753W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-classic-03",
@@ -4277,7 +4617,12 @@
    "access": "开放获取",
    "access_kind": "fulltext",
    "access_url": "https://law.nus.edu.sg/sjls/wp-content/uploads/sites/14/2024/07/52-1959-1-mal-dec-376.pdf",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 2,
+   "dup_chapters": [
+    "PVII.6",
+    "PVII.8"
+   ]
   },
   {
    "id": "PVII.8-classic-04",
@@ -4292,7 +4637,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/wolfendenreport0000unse",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-classic-05",
@@ -4307,7 +4653,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/794893",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-classic-06",
@@ -4322,7 +4669,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/libertyequalityf0000jame",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-further-01",
@@ -4338,7 +4686,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/James_Fitzjames_Stephen",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/stephen.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-further-02",
@@ -4354,7 +4703,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/law-limits/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-further-03",
@@ -4370,7 +4720,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/1991459/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVII.8-further-04",
@@ -4386,7 +4737,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Patrick_Devlin,_Baron_Devlin",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-classic-01",
@@ -4401,7 +4753,8 @@
    "access": "Project Gutenberg",
    "access_kind": "fulltext",
    "access_url": "https://www.gutenberg.org/ebooks/61",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-classic-02",
@@ -4416,7 +4769,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL37484060W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-classic-03",
@@ -4431,7 +4785,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL24394020W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-classic-04",
@@ -4446,7 +4801,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL40167839W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-further-01",
@@ -4462,7 +4818,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Friedrich_Engels",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/engels.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-further-02",
@@ -4478,7 +4835,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/marx/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/marx.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.1-further-03",
@@ -4494,7 +4852,8 @@
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/cihm_50473",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-01",
@@ -4509,7 +4868,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL678481W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-02",
@@ -4524,7 +4884,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/cu31924014578979",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-03",
@@ -4539,7 +4900,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1934447W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-04",
@@ -4554,7 +4916,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1577378W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-05",
@@ -4569,7 +4932,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1251683W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-06",
@@ -4584,7 +4948,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL38870718W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-classic-07",
@@ -4599,7 +4964,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1956431",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-further-01",
@@ -4615,7 +4981,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/hegel/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/hegel.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-further-02",
@@ -4631,7 +4998,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/hegel-dialectics/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.2-further-03",
@@ -4647,7 +5015,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/hegelsoc/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-01",
@@ -4662,7 +5031,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL8655645W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-02",
@@ -4677,7 +5047,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1340104",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-03",
@@ -4692,7 +5063,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1913582W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-04",
@@ -4707,7 +5079,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2694205W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-05",
@@ -4722,7 +5095,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3917155W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-06",
@@ -4737,7 +5111,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1229039",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-classic-07",
@@ -4752,7 +5127,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2749398W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-further-01",
@@ -4768,7 +5144,8 @@
    "access_kind": "fulltext",
    "access_url": "https://en.wikipedia.org/wiki/Evgeny_Pashukanis",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/pashukanis.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-further-02",
@@ -4784,7 +5161,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/feminism-law/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-further-03",
@@ -4800,7 +5178,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/critical-phil-race/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-further-04",
@@ -4816,7 +5195,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/law-ideology/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-further-05",
@@ -4832,7 +5212,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/critical-theory/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.3-further-06",
@@ -4848,7 +5229,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.cornell.edu/wex/feminist_jurisprudence",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-classic-01",
@@ -4863,7 +5245,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.4324/9781315539744-8",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-classic-02",
@@ -4878,7 +5261,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/796361",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-classic-03",
@@ -4893,7 +5277,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL26841W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-classic-04",
@@ -4908,7 +5293,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL566230W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-classic-05",
@@ -4923,7 +5309,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL15243W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-classic-06",
@@ -4938,7 +5325,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL3071073W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-further-01",
@@ -4954,7 +5342,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/derrida/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/derrida.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-further-02",
@@ -4970,7 +5359,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/foucault/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/foucault.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-further-03",
@@ -4986,7 +5376,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/lyotard/",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/lyotard.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.4-further-04",
@@ -5002,7 +5393,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/postmode/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.5-classic-01",
@@ -5017,7 +5409,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/466560",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.5-classic-02",
@@ -5032,7 +5425,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL485898W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.5-classic-03",
@@ -5047,7 +5441,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1924324W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.5-classic-04",
@@ -5062,7 +5457,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/259394",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.5-classic-05",
@@ -5077,7 +5473,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL4114255W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.5-further-01",
@@ -5093,7 +5490,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/legal-econanalysis/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.6-classic-01",
@@ -5108,7 +5506,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1924320W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.6-classic-02",
@@ -5123,7 +5522,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1086/467636",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.6-classic-03",
@@ -5138,7 +5538,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1340059",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.6-further-01",
@@ -5154,7 +5555,8 @@
    "access_kind": "fulltext",
    "access_url": "https://iep.utm.edu/law-and-economics/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PVIII.6-further-02",
@@ -5170,7 +5572,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.uchicago.edu/faculty/posner-r",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/posner.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.1-classic-01",
@@ -5185,7 +5588,8 @@
    "access": "Internet Archive",
    "access_kind": "fulltext",
    "access_url": "https://archive.org/details/dli.bengal.10689.15364",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.1-classic-02",
@@ -5200,7 +5604,8 @@
    "access": "HeinOnline",
    "access_kind": "locator",
    "access_url": "https://heinonline.org/HOL/Page?handle=hein.journals/lqr93&start_page=195&collection=journals",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.1-classic-03",
@@ -5215,7 +5620,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL1164995W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.1-further-01",
@@ -5231,7 +5637,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/rule-of-law/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.1-further-02",
@@ -5247,7 +5654,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.law.ox.ac.uk/events/dicey-100",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/dicey.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-classic-01",
@@ -5262,7 +5670,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2980860W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-classic-02",
@@ -5277,7 +5686,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL13635746W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-classic-03",
@@ -5292,7 +5702,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL15421404W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-classic-04",
@@ -5307,7 +5718,8 @@
    "access": "Georgia Law Review 仓储",
    "access_kind": "fulltext",
    "access_url": "https://digitalcommons.law.uga.edu/lectures_pre_arch_lectures_sibley/29",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-further-01",
@@ -5323,7 +5735,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/constitutionalism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-further-02",
@@ -5339,7 +5752,8 @@
    "access_kind": "locator",
    "access_url": "https://doi.org/10.33137/cal.v2i1.22514",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.2-further-03",
@@ -5355,7 +5769,8 @@
    "access_kind": "fulltext",
    "access_url": "https://www.balliol.ox.ac.uk/node/4889",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/bingham.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-classic-01",
@@ -5370,7 +5785,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.1080/07329113.1986.10756387",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-classic-02",
@@ -5385,7 +5801,8 @@
    "access": "Cardozo Law Review 仓储",
    "access_kind": "fulltext",
    "access_url": "https://larc.cardozo.yu.edu/clr/vol13/iss5/3",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-classic-03",
@@ -5400,7 +5817,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1410186",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-classic-04",
@@ -5415,7 +5833,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL2899400W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-classic-05",
@@ -5430,7 +5849,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL21013331W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-further-01",
@@ -5446,7 +5866,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/international-law/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-further-02",
@@ -5462,7 +5883,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/law-language/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-further-03",
@@ -5478,7 +5900,8 @@
    "access_kind": "fulltext",
    "access_url": "https://discovery.ucl.ac.uk/10070051/1/Twining_Normative%20and%20Legal%20Pluralism_%20A%20Global%20Perspective.pdf",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.3-further-04",
@@ -5494,7 +5917,8 @@
    "access_kind": "fulltext",
    "access_url": "https://warwick.ac.uk/fac/soc/law/people/memoriam/william-twining",
    "avatar": "https://raw.githubusercontent.com/wiki/acaGPT/Jurisprudence/images/twining.png",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-classic-01",
@@ -5509,7 +5933,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL16576719W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-classic-02",
@@ -5524,7 +5949,8 @@
    "access": "Open Library",
    "access_kind": "fulltext",
    "access_url": "https://openlibrary.org/works/OL21045547W",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-classic-03",
@@ -5539,7 +5965,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/3053638",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-classic-04",
@@ -5554,7 +5981,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/1410167",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-classic-05",
@@ -5569,7 +5997,8 @@
    "access": "doi.org",
    "access_kind": "locator",
    "access_url": "https://doi.org/10.2307/3052967",
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-further-01",
@@ -5585,7 +6014,8 @@
    "access_kind": "fulltext",
    "access_url": "https://opo.iisj.net/index.php/osls/article/view/269",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-further-02",
@@ -5601,7 +6031,8 @@
    "access_kind": "fulltext",
    "access_url": "https://plato.stanford.edu/entries/cosmopolitanism/",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   },
   {
    "id": "PIX.4-further-03",
@@ -5617,7 +6048,8 @@
    "access_kind": "locator",
    "access_url": "https://doi.org/10.5007/2177-7055.2021.e82466",
    "avatar": null,
-   "parsed": true
+   "parsed": true,
+   "dup_count": 1
   }
  ]
 }
