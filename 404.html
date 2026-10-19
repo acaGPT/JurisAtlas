@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>页面不存在 · 《法理学》课程地图</title>
+  <style>
+    body {
+      margin: 0; background: #faf9f6; color: #1b1a18;
+      font: 400 16px/1.75 "Songti SC", "Source Han Serif SC", Georgia, serif;
+    }
+    main { width: min(40rem, 100% - 48px); margin: 0 auto; padding: 6rem 0; }
+    p.eyebrow {
+      margin: 0 0 .6rem; color: #96938b; letter-spacing: .14em;
+      font: 500 12px/1 -apple-system, "PingFang SC", sans-serif; text-transform: uppercase;
+    }
+    h1 { margin: 0 0 .9rem; font-size: 28px; font-weight: 500; }
+    p { margin: 0 0 1rem; color: #6d6a63; }
+    a { color: #2b4a6f; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Error 404</p>
+    <h1>没有这个页面</h1>
+    <p>
+      所寻地址不存在。可返回 <a id="home" href="https://acaGPT.github.io/JurisprudenceAtlas/">课程地图</a>，
+      或直接查阅
+      <a href="https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus">课程大纲</a>。
+    </p>
+  </main>
+  <script>
+    // 404 页会被投递到任意深度的缺失路径下，相对链接的基准不可靠；
+    // 故由运行时取站点首段路径作为站点根。首段若形似文件名（直接打开本页，
+    // 或站点部署在域名根目录），则回落为根路径。
+    (function () {
+      var first = location.pathname.split('/').filter(Boolean)[0] || '';
+      if (first.indexOf('.') !== -1) first = '';
+      var root = first ? ['', first, ''].join('/') : '/';
+      document.getElementById('home').setAttribute('href', root);
+    })();
+  </script>
+</body>
+</html>

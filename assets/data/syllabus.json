@@ -1,0 +1,756 @@
+{
+ "course": {
+  "title_zh": "《法理学》课程地图",
+  "title_en": "Jurisprudence Course Map",
+  "wiki": "https://github.com/acaGPT/Jurisprudence/wiki",
+  "syllabus": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus"
+ },
+ "units": [
+  {
+   "num": 1,
+   "title_zh": "基础",
+   "title_en": "Part I — Foundations",
+   "chapters": 6
+  },
+  {
+   "num": 2,
+   "title_zh": "古典传统",
+   "title_en": "Part II — Classical Traditions",
+   "chapters": 5
+  },
+  {
+   "num": 3,
+   "title_zh": "自然法的复兴",
+   "title_en": "Part III — Natural Law Revival",
+   "chapters": 3
+  },
+  {
+   "num": 4,
+   "title_zh": "法律实证主义",
+   "title_en": "Part IV — Legal Positivism",
+   "chapters": 7
+  },
+  {
+   "num": 5,
+   "title_zh": "解释主义与裁判",
+   "title_en": "Part V — Interpretivism and Adjudication",
+   "chapters": 3
+  },
+  {
+   "num": 6,
+   "title_zh": "现实主义与社会学进路",
+   "title_en": "Part VI — Realism and Sociological Approaches",
+   "chapters": 4
+  },
+  {
+   "num": 7,
+   "title_zh": "正义、权利与价值",
+   "title_en": "Part VII — Justice, Rights, and Values",
+   "chapters": 8
+  },
+  {
+   "num": 8,
+   "title_zh": "批判性与跨学科进路",
+   "title_en": "Part VIII — Critical and Interdisciplinary Approaches",
+   "chapters": 6
+  },
+  {
+   "num": 9,
+   "title_zh": "法制的理念",
+   "title_en": "Part IX — The Ideal of Legality",
+   "chapters": 4
+  }
+ ],
+ "chapters": [
+  {
+   "code": "PI.1",
+   "unit": 1,
+   "title_zh": "安提戈涅：法律的源初冲突",
+   "title_en": "Antigone: The Founding Conflict of Law",
+   "desc_zh": "索福克勒斯的《安提戈涅》作为本课全部论争的起点：诸神的不成文法与君主敕令之间的碰撞，家庭与国家、良知与权威之间的碰撞。代表性解读：黑格尔论伦理冲突的悲剧与伦理实体（<em>Sittlichkeit</em>）；自然法与实证主义关于不成文法与主权命令的对立；努斯鲍姆论悲剧、审议与善的脆弱性；巴特勒论亲属关系、性别与国家；拉康论欲望与象征秩序；斯坦纳论该剧的接受史；批判性与女性主义解读（杜齐纳斯与沃林顿；卡瓦雷罗；霍尼格）；以及关于克瑞翁主权例外的政治神学解读。",
+   "desc_en": "Sophocles' <em>Antigone</em> as the origin of the course's debates: the collision between the gods' unwritten law and the sovereign decree, between family and state, conscience and authority. Representative readings: Hegel on the tragedy of ethical collision and <em>Sittlichkeit</em>; the natural-law and positivist opposition of unwritten law to sovereign command; Nussbaum on tragedy, deliberation and the fragility of goodness; Butler on kinship, gender and the state; Lacan on desire and the symbolic order; Steiner on the play's reception; critical and feminist readings (Douzinas and Warrington; Cavarero; Honig); and political-theological readings of Creon's sovereign exception.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 8,
+   "further_count": 4,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PI.2",
+   "unit": 1,
+   "title_zh": "导论：什么是法理学？",
+   "title_en": "Introduction: What is Jurisprudence?",
+   "desc_zh": "“法律是什么”这一问题；法理学与法律理论；法律哲学的方法；法理学与其他学科的关系。",
+   "desc_en": "The question \"What is law?\"; jurisprudence and legal theory; method in legal philosophy; the relationship between jurisprudence and other disciplines.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 9,
+   "further_count": 2,
+   "preclass": {
+    "title": "PI.2. 导论：什么是法理学？（Introduction: What is Jurisprudence?）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PI.2.-What-is-Jurisprudence"
+   },
+   "preclass_list": [
+    {
+     "title": "PI.2. 导论：什么是法理学？（Introduction: What is Jurisprudence?）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PI.2.-What-is-Jurisprudence"
+    }
+   ]
+  },
+  {
+   "code": "PI.3",
+   "unit": 1,
+   "title_zh": "法律理论的性质与范围",
+   "title_en": "The Nature and Scope of Legal Theory",
+   "desc_zh": "分析性、规范性与社会学进路；法律体系的概念；法律效力问题。",
+   "desc_en": "Analytical, normative, and sociological approaches; the concept of a legal system; the problem of legal validity.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 2,
+   "further_count": 0,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PI.4",
+   "unit": 1,
+   "title_zh": "法律的渊源与分类",
+   "title_en": "Sources and Classification of Law",
+   "desc_zh": "法律的主要渊源：立法与法典编纂、习惯与先例；判决理由（<em>ratio decidendi</em>）、附带意见（<em>obiter dicta</em>）与遵循先例（<em>stare decisis</em>）；法律的分类（民事与刑事、实体与程序、国内与国际、公法与私法）。",
+   "desc_en": "The principal sources of law: legislation and codification, custom, and precedent; <em>ratio decidendi</em>, <em>obiter dicta</em>, and <em>stare decisis</em>; the classification of law (civil and criminal, substantive and procedural, municipal and international, public and private).",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 1,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PI.5",
+   "unit": 1,
+   "title_zh": "法律人格、财产与占有",
+   "title_en": "Legal Personality, Property and Possession",
+   "desc_zh": "法律人格的概念，自然人与法人；胎儿、未成年人与死者的地位；占有与所有；财产与产权。",
+   "desc_en": "The concept of legal personality, natural and corporate; the status of the unborn, the minor, and the deceased; possession and ownership; property and title.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PI.6",
+   "unit": 1,
+   "title_zh": "责任与法律责任",
+   "title_en": "Liability and Legal Responsibility",
+   "desc_zh": "施加责任的条件；犯罪意图（<em>mens rea</em>）、故意与过失；因果关系；严格责任与替代责任；法律义务与道德责任的关系。",
+   "desc_en": "The conditions for imposing liability; <em>mens rea</em>, intention, and negligence; causation; strict and vicarious liability; the relation between legal and moral responsibility.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PII.1",
+   "unit": 2,
+   "title_zh": "亚里士多德论矫正正义与分配正义",
+   "title_en": "Aristotle on Corrective and Distributive Justice",
+   "desc_zh": "《尼各马可伦理学》第五卷中的分配正义（几何比例）与矫正正义或恢复正义（算术比例）；亚里士多德二元正义理论的架构。",
+   "desc_en": "Distributive justice (geometric proportion) versus corrective or rectificatory justice (arithmetic proportion) in the <em>Nicomachean Ethics</em>, Book V; the architecture of Aristotle's twofold theory of justice.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 7,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PII.2",
+   "unit": 2,
+   "title_zh": "古代法",
+   "title_en": "Law in Antiquity",
+   "desc_zh": "柏拉图与苏格拉底论法律与国家；亚里士多德论社会、伦理以及矫正正义与分配正义。",
+   "desc_en": "Plato and Socrates on law and the state; Aristotle on society, ethics, and corrective and distributive justice.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 2,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PII.3",
+   "unit": 2,
+   "title_zh": "古典自然法",
+   "title_en": "Classical Natural Law",
+   "desc_zh": "西塞罗论自然法；圣奥古斯丁；圣托马斯·阿奎那与经院哲学；自然法（<em>lex naturalis</em>）传统。",
+   "desc_en": "Cicero on natural law; St Augustine; St Thomas Aquinas and Scholasticism; the <em>lex naturalis</em> tradition.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 3,
+   "further_count": 4,
+   "preclass": {
+    "title": "PII.3. 古典自然法（Classical Natural Law）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PII.3.-Classical-Natural-Law"
+   },
+   "preclass_list": [
+    {
+     "title": "PII.3. 古典自然法（Classical Natural Law）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PII.3.-Classical-Natural-Law"
+    }
+   ]
+  },
+  {
+   "code": "PII.4",
+   "unit": 2,
+   "title_zh": "近代自然法与社会契约论",
+   "title_en": "Modern Natural Law and Social Contract Theory",
+   "desc_zh": "格劳秀斯；霍布斯；洛克；卢梭；从自然法到自然权利的转变。",
+   "desc_en": "Grotius; Hobbes; Locke; Rousseau; the transition from natural law to natural rights.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 5,
+   "preclass": {
+    "title": "PII.4. 近代自然法与社会契约论（Modern Natural Law and Social Contract Theory）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PII.4.-Modern-Natural-Law-and-Social-Contract-Theory"
+   },
+   "preclass_list": [
+    {
+     "title": "PII.4. 近代自然法与社会契约论（Modern Natural Law and Social Contract Theory）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PII.4.-Modern-Natural-Law-and-Social-Contract-Theory"
+    }
+   ]
+  },
+  {
+   "code": "PII.5",
+   "unit": 2,
+   "title_zh": "近代哲学：笛卡尔、休谟与康德",
+   "title_en": "Modern Philosophy: Descartes, Hume and Kant",
+   "desc_zh": "笛卡尔理性主义与向主体的转向；休谟的经验论与“是—应当”之分；康德的批判哲学与道德法则的自律。",
+   "desc_en": "Cartesian rationalism and the turn to the subject; Hume's empiricism and the is–ought distinction; Kant's critical philosophy and the autonomy of the moral law.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIII.1",
+   "unit": 3,
+   "title_zh": "哈特与富勒之争",
+   "title_en": "The Hart-Fuller Debate",
+   "desc_zh": "法律实证主义对自然法：法律与道德的分离（哈特 1958）对法律的内在道德性（富勒 1958、1964）；纽伦堡审判，以及“不正义的法律是否根本不是法律”这一问题。",
+   "desc_en": "Legal positivism versus natural law: the separation of law and morals (Hart 1958) against the inner morality of law (Fuller 1958 and 1964); Nuremberg and the question whether an unjust law is no law at all.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 3,
+   "further_count": 0,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIII.2",
+   "unit": 3,
+   "title_zh": "富勒与法律的道德性",
+   "title_en": "Fuller and the Morality of Law",
+   "desc_zh": "“法律的内在道德性”；八项要件；哈特与富勒之争。",
+   "desc_en": "The \"inner morality of law\"; the eight desiderata; the Hart–Fuller debate.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 1,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIII.3",
+   "unit": 3,
+   "title_zh": "菲尼斯与新托马斯主义",
+   "title_en": "Finnis and Neo-Thomism",
+   "desc_zh": "基本善；实践理性；自然法与自然权利。",
+   "desc_en": "Basic goods; practical reasonableness; natural law and natural rights.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 4,
+   "preclass": {
+    "title": "PIII.3. 菲尼斯与新托马斯主义（Finnis and Neo-Thomism）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIII.3.-Finnis-and-Neo-Thomism"
+   },
+   "preclass_list": [
+    {
+     "title": "PIII.3. 菲尼斯与新托马斯主义（Finnis and Neo-Thomism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIII.3.-Finnis-and-Neo-Thomism"
+    }
+   ]
+  },
+  {
+   "code": "PIV.1",
+   "unit": 4,
+   "title_zh": "奥斯丁的命令理论与哈特的法律概念",
+   "title_en": "Austin's Command Theory versus Hart's Concept of Law",
+   "desc_zh": "命令—主权理论对初级规则与次级规则理论；承认规则取代主权者；奥斯丁模型的遗产。",
+   "desc_en": "The command-and-sovereignty theory against the theory of primary and secondary rules; the rule of recognition as a replacement for the sovereign; the legacy of the Austinian model.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 2,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIV.2",
+   "unit": 4,
+   "title_zh": "古典实证主义",
+   "title_en": "Classical Positivism",
+   "desc_zh": "边沁与奥斯丁；命令理论；主权；法律与道德的分离。",
+   "desc_en": "Bentham and Austin; the command theory; sovereignty; the separation of law and morals.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 1,
+   "preclass": {
+    "title": "PIV.2. 古典实证主义（Classical Positivism）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.2.-Classical-Positivism"
+   },
+   "preclass_list": [
+    {
+     "title": "PIV.2. 古典实证主义（Classical Positivism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.2.-Classical-Positivism"
+    }
+   ]
+  },
+  {
+   "code": "PIV.3",
+   "unit": 4,
+   "title_zh": "凯尔森与纯粹法学",
+   "title_en": "Kelsen and the Pure Theory of Law",
+   "desc_zh": "规范与效力；基础规范（<em>Grundnorm</em>）；法律秩序的统合性。",
+   "desc_en": "Norms and validity; the <em>Grundnorm</em>; the unity of the legal order.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 2,
+   "preclass": {
+    "title": "PIV.3. 凯尔森与纯粹法学（Kelsen and the Pure Theory of Law）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.3.-Kelsen-and-the-Pure-Theory-of-Law"
+   },
+   "preclass_list": [
+    {
+     "title": "PIV.3. 凯尔森与纯粹法学（Kelsen and the Pure Theory of Law）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.3.-Kelsen-and-the-Pure-Theory-of-Law"
+    }
+   ]
+  },
+  {
+   "code": "PIV.4",
+   "unit": 4,
+   "title_zh": "主权、例外状态与阿伦特",
+   "title_en": "Sovereignty, the State of Exception and Arendt",
+   "desc_zh": "从博丹到施米特的主权概念；阿甘本论例外状态与赤裸生命；阿伦特论权力、权威与极权主义。",
+   "desc_en": "The concept of sovereignty from Bodin to Schmitt; Agamben on the state of exception and bare life; Arendt on power, authority, and totalitarianism.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 5,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIV.5",
+   "unit": 4,
+   "title_zh": "哈特与《法律的概念》",
+   "title_en": "Hart and <em>The Concept of Law</em>",
+   "desc_zh": "初级规则与次级规则；承认规则；内在观点；法律的开放结构。",
+   "desc_en": "Primary and secondary rules; the rule of recognition; the internal point of view; the open texture of law.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 3,
+   "further_count": 2,
+   "preclass": {
+    "title": "PIV.5. 哈特与《法律的概念》（Hart and *The Concept of Law*）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.5.-Hart-and-The-Concept-of-Law"
+   },
+   "preclass_list": [
+    {
+     "title": "PIV.5. 哈特与《法律的概念》（Hart and *The Concept of Law*）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.5.-Hart-and-The-Concept-of-Law"
+    }
+   ]
+  },
+  {
+   "code": "PIV.6",
+   "unit": 4,
+   "title_zh": "哈特之后的实证主义",
+   "title_en": "Post-Hart Positivism",
+   "desc_zh": "拉兹论权威与排他性理由；包容性实证主义与排他性实证主义；渊源命题。",
+   "desc_en": "Raz on authority and exclusionary reasons; inclusive versus exclusive positivism; the sources thesis.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 3,
+   "preclass": {
+    "title": "PIV.6. 哈特之后的实证主义（Post-Hart Positivism）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.6.-Post-Hart-Positivism"
+   },
+   "preclass_list": [
+    {
+     "title": "PIV.6. 哈特之后的实证主义（Post-Hart Positivism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PIV.6.-Post-Hart-Positivism"
+    }
+   ]
+  },
+  {
+   "code": "PIV.7",
+   "unit": 4,
+   "title_zh": "凯尔森对哈特：基础规范与承认规则",
+   "title_en": "Kelsen versus Hart: Grundnorm and Rule of Recognition",
+   "desc_zh": "凯尔森的基础规范对哈特的承认规则；纯粹法学对分析性实证主义；围绕法律效力判准的争论。",
+   "desc_en": "Kelsen's Grundnorm against Hart's rule of recognition; the pure theory of law versus analytical positivism; the contest over the criterion of legal validity.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 2,
+   "further_count": 0,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PV.1",
+   "unit": 5,
+   "title_zh": "解释法律：德沃金与费什对伽达默尔与利科",
+   "title_en": "Interpreting Law: Dworkin and Fish against Gadamer and Ricoeur",
+   "desc_zh": "德沃金与费什把法律理解为解释的主张，对伽达默尔与利科的哲学诠释学；客观正确的答案对法律解释中的视域融合与文本—行动辩证法。",
+   "desc_en": "Dworkin's and Fish's account of law as interpretation versus Gadamer's and Ricoeur's philosophical hermeneutics; objectively correct answers against the fusion of horizons and the text-action dialectic in legal interpretation.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PV.2",
+   "unit": 5,
+   "title_zh": "德沃金的解释主义",
+   "title_en": "Dworkin's Interpretivism",
+   "desc_zh": "规则、原则与政策；作为整全性的法律；权利命题；唯一正确答案命题。",
+   "desc_en": "Rules, principles, and policies; law as integrity; the rights thesis; the one-right-answer thesis.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PV.3",
+   "unit": 5,
+   "title_zh": "哲学诠释学与法律解释",
+   "title_en": "Philosophical Hermeneutics and Legal Interpretation",
+   "desc_zh": "伽达默尔论理解、前见与视域融合；利科论文本与行动；诠释学与法律解释。",
+   "desc_en": "Gadamer on understanding, prejudice, and the fusion of horizons; Ricoeur on text and action; hermeneutics and the interpretation of law.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVI.1.a",
+   "unit": 6,
+   "title_zh": "法律形式主义对法律现实主义",
+   "title_en": "Legal Formalism vs. Legal Realism",
+   "desc_zh": "二十世纪美国法学的主轴论战：形式主义主张法律为自足的逻辑体系，裁判可由规则与先例演绎而出（兰代尔的法律科学与判例教学法）；现实主义反击规则并不能决定案件——“书本上的法律”对“行动中的法律”，法官实则在造法（霍姆斯、庞德、卢埃林、弗兰克）；论战的后续重估：格雷重构兰代尔正统，肖尔为形式主义辩护。",
+   "desc_en": "The defining debate of twentieth-century American jurisprudence: formalism's claim that law is an autonomous logical system in which adjudication proceeds deductively from rules and precedent (Langdell's legal science and the case method); the realist counter-attack that rules do not decide cases — law in books versus law in action, with judges as lawmakers in fact (Holmes, Pound, Llewellyn, Frank); later reassessments of the debate: Grey's reconstruction of the Langdellian orthodoxy and Schauer's defence of formalism.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 1,
+   "preclass": {
+    "title": "PVI.1.a. 法律形式主义对法律现实主义（Legal Formalism vs Legal Realism）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.1.a.-Legal-Formalism-vs-Legal-Realism"
+   },
+   "preclass_list": [
+    {
+     "title": "PVI.1.a. 法律形式主义对法律现实主义（Legal Formalism vs Legal Realism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.1.a.-Legal-Formalism-vs-Legal-Realism"
+    },
+    {
+     "title": "PVI.1.b. 法律形式主义与法律现实主义的全球论战（Global Debates on Legal Formalism vs Legal Realism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.1.b.-Global-Debates-on-Legal-Formalism-vs-Legal-Realism"
+    }
+   ]
+  },
+  {
+   "code": "PVI.2",
+   "unit": 6,
+   "title_zh": "法律现实主义",
+   "title_en": "Legal Realism",
+   "desc_zh": "美国法律现实主义（霍姆斯、卢埃林、弗兰克）；斯堪的纳维亚现实主义（哈格斯特伦、奥利维克罗纳、罗斯）；行动中的法律与书本上的法律。",
+   "desc_en": "American Legal Realism (Holmes, Llewellyn, Frank); the Scandinavian realists (Hägerström, Olivecrona, Ross); law in action versus law in books.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 7,
+   "further_count": 5,
+   "preclass": {
+    "title": "PVI.2. 法律现实主义（Legal Realism）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.-Legal-Realism"
+   },
+   "preclass_list": [
+    {
+     "title": "PVI.2. 法律现实主义（Legal Realism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.-Legal-Realism"
+    },
+    {
+     "title": "PVI.2.c. 霍姆斯与法律之道（Holmes and The Path of the Law）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.c.-Holmes-and-The-Path-of-the-Law"
+    },
+    {
+     "title": "PVI.2.b. 霍姆斯与法律现实主义（Holmes and Legal Realism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.b.-Holmes-and-Legal-Realism"
+    }
+   ]
+  },
+  {
+   "code": "PVI.3",
+   "unit": 6,
+   "title_zh": "社会学法理学",
+   "title_en": "Sociological Jurisprudence",
+   "desc_zh": "韦伯论法律理性；涂尔干论法律与社会连带；埃利希与庞德论法律与社会工程。",
+   "desc_en": "Weber on legal rationality; Durkheim on law and social solidarity; Ehrlich and Pound on law and social engineering.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 4,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVI.4",
+   "unit": 6,
+   "title_zh": "卢埃林与庞德：形式主义对现实主义",
+   "title_en": "Llewellyn and Pound: Formalism versus Realism",
+   "desc_zh": "卢埃林的现实主义对庞德的社会学法条主义；“书本上的法律与行动中的法律”；规则怀疑论与对法院实际作为的关注。",
+   "desc_en": "Llewellyn's realism against Pound's socio-legal formalism; 'law in books and law in action'; rule-scepticism and the focus on what courts actually do.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 7,
+   "further_count": 5,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.1",
+   "unit": 7,
+   "title_zh": "罗尔斯对诺齐克：分配正义",
+   "title_en": "Rawls versus Nozick: Distributive Justice",
+   "desc_zh": "罗尔斯的作为公平的正义与差别原则对诺齐克的应得理论、自然权利与最弱国家；再分配正义的限度。",
+   "desc_en": "Rawls's justice as fairness and the difference principle against Nozick's entitlement theory, natural rights and the minimal state; the limits of redistributive justice.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 2,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.2",
+   "unit": 7,
+   "title_zh": "正义理论",
+   "title_en": "Theories of Justice",
+   "desc_zh": "功利主义；罗尔斯的作为公平的正义；诺齐克的应得理论；森的能力进路。",
+   "desc_en": "Utilitarianism; Rawls's justice as fairness; Nozick's entitlement theory; Sen's capability approach.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.3",
+   "unit": 7,
+   "title_zh": "自由、无政府主义与最弱国家",
+   "title_en": "Freedom, Anarchism and the Minimal State",
+   "desc_zh": "亚当·斯密与古典自由主义秩序；哲学无政府主义（沃尔夫）；自由至上主义与最弱国家；政治义务的根据与限度。",
+   "desc_en": "Adam Smith and the classical liberal order; philosophical anarchism (Wolff); libertarianism and the minimal state; the justification and limits of political obligation.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 4,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.4",
+   "unit": 7,
+   "title_zh": "平等主义正义：科恩对罗尔斯的批判",
+   "title_en": "Egalitarian Justice: Cohen and the Critique of Rawls",
+   "desc_zh": "G. A. 科恩对罗尔斯式正义的批判；平等主义正义的“通货”；运气平等主义；社会主义与正义的精神气质。",
+   "desc_en": "G. A. Cohen's critique of Rawlsian justice; the currency of egalitarian justice; luck egalitarianism; socialism and the ethos of justice.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.5",
+   "unit": 7,
+   "title_zh": "权利理论",
+   "title_en": "Rights Theory",
+   "desc_zh": "权利的概念与分类；霍菲尔德的法律关系；自然权利与基本权利；权利的代际。",
+   "desc_en": "The concept and classification of rights; Hohfeld's jural relations; natural rights and fundamental rights; generations of rights.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 5,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.6",
+   "unit": 7,
+   "title_zh": "法律与道德主义",
+   "title_en": "Law and Moralism",
+   "desc_zh": "法律道德主义与伤害原则；道德的强制执行；哈特与德弗林之争。",
+   "desc_en": "Legal moralism and the harm principle; the enforcement of morals; the Hart–Devlin debate.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 2,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.7",
+   "unit": 7,
+   "title_zh": "正义的通货：科恩对罗尔斯的批判",
+   "title_en": "The Currency of Justice: Cohen's Critique of Rawls",
+   "desc_zh": "G. A. 科恩对差别原则的批判；正义的通货问题；运气平等主义；正义的个人维度与制度维度，以及社会主义的平等主义精神气质。",
+   "desc_en": "G. A. Cohen's critique of the difference principle; the question of the currency of justice; luck egalitarianism; the personal and institutional dimensions of justice and the socialist egalitarian ethos.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 0,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVII.8",
+   "unit": 7,
+   "title_zh": "哈特与德弗林之争",
+   "title_en": "The Hart-Devlin Debate",
+   "desc_zh": "关于以法律强制执行道德的争论：哈特的伤害原则与自由主义对德弗林为强制执行共同公共道德所作的辩护，其导火索为《沃尔芬登报告》。",
+   "desc_en": "The debate over the legal enforcement of morality: Hart's harm principle and liberalism against Devlin's defence of enforcing a shared public morality, prompted by the Wolfenden Report.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 4,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVIII.1",
+   "unit": 8,
+   "title_zh": "黑格尔对马克思：法律的社会理论",
+   "title_en": "Hegel versus Marx: The Social Theory of Law",
+   "desc_zh": "黑格尔的法哲学、伦理生活与辩证法对马克思的历史唯物主义与法律的阶级性格；从理性国家到对法律与国家的批判。",
+   "desc_en": "Hegel's philosophy of right, ethical life and the dialectical method against Marx's historical materialism and the class character of law; from the rational state to the critique of law and the state.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVIII.2",
+   "unit": 8,
+   "title_zh": "黑格尔与辩证社会理论",
+   "title_en": "Hegel and Dialectical Social Theory",
+   "desc_zh": "黑格尔的《法哲学原理》；伦理生活（<em>Sittlichkeit</em>）；辩证法；从黑格尔到马克思。",
+   "desc_en": "Hegel's <em>Philosophy of Right</em>; ethical life (<em>Sittlichkeit</em>); the dialectical method; from Hegel to Marx.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 7,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVIII.3",
+   "unit": 8,
+   "title_zh": "批判法学进路",
+   "title_en": "Critical Approaches to Law",
+   "desc_zh": "马克思主义法律理论；批判法学运动；女性主义法理学；批判种族理论。",
+   "desc_en": "Marxist legal theory; the Critical Legal Studies movement; feminist jurisprudence; critical race theory.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 7,
+   "further_count": 6,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVIII.4",
+   "unit": 8,
+   "title_zh": "后现代与解构主义法律理论",
+   "title_en": "Postmodern and Deconstructionist Legal Theory",
+   "desc_zh": "德里达论解构与法律的暴力；福柯论权力与规训；利奥塔与后现代状况；对法律教义的后现代批判。",
+   "desc_en": "Derrida on deconstruction and the force of law; Foucault on power and discipline; Lyotard and the postmodern condition; postmodern critiques of legal doctrine.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 6,
+   "further_count": 4,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVIII.5",
+   "unit": 8,
+   "title_zh": "法律与经济学",
+   "title_en": "Law and Economics",
+   "desc_zh": "效率与财富最大化；科斯、波斯纳与法律的经济分析。",
+   "desc_en": "Efficiency and wealth maximisation; Coase, Posner, and the economic analysis of law.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 1,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PVIII.6",
+   "unit": 8,
+   "title_zh": "波斯纳对德沃金：效率与权利",
+   "title_en": "Posner versus Dworkin: Efficiency and Rights",
+   "desc_zh": "波斯纳的财富最大化与法律的经济分析对德沃金以权利为基础的理论；作为法律与经济学枢纽的科斯定理，以及价值问题。",
+   "desc_en": "Posner's wealth maximisation and the economic analysis of law against Dworkin's rights-based theory; the Coase theorem as the pivot of law and economics and the value question.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 3,
+   "further_count": 2,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIX.1",
+   "unit": 9,
+   "title_zh": "法治",
+   "title_en": "The Rule of Law",
+   "desc_zh": "形式性构想与实质性构想；戴雪、富勒与宾汉；当代宪制秩序中的法治。",
+   "desc_en": "Formal and substantive conceptions; Dicey, Fuller, and Bingham; the rule of law in contemporary constitutional orders.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 3,
+   "further_count": 2,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIX.2",
+   "unit": 9,
+   "title_zh": "法治的形式性构想与实质性构想",
+   "title_en": "Formal and Substantive Conceptions of the Rule of Law",
+   "desc_zh": "形式性法治（戴雪、拉兹）对实质性法治（富勒、德沃金、宾汉）；宪制秩序中合法性理想的内容与限度。",
+   "desc_en": "The formal rule of law (Dicey, Raz) against the substantive rule of law (Fuller, Dworkin, Bingham); the content and limits of the ideal of legality in constitutional orders.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 4,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIX.3",
+   "unit": 9,
+   "title_zh": "结语：当代论争",
+   "title_en": "Conclusion: Contemporary Debates",
+   "desc_zh": "法律多元主义；全球法与跨国法；法理学中的方法论多元主义。",
+   "desc_en": "Legal pluralism; global and transnational law; methodological pluralism in jurisprudence.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 4,
+   "preclass": null,
+   "preclass_list": []
+  },
+  {
+   "code": "PIX.4",
+   "unit": 9,
+   "title_zh": "法律多元主义与全球法",
+   "title_en": "Legal Pluralism and Global Law",
+   "desc_zh": "法律多元主义与非国家规范秩序对国家中心主义一元论；跨国法与全球法；当代法理学中的方法论多元主义。",
+   "desc_en": "Legal pluralism and non-state normative orders against state-centred monism; transnational and global law; methodological pluralism in contemporary jurisprudence.",
+   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
+   "refs_count": 5,
+   "further_count": 3,
+   "preclass": null,
+   "preclass_list": []
+  }
+ ]
+}

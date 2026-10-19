@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《法理学》文献库 · Jurisprudence References</title>
+  <meta name="description" content="《法理学》课程全部阅读文献的索引：经典文献与延伸阅读，按获取渠道筛选、按作者或年份排序，并可导出 BibTeX / RIS。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="《法理学》文献库">
+  <meta property="og:description" content="全部阅读文献的索引，按获取渠道筛选，可导出 BibTeX / RIS。">
+</head>
+<body>
+  <a class="skip" href="#refs">跳到正文</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <p class="eyebrow">Jurisprudence · References</p>
+      <h1>《法理学》文献库</h1>
+      <p class="lede">
+        课程大纲中的全部阅读文献，逐条还原为可检索的条目：谁写的、哪一年、
+        从哪里获取。按获取方式筛选，或按作者、年份重排；需要建书目时，
+        一键导出全部条目的 BibTeX 或 RIS。
+      </p>
+      <dl class="stats" id="stats"></dl>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="field">
+        <input id="q" type="search" placeholder="搜索作者、题名或年份…"
+               autocomplete="off" spellcheck="false" aria-label="搜索文献">
+        <kbd>/</kbd>
+      </div>
+      <div class="chips" id="kind-filter" role="group" aria-label="按文献类型筛选"></div>
+      <div class="chips" id="access-filter" role="group" aria-label="按获取方式筛选"></div>
+      <div class="chips" id="channel-filter" role="group" aria-label="按获取渠道筛选"></div>
+      <div class="chips" id="unit-filter" role="group" aria-label="按单元筛选"></div>
+      <div class="actions">
+        <label class="sort">
+          <span>排序</span>
+          <select id="sort">
+            <option value="course">按课程结构</option>
+            <option value="author">按作者</option>
+            <option value="year">按年份</option>
+          </select>
+        </label>
+        <button type="button" id="export-bibtex" class="plain" title="导出全部条目（不随筛选变化）">导出 BibTeX</button>
+        <button type="button" id="export-ris" class="plain" title="导出全部条目（不随筛选变化）">导出 RIS</button>
+        <button type="button" id="reset" class="plain" hidden>清除筛选</button>
+        <button type="button" id="theme" class="plain" aria-label="切换深浅色">深色</button>
+      </div>
+      <p class="count" id="count"></p>
+    </div>
+  </div>
+
+  <main id="refs" class="wrap">
+    <noscript>
+      <p class="empty">
+        本页需要启用 JavaScript 才能检索与筛选。全部文献请见
+        <a href="https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus">课程大纲</a>。
+      </p>
+    </noscript>
+    <div id="list"></div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="source">
+        内容以 <a href="https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus">课程 Wiki
+        · 课程大纲</a> 为准；本站只呈现索引，不改写正文与文献。
+        课程结构请前往<a href="index.html">课程地图</a>。
+      </p>
+      <p class="rights">
+        © 2026 iLINGBIN. 保留所有权利。未获书面许可，不得以复制、改写、汇编、翻译、
+        上传网络或商业性使用等方式利用；课堂内为教学目的之讲授、投影、复印属许可范围。
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/references.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>《法理学》课程地图 · Jurisprudence Course Map</title>
+  <meta name="description" content="《法理学》课程九单元四十六章的全景索引：按单元浏览、按主题检索、标注各章课前概览的撰写进度，并可直达课程 Wiki 原文。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="《法理学》课程地图">
+  <meta property="og:description" content="九单元四十六章的全景索引，可检索、可筛选，直达课程 Wiki 原文。">
+</head>
+<body>
+  <a class="skip" href="#map">跳到正文</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <p class="eyebrow">Jurisprudence · Course Map</p>
+      <h1>《法理学》课程地图</h1>
+      <p class="lede">
+        把课程大纲从一篇长文还原为一张可检索的地图：九个单元、四十六章，
+        每章标注中英题名、内容梗概、文献规模，以及课前概览的撰写进度。
+      </p>
+      <dl class="stats" id="stats"></dl>
+      <p class="head-link">
+        配套页面：<a href="references.html">文献库</a> ——
+        全部阅读文献的索引，可按获取方式筛选，可导出 BibTeX / RIS。
+      </p>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="field">
+        <input id="q" type="search" placeholder="搜索章题、关键词或人名…"
+               autocomplete="off" spellcheck="false" aria-label="搜索章节">
+        <kbd>/</kbd>
+      </div>
+      <div class="chips" id="unit-filter" role="group" aria-label="按单元筛选"></div>
+      <div class="chips" id="cover-filter" role="group" aria-label="按撰写进度筛选"></div>
+      <div class="actions">
+        <button type="button" id="toggle-en" class="plain" aria-pressed="false">显示英文</button>
+        <button type="button" id="reset" class="plain" hidden>清除筛选</button>
+        <button type="button" id="theme" class="plain" aria-label="切换深浅色">深色</button>
+      </div>
+      <p class="count" id="count"></p>
+    </div>
+  </div>
+
+  <main id="map" class="wrap">
+    <noscript>
+      <p class="empty">
+        本页需要启用 JavaScript 才能按单元浏览与检索。课程结构请见
+        <a href="https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus">课程大纲</a>。
+      </p>
+    </noscript>
+    <div id="units"></div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="source">
+        内容以 <a href="https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus">课程 Wiki
+        · 课程大纲</a> 为准；本站只呈现索引，不改写正文与文献。
+      </p>
+      <p class="rights">
+        © 2026 iLINGBIN. 保留所有权利。未获书面许可，不得以复制、改写、汇编、翻译、
+        上传网络或商业性使用等方式利用；课堂内为教学目的之讲授、投影、复印属许可范围。
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
