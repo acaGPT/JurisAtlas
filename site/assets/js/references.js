@@ -9,9 +9,13 @@
   var DATA_DIR = 'assets/data/';
   var THEME_KEY = 'jcm-theme';
   var DEBOUNCE_MS = 110;
+  /* 仅 1 条的渠道归入长尾、默认折叠：全部平铺有 30 余个筛选项，长尾占多数却几乎点不到 */
+  var CHANNEL_TAIL_MAX = 1;
 
-  var state = { q: '', kind: 'all', access: 'all', channel: 'all', unit: 'all', sort: 'course' };
+  var state = { q: '', kind: 'all', access: 'all', channel: 'all', unit: 'all',
+                sort: 'course', tailOpen: false };
   var items = [];
+  var byId = new Map();          // 条目 id -> 条目（供复制引注取用）
   var chapterTitles = {};   // 章号 -> 中文题名（供分组头与条目悬停提示）
   var index = null;
   var timer = null;
@@ -111,11 +115,25 @@
         (meta.length ? '<span class="ref-meta">' + meta.join(' · ') + '</span> ' : '') +
         highlight(item.title, state.q) + '</p>';
 
+    /* 同一著作在多章出现时标出共引，拼阅读清单时可据此去重 */
+    var dup = item.dup_count > 1
+      ? '<span class="dup" title="亦见于 ' +
+        escapeHtml((item.dup_chapters || []).join('、')) + '">' +
+        item.dup_count + ' 章共引</span>'
+      : '';
+
+    var cite = '<span class="cite">' +
+      '<button type="button" data-cite="apa" data-id="' + escapeHtml(item.id) +
+      '" title="复制 APA 引注">APA</button>' +
+      '<button type="button" data-cite="mla" data-id="' + escapeHtml(item.id) +
+      '" title="复制 MLA 引注">MLA</button></span>';
+
     return '<li class="ref-item">' +
       '<div class="ref-side">' + avatar + badge + kind + kindTip + '</div>' +
       '<div class="ref-main">' + body +
-      '<p class="ref-foot">' + access +
-      '<span class="access-kind">' + (ACCESS_LABEL[item.access_kind] || '') + '</span></p>' +
+      '<p class="ref-foot">' + dup + access +
+      '<span class="access-kind">' + (ACCESS_LABEL[item.access_kind] || '') + '</span>' +
+      cite + '</p>' +
       '</div></li>';
   }
 
@@ -235,12 +253,36 @@
       chip('全文直读', 'fulltext', fullCount, state.access === 'fulltext' ? 'true' : 'false', 'access') +
       chip('需定位或订阅', 'locator', locatorCount, state.access === 'locator' ? 'true' : 'false', 'access');
 
-    el.channelFilter.innerHTML =
-      chip('全部渠道', 'all', null, state.channel === 'all' ? 'true' : 'false', 'channel') +
-      channels.map(function (name) {
+    /* 长尾渠道（条目数 <= CHANNEL_TAIL_MAX）默认折叠；选中了长尾渠道时自动展开，
+       否则用户筛完会看不到自己选中的那一项 */
+    var totalByChannel = {};
+    items.forEach(function (item) {
+      totalByChannel[item.access] = (totalByChannel[item.access] || 0) + 1;
+    });
+    var headChannels = channels.filter(function (name) {
+      return totalByChannel[name] > CHANNEL_TAIL_MAX;
+    });
+    var tailChannels = channels.filter(function (name) {
+      return totalByChannel[name] <= CHANNEL_TAIL_MAX;
+    });
+    var showTail = state.tailOpen || tailChannels.indexOf(state.channel) !== -1;
+
+    function channelChips(list) {
+      return list.map(function (name) {
         return chip(name, name, countBy('channel', name),
           state.channel === name ? 'true' : 'false', 'channel');
       }).join('');
+    }
+
+    el.channelFilter.innerHTML =
+      chip('全部渠道', 'all', null, state.channel === 'all' ? 'true' : 'false', 'channel') +
+      channelChips(headChannels) +
+      (tailChannels.length
+        ? '<button type="button" class="tail-toggle" data-tail="1" ' +
+          'aria-expanded="' + showTail + '">' +
+          (showTail ? '收起长尾渠道' : '展开其余 ' + tailChannels.length + ' 个渠道') +
+          '</button>' + (showTail ? channelChips(tailChannels) : '')
+        : '');
 
     el.unitFilter.innerHTML =
       chip('全部单元', 'all', null, state.unit === 'all' ? 'true' : 'false', 'unit') +
@@ -323,6 +365,67 @@
     URL.revokeObjectURL(link.href);
   }
 
+  /* ---------- 单条引注：APA / MLA，纯客户端生成并写入剪贴板 ---------- */
+
+  function plainText(raw) {
+    return String(raw == null ? '' : raw)
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/[*_`]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function citation(item, style) {
+    /* 解析失败的条目没有作者与题名，退回原始行的纯文本，保证复制出去仍是可用信息 */
+    var author = item.author || '';
+    var title = item.title || plainText(item.raw);
+    var year = item.year == null ? '' : String(item.year);
+    if (!author && !title) return plainText(item.raw);
+
+    if (style === 'mla') {
+      return [author ? author + '.' : '', title ? title + '.' : '',
+              year ? year + '.' : '',
+              item.access_url ? item.access_url + '.' : '']
+        .filter(Boolean).join(' ');
+    }
+    return [author ? author + (year ? ' (' + year + ').' : '.')
+                   : (year ? '(' + year + ').' : ''),
+            title ? title + '.' : '',
+            item.access_url || ''].filter(Boolean).join(' ');
+  }
+
+  function copyText(text, button) {
+    function done(ok) {
+      var original = button.getAttribute('data-label') || button.textContent;
+      button.setAttribute('data-label', original);
+      button.textContent = ok ? '已复制' : '复制失败';
+      window.setTimeout(function () { button.textContent = original; }, 1200);
+    }
+
+    function fallback() {
+      var area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.top = '-1000px';
+      document.body.appendChild(area);
+      area.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (error) { ok = false; }
+      document.body.removeChild(area);
+      done(ok);
+    }
+
+    /* 剪贴板 API 需要安全上下文（https 或 localhost）；不满足时退回 execCommand */
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        done(true);
+      }, fallback);
+      return;
+    }
+    fallback();
+  }
+
   /* ---------- 主题 ---------- */
 
   function applyTheme(theme) {
@@ -358,6 +461,19 @@
         renderChips();
         render();
       });
+    });
+
+    el.channelFilter.addEventListener('click', function (event) {
+      if (!event.target.closest('button[data-tail]')) return;
+      state.tailOpen = !state.tailOpen;
+      renderChips();
+    });
+
+    el.list.addEventListener('click', function (event) {
+      var button = event.target.closest('button[data-cite]');
+      if (!button) return;
+      var item = byId.get(button.getAttribute('data-id'));
+      if (item) copyText(citation(item, button.getAttribute('data-cite')), button);
     });
 
     el.sort.addEventListener('change', function () {
@@ -418,6 +534,8 @@
       fetch(DATA_DIR + 'syllabus.json').then(function (r) { return r.json(); })
     ]).then(function (results) {
       items = results[0].items;
+      byId = new Map();
+      items.forEach(function (item) { byId.set(item.id, item); });
       results[1].chapters.forEach(function (chapter) {
         chapterTitles[chapter.code] = chapter.title_zh;
       });

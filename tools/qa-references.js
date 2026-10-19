@@ -152,7 +152,52 @@ function check(name, actual, expected) {
   check('移动端无横向溢出', overflow <= 0, true);
   await page.screenshot({ path: OUT + '/refs-mobile.png', fullPage: false });
 
-  /* 11. 控制台零错误 */
+  /* 11. 长尾渠道折叠 */
+  const tailToggle = page.locator('#channel-filter button[data-tail]');
+  check('渠道·长尾折叠开关存在', await tailToggle.count(), 1);
+  check('渠道·开关文案含待展开数量',
+    (await tailToggle.textContent()).includes('24'), true);
+  const chipsCollapsed = await page.locator('#channel-filter button[data-channel]').count();
+  await tailToggle.click();
+  const chipsExpanded = await page.locator('#channel-filter button[data-channel]').count();
+  check('渠道·展开后筛选项增加', chipsExpanded > chipsCollapsed, true);
+  check('渠道·展开后为全部 36 类 + 全部渠道', chipsExpanded, 37);
+  await tailToggle.click();
+  check('渠道·可再次收起',
+    await page.locator('#channel-filter button[data-channel]').count(), chipsCollapsed);
+
+  /* 12. 跨章共引标记 */
+  const dupBadges = await page.locator('.ref-item .dup').count();
+  check('共引·标记条目数为 17', dupBadges, 17);
+  check('共引·徽章文案为「N 章共引」',
+    /^\d+ 章共引$/.test((await page.locator('.ref-item .dup').first().textContent()).trim()), true);
+
+  /* 13. 单条引注复制（APA / MLA） */
+  await page.context().grantPermissions(['clipboard-read', 'clipboard-write']);
+  const sample = await page.evaluate(async () => {
+    const res = await fetch('assets/data/references.json');
+    const data = await res.json();
+    return data.items.find((i) => i.author && i.year != null);
+  });
+  const apaBtn = page.locator(`button[data-cite="apa"][data-id="${sample.id}"]`);
+  await apaBtn.click();
+  /* 复制反馈在剪贴板写入完成后才出现，须等一拍再断言，不能点完立刻读 */
+  await page.waitForFunction((id) => {
+    const button = document.querySelector(`button[data-cite="apa"][data-id="${id}"]`);
+    return !!button && button.textContent.trim() !== 'APA';
+  }, sample.id, { timeout: 3000 }).catch(() => {});
+  check('引注·复制后按钮反馈为「已复制」',
+    (await apaBtn.textContent()).trim(), '已复制');
+  const apa = await page.evaluate(() => navigator.clipboard.readText());
+  check('引注·APA 含作者', apa.includes(sample.author), true);
+  check('引注·APA 含年份', apa.includes(String(sample.year)), true);
+
+  await page.locator(`button[data-cite="mla"][data-id="${sample.id}"]`).click();
+  const mla = await page.evaluate(() => navigator.clipboard.readText());
+  check('引注·MLA 含作者', mla.includes(sample.author), true);
+  check('引注·MLA 与 APA 结果不同', mla !== apa, true);
+
+  /* 14. 控制台零错误 */
   check('控制台零错误', consoleErrors.length, 0);
   if (consoleErrors.length) console.log(consoleErrors);
 

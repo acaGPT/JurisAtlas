@@ -311,6 +311,29 @@ def extract(wiki_dir: Path) -> tuple[dict, dict]:
                 **parsed,
             })
 
+    # 同一著作在多章出现时标注共引，拼阅读清单时可据此去重。
+    # 只认「作者 + 题名」都非空的条目：延伸阅读多为百科条目，缺少作者，
+    # 强行按题名归并会把同名不同页的条目误判为重复。
+    def dup_key(item: dict) -> tuple[str, str]:
+        return ((item.get("author") or "").strip().lower(),
+                (item.get("title") or "").strip().lower())
+
+    chapters_by_key: dict[tuple[str, str], list[str]] = {}
+    for item in items:
+        key = dup_key(item)
+        if not key[0]:
+            continue
+        bucket = chapters_by_key.setdefault(key, [])
+        if item["chapter"] not in bucket:
+            bucket.append(item["chapter"])
+
+    for item in items:
+        key = dup_key(item)
+        chapters = chapters_by_key.get(key, [item["chapter"]])
+        item["dup_count"] = len(chapters)
+        if len(chapters) > 1:
+            item["dup_chapters"] = chapters
+
     channels = Counter(item["access"] for item in items)
     data = {
         "stats": {
@@ -320,6 +343,7 @@ def extract(wiki_dir: Path) -> tuple[dict, dict]:
             "fulltext": sum(1 for i in items if i["access_kind"] == "fulltext"),
             "locator": sum(1 for i in items if i["access_kind"] == "locator"),
             "unparsed": sum(1 for i in items if not i["parsed"]),
+            "dup_items": sum(1 for i in items if i["dup_count"] > 1),
             "channels": dict(channels.most_common()),
         },
         "items": items,

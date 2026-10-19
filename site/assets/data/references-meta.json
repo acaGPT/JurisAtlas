@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-19 23:27 +0800",
+ "generated_at": "2026-10-19 23:55 +0800",
  "source_repo": "https://github.com/acaGPT/Jurisprudence.wiki",
  "source_commit": "029e825",
  "wiki_base": "https://github.com/acaGPT/Jurisprudence/wiki",
@@ -10,6 +10,7 @@
   "fulltext": 294,
   "locator": 69,
   "unparsed": 0,
+  "dup_items": 17,
   "channels": {
    "Open Library": 137,
    "plato.stanford.edu": 76,

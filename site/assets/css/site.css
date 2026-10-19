@@ -309,6 +309,30 @@ mark { background: var(--mark); color: inherit; border-radius: 2px; }
 .channel { color: var(--accent); }
 .access-kind::before { content: "· "; }
 
+/* 跨章共引标记：同一著作在多章出现，拼阅读清单时可据此去重 */
+.dup {
+  font: 400 11.5px/1 var(--sans); padding: 4px 8px; border-radius: 999px;
+  color: var(--text); background: var(--surface-2); border: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+/* 单条引注复制：APA / MLA */
+.cite { display: inline-flex; gap: 6px; margin-left: auto; }
+.cite button {
+  font: 400 11.5px/1 var(--sans); padding: 4px 8px; border-radius: 6px;
+  color: var(--muted); background: transparent; border: 1px solid var(--line);
+  cursor: pointer; transition: color .15s ease, border-color .15s ease;
+}
+.cite button:hover { color: var(--accent); border-color: var(--line-strong); }
+
+/* 长尾渠道的展开开关：与筛选 chip 同排，虚线边框区别于可筛选项 */
+.tail-toggle {
+  font: 400 12px/1 var(--sans); padding: 5px 10px; border-radius: 999px;
+  color: var(--muted); background: var(--surface-2);
+  border: 1px dashed var(--line-strong); cursor: pointer;
+}
+.tail-toggle:hover { color: var(--accent); }
+
 /* 文献库的章分组头复用 .unit-head，其内 h2 略小 */
 .ref-group .unit-head h2 { font-size: clamp(17px, 2vw, 20px); }
 
@@ -336,7 +360,7 @@ mark { background: var(--mark); color: inherit; border-radius: 2px; }
 }
 
 @media print {
-  .toolbar, .skip { display: none; }
+  .toolbar, .skip, .cite { display: none; }
   .card { break-inside: avoid; }
   .ref-item { break-inside: avoid; }
 }
