@@ -4,7 +4,7 @@
 
 - **站点地址**：<https://acagpt.github.io/JurisprudenceAtlas/>
 - **数据来源**：<https://github.com/acaGPT/Jurisprudence.wiki>
-- **当前版本**：v0.2.4
+- **当前版本**：v0.2.5
 
 ## 这个站点做什么
 
@@ -110,14 +110,23 @@ Course-Syllabus.md ──抽取器──▶ syllabus.json / meta.json ──推�
 | 步骤 | 行为 | 失败时 |
 |---|---|---|
 | 判定 | 比对 Wiki `master` 的 HEAD 与 `gh-pages` 上 `meta.json` 的 `source_commit` | 取不到基准即判定为「无法判定」，本轮不动任何东西 |
-| 抽取 | 重跑 `extract-syllabus.py`，产物写临时目录 | 抽取异常退出，`gh-pages` 不被触碰 |
-| 推送 | 只替换 `assets/data/` 两个 JSON，站点其余文件沿用分支现状 | 抽取结果与现状一致时不产生空提交 |
+| 抽取 | 重跑两个抽取器，产物写临时目录 | 抽取异常退出，`gh-pages` 不被触碰 |
+| 推送 | 只替换 `assets/data/` 四个 JSON，站点其余文件沿用分支现状 | 抽取结果与现状一致时不产生空提交 |
 | 构建 | 轮询 Pages API 至 `built`（10 分钟上限） | 超时只告警，不回滚已发布内容 |
-| 发版 | 仅在 `syllabus.json` **确有字节级变化**时递增版本号并建 Release | 无实质变化时只更新溯源信息，不占版本号 |
+| 回流 | 同一份数据层提交回 `main`；版本号有变化时一并提交 README | `main` 侧无差异则跳过；两者合并为一次提交，避免第二次推送非快进 |
+| 发版 | 仅在 `syllabus.json` / `references.json` **确有字节级变化**时递增版本号并建 Release | 无实质变化时只更新溯源信息，不占版本号 |
+| 复核 | 以**本轮刚推送的产物**为基准比对线上 Pages，轮询 6 次 × 30 秒 | 仍不一致才报错 |
 
 判定与发版的分流是刻意设计：源 commit 变化可能来自首页或其他非大纲页面的改动，
-此时站点内容其实没变，不应白耗一个版本号。分流依据是 `syllabus.json` 的字节差异，
-而非 commit 本身。
+此时站点内容其实没变，不应白耗一个版本号。分流依据是 `syllabus.json` 与
+`references.json` 的字节差异，而非 commit 本身。
+
+**数据层必须回流 `main`。** 若只推 `gh-pages`，`main` 上的 `site/assets/data` 会永远
+停在上一轮，本地 `check-sync.py` 的「数据层」这一级就恒判落后、失去判定意义。
+
+**复核不能拿 `main` 的数据层当基准。** 同步发生前它还是上一轮内容，比对必然判
+「不同步」——v0.2.1–v0.2.4 期间连续四次运行在同步其实成功的情况下被标红，正是此因。
+复核须用 `--meta` 指向本轮刚推送的产物。
 
 手动复查当前是否同步：
 
@@ -127,11 +136,10 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 ```
 
 ```
-源 Wiki    ：6aa6999（远端 master）
-数据层     ：6aa6999｜数据层 已对齐（6aa6999）
-线上 Pages ：5e5b0ec｜线上 Pages 落后：站点 5e5b0ec，Wiki 6aa6999
-结论       ：不同步
-动作       ：先重跑 tools/extract-syllabus.py 更新数据层，再把站点重新发布到 gh-pages
+源 Wiki    ：029e825（本地克隆 Jurisprudence.wiki）
+数据层     ：029e825｜数据层 已对齐（029e825）
+线上 Pages ：029e825｜线上 Pages 已对齐（029e825）
+结论       ：同步
 ```
 
 退出码：`0` 对齐、`1` 落后、`2` 无法判定——可直接用于其他脚本或本地钩子。
@@ -145,7 +153,7 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 python3 ~/.workbuddy/skills/gh-pages-maker/scripts/new_pages_site.py \
   --name JurisprudenceAtlas \
   --source site \
-  --description "《法理学》课程地图与文献库：四十七章与全部阅读文献的可检索索引" \
+  --description "《法理学》课程地图与文献库：四十六章与全部阅读文献的可检索索引" \
   --org acaGPT --copyright iLINGBIN --branch gh-pages --auto
 ```
 
@@ -194,9 +202,10 @@ python3 -m http.server 8899 --directory site
 - `meta.json` 每次抽取都会写入新的 `generated_at`，即使内容未变。因此判定「是否需要
   同步」以 `source_commit` 为准，判定「是否值得发版」以 `syllabus.json` 与
   `references.json` 的字节差异为准，两者不要混用。
-- 自动发版路径（递增版本号 + `gh release create`）**尚未在真实环境跑过**：截至 v0.1.2，
-  Wiki 的历次改动只影响溯源信息、未改动 `syllabus.json`，该分支一直被条件跳过。
-  首次大纲内容真正变化时会首次执行，届时留意 Actions 日志。
+- 自动发版路径（递增版本号 + `gh release create`）已由 CI 真实跑通：v0.2.1–v0.2.4 均为
+  同步工作流自行递增并创建，无需人工介入。
+- 章数随大纲变动，不手工维护：Wiki 在 v0.2.x 期间由 47 章调整为 **46 章**，已有课前
+  概览增至 13。站点上的数字一律由抽取器生成。
 - CI 在 UTC 环境运行，`meta.json` 的 `generated_at` 时区写作 `+0000`，与本地生成的
   `+0800` 不同。这是环境差异而非错误，比对请以 `source_commit` 为准。
 

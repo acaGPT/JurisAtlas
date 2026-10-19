@@ -40,7 +40,7 @@
    "num": 6,
    "title_zh": "现实主义与社会学进路",
    "title_en": "Part VI — Realism and Sociological Approaches",
-   "chapters": 5
+   "chapters": 4
   },
   {
    "num": 7,
@@ -86,12 +86,12 @@
    "refs_count": 9,
    "further_count": 2,
    "preclass": {
-    "title": "PI.2. 什么是法理学（What is Jurisprudence?）",
+    "title": "PI.2. 导论：什么是法理学？（Introduction: What is Jurisprudence?）",
     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PI.2.-What-is-Jurisprudence"
    },
    "preclass_list": [
     {
-     "title": "PI.2. 什么是法理学（What is Jurisprudence?）",
+     "title": "PI.2. 导论：什么是法理学？（Introduction: What is Jurisprudence?）",
      "url": "https://github.com/acaGPT/Jurisprudence/wiki/PI.2.-What-is-Jurisprudence"
     }
    ]
@@ -456,24 +456,7 @@
     {
      "title": "PVI.1.a. 法律形式主义对法律现实主义（Legal Formalism vs Legal Realism）",
      "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.1.a.-Legal-Formalism-vs-Legal-Realism"
-    }
-   ]
-  },
-  {
-   "code": "PVI.1.b",
-   "unit": 6,
-   "title_zh": "法律形式主义与法律现实主义的全球论战",
-   "title_en": "Global Debates on Legal Formalism vs Legal Realism",
-   "desc_zh": "形式主义与现实主义之争跨出美国一国的场域：柯克对詹姆斯一世、布莱克斯通的发现说、法国法典化与蒂堡对萨维尼，依次把解释权威安放在法官、立法者与法律科学的不同位置（权威之争）；概念法学、兰代尔对霍姆斯与庞德、耶林的转向、热尼的自由科学研究与利益法学次第登场，最后由卢埃林与弗兰克的现实主义高潮收束（方法之争）；凯尔森对施米特、哈特对富勒、现代法教义学的存续、哈特对德沃金，以及格雷与肖尔的重估，逐次追问解释者能走多远（约束之争）；末节收于四方对照式的全球比较与中文语境的译介。",
-   "desc_en": "The same dispute conducted beyond the American case: Coke against James I, Blackstone's discovery thesis, French codification and Thibault against Savigny each settle interpretive authority in a different place — the courts, the legislator, or legal science; conceptual jurisprudence, Langdell against Holmes and Pound, Jhering's turn, Gény's free scientific research and the interest jurisprudence succeed one another, closing with the realist flourish of Llewellyn and Frank; Kelsen against Schmitt, Hart against Fuller, the survival of modern dogmatics, Hart against Dworkin, and the reassessments of Grey and Schauer each press the further question of how far an interpreter may go; the chapter closes with a four-fold comparative survey and the Chinese reception.",
-   "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
-   "refs_count": 0,
-   "further_count": 0,
-   "preclass": {
-    "title": "PVI.1.b. 法律形式主义与法律现实主义的全球论战（Global Debates on Legal Formalism vs Legal Realism）",
-    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.1.b.-Global-Debates-on-Legal-Formalism-vs-Legal-Realism"
-   },
-   "preclass_list": [
+    },
     {
      "title": "PVI.1.b. 法律形式主义与法律现实主义的全球论战（Global Debates on Legal Formalism vs Legal Realism）",
      "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.1.b.-Global-Debates-on-Legal-Formalism-vs-Legal-Realism"
@@ -485,13 +468,29 @@
    "unit": 6,
    "title_zh": "法律现实主义",
    "title_en": "Legal Realism",
-   "desc_zh": "美国法律现实主义（霍姆斯、卢埃林、弗兰克）；斯堪的纳维亚现实主义（海格斯特伦、奥利维克罗纳、罗斯）；行动中的法律与书本上的法律。",
+   "desc_zh": "美国法律现实主义（霍姆斯、卢埃林、弗兰克）；斯堪的纳维亚现实主义（哈格斯特伦、奥利维克罗纳、罗斯）；行动中的法律与书本上的法律。",
    "desc_en": "American Legal Realism (Holmes, Llewellyn, Frank); the Scandinavian realists (Hägerström, Olivecrona, Ross); law in action versus law in books.",
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 7,
    "further_count": 5,
-   "preclass": null,
-   "preclass_list": []
+   "preclass": {
+    "title": "PVI.2. 法律现实主义（Legal Realism）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.-Legal-Realism"
+   },
+   "preclass_list": [
+    {
+     "title": "PVI.2. 法律现实主义（Legal Realism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.-Legal-Realism"
+    },
+    {
+     "title": "PVI.2.c. 霍姆斯与法律之道（Holmes and The Path of the Law）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.c.-Holmes-and-The-Path-of-the-Law"
+    },
+    {
+     "title": "PVI.2.b. 霍姆斯与法律现实主义（Holmes and Legal Realism）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVI.2.b.-Holmes-and-Legal-Realism"
+    }
+   ]
   },
   {
    "code": "PVI.3",
