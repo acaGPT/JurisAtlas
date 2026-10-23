@@ -17,7 +17,7 @@
     --meta        被检数据层的 meta.json，默认 <仓库根>/site/assets/data/meta.json；
                   CI 里可指到 gh-pages 分支检出物上的 meta.json，检查「待发布产物」
     --repo-root   仓库根目录（默认取本脚本上级目录），数据层由此定位
-    --site-url    线上站点地址，默认 <https://acagpt.github.io/JurisprudenceAtlas/>
+    --site-url    线上站点地址，默认 <https://acagpt.github.io/JurisAtlas/>
     --offline     只做本地检查，跳过远端 Wiki 与线上 Pages 的联网查询
     --json        以 JSON 输出结论，供脚本或 CI 消费
     --auto        非交互式执行；本脚本无交互环节，保留该参数以统一脚本约定
@@ -43,7 +43,7 @@ from pathlib import Path
 
 WIKI_REPO = "https://github.com/acaGPT/Jurisprudence.wiki.git"
 WIKI_DEFAULT_BRANCH = "master"
-DEFAULT_SITE_URL = "https://acagpt.github.io/JurisprudenceAtlas/"
+DEFAULT_SITE_URL = "https://acagpt.github.io/JurisAtlas/"
 
 # 三级状态：对齐 / 落后 / 取不到
 OK = "ok"

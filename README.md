@@ -1,10 +1,10 @@
-# JurisprudenceAtlas
+# JurisAtlas
 
 《法理学》课程地图与文献库 —— 把课程大纲从一篇长文还原为可检索、可筛选的索引页。
 
-- **站点地址**：<https://acagpt.github.io/JurisprudenceAtlas/>
+- **站点地址**：<https://acagpt.github.io/JurisAtlas/>
 - **数据来源**：<https://github.com/acaGPT/Jurisprudence.wiki>
-- **当前版本**：v0.3.3
+- **当前版本**：v0.3.4
 
 ## 这个站点做什么
 
@@ -158,7 +158,7 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 
 ```bash
 python3 ~/.workbuddy/skills/gh-pages-maker/scripts/new_pages_site.py \
-  --name JurisprudenceAtlas \
+  --name JurisAtlas \
   --source site \
   --description "《法理学》课程地图与文献库：四十六章与全部阅读文献的可检索索引" \
   --org acaGPT --copyright iLINGBIN --branch gh-pages --auto
