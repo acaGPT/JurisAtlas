@@ -11,7 +11,7 @@ permissions:
 
 env:
   PUBLISH_DIR: .publish
-  SITE_URL: https://acagpt.github.io/JurisprudenceAtlas/
+  SITE_URL: https://acagpt.github.io/JurisAtlas/
 
 jobs:
   sync:
