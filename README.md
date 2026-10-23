@@ -1,11 +1,11 @@
-# JurisprudenceAtlas
+# JurisAtlas
 
 《法理学》课程地图与文献库：四十六章与全部阅读文献的可检索索引
 
 ## 在线地址
 
-- 站点：<https://acagpt.github.io/JurisprudenceAtlas/>
-- 仓库：<https://github.com/acaGPT/JurisprudenceAtlas>
+- 站点：<https://acagpt.github.io/JurisAtlas/>
+- 仓库：<https://github.com/acaGPT/JurisAtlas>
 
 ## 发布方式
 
