@@ -17,6 +17,8 @@ jobs:
   sync:
     name: 抽取并发布
     runs-on: ubuntu-latest
+    # 复核最长等待 Pages 部署 30 分钟，加上抽取与推送，45 分钟足够
+    timeout-minutes: 45
 
     steps:
       - name: 检出站点仓库
@@ -93,19 +95,6 @@ jobs:
           # 必须把当前 HEAD 显式映射到远端分支。
           git push origin HEAD:refs/heads/gh-pages
 
-      - name: 等待 Pages 构建完成
-        if: steps.check.outputs.verdict == '不同步'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          for _ in $(seq 1 30); do
-            status=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .status)
-            echo "Pages 状态：$status"
-            if [ "$status" = "built" ]; then exit 0; fi
-            sleep 20
-          done
-          echo "Pages 在 10 分钟内未构建完成，仍按同步成功继续（构建可稍后完成）"
-
       - name: 同步数据层与版本号回 main
         id: bump
         if: steps.check.outputs.verdict == '不同步'
@@ -151,22 +140,41 @@ jobs:
 
       - name: 复核线上同步
         if: steps.check.outputs.verdict == '不同步'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # 复核只比「本轮刚推送的产物」与「线上 Pages」，不比 main 上的数据层快照：
           # main 的 site/assets/data 在同步发生前仍是上一轮内容，拿它当基准会恒判
           # 「不同步」——10 月中旬连续四次运行因此误报失败，而线上其实早已对齐。
-          # Pages 部署另有延迟，故轮询重试而不是一次性下结论。
-          for attempt in 1 2 3 4 5 6; do
+          # Pages 从推送到可访问通常要十几分钟，窗口取 30 分钟；等待期间若查到
+          # Pages 最近一次构建为 errored，则立即失败——构建失败不会随时间好转。
+          start=$(date +%s)
+          limit=1800
+          attempt=1
+          while :; do
             if python3 tools/check-sync.py --wiki-dir wiki --site-url "$SITE_URL" \
                  --meta "$PUBLISH_DIR/assets/data/meta.json"; then
-              echo "线上已与 Wiki 对齐"
+              echo "线上已与 Wiki 对齐（第 ${attempt} 次复核，耗时 $(( $(date +%s) - start )) 秒）"
               exit 0
             fi
-            echo "第 ${attempt} 次复核：线上尚未更新，30 秒后重试"
-            sleep 30
+            build=$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" \
+                      --jq '.status + " " + (.error.message // "无错误信息")' 2>/dev/null || echo "未知")
+            echo "第 ${attempt} 次复核：线上尚未更新；Pages 最近构建：${build}"
+            case "$build" in
+              errored*)
+                echo "Pages 构建已失败，继续等待无意义，请检查 Pages 部署日志"
+                exit 1
+                ;;
+            esac
+            elapsed=$(( $(date +%s) - start ))
+            if [ "$elapsed" -ge "$limit" ]; then
+              echo "线上在 30 分钟内仍未更新，请手动核查 Pages 部署状态"
+              exit 1
+            fi
+            echo "60 秒后重试（已等待 ${elapsed} 秒）"
+            sleep 60
+            attempt=$((attempt + 1))
           done
-          echo "线上在约 3 分钟内仍未更新，请手动核查 Pages 部署状态"
-          exit 1
 
       - name: 无需同步时说明
         if: steps.check.outputs.verdict != '不同步'
