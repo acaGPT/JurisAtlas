@@ -482,6 +482,18 @@ html[data-theme="dark"] {
 }
 .mark-note strong { color: var(--text); font-weight: 600; }
 .mark-note[hidden] { display: none; }
+/* 交回入口做成行内的下划线链接，不做按钮：它是标记动作的收尾，
+   不是第二套面板。 */
+.mark-note a.submit {
+  margin-left: 4px; font-weight: 700; color: var(--accent);
+  text-decoration: none; border-bottom: 1px solid currentColor;
+  cursor: pointer;
+}
+.mark-note a.submit:hover { color: var(--text); border-bottom-color: var(--text); }
+.mark-note a.submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+/* 交回视图：从 issue 里的链接打开时，被改标的条目描一圈，方便逐条核对 */
+.wk[data-imported="1"] { box-shadow: 0 0 0 2px var(--accent-soft), 0 0 0 3px var(--accent); }
+.wk-mark button:disabled { cursor: default; opacity: 1; }
 
 @media (max-width: 720px) {
   .wk-top { flex-wrap: wrap; }

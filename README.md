@@ -4,7 +4,7 @@
 
 - **站点地址**：<https://acagpt.github.io/JurisAtlas/>
 - **数据来源**：<https://github.com/acaGPT/Jurisprudence.wiki>
-- **当前版本**：v0.4.2
+- **当前版本**：v0.5.0
 
 ## 这个站点做什么
 
@@ -38,7 +38,7 @@
 2. **事件而非消息**——同一件事的多条报道收在一张卡片里按日期排开，跨周的接上「此前」进展；
 3. **逐条出处**——每条注明日期、来源与原文链接，判断依据可以直接点开核对；
 4. **人工标记**——每条可标 Law 或 Tech（默认 Law），标为 Tech 的是「这条更像技术动态」
-   这一判断，留在这台设备上供自己复核；
+   这一判断，交回后成为下一轮分类的候选反例。
 
 ## 内容边界
 
@@ -61,7 +61,7 @@
 │   ├── extract-syllabus.py    # 从 Wiki 大纲抽取课程地图数据层
 │   ├── extract-references.py  # 从 Wiki 大纲抽取文献库数据层
 │   ├── extract-weekly.py      # 从 Wiki 周报页抽取「本周 AI+法律动态」数据层
-│   ├── apply-weekly-labels.py # 把人工 Law/Tech 标记整理为反馈表（页面已无导出，备用通道）
+│   ├── apply-weekly-labels.py # 把交回的标记清单（issue 正文或 JSON）整理为反馈表
 │   ├── check-sync.py          # 三级比对：Wiki → 数据层 → 线上 Pages
 │   ├── bump-version.py        # 递增 README 版本号，供自动发版取号
 │   ├── qa-references.js       # 文献库断言式 QA（playwright + Chrome）
@@ -196,28 +196,35 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 | Tech | 点一下 Tech | 人工否定：这条更像技术动态，不该占法律新闻的位置 |
 
 Law 是默认值，所以只用强调色标出、不填底——278 条全挂底色等于没有标记；Tech 是
-人工作出的判断，填实并给卡片挂一条琥珀竖条，翻到底也认得出自己改过哪些。
-标记存在浏览器本地存储（键 `jcm-weekly-marks:<周次>`，逐周独立），
-**不上传、不需要登录、不跨设备**。
+人工作出的判断，填实并给卡片挂一条琥珀竖条，翻到底也认得出自己改过哪些。标记先落在
+本机（键 `jcm-weekly-marks:<周次>`，逐周独立），刷新不丢。
 
-工具栏只留搜索框与主题 chip：标记筛选、导出、深浅色切换都不在页面上了，深色跟随
+工具栏只留搜索框与主题 chip：标记筛选、导出面板、深浅色切换都不在页面上了，深色跟随
 课程地图／文献库上设过的偏好（同一个 `jcm-theme` 键），没设过就跟系统走。
 
-页面当前不导出标记。格式与合并脚本都还在，需要成批收集时可直接取浏览器里的
-`localStorage['jcm-weekly-marks:<周次>']`（`{id: "tech"}` 的例外清单），按
-`jurisatlas-weekly-labels/v1` 包一层交给 `tools/apply-weekly-labels.py`：
+**没有「导出」这一步。** 改完标，正文上方那行提示里直接给「交回给课程维护者」；点它
+打开一条正文已填好的 issue（本仓库，标签 `weekly-labels`），在 GitHub 按 Create 即入库。
+
+- 正文里有三样东西：可读的标题清单、一条回链（点开是高亮视图，逐条核对被改标的是哪几条）、
+  一段机读清单（`<id>:tech`，一行一条）。
+- 交回按批走：已交回的 id 记在本机（`jcm-weekly-submitted:<周次>`），下次只送新改的。
+  所以标 20 条是**一次交回、一条 issue**，不是 20 条——这也是点标签本身不跳转的原因：
+  自动打开时 issue 里只有当时那一条，后续改标进不去。
+- 条数多到 URL 装不下时，正文自动退成「只列 id」：中文标题经 URL 编码一个字占九个
+  字节，三十条就顶到浏览器上限，标题靠回链看。
+
+维护者收：把 issue 正文另存成 `.md`（或直接复制正文）喂给脚本：
 
 ```bash
-python3 tools/apply-weekly-labels.py --in a.json b.json c.json
+python3 tools/apply-weekly-labels.py --in issue.md
 # → weekly-reports/human-labels-2026-W43.jsonl
 ```
 
 输出每行一个条目，带 `label`、`votes` 与 `agree`。**标为 `tech` 的条目就是
 `classify_domain` 的候选假阳性**——它们本来被判定为法律新闻，人读下来认为不是，
-下一轮校准应当逐条复核。payload 用 `default_label: "law"` 声明默认值，文件里只列
-改判项：默认 Law 是基线，不是判断。同一 id 被多人标过就计票；若要记「我认为是
-Law」的异见，需手工补一行 `label: "law"`——票数打平按待复核记 `agree: false`。
-不同周的导出不能合并（脚本会拒绝）——跨周的同 id 不相干。
+下一轮校准应当逐条复核。同一个 id 被多人各交一份就计票；若要记「我认为是 Law」的
+异见，需手工补一行 `label: "law"`——票数打平按待复核记 `agree: false`。
+不同周的交回不能合并（脚本会拒绝）——跨周的同 id 不相干。
 
 标记只收人不收机器：这一页不自动改分类，也不回写 Wiki。反馈表交回课程维护者，
 由人决定下一轮要不要调整判据——与 `relation-gold.jsonl` 那套金标维护是同一个口径。

@@ -1,10 +1,12 @@
 /* 《法理学》周报 —— 页面逻辑
    用途：读取周报数据层，渲染「主题 → 事件类型 → 条目」三层结构，并给每条挂
-        Law / Tech 两个并列标签（默认 Law，没有第三种状态），标记存在浏览器本地。
+        Law / Tech 两个并列标签（默认 Law，没有第三种状态）。
    用法：由 weekly.html 以 <script> 引入；数据取自 assets/data/weekly*.json。
 
-   工具栏只留搜索框与主题 chip：标记筛选、导出、深浅色切换都不在页面上了。
-   标记仍按周存在本机（jcm-weekly-marks:<周次>），刷新不丢，但不出这台设备。
+   工具栏只留搜索框与主题 chip：标记筛选、导出面板、深浅色切换都不在页面上了。
+   标记按周存在本机（jcm-weekly-marks:<周次>），刷新不丢；改动后不再需要「导出」——
+   正文上方那行提示里直接给「交回」，点了就打开一条正文已填好的 GitHub issue，
+   由维护者在该仓库的 issues 里收。交回过的不再重复列入下一次交回。
 */
 
 (function () {
@@ -13,18 +15,42 @@
   var DATA_DIR = 'assets/data/';
   var THEME_KEY = 'jcm-theme';
   var MARK_KEY_PREFIX = 'jcm-weekly-marks:';
+  var SUBMIT_KEY_PREFIX = 'jcm-weekly-submitted:';
   var DEBOUNCE_MS = 110;
   var CHIP_GAP = 5;
+
+  /* 交回通道：本仓库的 issues。public 仓库不需要任何 token——
+     页面只负责把内容预填进 issue 表单，读者按 GitHub 的 Create 才真正入库。 */
+  var ISSUE_REPO = 'acaGPT/JurisAtlas';
+  var ISSUE_LABEL = 'weekly-labels';
+  var PAGE_URL = 'https://acagpt.github.io/JurisAtlas/weekly.html';
+  /* URL 超过这个长度就退回「只列 id」的紧凑正文（浏览器与 GitHub 都在 8K 上下截断） */
+  var MAX_ISSUE_URL = 6000;
+  /* 点标签那一刻是否弹出交回页。默认关——不是因为怕多一次点击，而是因为
+     自动打开时 issue 里只有当时那一条：读者接着标第 2、3 条也进不去，结果变成
+     「一条一个 issue」。所以改成累积：改标先入队，正文上方给一个「交回」，
+     点一次就把这一批全部送出去。要单条即送，把这里改成 true。 */
+  var AUTO_OPEN = false;
 
   var state = { q: '', topic: 'all', topicsExpanded: false };
   /* 只记被人工改过的：id -> 'tech'。没有键就是默认 Law——
      默认值即当前值，不再有「未表态」这个中间态。 */
   var marks = {};
   var markKey = '';
+  var submitKey = '';
+  /* 已经交回过的 id 与时间。交回是「点一次链接」的动作，页面无法确认读者是否
+     真按了 GitHub 的 Create，所以这里记的是「已交回」，不是「已入库」。 */
+  var submitted = null;
+  /* 用 ?marks= 打开时是交回视图：按链接里带的标记渲染，只读，不写本机存储。 */
+  var readOnly = false;
+  /* 本次会话是否已经自动弹过交回页 */
+  var autoOpened = false;
   var data = null;
   var meta = null;
   var timer = null;
   var layoutTimer = null;
+  /* id -> {title, topic, group, date}：交回时要把 id 还原成人能读的标题 */
+  var itemIndex = {};
 
   var el = {
     weekLine: document.getElementById('week-line'),
@@ -74,6 +100,138 @@
       if (marks[id] === 'tech') { tech += 1; }
     });
     return { tech: tech, total: tech };
+  }
+
+  function loadSubmitted() {
+    var raw = null;
+    try { raw = localStorage.getItem(submitKey); } catch (error) { raw = null; }
+    try { submitted = raw ? JSON.parse(raw) : null; } catch (error) { submitted = null; }
+    if (!submitted || !Array.isArray(submitted.ids)) { submitted = null; }
+  }
+
+  /* 还没交回的 id。交回过的留在 submitted 里，后面又改标的会重新进来。 */
+  function pendingIds() {
+    var done = {};
+    if (submitted) {
+      submitted.ids.forEach(function (id) { done[id] = 1; });
+    }
+    return Object.keys(marks).filter(function (id) { return !done[id]; }).sort();
+  }
+
+  /* ?marks=id1:tech,id2:tech —— issue 正文里的那条链接用的就是这个形状，
+     维护者点开即看到被改标的条目，不必自己对着 id 反查。 */
+  function importMarks() {
+    var hit = /[?&]marks=([^&]+)/.exec(location.search);
+    if (!hit) { return null; }
+    var parsed = {};
+    var raw = '';
+    try { raw = decodeURIComponent(hit[1]); } catch (error) { return null; }
+    raw.split(',').forEach(function (pair) {
+      var bits = pair.split(':');
+      if (bits.length === 2 && bits[1] === 'tech' && bits[0]) {
+        parsed[bits[0]] = 'tech';
+      }
+    });
+    return Object.keys(parsed).length ? parsed : null;
+  }
+
+  /* ---------------- 交回 ---------------- */
+
+  function shorten(text, limit) {
+    var str = String(text || '');
+    return str.length > limit ? str.slice(0, limit - 1) + '…' : str;
+  }
+
+  function pageLink(ids) {
+    return PAGE_URL + '?marks=' +
+      encodeURIComponent(ids.map(function (id) { return id + ':tech'; }).join(','));
+  }
+
+  function issueBody(ids, withTitles) {
+    var lines = [];
+    lines.push('### 人工改标：' + ids.length + ' 条（' + (data.week || '') + '）');
+    lines.push('');
+    lines.push('来自 [本周 AI+法律动态](' + PAGE_URL + ') 页面。这些条目被人逐条点成 **Tech**，');
+    lines.push('意思是「更像技术动态，不该占法律新闻的位置」。请移到技术卷或剔除。');
+    lines.push('');
+    if (withTitles) {
+      ids.forEach(function (id) {
+        var row = itemIndex[id];
+        if (!row) { return; }
+        lines.push('- ' + (row.date ? row.date + ' · ' : '') + shorten(row.title, 46));
+      });
+      lines.push('');
+    }
+    lines.push('在页面上查看：[高亮这 ' + ids.length + ' 条](' + pageLink(ids) + ')');
+    lines.push('');
+    lines.push('<details><summary>机读清单（`tools/apply-weekly-labels.py` 可直接读）</summary>');
+    lines.push('');
+    lines.push('```');
+    ids.forEach(function (id) { lines.push(id + ':tech'); });
+    lines.push('```');
+    lines.push('</details>');
+    return lines.join('\n');
+  }
+
+  function issueUrl() {
+    var ids = pendingIds();
+    var title = '[' + (data.week || '') + '] 人工改标 ' + ids.length + ' 条（Law → Tech）';
+    function build(withTitles) {
+      return 'https://github.com/' + ISSUE_REPO + '/issues/new' +
+        '?labels=' + encodeURIComponent(ISSUE_LABEL) +
+        '&title=' + encodeURIComponent(title) +
+        '&body=' + encodeURIComponent(issueBody(ids, withTitles));
+    }
+    var full = build(true);
+    /* 中文标题经 URL 编码后一个字占九个字节，条数一多就顶到上限：退回只列 id */
+    return full.length <= MAX_ISSUE_URL ? full : build(false);
+  }
+
+  function openIssue() {
+    var ids = pendingIds();
+    if (!ids.length) { return; }
+    var win = window.open(issueUrl(), '_blank');
+    if (!win) {
+      el.note.innerHTML = '交回页被浏览器拦下了（弹窗设置）。' +
+        '允许本站弹出窗口后，再点一次「交回给课程维护者」。';
+      return;
+    }
+    win.opener = null;
+    submitted = {
+      ids: (submitted ? submitted.ids : []).concat(ids),
+      at: new Date().toISOString()
+    };
+    try { localStorage.setItem(submitKey, JSON.stringify(submitted)); } catch (error) { /* 隐私模式 */ }
+    renderNote();
+  }
+
+  function renderNote() {
+    var total = countMarks().total;
+    if (!total) {
+      el.note.hidden = true;
+      el.note.innerHTML = '';
+      return;
+    }
+    el.note.hidden = false;
+
+    if (readOnly) {
+      el.note.innerHTML = '这是交回视图：只列被改标为 Tech 的 <strong>' +
+        total + '</strong> 条，蓝圈标出，逐条核对即可。';
+      return;
+    }
+
+    var pending = pendingIds();
+    var head = '已把 <strong>' + total + '</strong> 条改标为 Tech。';
+    if (pending.length) {
+      var tail = submitted && submitted.ids.length
+        ? '（另 ' + submitted.ids.length + ' 条已交回）' : '';
+      el.note.innerHTML = head +
+        ' <a class="submit" href="#" id="submit-marks" role="button">交回给课程维护者</a>' +
+        tail;
+    } else {
+      /* 页面只能确认「交回页已打开」，是否真按了 Create 无法知道，别把话说满。 */
+      el.note.innerHTML = head + ' 已在 GitHub 打开交回页——在那边按 Create 才算入库。';
+    }
   }
 
   /* ---------------- 渲染 ---------------- */
@@ -137,14 +295,20 @@
     var item = entry.item;
     var mark = markOf(item.id);
     var when = stageSummary(item);
+    /* 交回时要把 id 还原成标题，顺手记一份索引 */
+    itemIndex[item.id] = {
+      title: item.title, topic: entry.topic, group: entry.group, date: when
+    };
     var head = '<div class="wk-top">' +
       (when ? '<span class="wk-when">' + esc(when) + '</span>' : '') +
       '<h4 class="wk-title">' + esc(item.title) + '</h4>' +
       '<div class="wk-mark" role="group" aria-label="这条属于哪一类">' +
         '<button type="button" data-label="law" aria-pressed="' +
-          (mark !== 'tech' ? 'true' : 'false') + '">Law</button>' +
+          (mark !== 'tech' ? 'true' : 'false') + '"' + (readOnly ? ' disabled' : '') +
+          '>Law</button>' +
         '<button type="button" data-label="tech" aria-pressed="' +
-          (mark === 'tech' ? 'true' : 'false') + '">Tech</button>' +
+          (mark === 'tech' ? 'true' : 'false') + '"' + (readOnly ? ' disabled' : '') +
+          '>Tech</button>' +
       '</div>' +
       '</div>';
 
@@ -172,8 +336,9 @@
         linksHtml(item.links) + '</p>';
     }
 
+    var imported = readOnly && mark === 'tech' ? ' data-imported="1"' : '';
     return '<li class="wk" data-id="' + esc(item.id) + '" data-mark="' + esc(mark) + '"' +
-      ' data-haystack="' + esc(haystackOf(entry)) + '">' + head + body + foot + '</li>';
+      imported + ' data-haystack="' + esc(haystackOf(entry)) + '">' + head + body + foot + '</li>';
   }
 
   function renderTopics() {
@@ -268,6 +433,9 @@
   /* ---------------- 筛选 ---------------- */
 
   function matches(item, haystack) {
+    /* 交回视图只列被改标的条目：核对三五条不该先滚过两百多条。主题标题仍在，
+       所以看得出每条属于哪个制度主题。 */
+    if (readOnly && !item.hasAttribute('data-imported')) { return false; }
     if (state.topic !== 'all' && item.dataset.topic !== state.topic) { return false; }
     if (state.q && haystack.indexOf(state.q) === -1) { return false; }
     return true;
@@ -300,16 +468,13 @@
       section.hidden = visibleInTopic === 0;
     });
 
-    el.count.textContent = shown === total
-      ? '共 ' + total + ' 条'
-      : '显示 ' + shown + ' / ' + total + ' 条';
+    el.count.textContent = readOnly
+      ? '只看这 ' + shown + ' 条'
+      : (shown === total
+        ? '共 ' + total + ' 条'
+        : '显示 ' + shown + ' / ' + total + ' 条');
 
-    var counts = countMarks();
-    el.note.hidden = !counts.total;
-    if (counts.total) {
-      el.note.innerHTML = '已把 <strong>' + counts.total + '</strong> 条改标为 Tech。' +
-        '标记只存在这台设备的浏览器里，刷新仍在，不会上传。';
-    }
+    renderNote();
   }
 
   function scheduleFilter() {
@@ -320,6 +485,7 @@
   /* ---------------- 标记 ---------------- */
 
   function setMark(node, label) {
+    if (readOnly) { return; }        /* 交回视图只看不改 */
     var id = node.dataset.id;
     /* 两态：Tech 是人工改判，Law 是默认值。点 Law 即撤回，不存第三种状态。 */
     if (label === 'tech') { marks[id] = 'tech'; } else { delete marks[id]; }
@@ -328,6 +494,11 @@
     syncButtons(node);
     applyFilters();
     refreshStat();
+    /* 标记即入队；AUTO_OPEN 打开时才在点标签这一刻直接开交回页 */
+    if (label === 'tech' && AUTO_OPEN && !autoOpened && pendingIds().length) {
+      autoOpened = true;
+      openIssue();
+    }
   }
 
   function syncButtons(node) {
@@ -390,6 +561,14 @@
       setMark(node, button.dataset.label);
     });
 
+    /* 「交回」是提示行里的一个链接，不用按钮：交回是标记动作的收尾，不是另一套面板 */
+    el.note.addEventListener('click', function (event) {
+      var link = event.target.closest('#submit-marks');
+      if (!link) { return; }
+      event.preventDefault();
+      openIssue();
+    });
+
     document.addEventListener('keydown', function (event) {
       if (event.key !== '/') { return; }
       var tag = (event.target.tagName || '').toLowerCase();
@@ -425,7 +604,16 @@
       data = results[0];
       meta = results[1];
       markKey = MARK_KEY_PREFIX + (data.week || 'latest');
+      submitKey = SUBMIT_KEY_PREFIX + (data.week || 'latest');
       loadMarks();
+      loadSubmitted();
+      /* ?marks= 优先于本机记录：链接里带的是「这一批交回的条目」，
+         用它渲染成只读视图，避免维护者本机的旧标记搅进来。 */
+      var imported = importMarks();
+      if (imported) {
+        marks = imported;
+        readOnly = true;
+      }
       renderHead();
       renderTopics();
       renderFilters();

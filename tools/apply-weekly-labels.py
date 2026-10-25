@@ -2,24 +2,29 @@
 """把周报页上的人工标记，整理为下一轮分类可用的反馈表。
 
 用途
-    weekly.html 上每条信息可以标 Law 或 Tech（默认 Law，没有第三种状态）。标记存在
-    读者浏览器的本地存储里（键 jcm-weekly-marks:<周次>），页面已不提供导出按钮；
-    需要成批收集时，取其值按 jurisatlas-weekly-labels/v1 包一层即可（字段见下方
-    「输入格式」）。本脚本读取一份或多份这样的文件，按条目 id 合并（同一份被多人标过
-    就投票），写出 JSONL 供分类校准使用。
+    weekly.html 上每条信息可以标 Law 或 Tech（默认 Law，没有第三种状态）。点 Tech 就
+    交回：页面会开一条正文已填好的 issue（本仓库 issues，标签 weekly-labels），读者在
+    GitHub 按 Create 即入库。本脚本读取一份或多份这样的**清单**，按条目 id 合并（多人
+    各交一份就投票），写出 JSONL 供分类校准使用。
 
-    文件是一份**例外清单**：只列被读者改判为 Tech 的条目——默认 Law 的条目不进文件，
+    输入可以是两种：issue 正文另存的 .md/.txt（读其中的 id:label 清单行，最常用），或
+    一份 jurisatlas-weekly-labels/v1 的 JSON（格式见下）。
+
+    清单是一份**例外清单**：只列被读者改判为 Tech 的条目——默认 Law 的条目不进文件，
     因为它们是基线而不是判断。因此标为 tech 的条目就是 `classify_domain` 的候选假阳性。
     若要记录「我认为是 Law」的异见，可手工补一行 label: "law"。
 
     多份文件必须属于同一周——不同周的同 id 不相干，混在一起会串味。
 
 用法
-    python3 tools/apply-weekly-labels.py --in <标记.json> [<标记2.json> ...] \
+    # 最常用：把 issue 正文另存为 issue.md 直接喂进来
+    python3 tools/apply-weekly-labels.py --in issue.md
+
+    python3 tools/apply-weekly-labels.py --in <清单.md> [<清单2.md> ...] \
         [--out <反馈.jsonl>] [--json]
 
 参数
-    --in    一份或多份标记文件（jurisatlas-weekly-labels/v1）
+    --in    一份或多份清单：issue 正文（.md/.txt）或标记 JSON
     --out   输出路径；默认 weekly-reports/human-labels-<周次>.jsonl
     --json  以 JSON 打印汇总，便于其他脚本消费
 
@@ -29,8 +34,11 @@
      "kind":"single","date":"…","source":"…","url":"…"}
 
 输入格式
-    {"schema":"jurisatlas-weekly-labels/v1","week":"2026-W43",
-     "default_label":"law","labels":[{"id":"…","label":"tech"}, …]}
+    ① issue 正文（推荐）：任意文本，只要能找到周次（形如 2026-W43）与机读清单行，
+       形如 `076ff717d2:tech`，一行一条。
+    ② 标记 JSON：
+       {"schema":"jurisatlas-weekly-labels/v1","week":"2026-W43",
+        "default_label":"law","labels":[{"id":"…","label":"tech"}, …]}
 
 返回值
     0  成功
@@ -42,15 +50,36 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
 SCHEMA_IN = "jurisatlas-weekly-labels/v1"
 SCHEMA_OUT = "weekly-human-labels/v1"
 
+# issue 正文里那段机读清单：一行一条 id:label
+ISSUE_LINE = re.compile(r"^\s*([0-9a-f]{10}):(law|tech)\s*$", re.M)
+ISSUE_WEEK = re.compile(r"(20\d{2}-W\d{2})")
+
 
 class WeekMismatch(ValueError):
     """多份导出不属于同一周：合并会串味，直接拒绝。"""
+
+
+def parse_issue_text(text: str, path: Path) -> tuple[str, list[dict]]:
+    """把 issue 正文里的 id:label 清单读成与导出同形的条目。
+
+    weekly.html 的「交回」会开一条 issue，正文折叠块里就是这个形状。维护者把
+    issue 正文存成 .md/.txt 丢进来即可，不必再去掏浏览器存储。只认清单行，
+    其余文字（标题、回链）一概不猜。
+    """
+    rows = [{"id": m.group(1), "label": m.group(2)} for m in ISSUE_LINE.finditer(text)]
+    if not rows:
+        raise ValueError(f"{path}：既不是 {SCHEMA_IN} 的 JSON，也没有 id:label 清单行")
+    hit = ISSUE_WEEK.search(text)
+    if not hit:
+        raise ValueError(f"{path}：正文里找不到周次（形如 2026-W43），无法归周")
+    return hit.group(1), rows
 
 
 def load_exports(paths: list[Path]) -> tuple[str, list[dict]]:
@@ -58,23 +87,34 @@ def load_exports(paths: list[Path]) -> tuple[str, list[dict]]:
     week = ""
     for path in paths:
         try:
-            payload = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as error:
+            raw = path.read_text(encoding="utf-8")
+        except OSError as error:
             raise ValueError(f"{path}：读不出来（{error}）") from error
-        if payload.get("schema") != SCHEMA_IN:
+        try:
+            payload = json.loads(raw)
+        except json.JSONDecodeError:
+            payload = None
+
+        if isinstance(payload, dict) and payload.get("schema") == SCHEMA_IN:
+            this_week = payload.get("week") or ""
+            if not this_week:
+                raise ValueError(f"{path}：缺少 week 字段")
+            rows = payload.get("labels") or []
+            for row in rows:
+                if not row.get("id") or row.get("label") not in ("law", "tech"):
+                    raise ValueError(f"{path}：有条目缺少 id 或 label 非法：{row}")
+        elif isinstance(payload, dict) and payload.get("schema"):
             raise ValueError(f"{path}：schema 是 {payload.get('schema')!r}，"
                              f"不是 {SCHEMA_IN}——请按脚本头部「输入格式」重包一次")
-        this_week = payload.get("week") or ""
-        if not this_week:
-            raise ValueError(f"{path}：缺少 week 字段")
+        else:
+            # 不是 JSON：当作 issue 正文读
+            this_week, rows = parse_issue_text(raw, path)
+
         if week and this_week != week:
             raise WeekMismatch(f"{path}：周次是 {this_week}，与已有的 {week} 不同，"
                                f"不同周的标记不能合并")
         week = this_week
-        for row in payload.get("labels") or []:
-            if not row.get("id") or row.get("label") not in ("law", "tech"):
-                raise ValueError(f"{path}：有条目缺少 id 或 label 非法：{row}")
-            labels.append(row)
+        labels.extend(rows)
     return week, labels
 
 
@@ -121,9 +161,9 @@ def merge(labels: list[dict]) -> list[dict]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="把周报页导出的人工 Law/Tech 标记整理为分类反馈表。")
+        description="把周报页交回的人工 Law/Tech 标记整理为分类反馈表。")
     parser.add_argument("--in", dest="inputs", nargs="+", required=True,
-                        help="weekly.html 导出的标记文件（可多份，须同周）")
+                        help="issue 正文（.md/.txt）或标记 JSON（可多份，须同周）")
     parser.add_argument("--out", help="输出 JSONL 路径")
     parser.add_argument("--json", action="store_true", help="以 JSON 打印汇总")
     args = parser.parse_args()
@@ -177,7 +217,10 @@ def main() -> int:
         print(f"票数打平 {len(summary['disagree'])} 条，已按待复核处理："
               f"{', '.join(summary['disagree'][:6])}")
     for row in tech:
-        print(f"  [Tech] {row['topic']}／{row['group'] or '—'}：{row['title']}")
+        where = "／".join(part for part in (row["topic"], row["group"]) if part) or "—"
+        print(f"  [Tech] {where}：{row['title'] or row['id']}")
+    if any(not row["title"] for row in tech):
+        print("说明：从 issue 正文读进来时只有 id——标题点正文里那条回链即见。")
     print(f"输出：{out}")
     return 0
 

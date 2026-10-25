@@ -52,9 +52,18 @@ function check(name, actual, expected) {
   page.on('console', m => { if (m.type() === 'error') { errors.push(m.text()); } });
   page.on('pageerror', e => { errors.push(String(e)); });
 
+  /* 点标签会自动打开交回页（window.open）。这里把它截下来，既不去真开 GitHub，
+     又能直接检查那条 issue URL 的内容。 */
+  await page.addInitScript(() => {
+    window.__opened = [];
+    window.open = function (url) {
+      window.__opened.push(url);
+      return { opener: null, closed: false };
+    };
+  });
+
   await page.goto(BASE.replace(/\/$/, '') + '/weekly.html', { waitUntil: 'networkidle' });
   await page.waitForSelector('.wk', { timeout: 15000 });
-
   check('条目数与数据层一致', await page.locator('.wk').count(), EXPECT.items);
   check('主题数与数据层一致', await page.locator('.topic').count(), EXPECT.topics);
   check('周次行显示当周',
@@ -121,11 +130,52 @@ function check(name, actual, expected) {
   check('Tech 按钮进入按下态',
     await first.locator('button[data-label="tech"]').getAttribute('aria-pressed'), 'true');
   check('标记提示出现', await page.locator('#mark-note').isVisible());
-  check('统计项「条标为 Tech」同步为 1', await page.evaluate(() => {
+
+  /* 标记即入队，一次交回送一整批：点标签不跳走，也不再有「导出」这一步 */
+  check('点标签本身不跳走',
+    (await page.evaluate(() => window.__opened)).length, 0);
+  check('改标后给出交回入口', await page.locator('#submit-marks').isVisible());
+
+  await page.locator('#submit-marks').click();
+  await page.waitForTimeout(160);
+  const opened = await page.evaluate(() => window.__opened);
+  check('点交回打开 issue 表单', opened.length, 1);
+  const issue = new URL(opened[0]);
+  check('交回落在本仓库的 issue 表单',
+    issue.host + issue.pathname, 'github.com/acaGPT/JurisAtlas/issues/new');
+  check('issue 标题写明周次', (issue.searchParams.get('title') || '').includes(EXPECT.week));
+  check('issue 带 weekly-labels 标签',
+    issue.searchParams.get('labels'), 'weekly-labels');
+  const issueBody = issue.searchParams.get('body') || '';
+  check('issue 正文含该条的机读 id', issueBody.includes(firstId + ':tech'));
+  check('issue 正文回链到高亮视图', issueBody.includes('?marks='));
+  check('提示行要求去 GitHub 按 Create',
+    (await page.locator('#mark-note').innerText()).includes('Create'));
+
+  const second = page.locator('.wk').nth(1);
+  const secondId = await second.getAttribute('data-id');
+  await second.locator('button[data-label="tech"]').click();
+  await page.waitForTimeout(160);
+  check('新改标不再自动弹窗',
+    (await page.evaluate(() => window.__opened)).length, 1);
+  check('未交回的改标重新给出入口', await page.locator('#submit-marks').isVisible());
+  await page.locator('#submit-marks').click();
+  await page.waitForTimeout(160);
+  const opened2 = await page.evaluate(() => window.__opened);
+  check('第二次交回再开一次', opened2.length, 2);
+  const body2 = new URL(opened2[1]).searchParams.get('body') || '';
+  check('第二次只含尚未交回的条目',
+    body2.includes(secondId + ':tech') && !body2.includes(firstId + ':tech'));
+  check('交回记录写入本地存储', await page.evaluate(key => {
+    const raw = localStorage.getItem(key);
+    return !!raw && JSON.parse(raw).ids.length === 2;
+  }, 'jcm-weekly-submitted:' + EXPECT.week));
+
+  check('统计项「条标为 Tech」同步为 2', await page.evaluate(() => {
     const dt = Array.from(document.querySelectorAll('#stats dt'))
       .find(node => node.textContent === '条标为 Tech');
     return dt ? dt.nextElementSibling.textContent : null;
-  }), '1');
+  }), '2');
   const stored = await page.evaluate(key => localStorage.getItem(key),
     'jcm-weekly-marks:' + EXPECT.week);
   check('标记写入本地存储', typeof stored === 'string' && stored.includes('tech'));
@@ -139,7 +189,8 @@ function check(name, actual, expected) {
 
   /* 点 Law 即撤回：没有第三种状态 */
   await page.locator(`.wk[data-id="${firstId}"]`).locator('button[data-label="law"]').click();
-  await page.waitForTimeout(150);
+  await page.locator(`.wk[data-id="${secondId}"]`).locator('button[data-label="law"]').click();
+  await page.waitForTimeout(160);
   check('点 Law 撤回默认', await page.locator('.wk[data-mark="law"]').count(), EXPECT.items);
   check('撤回后标记提示收起', await page.locator('#mark-note').isVisible(), false);
   check('撤回后本地存储清空',
@@ -182,13 +233,36 @@ function check(name, actual, expected) {
   check('移动端无横向溢出', overflow, 0);
   await page.screenshot({ path: path.join(OUT, 'weekly-mobile.png') });
 
+  /* 交回视图：issue 正文里那条 ?marks= 链接，维护者点开就能逐条核对 */
+  const viewer = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
+  await viewer.goto(BASE.replace(/\/$/, '') + '/weekly.html?marks=' +
+    encodeURIComponent(firstId + ':tech,' + secondId + ':tech'),
+    { waitUntil: 'networkidle' });
+  /* 交回视图只列被改标的条目，第一条 .wk 是 hidden 的——等有内容的那个 */
+  await viewer.waitForSelector('.wk[data-imported]', { state: 'visible' });
+  await viewer.waitForTimeout(200);
+  check('交回视图高亮对应条目',
+    await viewer.locator('.wk[data-imported="1"]').count(), 2);
+  check('交回视图只列被改标的条目',
+    await viewer.locator('.wk:not([hidden])').count(), 2);
+  check('交回视图标明只读',
+    (await viewer.locator('#mark-note').innerText()).includes('交回视图'));
+  check('交回视图不给交回入口', await viewer.locator('#submit-marks').count(), 0);
+  check('交回视图的标签不可点',
+    await viewer.locator('.wk[data-imported="1"] .wk-mark button').first().isDisabled());
+  check('交回视图不写本机标记',
+    await viewer.evaluate(k => localStorage.getItem(k),
+      'jcm-weekly-marks:' + EXPECT.week), null);
+  await viewer.close();
+
   check('控制台无错误', errors.length, 0);
 
   // 收尾：清空标记，别把测试痕迹留在这台机器上
   await page.setViewportSize({ width: 1280, height: 1000 });
   await page.evaluate(() => {
     Object.keys(localStorage)
-      .filter(k => k.indexOf('jcm-weekly-marks:') === 0)
+      .filter(k => k.indexOf('jcm-weekly-marks:') === 0 ||
+                   k.indexOf('jcm-weekly-submitted:') === 0)
       .forEach(k => localStorage.removeItem(k));
     localStorage.setItem('jcm-theme', 'light');
   });
