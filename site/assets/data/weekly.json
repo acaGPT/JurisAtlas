@@ -1,0 +1,4127 @@
+{
+ "title": "本周 AI+法律动态",
+ "week": "2026-W43",
+ "week_line": "2026 年第 43 周（10 月 18 日—10 月 24 日）",
+ "period": {
+  "start": "2026-10-18",
+  "end": "2026-10-24"
+ },
+ "overview": [
+  "本周与法律相关的动向集中在资本、管制与执法三条线上。",
+  "资本市场是本周最密集的一块。Anthropic 的上市进程贯穿全周：WSJ 披露其 IPO 草案，显示上半年收入 163 亿美元、纸面亏损 807 亿美元，以及约 4500 亿美元的算力承诺；随后有消息称其最快在周五公开提交 S-1 招股书。围绕估值的讨论同步展开——纽约大学教授 Damodaran 认为会按 run-rate 收入而非现金流定价，Axios 则分析其芯片债务利率已升至 10% 以上、难以推迟上市。OpenAI 的估值目标在同一周里从 1.4 万亿美元下调到 1.25 万亿美元，拟募资至多 300 亿美元。DeepSeek 在美国限制措施出台数日后据报融资约 150 亿美元。Disney 先向 Character.AI 的大部分员工发出录用邀请，隔一天改走破产程序取得其团队与技术，从而绕开后者面临的诉讼。",
+  "出口管制方面，中国商务部与科技部 10 月 16 日发布的《中国禁止出口限制出口技术目录》增补草案本周持续发酵：草案拟新增 40 项技术，其中 23 项涉及 AI，首次把先进大模型、智能体与大规模算力集群纳入，公开征求意见至 11 月 15 日。多篇解读指出，开放权重模型不在禁止范围，通过 API 或 SaaS 提供访问不构成技术出口；DeepSeek、MiniMax 已履行登记手续并完成开源与海外授权。管制清单尚未落地，企业行为已经改变。美国一侧，财政部提出新规，拟把投资限制从「最强大的中国模型」扩大到所有开发 AI 系统的中国公司，并新增高带宽内存、光子芯片、抗辐射芯片等受限品类。",
+  "执法与诉讼方面，美国国土安全部要求联邦文职机构移除 DeepSeek 产品及基于其开源模型构建的软件，中国外交部与商务部提出抗议。德国两家法院先后认定 Google 须为 AI Overview 的错误内容负责；同一周里 Google 又把 Personal Intelligence 引入车载 Gemini，随后在隐私政策中为 Drive、Gmail 与 Photos 数据用于个性化广告开了例外。前 OpenAI 工程师 Alfozan 涉嫌窃密一案，从 FBI 指其手机存有沙特政府文件，走到联邦法官拒绝其 100 万美元保释。美国法院要求 Meta 披露批准以种子下载盗版图书训练 Llama 的高管。数据中心的环境许可成为新的执法前沿：得州环境质量委员会在媒体报道后关闭自动审批系统、暂停 17 个数据中心项目；芬兰许可与监督局叫停 Google 在穆霍斯与奥坦迈基的两处工地施工；xAI 孟菲斯 Colossus 数据中心的污染诉讼继续推进。",
+  "立法与就业政策方面，Anthropic 正游说一份 AI 安全法案，规定政府只有在大模型可能造成 50 人以上死伤或 10 亿美元以上损失时才能阻止其发布。国务院办公厅 10 月 23 日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》，提出减缓 AI 应用的就业替代影响，鼓励企业探索失业缓冲期制度。OpenAI 与 Meta 在美国司法会议警告，深度伪造将威胁诉讼证据的可靠性。"
+ ],
+ "topics": [
+  {
+   "name": "司法与诉讼",
+   "groups": [
+    {
+     "name": "刑事案件",
+     "items": [
+      {
+       "id": "bd8b0452db",
+       "kind": "event",
+       "title": "Alfozan 案",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112237091258351762"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112450615737729213"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-19",
+         "stage": "强制措施",
+         "text": "FBI 称前 OpenAI 工程师涉嫌窃密，手机中发现 Saudi Gov Docs 文件夹"
+        },
+        {
+         "date": "10-20",
+         "stage": "裁决",
+         "text": "联邦法官拒绝沙特担保的 100 万美元保释，前 OpenAI 工程师 Abdulrahman Alfozan 继续羁押"
+        }
+       ]
+      },
+      {
+       "id": "47831c7053",
+       "kind": "single",
+       "title": "佛州警方称诈骗分子用 AI 克隆警长声音行骗",
+       "date": "2026-10-19",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/police-say-scammers-used-ai-to-clone-a-sheriffs-voice/"
+        }
+       ],
+       "fact": "佛罗里达州奥西奥拉县警方称，诈骗分子用 AI 克隆警长 Steve Moser 的声音并配上其照片，给一名居民留下语音留言，冒充其本人打电话。此类冒充警察、以陪审团义务或逮捕令为由的诈骗正在多个州蔓延，佐治亚州和宾夕法尼亚州近一周也有相关报案。在佛州，冒充警察属三级重罪。"
+      },
+      {
+       "id": "360cb88d81",
+       "kind": "single",
+       "title": "法庭记录显示 CBP 谎称以儿童色情为由搜查 Stop Cop City 活动人士的 GrapheneOS 手机",
+       "date": "2026-10-20",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/dhs-said-they-searched-man-who-wiped-grapheneos-phone-for-child-abuse-material-they-lied/"
+        }
+       ],
+       "fact": "新提交的法庭记录显示，2025 年 1 月美国国土安全部以涉嫌恐怖活动为由发出警报，在机场拦截 Stop Cop City 活动人士 Samuel Tunick，但 CBP 官员盘问时谎称需要其手机查找儿童色情材料。Tunick 提供了 wipe 其 GrapheneOS 手机的代码，现因此被刑事起诉，成为近期受关注的科技公民自由案件之一。"
+      }
+     ]
+    },
+    {
+     "name": "民事与集体诉讼",
+     "items": [
+      {
+       "id": "d7c2c98012",
+       "kind": "single",
+       "title": "法官驳回 Trump 主张，xAI 数据中心污染诉讼将继续",
+       "date": "2026-10-21",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/tech-policy/2026/10/judge-rejects-trumps-wild-claim-epa-can-dismiss-data-center-pollution-lawsuits/"
+        }
+       ],
+       "fact": "法官驳回了 Trump 关于 EPA 可单方面撤回任何 Clean Air Act 诉讼的主张，xAI（现称 SpaceXAI）将继续面临 NAACP 就其孟菲斯 Colossus 数据中心未获许可燃气轮机污染提起的诉讼。NAACP 要求法院责令 xAI 使用最佳可得污染控制技术，并按每项违规每天最高 $124,426 索赔。"
+      }
+     ]
+    },
+    {
+     "name": "程序、证据与上诉",
+     "items": [
+      {
+       "id": "6dbafb794b",
+       "kind": "single",
+       "title": "德国两家法院先后裁定 Google 须为其 AI Overview 内容负责",
+       "date": "2026-10-18",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/"
+        }
+       ],
+       "fact": "慕尼黑地区法院 I 五月底裁定 Google 的 AI 搜索摘要属于公司自己的陈述而非中立转述，Google 须为错误内容担责；Google 公开宣布上诉后实际以和解结案，未获上级法院裁决。"
+      }
+     ]
+    },
+    {
+     "name": "其他司法事项",
+     "items": [
+      {
+       "id": "dcc717d6c9",
+       "kind": "single",
+       "title": "Meta 被法院要求披露批准用种子下载盗版书训练 Llama 的高管",
+       "date": "2026-10-20",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/tech-policy/2026/10/meta-ordered-to-name-execs-who-approved-torrenting-for-ai-training/"
+        }
+       ],
+       "fact": "法院命令 Meta 披露批准为训练 Llama 1 和 2 而通过种子下载盗版图书的高管姓名。Meta 辩称早期数据获取无正式决策、属于集体讨论且没有单一决策者，法官 Hixon 驳回这些说法，要求 Meta 说明所有决策者以及未用于训练的盗版作品的去向。"
+      }
+     ]
+    }
+   ],
+   "count": 6
+  },
+  {
+   "name": "监管执法与行政处罚",
+   "groups": [
+    {
+     "name": "调查与立案",
+     "items": [
+      {
+       "id": "ca7eba366d",
+       "kind": "single",
+       "title": "Redact 调查 WhatsApp 帮助页面隐藏的 LLM 指令：不让 AI 推荐监管机构",
+       "date": "2026-10-19",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions"
+        }
+       ],
+       "fact": "Redact 调查发现，截至 2026 年 10 月中旬，WhatsApp 帮助中心 545 个页面中有 80 个页面嵌入了 102 段屏幕上不可见、仅供 AI 读取的隐藏指令，其中删除账号页面指示 AI 不要推荐联系任何数据保护监管机构，举报与屏蔽页面指示 AI 在用户提及律师或诉讼时不引用 GDPR、LGPD、CCPA 等法规。"
+      },
+      {
+       "id": "076ff717d2",
+       "kind": "single",
+       "title": "Monday.com 调查：超半数高管称采用 AI 后更难评估员工工作",
+       "date": "2026-10-21",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/"
+        }
+       ]
+      },
+      {
+       "id": "6e689f674b",
+       "kind": "single",
+       "title": "Gartner 调查显示仅 13% 的企业从 AI 获得实质回报",
+       "date": "2026-10-22",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "处罚与整改",
+     "items": [
+      {
+       "id": "e53890d574",
+       "kind": "single",
+       "title": "ICRC 官员警告 AI 已在扩大战争破坏，呼吁禁止部分自主武器",
+       "date": "2026-10-22",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/ai-is-already-amplifying-the-destruction-of-war/"
+        }
+       ],
+       "fact": "红十字国际委员会法律战争团队负责人 Laurent Gisel 在联合国会议期间接受 404 Media 采访，称 AI 正以更高速度和频率生成并打击目标，放大战争破坏和人道伤害。"
+      }
+     ]
+    },
+    {
+     "name": "下架与封禁",
+     "items": [
+      {
+       "id": "5ef50f452d",
+       "kind": "single",
+       "title": "亚马逊等企业封禁AI智能体",
+       "date": "2026-10-19",
+       "source": "X：Yuchen Jin (@Yuchenj_UW)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Yuchenj_UW/status/2112030814905180441"
+        }
+       ],
+       "fact": "亚马逊、达美航空和摩根大通正在封禁AI智能体。还记得史蒂夫·乔布斯最初拒绝允许第三方iPhone应用吗？后来，苹果推出了App Store。"
+      },
+      {
+       "id": "97a66873aa",
+       "kind": "single",
+       "title": "The Verge 实测 Meta Muse 购物智能体：被 Amazon 等零售商封禁、体验参差",
+       "date": "2026-10-22",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/report/1015811/ai-shopping-agents-blocked-amazon-the-realreal-target-meta-muse"
+        }
+       ],
+       "fact": "The Verge 作者实测 Meta 的 Muse 购物智能体，发现智能体购物体验参差，且多家零售商主动封禁。Amazon 已封禁 Muse 并曾起诉 Perplexity；JPMorgan Chase 拒绝外部智能体接入账户。"
+      },
+      {
+       "id": "eb12ff087e",
+       "kind": "single",
+       "title": "Morgan Stanley、JPMorgan 等美国大行封禁使用客户凭证登录的 AI 智能体",
+       "date": "2026-10-22",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/"
+        }
+       ],
+       "fact": "据 Axios 报道，Morgan Stanley、JPMorgan、Bank of America、Wells Fargo 等美国大型银行正在限制外部 AI 智能体使用客户提供的凭证登录账户，因为这违反了要求账户持有人本人登录的银行政策。"
+      },
+      {
+       "id": "bddb76a3c7",
+       "kind": "single",
+       "title": "谷歌为建芬兰 AI 数据中心非法砍伐约 25 万棵树遭监管叫停",
+       "date": "2026-10-23",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/025.htm"
+        }
+       ],
+       "fact": "据《卫报》报道，谷歌为在芬兰北部穆霍斯建设数据中心，清除约 330 公顷森林、砍伐约 25 万棵树，且未完成法定环境影响评估即进行土地清理。芬兰许可与监督局（LVV）已要求谷歌暂停穆霍斯和奥坦迈基两个工地施工，并在 10 月 23 日前停止显著改变环境的活动，否则可能执法并罚款；环保人士估计奥坦迈基另有约 15 万棵树被砍伐，谷歌芬兰区负责人已道歉。"
+      }
+     ]
+    },
+    {
+     "name": "其他执法事项",
+     "items": [
+      {
+       "id": "4ab5ccca58",
+       "kind": "single",
+       "title": "民主党人认为，严管 AI 或能为其赢得选举优势",
+       "date": "2026-10-19",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/policy/1013113/democrats-ai-midterms"
+        }
+       ],
+       "fact": "民主党有望在 11 月中期选举中夺回国会至少一院，届时将掌握委员会主导权，可传唤 AI 公司 CEO 作证并要求提交内部文件。与民主党结盟的超级政治行动委员会 Tomorrow Together 上周在摇摆选区投入 400 万美元广告，抨击共和党候选人在 AI 议题上脱节。民调显示，特朗普与国会共和党人推动的禁止各州监管 AI 的主张比数据中心更不受欢迎。"
+      },
+      {
+       "id": "b33568a78d",
+       "kind": "single",
+       "title": "Anthropic 向国会推 AI 安全草案：可造成50人以上死亡或超10亿美元损失时或禁止模型发布",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/"
+        }
+       ],
+       "fact": "Politico 报道，Anthropic 正向国会推一份 AI 安全草案，规定在可预见的迫近风险下可阻止模型发布，阈值参照加州 SB 53：超50人死亡或超10亿美元财产损失，且灾难风险须来自生物武器、模型脱离开发者控制或网络攻击。"
+      },
+      {
+       "id": "445e895081",
+       "kind": "single",
+       "title": "Meta 在 AI 抵制声浪后从商业服务条款中删除 train 一词",
+       "date": "2026-10-20",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/tech-policy/2026/10/meta-drops-the-word-train-from-its-commercial-tos-after-ai-backlash/"
+        }
+       ],
+       "fact": "面对全球新闻出版界的抵制，Meta 在其商业服务条款中删除了 train 一词，新条款定于 10 月 30 日生效。专家指出，由于遵守 robots.txt 属自愿行为，Meta 仍可能依靠可法律执行的条款抓取试图屏蔽的网站；英国新闻媒体协会、欧洲出版商理事会和美国 News/Media Alliance 已分别敦促监管机构介入。"
+      },
+      {
+       "id": "021f011b4b",
+       "kind": "single",
+       "title": "美国制裁与前 Google 工程师 Linwei Ding 相关的 5 家中国实体",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112505487581417721"
+        }
+       ],
+       "fact": "美国国务院依据 PAIPA 制裁 5 家与前 Google 工程师 Linwei Ding 相关的中国实体，包括其创业公司背后的投资方。Ding 于 2023 年创立上海智算科技，主打加速超算芯片上的机器学习训练；所涉窃取材料集中在 Google 将数千块 TPU 和 GPU 组成超算的方法。"
+      },
+      {
+       "id": "dd51bf42f9",
+       "kind": "event",
+       "title": "DeepSeek · 其他执法事项",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/015/434.htm"
+        },
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/china-protests-the-us-deepseek-ban-while-blocking-chatgpt-claude-and-gemini-at-home/"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-20",
+         "stage": "进展",
+         "text": "外交部回应美政府要求机构停用 DeepSeek：反对将科技经贸问题政治化"
+        },
+        {
+         "date": "10-21",
+         "stage": "进展",
+         "text": "美国禁政府系统使用 DeepSeek，中国抗议并指其歧视，但国内仍封锁 ChatGPT、Claude 和 Gemini"
+        }
+       ]
+      },
+      {
+       "id": "bce4357c93",
+       "kind": "single",
+       "title": "纽约市长 Mamdani 批评联邦政府在 AI 监管上缺位，呼吁市民抵制",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/19/mamdani-says-feds-have-abdicated-on-ai-urges-new-yorkers-to-push-back/"
+        }
+       ]
+      },
+      {
+       "id": "398158661c",
+       "kind": "single",
+       "title": "阿联酋酋长接收小鹏汇天\"陆地航母\"首台测试机",
+       "date": "2026-10-21",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2112847613762367740"
+        }
+       ]
+      },
+      {
+       "id": "3bb34b2271",
+       "kind": "single",
+       "title": "a16z Crypto 更名为 a16z Frontier，投资范围扩展至前沿科技初创公司",
+       "date": "2026-10-22",
+       "source": "a16z：News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.a16z.news/p/a16z-frontier"
+        }
+       ]
+      },
+      {
+       "id": "bc78afabf3",
+       "kind": "single",
+       "title": "国务院办公厅印发意见应对人工智能就业替代影响",
+       "date": "2026-10-23",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2113594727555834264"
+        }
+       ],
+       "fact": "10月23日，国务院办公厅印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。文件提出减缓人工智能应用就业替代影响，优先在劳动力紧缺、环境高危等岗位推广应用，稳慎把握在劳动密集型行业的应用范围、力度和节奏，并鼓励企业探索建立失业缓冲期制度，提前告知受影响劳动者并提供转型转岗就业支持。"
+      },
+      {
+       "id": "36bd80f1a7",
+       "kind": "single",
+       "title": "美国财政部拟禁止美国人投资所有开发 AI 系统的中国公司",
+       "date": "2026-10-23",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113567271893577992"
+        }
+       ],
+       "fact": "美国财政部提出新规，拟禁止美国人投资开发任何 AI 系统的中国公司，现行规则只限制最强大的中国 AI 模型。新提案还将新增高带宽内存、光子芯片和抗辐射芯片等受限芯片类型，并扩展到高超音速武器和生物科技等领域，覆盖国家新增俄罗斯、伊朗、朝鲜和古巴。"
+      },
+      {
+       "id": "962d14b6a2",
+       "kind": "single",
+       "title": "Meta 因出版方反对推迟新商业条款至 11 月 20 日",
+       "date": "2026-10-23",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/tech/1017450/meta-business-terms-delayed-ai-scraping"
+        }
+       ],
+       "fact": "Meta 宣布将新商业条款的生效时间从 10 月 30 日推迟到 11 月 20 日，此前出版方担忧条款允许 Meta 抓取新闻网站内容用于 AI 训练。News/Media Alliance 致信 Mark Zuckerberg 要求修改条款，欧盟和英国的广告主与出版方也敦促监管机构介入；Meta 表示将利用这段时间说明网络爬虫的使用方式，并强调内容方仍可通过 robots.txt 表达偏好。"
+      }
+     ]
+    }
+   ],
+   "count": 19
+  },
+  {
+   "name": "立法与政策制定",
+   "groups": [
+    {
+     "name": "法案进程",
+     "items": [
+      {
+       "id": "36db89b2e7",
+       "kind": "single",
+       "title": "Anthropic 游说的 AI 安全法案：政府仅在 50 人死伤或 10 亿美元损失风险时才能阻止模型发布",
+       "date": "2026-10-18",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-proposed-ai-safety-bill-only-kicks-in-if-50-deaths-or-usd1-billion-in-damages-are-on-the-line-proposal-would-effectively-make-the-commerce-department-the-only-agency-capable-of-stopping-an-ai-model"
+        }
+       ],
+       "fact": "Anthropic 正在低调游说一项 AI 安全法案，政府只有在大语言模型可能造成 10 亿美元损失或致 50 人以上死伤时才能阻止其发布。据 Politico 报道，由商务部注册的独立第三方将定期评估模型，实验室可向评估方付费但不得影响其独立性；Anthropic 发言人称该法案是其自 6 月以来向联邦和州立法者推动的 Advanced AI Framework 提案。"
+      },
+      {
+       "id": "1a318aab62",
+       "kind": "single",
+       "title": "Dario Amodei 回应批评，承认 Anthropic 三项举措本可处理得更好",
+       "date": "2026-10-21",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112796136134345015"
+        }
+       ],
+       "fact": "Rohan Paul 转发 Dario Amodei 对 AI 安全研究者批评的长文回应。Amodei 承认包括联邦 AI 法案草案在内的 3 项举措本可处理得更好，称其为沟通失误并以 CEO 身份承担责任；他坚持 Anthropic 的 race to the top 战略，列举 SB53 支持、生物安全防护、限制对 PRC 企业出售 AI 服务、将公司 5% 投入公益基金等付出商业代价的安全决策，并为 RSP 改革辩护。"
+      }
+     ]
+    },
+    {
+     "name": "政策文件",
+     "items": [
+      {
+       "id": "68ca5d315c",
+       "kind": "single",
+       "title": "六小龄童回应孙悟空林黛玉“圣黛 CP”AI 魔改：创意好玩但改编不能逾越红线",
+       "date": "2026-10-19",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/014/753.htm"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 3
+  },
+  {
+   "name": "出口管制、制裁与投资审查",
+   "groups": [
+    {
+     "name": "禁用与移除",
+     "items": [
+      {
+       "id": "deaca4f5dc",
+       "kind": "event",
+       "title": "DeepSeek · 禁用与移除",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://madrobot.blog/2026/10/19/us-bans-deepseek-federal-agencies-dhs-order-remove-third-party/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112265351492972953"
+        },
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/us-bans-deepseek-technology-across-federal-civilian-agencies/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2112435726432240076"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-19",
+         "stage": "报道",
+         "text": "美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品"
+        },
+        {
+         "date": "10-20",
+         "stage": "报道",
+         "text": "美国国土安全部禁止联邦民用机构使用 DeepSeek 技术"
+        }
+       ]
+      },
+      {
+       "id": "e3c7b89e60",
+       "kind": "single",
+       "title": "中国 AI 技术出口管制草案澄清：开放权重模型不在禁止范围",
+       "date": "2026-10-21",
+       "source": "Recode China AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.recodechinaai.com/p/chinas-draft-ai-export-controls-dont"
+        }
+       ],
+       "fact": "中国商务部和科技部 10 月 16 日发布技术出口管制目录增补草案，首次涵盖先进大模型、智能体和大规模算力集群，公开征求意见至 11 月 15 日。作者解读：禁止项包括使用核心数据训练的模型和国防等高敏感应用智能体；受限项包括算力达 10²⁶ FLOPs、参数达 2 万亿或全球排名前列的模型，以及 20 步任务分解、60 个智能体协同、200 工具集成等阈值的智能体。"
+      },
+      {
+       "id": "422aa71f0a",
+       "kind": "single",
+       "title": "DeepSeek、MiniMax 已就AI技术出口新规履行登记手续并完成开源和海外授权",
+       "date": "2026-10-23",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/796.htm"
+        }
+       ],
+       "fact": "据玉渊谭天消息，自商务部、科技部就修订《中国禁止出口限制出口技术目录》公开征求意见后，DeepSeek、MiniMax 已顺利履行登记手续，并完成开源和海外授权使用。"
+      }
+     ]
+    },
+    {
+     "name": "出口管制与制裁",
+     "items": [
+      {
+       "id": "31a4c1f265",
+       "kind": "event",
+       "title": "ChinaTalk · 出口管制与制裁",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/the-match-act"
+        },
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/mofcoms-new-ai-rules"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-20",
+         "stage": "报道",
+         "text": "ChinaTalk 访谈解析 MATCH 法案与 DUV 浸没式光刻出口管控"
+        },
+        {
+         "date": "10-21",
+         "stage": "报道",
+         "text": "ChinaTalk 解读商务部第48号公告对AI技术出口管制的影响"
+        }
+       ]
+      },
+      {
+       "id": "c84589aba5",
+       "kind": "single",
+       "title": "中国拟议 AI 出口管制，DeepSeek 投资机器人，Infinigence 完成 3.34 亿美元融资",
+       "date": "2026-10-18",
+       "source": "Recode China AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.recodechinaai.com/p/china-proposes-ai-export-controls"
+        }
+       ],
+       "fact": "中国商务部和科技部拟将 AI 模型、智能体、芯片设计与算力集群纳入技术出口管制目录，但通过 API、应用、网页界面或 SaaS 提供访问不构成大模型技术出口。DeepSeek 据报将领投机器人 AI 初创公司 Winverse AI 的种子轮融资，美团 Long-Z Investments 也参与其中。"
+      },
+      {
+       "id": "472f46544d",
+       "kind": "single",
+       "title": "八年关税战后，中国如何重塑美国进口供应链",
+       "date": "2026-10-19",
+       "source": "Azeem Azhar：Exponential View（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.exponentialview.co/p/monday-data-who-won-the-trade-war"
+        }
+       ],
+       "fact": "Azeem Azhar 的 Monday Data 复盘八年关税战：美国自中国进口商品份额从 2010 年代中期的约 21% 降至今年夏天的约 8%，但中国通过将产能转移至越南、墨西哥等地实现关税跳跃。2020-2023 年，中资工厂贡献了越南对美出口的 25%，高于 2018-19 年的 11%。"
+      },
+      {
+       "id": "538a0c2648",
+       "kind": "single",
+       "title": "Politico：OpenAI 在对华芯片出口限制议题上从主张严控转为沉默",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112626412658282676"
+        }
+       ],
+       "fact": "据 Politico，OpenAI 从 2025 年 3 月要求白宫对中国保持严格芯片出口管制并扩大受限芯片清单，转为在国会酝酿新限制时保持沉默。Nvidia 一边游说反对限制，一边是 OpenAI 的芯片供应商、300 亿美元股权投资方，并为 OpenAI 将租用的俄亥俄州数据中心一期提供至多 1050 亿美元担保。"
+      }
+     ]
+    },
+    {
+     "name": "其他管制事项",
+     "items": [
+      {
+       "id": "f9c7e73124",
+       "kind": "single",
+       "title": "英国国防大臣建议大家“准备好一些日常必需品……每人每天三升水、罐头食品……够维持几天” 以应对这个动荡而危险的网络攻击时代 大家最担心的是我们的支付系统被攻陷",
+       "date": "2026-10-24",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2113815314366632067"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 8
+  },
+  {
+   "name": "数据保护与个人信息",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "id": "3e38c58b6e",
+       "kind": "event",
+       "title": "Google · 个人信息保护",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto"
+        },
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-20",
+         "stage": "报道",
+         "text": "Google 将 Personal Intelligence 个性化功能引入车载 Gemini"
+        },
+        {
+         "date": "10-23",
+         "stage": "报道",
+         "text": "Google 更新隐私政策：Personal Intelligence 开启后 Gmail、Drive 和 Photos 数据可能用于个性化广告"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 1
+  },
+  {
+   "name": "知识产权",
+   "groups": [
+    {
+     "name": "侵权与纠纷",
+     "items": [
+      {
+       "id": "7af63a16a8",
+       "kind": "single",
+       "title": "AI 游戏克隆让独立开发者不敢公开展示作品",
+       "date": "2026-10-19",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/gaming/2026/10/ai-game-clones-are-making-indie-developers-afraid-to-show-their-work/"
+        }
+       ],
+       "fact": "Ars Technica 报道称，AI 生成的游戏克隆让多位独立开发者抱怨作品被整批复制，McPixel 开发者 Sos Sosowski 记录了诸多案例，指出开发者陷入不分享就没销量、分享就被抄袭的两难。"
+      },
+      {
+       "id": "3b4a45e222",
+       "kind": "single",
+       "title": "老板审美难敌KPI，AI或让小团队审美突围",
+       "date": "2026-10-19",
+       "source": "X：Dash (@dashhuang)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/DashHuang/status/2112163813160333468"
+        }
+       ],
+       "fact": "推文认为，上百人维护的项目里老板无法兼顾审美，竞争压力层层传导为KPI后，任何能提升数据的提案再丑也会被采纳，不存在既让下属背KPI又让老板坚持审美的两全方案。作者期待AI改变这一点：软件工程规模不再是竞争壁垒，坚持独特审美的小团队作品有望超越丑陋的巨无霸产品。引用推文补充称，中国产品过度竞争源于知识产权保护不足，抄袭成本低，并追问AI时代成本大降后能否出现既好看又好用且长期存活的产品。"
+      }
+     ]
+    },
+    {
+     "name": "权利申请与登记",
+     "items": [
+      {
+       "id": "16d7cea639",
+       "kind": "single",
+       "title": "Grok Bot 查外卖盒折叠专利源自1908年",
+       "date": "2026-10-24",
+       "source": "X：Peng Zheng（SpaceXSI，Grok Bot 设计负责人） (@pengzheng_)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/pengzheng_/status/2113786630033322239"
+        }
+       ],
+       "fact": "让我的 @bot 去查了一下外卖盒怎么折叠，用于我的 og:video。结果发现这项专利是 1908 年的 🤯"
+      }
+     ]
+    },
+    {
+     "name": "其他知产事项",
+     "items": [
+      {
+       "id": "a0f21cc32e",
+       "kind": "single",
+       "title": "火山引擎 Seedance 精品 AI 剧激励计划：单部作品最高 20 万元",
+       "date": "2026-10-19",
+       "source": "公众号：火山引擎",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://mp.weixin.qq.com/s?__biz=MzI0NzU1NzI5NQ%3D%3D&mid=2247544876&idx=1&sn=b12bbf0e3c265e4bc6a43f2e75ebe6fe"
+        }
+       ],
+       "fact": "火山引擎发起精品 AI 剧激励计划，面向使用 Seedance 制作并在红果短剧 APP 上线的精品 AI 漫短剧，单部作品最高可获 20 万元激励。报名入口在抖音集团短剧版权中心及火山引擎官方渠道同步发布，更多咨询可通过火山引擎官网联系官方客服。"
+      }
+     ]
+    }
+   ],
+   "count": 4
+  },
+  {
+   "name": "内容治理、人格权与深度伪造",
+   "groups": [
+    {
+     "name": "深度伪造与肖像",
+     "items": [
+      {
+       "id": "3d3bc984de",
+       "kind": "single",
+       "title": "OpenAI 与 Meta 在美国司法会议警告深度伪造将威胁诉讼证据可靠性",
+       "date": "2026-10-20",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/015/421.htm"
+        }
+       ],
+       "fact": "OpenAI 与 Meta 代表在 10 月 15 日的美国司法会议证据规则咨询委员会会议上表示，AI 驱动的深度伪造将严重威胁法律诉讼中的证据可靠性。OpenAI 政策顾问 Shira Anderson 称未来将无法通过科学手段识别 AI 生成图像，Meta 的 Devin Norder 称人类已无法分辨真实媒体与最近几代前沿 AI 模型生成的媒体。"
+      }
+     ]
+    },
+    {
+     "name": "标识与审核",
+     "items": [
+      {
+       "id": "e87f253ad4",
+       "kind": "single",
+       "title": "百度 Apollo Go 无人车首次在伦敦街头提供媒体试乘",
+       "date": "2026-10-22",
+       "source": "X：百度 Baidu (@Baidu_Inc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Baidu_Inc/status/2113292289841750151"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 2
+  },
+  {
+   "name": "竞争与平台治理",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "id": "b966805622",
+       "kind": "single",
+       "title": "伊利诺伊州州长 JB Pritzker 谈 AI：可能让人活到 100 岁，也可能像核武器一样威胁人类",
+       "date": "2026-10-19",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws"
+        }
+       ],
+       "fact": "伊利诺伊州州长 JB Pritzker 在 Decoder 播客中表示，AI 既可能帮助人类活到 100 岁，也可能像核武器一样构成威胁。他还谈到数据中心、隐私与反垄断正形成两党共同反弹，并认为政府应更积极地保护民众、而非一味与企业合作。"
+      }
+     ]
+    }
+   ],
+   "count": 1
+  },
+  {
+   "name": "劳动与就业",
+   "groups": [
+    {
+     "name": "替代与裁员",
+     "items": [
+      {
+       "id": "c08e03da06",
+       "kind": "single",
+       "title": "OpenClaw 可替代 20 项订阅服务",
+       "date": "2026-10-21",
+       "source": "X：OpenClaw (@openclaw)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/openclaw/status/2112961586617041042"
+        }
+       ]
+      },
+      {
+       "id": "9fcbab4384",
+       "kind": "single",
+       "title": "巴克莱称因 AI 效率提升今年将裁员约 5000 人",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113258189009654265"
+        }
+       ]
+      },
+      {
+       "id": "77910c6d39",
+       "kind": "single",
+       "title": "WSJ：OpenAI 因 Signal 阅后即焚聊天解雇 3 名安全研究员",
+       "date": "2026-10-23",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113511968112042349"
+        }
+       ],
+       "fact": "据 WSJ 报道，OpenAI 安全人员发现 3 名安全研究员与一名外部安全研究员使用阅后即焚的 Signal 聊天后将其解雇。"
+      },
+      {
+       "id": "eefa332ca3",
+       "kind": "single",
+       "title": "2026 年湾区科技裁员已近 14,500 人，超 2025 全年总数",
+       "date": "2026-10-23",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113691034463207908"
+        }
+       ]
+      },
+      {
+       "id": "2f8ce27277",
+       "kind": "single",
+       "title": "美国运通、巴克莱、eBay、Netflix 集中宣布 AI 相关裁员",
+       "date": "2026-10-23",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2113766250178592993"
+        }
+       ]
+      },
+      {
+       "id": "ea72fb06e3",
+       "kind": "single",
+       "title": "NYU 教授 Damodaran：AI 十万亿美元市场叙事的前提是替代人类工作",
+       "date": "2026-10-24",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113903758149369971"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "其他劳动事项",
+     "items": [
+      {
+       "id": "e9265d2299",
+       "kind": "single",
+       "title": "Grok @Bot 如同雇了一位极能干的员工",
+       "date": "2026-10-18",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2111914748648296655"
+        }
+       ]
+      },
+      {
+       "id": "cb7a41f6eb",
+       "kind": "single",
+       "title": "Grok Bot 或成你最爱的员工",
+       "date": "2026-10-19",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2112219181500281276"
+        }
+       ]
+      },
+      {
+       "id": "4b1a522687",
+       "kind": "single",
+       "title": "昆仑万维方汉率队走进广东以色列理工学院开展2027届校招宣讲",
+       "date": "2026-10-19",
+       "source": "公众号：昆仑万维（天工）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://mp.weixin.qq.com/s?__biz=MzI1MzE1NDc3Mg%3D%3D&mid=2247510626&idx=2&sn=c398f0befeabff1554e53aed65df1282"
+        }
+       ]
+      },
+      {
+       "id": "ed9af6db83",
+       "kind": "single",
+       "title": "多名 Google DeepMind 员工因军方 AI 合同辞职，BBC 调查披露内部争议",
+       "date": "2026-10-21",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.bbc.com/news/articles/cmreyvepnv0po"
+        }
+       ]
+      },
+      {
+       "id": "4eebe0e0ba",
+       "kind": "single",
+       "title": "Grok Bot 可当生活与商务管家",
+       "date": "2026-10-23",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2113506269260595431"
+        }
+       ]
+      },
+      {
+       "id": "4f6be67270",
+       "kind": "single",
+       "title": "Anthropic 员工吐槽用 AI 玩游戏",
+       "date": "2026-10-23",
+       "source": "X：Ado Kukic（Anthropic 开发者关系，Claude Code） (@adocomplete)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/adocomplete/status/2113451740590706939"
+        }
+       ]
+      },
+      {
+       "id": "3746a0a434",
+       "kind": "single",
+       "title": "OpenAI 员工对 Opus 5.5 的调侃",
+       "date": "2026-10-24",
+       "source": "X：Dominik Kundel（OpenAI 开发者体验，Codex） (@dkundel)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dkundel/status/2113858781872582799"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 13
+  },
+  {
+   "name": "产品责任与消费者保护",
+   "groups": [
+    {
+     "name": "产品缺陷与召回",
+     "items": [
+      {
+       "id": "b78374f301",
+       "kind": "single",
+       "title": "Waymo 宣布进军西班牙，2027 年在马德里大区迎接首批乘客",
+       "date": "2026-10-20",
+       "source": "Waymo：Blog（网页）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://waymo.com/blog/2026/10/waymo-in-madrid-region"
+        }
+       ]
+      },
+      {
+       "id": "e1df102eb4",
+       "kind": "single",
+       "title": "上海警方用大数据打击“职业碰瓷”：朱某一年多制造事故200余起，涉案60余万元",
+       "date": "2026-10-24",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/333.htm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "其他消费事项",
+     "items": [
+      {
+       "id": "8f0647bc4d",
+       "kind": "single",
+       "title": "Sundar Pichai 回应 Google 自由现金流转负投入 AI 资本开支的理由",
+       "date": "2026-10-21",
+       "source": "X：Alex Heath (@alexeheath)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/alexeheath/status/2112960978631737797"
+        }
+       ]
+      },
+      {
+       "id": "a93f813602",
+       "kind": "single",
+       "title": "Meshy × Chrona 旧金山展示六个创作者世界",
+       "date": "2026-10-23",
+       "source": "X：Meshy (@MeshyAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/MeshyAI/status/2113578682942120387"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 4
+  },
+  {
+   "name": "资本市场与公司交易",
+   "groups": [
+    {
+     "name": "融资与估值",
+     "items": [
+      {
+       "id": "4c19024337",
+       "kind": "event",
+       "title": "OpenAI · 融资与估值",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112455383356989598"
+        },
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/"
+        },
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/openai-lowers-valuation-target-raises-up-to-30-billion/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113484586558931214"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-20",
+         "stage": "定价",
+         "text": "路透：OpenAI 拟在 Anthropic 上市前加速融资约 300 亿美元，估值超 1.4 万亿美元"
+        },
+        {
+         "date": "10-22",
+         "stage": "定价",
+         "text": "OpenAI 据报道正洽谈以 1.25 万亿美元估值融资至多 300 亿美元"
+        },
+        {
+         "date": "10-23",
+         "stage": "定价",
+         "text": "Bloomberg：OpenAI 约 300 亿美元融资目标估值从 1.4T 降至 1.25T"
+        }
+       ]
+      },
+      {
+       "id": "6317550939",
+       "kind": "single",
+       "title": "Anthropic 以超 10% 收益率为芯片交易融资 600 亿美元",
+       "date": "2026-10-18",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/014/628.htm"
+        }
+       ],
+       "fact": "Anthropic 正以超过 10% 的收益率吸引黑石集团为芯片交易提供 600 亿美元债务融资，其中约 420 亿美元优先级债务由博通提供担保，美国银行、花旗和摩根士丹利率先启动银团分销；180 亿美元次级债中黑石旗下基金将投资 90 亿美元，票息 10%。"
+      },
+      {
+       "id": "7562d6c203",
+       "kind": "single",
+       "title": "All In 播客拆解 CoreWeave 盒子结构与 AI 算力泡沫风险",
+       "date": "2026-10-18",
+       "source": "X：Saito 硬地骇客 (@SaitoWu)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/SaitoWu/status/2111775766631657836"
+        }
+       ]
+      },
+      {
+       "id": "893b198792",
+       "kind": "single",
+       "title": "Anthropic 承诺将 5% 股份投入新设的公益基金",
+       "date": "2026-10-18",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/"
+        }
+       ],
+       "fact": "Anthropic 宣布设立公司全资持有的公益基金，承诺投入 5% 股份，公司估值每增长 50% 可追加 2%。基金可用于向传统非营利组织大额捐赠或直接向特定人群发放，Anthropic 此前已投入 2 亿美元研究 AI 对就业市场的影响。结构和治理细节将在未来几个月公布。"
+      },
+      {
+       "id": "983aba927f",
+       "kind": "single",
+       "title": "Anthropic 将 5% 股份注入公共利益基金，估值约 9650 亿美元下约合 480 亿美元",
+       "date": "2026-10-19",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112047682466570502"
+        }
+       ],
+       "fact": "Anthropic 设立 Anthropic Public Benefit Fund，承诺投入 5% 股份，按 9650 亿美元估值约合 480 亿美元，董事会可在公司价值超过未公开基线后每上涨 50% 追加 2%。"
+      },
+      {
+       "id": "9c5e1b14f7",
+       "kind": "single",
+       "title": "Anthropic 拟设工人援助基金并保持控制权，Musk 以 SpaceX 股份回应",
+       "date": "2026-10-19",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/anthropic-plans-fund-for-workers-threatened-by-ai-musk-counters-with-spacex-shares-for-children/"
+        }
+       ],
+       "fact": "The Decoder 报道 Anthropic 计划设立一只全资 LLC 子公司基金，用于帮助受 AI 冲击的工人，估值每超出基准 50% 可获最多 2% 股份追加，公司称连同创始人承诺的 80% 股份等合计约 20% 股权投向公共利益。"
+      },
+      {
+       "id": "2f7b68dfe7",
+       "kind": "single",
+       "title": "AI 陪伴应用 Tolan 融资 3000 万美元，估值超 2.68 亿美元",
+       "date": "2026-10-19",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/"
+        }
+       ],
+       "fact": "AI 陪伴应用 Tolan 完成 3000 万美元新融资，投资方包括 Union Square Ventures、Khosla Ventures 和 Homebrew，PitchBook 估算其估值超过 2.68 亿美元。"
+      },
+      {
+       "id": "9767324f7b",
+       "kind": "single",
+       "title": "Anthropic 与 Nscale 据报道正洽谈再签 450 亿美元算力协议",
+       "date": "2026-10-19",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/"
+        }
+       ],
+       "fact": "Bloomberg 援引知情人士报道称，Anthropic 与 Nscale 接近宣布第二笔 450 亿美元算力协议，距双方上月公布首笔同规模交易仅一个多月，谈判仍在进行、细节可能变化。两家公司均在推进 IPO，Nscale 拟以 300 亿美元估值上市但遭投资者阻力，大规模算力投入也令部分投资者担忧回报。"
+      },
+      {
+       "id": "df88d75698",
+       "kind": "single",
+       "title": "Apate.ai 用35万个AI反诈拖住骗子，国内年轻人用AI视频反制AI卖惨账号",
+       "date": "2026-10-20",
+       "source": "公众号：数字生命卡兹克",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647687365&idx=1&sn=4102098fb8725531aa2f783fa2f20f20"
+        }
+       ],
+       "fact": "作者讲述了两起用AI反制诈骗的案例。澳大利亚公司 Apate.ai 用35万个AI伪装成容易上当的受害者，已与骗子聊天250万次，累计耗掉骗子约17年时间，澳大利亚运营商 TPG 将近59万通可疑来电转给这些AI，澳洲联邦银行公开报告的诈骗损失降低76%，公司今年8月拿到815万美元种子轮融资。"
+      },
+      {
+       "id": "75f56d3d0e",
+       "kind": "single",
+       "title": "Eka Robotics 融资 1.5 亿美元，估值 14.5 亿美元，力觉驱动机器人模型获业内关注",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/"
+        }
+       ],
+       "fact": "Eka Robotics 完成 1.5 亿美元 A 轮融资，投后估值 14.5 亿美元，由 a16z 和 F-Prime 领投。"
+      },
+      {
+       "id": "18b74d1168",
+       "kind": "single",
+       "title": "Otter.ai 从 General Catalyst 获 3.2 亿美元融资用于会议工具扩张",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/"
+        }
+       ],
+       "fact": "Otter.ai 宣布从 General Catalyst 旗下 Customer Value Fund 获得 3.2 亿美元融资，该基金不稀释股权、从营销支出成果中获取回报，资金将用于企业增长、国际化与产品创新。"
+      },
+      {
+       "id": "22a704d760",
+       "kind": "single",
+       "title": "Eric Schmidt 持有 Anthropic 约 1% 股份",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112403694973026732"
+        }
+       ],
+       "fact": "哇。Eric Schmidt 持有 Anthropic 约 1% 的股份，若其 IPO 达到 2 万亿美元，这部分股份价值约 200 亿美元。Anthropic 2021 年的 A 轮融资筹集了 1.24 亿美元，当时 Pitchbook 对公司的估值为 4.61 亿美元，而 Schmidt 在这 1.24 亿美元中贡献了相当大的份额。"
+      },
+      {
+       "id": "804413f7ff",
+       "kind": "single",
+       "title": "Meta 宣布创设新一类无投票权股票以资助其 AI 建设",
+       "date": "2026-10-21",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/"
+        }
+       ],
+       "fact": "Meta 在周三发布第三季度财报时确认，将创设新一类无投票权资本股，通过股票股息分配给现有股东，用于融资、员工薪酬、收购等用途，同时保持现有 A 类和 B 类股东的投票权与创始人主导结构。"
+      },
+      {
+       "id": "e18755bfeb",
+       "kind": "single",
+       "title": "FT 报道 150 亿美元估值的广告驱动医疗 AI 创业公司 OpenEvidence 的争议与竞争",
+       "date": "2026-10-21",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/ai/2026/10/the-15-billion-ad-powered-ai-startup-your-doctor-may-already-be-using/"
+        }
+       ],
+       "fact": "Financial Times 报道医疗 AI 公司 OpenEvidence，其创始人 Nadler 称最终目标是基于文献的药物发现，经济价值将远超向医院或广告主收费。"
+      },
+      {
+       "id": "8712a1f833",
+       "kind": "single",
+       "title": "Blacksmith 获红杉领投 6600 万美元 C 轮，估值达 10 亿美元",
+       "date": "2026-10-21",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/21/blacksmith-hits-unicorn-valuation-after-sequoia-leads-series-c/"
+        }
+       ],
+       "fact": "CI 平台 Blacksmith 宣布 6600 万美元 C 轮融资，由红杉领投，估值 10 亿美元。公司称年经常性收入增长 17 倍，已运行超 9000 万个 CI 任务，客户包括 Mercury 和 Granola；此轮距其 5500 万美元估值的 4500 万美元 B 轮仅两个月，累计融资 1.25 亿美元。"
+      },
+      {
+       "id": "d78d99608c",
+       "kind": "single",
+       "title": "Bloomberg 报道 DeepSeek 新一轮融资约 150 亿美元",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113106318659928525"
+        }
+       ],
+       "fact": "据 Bloomberg，DeepSeek 最新一轮融资约 150 亿美元，为中国最大规模私募融资之一。谈判期间融资目标至少两次上调，从约 75 亿美元提高到 120 亿美元；CATL 和腾讯是最大投资方之一，CATL 据报出资约 15 亿美元。"
+      },
+      {
+       "id": "1f74b18335",
+       "kind": "single",
+       "title": "软银股价较 6 月高点接近腰斩，AI 投资烧钱模式遭市场质疑",
+       "date": "2026-10-22",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/383.htm"
+        }
+       ],
+       "fact": "据彭博社报道，软银股价 10 月 22 日盘中一度下跌 6.7%，较 6 月 2 日历史最高点累计跌幅达 50%，市值接近腰斩。市场担忧其高度依赖举债的 AI 投资模式，对冲软银违约风险的信用违约互换报价升至近四年高点；软银 9 月发行 111 亿美元垃圾债创企业纪录，并向 OpenAI 投资近 650 亿美元，而 CoreWeave 债务困境加剧了市场对 AI 行业融资风险的疑虑。"
+      },
+      {
+       "id": "692fcf5638",
+       "kind": "single",
+       "title": "Semafor：Meta 计划发行无投票权 C 类股为 AI 融资，不稀释 Zuckerberg 控制权",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113114993592078353"
+        }
+       ],
+       "fact": "据 Semafor 报道，Meta 计划创设无投票权 C 类股，为 AI 建设融资而不稀释 Mark Zuckerberg 的控制权。2027 年 1 月 19 日章程变更后每持 1 股 A 类或 B 类股将获得 1 股 C 类股，效果类似 2 比 1 拆股但不改变投票权；该股票也将用于支付员工，且投票股的买家将排除主权金融机构。"
+      },
+      {
+       "id": "00f2b2b6bd",
+       "kind": "single",
+       "title": "Latent Space 访谈 Modal CEO Erik Bernhardsson：AI 算力需求为何不是长方形",
+       "date": "2026-10-22",
+       "source": "Latent Space（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.latent.space/p/modal-d"
+        }
+       ],
+       "fact": "Latent Space 在 Modal 完成 7.5 亿美元 Series D（估值 160 亿美元、年化收入超 10 亿美元）之际，专访 CEO Erik Bernhardsson，解释支撑增长的基础设施与经济逻辑。"
+      },
+      {
+       "id": "c256730107",
+       "kind": "single",
+       "title": "黄仁勋谈 neocloud 融资与高资金成本",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113297977423130794"
+        }
+       ],
+       "fact": "黄仁勋谈 neocloud 融资与高资金成本，称 Nvidia 投资 neocloud 是因为投资回报好，这与为其背书不同。他表示 neocloud 客户充足、产能已售罄，唯一问题是为购买土地、电力、建筑和芯片而缺少营运资金；借贷成本上升是 AI 需求巨大的副作用，而非商业模式缺陷，并称“只要需求高，其他问题都会解决”。"
+      },
+      {
+       "id": "17d16486cf",
+       "kind": "single",
+       "title": "Nirva 融资 3300 万美元，做只监听佩戴者本人的 AI 吊坠",
+       "date": "2026-10-22",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/22/nirva-raises-33m-for-a-pendant-that-only-listens-to-you/"
+        }
+       ],
+       "fact": "Nirva 完成 2500 万美元 pre-Series A 轮融资，加上今年早些时候的 800 万美元，总融资达 3300 万美元。其首款设备是重约 8 克、续航最长 3 天的吊坠，也可作手链佩戴，通过用户录入的语音样本建模并过滤周围他人声音，只记录佩戴者本人，处理后默认不保留音频和转录。该设备定价 249 美元，11 月开始接受订单，目标年底前发货给早期用户。"
+      },
+      {
+       "id": "5c43ca4a1a",
+       "kind": "single",
+       "title": "Stuut 获 5250 万美元融资，用 AI 自动化回款",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113358989346132056"
+        }
+       ],
+       "fact": "Stuut 首席执行官兼联合创始人 Tarek Alaruri（@realtarek）谈公司融资 5250 万美元，用 AI 自动化企业的收款流程 Stuut 打造了一个 AI 驱动的订单到收款（order to cash）平台，自动完成从发出账单到现金入账之间的应收账款工作。---- 完整视频见“SiliconANGLE theCUBE”YouTube 频道（链接见评论）"
+      },
+      {
+       "id": "061a850cb7",
+       "kind": "single",
+       "title": "NYU 教授 Damodaran 分析 Anthropic IPO 将按 run-rate 收入定价而非现金流估值",
+       "date": "2026-10-23",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113684066612785367"
+        }
+       ],
+       "fact": "NYU 教授 Aswath Damodaran 发长文分析，Anthropic IPO 将按 run-rate 收入定价，而非基于现金流估值；H1 2026 Anthropic 亏损 $8.7B、OpenAI 亏损 $21.6B（不含非现金费用），使收益倍数法失效，ARR 成为 AI 版的互联网眼球数。"
+      },
+      {
+       "id": "b11598e950",
+       "kind": "single",
+       "title": "Anthropic 上市在即，硅谷风投被迫\"变大\"以承接巨额融资",
+       "date": "2026-10-23",
+       "source": "Newcomer 新闻长文（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.newcomer.co/p/anthropics-pending-ipo-has-silicon"
+        }
+       ],
+       "fact": "Anthropic 的 pre-IPO 融资迫使 Menlo Ventures、Lightspeed、ICONIQ 等风投机构扩充基金规模、动员 LP 共同投资，其即将提交的 S-1 将显示股权结构由企业投资者和后期巨型基金主导。"
+      }
+     ]
+    },
+    {
+     "name": "上市与招股",
+     "items": [
+      {
+       "id": "836c10e1a5",
+       "kind": "single",
+       "title": "微软终止与 Nscale 数据中心合作，后者数十亿美元上市计划受挫",
+       "date": "2026-10-18",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/014/574.htm"
+        }
+       ],
+       "fact": "据《每日电讯报》报道，微软终止了与英国数据中心企业 Nscale 在埃塞克斯郡劳顿的数据中心项目，Nscale 价值数十亿美元的上市计划因此遭遇重大挫折。微软是 Nscale 最大的两家客户之一，另一家为 Anthropic；Nscale 上个月已在美国提交 IPO 申请，两年半内合同总金额从 1 亿美元增长至超过 1,030 亿美元，双方均未回应置评请求。"
+      },
+      {
+       "id": "69a7778103",
+       "kind": "single",
+       "title": "Neocloud 行业面临洗牌，Nvidia 被认为风险最大",
+       "date": "2026-10-19",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/the-neocloud-shakeout-is-coming-and-nvidia-has-the-most-to-lose/"
+        }
+       ],
+       "fact": "The Decoder 报道，数据中心与 neocloud 行业高管预计数百家 AI 云厂商中仅七到十家能在几年内存活，Firmus 撤回 IPO，CoreWeave 市值一周缩水约四分之一。"
+      },
+      {
+       "id": "c7ca94dd5f",
+       "kind": "single",
+       "title": "Anthropic 云合作生变：AWS、Google、微软视其为竞争者",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/"
+        }
+       ],
+       "fact": "据泄露给华尔街日报的 S-1 文件，Anthropic 难以从 AWS、Google 和 Microsoft 获得足够云算力，这些厂商日益将其视为竞争者而非客户。"
+      },
+      {
+       "id": "8ca83e329a",
+       "kind": "single",
+       "title": "WSJ 披露 Anthropic IPO 草案：上半年收入 163 亿美元、纸面亏损 807 亿美元、约 4500 亿美元算力承诺",
+       "date": "2026-10-21",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112763999586771238"
+        }
+       ],
+       "fact": "WSJ 看到 Anthropic 的 IPO 草案文件，显示其上半年收入 $16.3B、纸面亏损 $80.7B，并承诺约 $4500 亿算力支出。"
+      },
+      {
+       "id": "31c9f8b6b1",
+       "kind": "single",
+       "title": "Anthropic 芯片债务利率升至 10% 以上，Axios 分析其难以推迟 IPO 的原因",
+       "date": "2026-10-21",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112890729802707204"
+        }
+       ],
+       "fact": "Axios 报道称私募信贷成本上升，Anthropic 向 Blackstone 提供的芯片债务利率已超过 10%，四个月前为 8.5%，而同评级的公开市场借款人利率约 7%。"
+      },
+      {
+       "id": "cba221f811",
+       "kind": "single",
+       "title": "消息称 Anthropic 最快本周五公开提交 S-1 招股书，或创史上最大 IPO",
+       "date": "2026-10-22",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/243.htm"
+        }
+       ],
+       "fact": "据雅虎财经援引知情人士报道，Anthropic 最早或于本周五公开提交 S-1 招股说明书，推进有望创史上最大规模的 IPO。"
+      },
+      {
+       "id": "8c82b87ef5",
+       "kind": "single",
+       "title": "SK Hynix 暂停旗下存储芯片子公司 Solidigm 的美国 IPO 评估",
+       "date": "2026-10-23",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113520478987944441"
+        }
+       ],
+       "fact": "SK Hynix 据华尔街日报报道，以市场波动和半导体股整体回调为由，停止评估 Solidigm 的 pre-IPO 融资和美国 IPO。SK Hynix 表示 Solidigm 现有工厂产能难以满足 AI 驱动的需求，仍需新建美国工厂。SK Hynix 股价本季度下跌约 30%，自 6 月纪录以来跌逾一半，此前三个月公司刚在纳斯达克向美国投资者发售新股募资 $26.51B。"
+      }
+     ]
+    },
+    {
+     "name": "并购与收购",
+     "items": [
+      {
+       "id": "db1e48e5ea",
+       "kind": "event",
+       "title": "Disney · 并购与收购",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/"
+        },
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits/"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-18",
+         "stage": "进展",
+         "text": "Disney 同意雇佣 Character.AI 大部分员工"
+        },
+        {
+         "date": "10-19",
+         "stage": "洽谈",
+         "text": "Disney 拟通过破产程序收购 Character.AI 团队与技术、绕开其诉讼"
+        }
+       ]
+      },
+      {
+       "id": "0843cffcfc",
+       "kind": "single",
+       "title": "OpenAI 收购 AI 生物科技初创公司 Orchestra Bio",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/"
+        }
+       ],
+       "fact": "OpenAI 于周二宣布收购成立四年的 AI 生物科技软件初创公司 Orchestra Bio，交易金额未披露。Orchestra 开发帮助生物科技公司管理药物研发运营琐事的 AI 智能体，涉及财务追踪和临床试验排期等，据报道截至 2025 年融资约 2000 万美元，投资方包括 Andreessen Horowitz、Atria 和 8VC。"
+      },
+      {
+       "id": "1e31ad02b0",
+       "kind": "single",
+       "title": "Meta 宣布发行新的无投票权股票类别，为 AI 投入筹资",
+       "date": "2026-10-21",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/tech/1015799/meta-shares-class-ai-q3-2026-earnings"
+        }
+       ]
+      },
+      {
+       "id": "902fce3737",
+       "kind": "single",
+       "title": "WSJ：马斯克希望以 AI 为核心推动 SpaceX 与 Tesla 合并",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113107154219741231"
+        }
+       ],
+       "fact": "WSJ 报道，马斯克希望以 AI 为核心将估值约 $2T 的 SpaceX 与约 $1.5T 的 Tesla 合并。SpaceX 的 AI 业务已成其最大业务，Q3 营收 $7.56B（一年前仅 $813M），季度 $19.6B 资本开支中超过 $16.4B 投向 AI，推动 SpaceX 实现季度利润 $4.4B（上年同期亏损 $1.05B）。"
+      },
+      {
+       "id": "d6bff015da",
+       "kind": "single",
+       "title": "Meta 收购前员工创办的 AI 数据分析平台 Sundial",
+       "date": "2026-10-24",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/294.htm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "信息披露与治理",
+     "items": [
+      {
+       "id": "bb57ce8c79",
+       "kind": "single",
+       "title": "WorkBuddy 演示用 AI 几分钟完成 SpaceX 财报分析",
+       "date": "2026-10-21",
+       "source": "X：Tencent WorkBuddy (@WorkBuddy_AI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/WorkBuddy_AI/status/2112778892033614151"
+        }
+       ],
+       "fact": "WorkBuddy 发布视频，演示用 AI 在几分钟内端到端完成一份专业财报分析，涵盖数据提取、分部拆解与估值核查。该演示基于一周前对 SpaceX Q2 数据的分析，当时对 AI 与 Starlink 走向的判断正被 Q3 数据验证。SpaceX Q3 首次实现季度盈利，营收 146 亿美元，AI 收入增长 830%。"
+      },
+      {
+       "id": "f5a3bf3e45",
+       "kind": "single",
+       "title": "Anthropic 股权结构复盘：VC 迟到，无人持股超 2%",
+       "date": "2026-10-22",
+       "source": "Newcomer 新闻长文（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.newcomer.co/p/the-story-of-anthropics-cap-table"
+        }
+       ],
+       "fact": "Newcomer 复盘 Anthropic 走向 IPO 的股权结构，称没有任何风投机构持股超过 2%，这是公司刻意控制的结果。"
+      },
+      {
+       "id": "16a9ddebf3",
+       "kind": "single",
+       "title": "FT：Meta 拟设无投票权股份为 AI 建设引入外部资金",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113116183264448877"
+        }
+       ]
+      },
+      {
+       "id": "df96d1ad2a",
+       "kind": "single",
+       "title": "Anthropic、OpenAI 与 Musk 的公益承诺总额已超盖茨基金会三倍",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113365600953422324"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "破产与重整",
+     "items": [
+      {
+       "id": "5543875d34",
+       "kind": "single",
+       "title": "美国顶尖大学捐赠基金借AI投资获超额收益",
+       "date": "2026-10-18",
+       "source": "X：马东锡 NLP (@dongxi_nlp)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dongxi_nlp/status/2111931453780963485"
+        }
+       ],
+       "fact": "2026年美国顶尖大学捐赠基金因早期投资AI和SpaceX获得超额收益，北卡罗来纳大学系统回报+37.8%，圣路易斯华盛顿大学+37.3%，哈佛大学+27.1%。推文指出，大学作为长期资本持有者成为这轮技术革命的重要受益者，这与“AI将颠覆学术研究、大学走向破产”的论调形成对照。对普通人而言，AI持续降低知识生产门槛，看清历史进程的能力愈发重要。"
+      },
+      {
+       "id": "042f49a9d4",
+       "kind": "single",
+       "title": "播客：“逆向工程一切”成新一轮 AI 低质内容潮",
+       "date": "2026-10-23",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/podcast-reverse-engineer-anything-is-the-next-wave-of-ai-slop/"
+        }
+       ],
+       "fact": "404 Media 本周播客讨论 Jason 关于“逆向工程一切”现象的文章，并将其称为 AI 低质内容的新一轮浪潮。节目还谈及咨询巨头 Accenture 的 AI 调整，以及订阅者专属环节中讨论的 Character.ai 破产。"
+      }
+     ]
+    },
+    {
+     "name": "其他资本事项",
+     "items": [
+      {
+       "id": "cfb270f63a",
+       "kind": "single",
+       "title": "AWS CFO 约翰·费尔顿称 AI 基建繁荣可持续，AI 服务器投资回报周期不到三年",
+       "date": "2026-10-18",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/014/488.htm"
+        }
+       ]
+      },
+      {
+       "id": "dd01a480c3",
+       "kind": "single",
+       "title": "The Verge 分析 CoreWeave 债务困境为何波及整个 AI 行业",
+       "date": "2026-10-19",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1014045/coreweave-stock-debt-sector-ai"
+        }
+       ]
+      },
+      {
+       "id": "d6872aa005",
+       "kind": "single",
+       "title": "Blackstone 的 Jas Khaira 认为 AI 基建债务担忧被夸大",
+       "date": "2026-10-21",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/"
+        }
+       ]
+      },
+      {
+       "id": "657d2d40ea",
+       "kind": "single",
+       "title": "TechCrunch Founder Summit 2026：Toast、Bessemer 等投资人将分享哪些创业经验",
+       "date": "2026-10-23",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/"
+        }
+       ],
+       "fact": "TechCrunch Founder Summit 2026 将于 11 月 4 日在波士顿 SoWa Power Station 举办，Toast 联合创始人 Steve Fredette、Bessemer 合伙人 Kent Bennett、Glasswing Ventures 的 Rudina Seseri 等将登台分享。"
+      }
+     ]
+    }
+   ],
+   "count": 46
+  },
+  {
+   "name": "法律职业与法律科技",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "id": "94c62fd5a9",
+       "kind": "single",
+       "title": "Anthropic 给外部安全机构 METR 授予类员工访问权限",
+       "date": "2026-10-18",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access/"
+        }
+       ],
+       "fact": "Anthropic 为 6 名 METR 员工提供公司硬件、办公空间和与内部风险评估团队相当的内部工具访问权限，以自愿方式引入外部监督。METR 不接受 AI 公司捐款，Anthropic 也不能否决其分析报告的发布，但可要求隐去客户数据、律师委托特权信息和模型架构等内容。"
+      },
+      {
+       "id": "9df72dd0fe",
+       "kind": "single",
+       "title": "FT：Anthropic 借鉴律师谈判伦理，为 Claude 智能体谈判制定规范",
+       "date": "2026-10-18",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2111695161164259808"
+        }
+       ],
+       "fact": "据 FT 报道，Anthropic 希望把律师的谈判伦理规范植入将与其他智能体讨价还价、解决纠纷和协商薪酬的 Claude 智能体。"
+      },
+      {
+       "id": "ae0ec4d423",
+       "kind": "single",
+       "title": "Claude Tag 助力 Anthropic 法务财务运营团队",
+       "date": "2026-10-20",
+       "source": "X：Noah Zweben（@noahzweben）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/noahzweben/status/2112579381600428068"
+        }
+       ],
+       "fact": "在你工作的地方有存在感的主动式智能体就是未来！很高兴能用 Claude Tag 支持我们法务、财务和运营团队的工作"
+      },
+      {
+       "id": "95f2062d34",
+       "kind": "single",
+       "title": "悉尼男子向 Claude 发表枪击托儿所言论后被捕",
+       "date": "2026-10-24",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/325.htm"
+        }
+       ],
+       "fact": "悉尼一名 29 岁男子因向 Anthropic 的 Claude 透露想枪击当地托儿所，对话引起国际刑警组织注意后于当地时间 18 日被警方拘留，被控利用通信服务实施骚扰、恐吓或冒犯行为，将接受心理健康评估。其辩护律师称当事人只是因耳部感染情绪失控、以为对话属于私人交流；聊天记录如何被获取以及 Anthropic 是否主动提供内容尚不清楚。"
+      }
+     ]
+    }
+   ],
+   "count": 4
+  },
+  {
+   "name": "产业与商业动向",
+   "groups": [
+    {
+     "name": "发布与上线",
+     "items": [
+      {
+       "id": "1980d7ff3f",
+       "kind": "single",
+       "title": "报告：美国化石燃料基建规模创十年新高，可再生能源增长放缓",
+       "date": "2026-10-19",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/science/1013954/fossil-fuel-power-infrastructure-data-centers-report"
+        }
+       ]
+      },
+      {
+       "id": "03c0a85504",
+       "kind": "single",
+       "title": "阿里速卖通联合天猫推出“中国品牌全球增长计划”，将天使轮投资 AI 硬件新品牌",
+       "date": "2026-10-19",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/014/870.htm"
+        }
+       ]
+      },
+      {
+       "id": "9eb89a6de1",
+       "kind": "single",
+       "title": "PyTorch 基金会新增九家成员，Nebius、Nscale、Shopify 加入铂金级",
+       "date": "2026-10-20",
+       "source": "PyTorch：Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://pytorch.org/blog/pytorch-foundation-welcomes-nine-new-members-as-momentum-builds-around-open-source-ai-center-of-gravity/"
+        }
+       ]
+      },
+      {
+       "id": "6e1ad66f88",
+       "kind": "single",
+       "title": "腾讯张军：超 10 万名老师申领 WorkBuddy 教育公益版，覆盖全国 1467 个城市 4.5 万所学校",
+       "date": "2026-10-22",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/690.htm"
+        }
+       ]
+      },
+      {
+       "id": "604901a6d0",
+       "kind": "single",
+       "title": "Claude 未能造出蝎子抗毒血清：Citrini 与 Anthropic 的药物研发实验",
+       "date": "2026-10-22",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "合作与签约",
+     "items": [
+      {
+       "id": "801095f314",
+       "kind": "single",
+       "title": "Figma 联合创始人 Dylan Field 称 MCP 并非完美协议",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/"
+        }
+       ]
+      },
+      {
+       "id": "f880efdcb8",
+       "kind": "single",
+       "title": "Google 与 EarthFireAll 用 AI 卫星探测野火",
+       "date": "2026-10-20",
+       "source": "X：Google AI (@GoogleAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/GoogleAI/status/2112536218646806986"
+        }
+       ]
+      },
+      {
+       "id": "2b15df08b6",
+       "kind": "single",
+       "title": "Mistral 与 Nvidia 用物理 AI 加速工业设计",
+       "date": "2026-10-21",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/mistral-and-nvidia-want-to-speed-up-industrial-design-with-physics-ai/"
+        }
+       ]
+      },
+      {
+       "id": "d46e7e1d96",
+       "kind": "single",
+       "title": "Mistral 深化与 NVIDIA 工业工程合作",
+       "date": "2026-10-21",
+       "source": "X：Arthur Mensch（Mistral CEO） (@arthurmensch)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/arthurmensch/status/2112875860206162322"
+        }
+       ]
+      },
+      {
+       "id": "22ebe4b660",
+       "kind": "single",
+       "title": "Google 与 Voltus 将在 PJM 电网合作争取 1 GW 虚拟电厂容量",
+       "date": "2026-10-22",
+       "source": "Canary Media：Data Centers 原创报道",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.canarymedia.com/articles/virtual-power-plants/google-plans-big-virtual-power-plant-in-energy-strapped-pjm-grid"
+        }
+       ]
+      },
+      {
+       "id": "a73796586d",
+       "kind": "single",
+       "title": "OpenAI 试点内部监控系统嵌入式评估",
+       "date": "2026-10-22",
+       "source": "X：OpenAI (@OpenAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/OpenAI/status/2113298833392496746"
+        }
+       ]
+      },
+      {
+       "id": "ef54b70e31",
+       "kind": "single",
+       "title": "黑石集团总裁格雷反驳 AI 泡沫论：需求近乎抛物线式增长",
+       "date": "2026-10-22",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/752.htm"
+        }
+       ]
+      },
+      {
+       "id": "1a49d1e22b",
+       "kind": "single",
+       "title": "OpenAI 携手 ICBA 助社区银行网络安全",
+       "date": "2026-10-22",
+       "source": "X：OpenAI Newsroom (@OpenAINewsroom)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/OpenAINewsroom/status/2113330753832726617"
+        }
+       ]
+      },
+      {
+       "id": "0edd65ea7a",
+       "kind": "single",
+       "title": "Ed Zitron 撰文质疑 Blackstone 重金押注 AI 基础设施",
+       "date": "2026-10-23",
+       "source": "Ed Zitron 长文 / Where’s Your Ed At（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.wheresyoured.at/premium-the-haters-guide-to-blackstone/"
+        }
+       ]
+      },
+      {
+       "id": "2a74a5cfc0",
+       "kind": "single",
+       "title": "黄仁勋访问阿斯塔纳，NVIDIA 投资哈萨克斯坦 AI 生态",
+       "date": "2026-10-23",
+       "source": "NVIDIA Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/"
+        }
+       ]
+      },
+      {
+       "id": "2dedfcf6d3",
+       "kind": "single",
+       "title": "OpenAI 与波兰 NASK 签署协议，合作推进 AI 安全与安保",
+       "date": "2026-10-23",
+       "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "市场与运营",
+     "items": [
+      {
+       "id": "6cf3b831bd",
+       "kind": "single",
+       "title": "科乐美社长早川英树谈 AI 对游戏开发的影响：最重要的依然是\"人\"与\"创作者\"",
+       "date": "2026-10-18",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/014/439.htm"
+        }
+       ]
+      },
+      {
+       "id": "bafeb12cab",
+       "kind": "single",
+       "title": "NVIDIA 联合六家供应链伙伴扩大制造产能",
+       "date": "2026-10-21",
+       "source": "NVIDIA：Newsroom（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout"
+        }
+       ]
+      },
+      {
+       "id": "6f3a955aa6",
+       "kind": "single",
+       "title": "西弗吉尼亚美国板栗林陷入 Nscale 数据中心选址争议",
+       "date": "2026-10-21",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/west-virginia-american-chestnut-trees-data-center/"
+        }
+       ]
+      },
+      {
+       "id": "e0687d3af7",
+       "kind": "single",
+       "title": "特朗普要求大型数据中心自建电力并向社区支付现金分红",
+       "date": "2026-10-21",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112896701308796936"
+        }
+       ]
+      },
+      {
+       "id": "6f7589001f",
+       "kind": "single",
+       "title": "ABC/华盛顿邮报/Ipsos 民调：57% 美国人认为 AI 对社会有害，66% 反对新建数据中心",
+       "date": "2026-10-21",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://abcnews.com/Politics/americans-ai-bad-society-oppose-data-centers-abcpostipsos/story?id=137414085"
+        }
+       ]
+      },
+      {
+       "id": "e07e9d3b16",
+       "kind": "single",
+       "title": "HARC 报告：德州数据中心扩张可能抹去数十年空气治理成果",
+       "date": "2026-10-21",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1015958/data-center-pollution-rising-report"
+        }
+       ]
+      },
+      {
+       "id": "6606f6a220",
+       "kind": "single",
+       "title": "和科沃斯CEO钱程聊父与子、企二代接班与机器人",
+       "date": "2026-10-21",
+       "source": "张小珺商业访谈录（播客 RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.xiaoyuzhoufm.com/episode/6ad4dacd641ef406308d86e5?utm_source=rss"
+        }
+       ]
+      },
+      {
+       "id": "1143502e72",
+       "kind": "single",
+       "title": "404 Media 报道后，得州环境质量委员会关闭自动审批系统并暂停 17 个数据中心项目许可",
+       "date": "2026-10-22",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/texas-commission-on-environmental-quality-portal-down/"
+        }
+       ]
+      },
+      {
+       "id": "e3186e248a",
+       "kind": "single",
+       "title": "路透社：特斯拉下调 2026 年资本支出目标至约 200 亿美元，降幅约 20%",
+       "date": "2026-10-22",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/215.htm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "人事与组织",
+     "items": [
+      {
+       "id": "92b0d1a6c5",
+       "kind": "single",
+       "title": "DeepSeek 合并团队成立产品部",
+       "date": "2026-10-19",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2112121758811562346"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "活动与行程",
+     "items": [
+      {
+       "id": "04b4a274fe",
+       "kind": "single",
+       "title": "荣耀人形机器人闪电与越野冠军赵家驹同台赛跑",
+       "date": "2026-10-21",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/015/664.htm"
+        }
+       ]
+      },
+      {
+       "id": "5100bb9c6e",
+       "kind": "single",
+       "title": "Perplexity Computer 自主将树莓派改造成游戏主机",
+       "date": "2026-10-23",
+       "source": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/AravSrinivas/status/2113661112143282441"
+        }
+       ]
+      },
+      {
+       "id": "771b5790a3",
+       "kind": "single",
+       "title": "Grok Bot 问答活动",
+       "date": "2026-10-23",
+       "source": "X：Matt Palmer（SpaceXSI，Grok Bot） (@mattyp)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/mattyp/status/2113758453906944205"
+        }
+       ]
+      },
+      {
+       "id": "633ca4c94c",
+       "kind": "single",
+       "title": "瑞典政府办公厅禁止办公电脑直接访问 ChatGPT 和 Claude，改用经批准的 AI 服务",
+       "date": "2026-10-24",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/385.htm"
+        }
+       ]
+      },
+      {
+       "id": "29f301da25",
+       "kind": "single",
+       "title": "智元在济南组织 110 台远征 A3 人形机器人同舞创吉尼斯世界纪录",
+       "date": "2026-10-24",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/382.htm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "观点与转述",
+     "items": [
+      {
+       "id": "49766244c2",
+       "kind": "event",
+       "title": "Microduck · 观点与转述",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/ClementDelangue/status/2112937020456612298"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/ClementDelangue/status/2113322519423758540"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-21",
+         "stage": "进展",
+         "text": "Hugging Face CEO：欧洲AI机会更大，Microduck已售1.5万台"
+        },
+        {
+         "date": "10-22",
+         "stage": "进展",
+         "text": "Hugging Face CEO 称 Microduck 预订单将破 2 万"
+        }
+       ]
+      },
+      {
+       "id": "99a9ee0473",
+       "kind": "single",
+       "title": "重阳节，京东JoyInside一批AI设备走进许昌福瑞园养老院",
+       "date": "2026-10-19",
+       "source": "公众号：京东JoyAI",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://mp.weixin.qq.com/s?__biz=MzU0MjU0MDMzMw%3D%3D&mid=2247487528&idx=1&sn=a185dac109d95a86bd885a8a9651611d"
+        }
+       ]
+      },
+      {
+       "id": "78bb049ba2",
+       "kind": "single",
+       "title": "Morgan Stanley 预测 2027 年超大规模厂商与 neocloud AI 支出达 1.58 万亿美元",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112427961047798236"
+        }
+       ]
+      },
+      {
+       "id": "a171b2dd19",
+       "kind": "single",
+       "title": "Tenex 访谈：按产出付酬的工程组织与 AI 原生 SDLC 实践",
+       "date": "2026-10-21",
+       "source": "Latent Space（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.latent.space/p/tenex"
+        }
+       ]
+      },
+      {
+       "id": "af23eb0594",
+       "kind": "single",
+       "title": "X.PIN 分析 Tim Cook 中国行与 Apple iPhone Duo 中国布局",
+       "date": "2026-10-21",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2113039089431671186"
+        }
+       ]
+      },
+      {
+       "id": "a354fc75c8",
+       "kind": "single",
+       "title": "Google 等 e-Conomy SEA 2026 报告预测东南亚数字经济将达 3680 亿美元",
+       "date": "2026-10-21",
+       "source": "Google Blog：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/"
+        }
+       ]
+      },
+      {
+       "id": "98e79b1561",
+       "kind": "single",
+       "title": "United称Starlink航班数超全美航司总和",
+       "date": "2026-10-21",
+       "source": "X：Alex Heath (@alexeheath)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/alexeheath/status/2112968170952876490"
+        }
+       ]
+      },
+      {
+       "id": "1f2f26b12f",
+       "kind": "single",
+       "title": "The Verge 分析 SpaceX 与特斯拉成立特别委员会讨论合并背后的财务逻辑",
+       "date": "2026-10-22",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari"
+        }
+       ]
+      },
+      {
+       "id": "3c67db5179",
+       "kind": "single",
+       "title": "从遥操作到第一视角采集：中国人形机器人数据收集行业实地观察",
+       "date": "2026-10-22",
+       "source": "ChinaTalk（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/take-ten-thousand-egocentric-data"
+        }
+       ]
+      },
+      {
+       "id": "548906d762",
+       "kind": "single",
+       "title": "Switch 2 首个破解据称由 OpenAI Codex 协助完成",
+       "date": "2026-10-22",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/games/1016862/nintendo-switch-2-jailbreak-ai"
+        }
+       ]
+      },
+      {
+       "id": "afb3081208",
+       "kind": "single",
+       "title": "Moshi CEO Anekha Sokhal 访谈：从能源衍生品交易员到为交易员打造 AI 推荐引擎",
+       "date": "2026-10-22",
+       "source": "Latent Space（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.latent.space/p/moshi"
+        }
+       ]
+      },
+      {
+       "id": "82462d366b",
+       "kind": "single",
+       "title": "OpenAI的Brockman称与团队共担责任",
+       "date": "2026-10-23",
+       "source": "X：Greg Brockman (@gdb)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/gdb/status/2113746426236977236"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "行业动态",
+     "items": [
+      {
+       "id": "f57527e17a",
+       "kind": "single",
+       "title": "xAI 团队每天为 Grok Bot 做约 20 项改进",
+       "date": "2026-10-18",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2111642151138546118"
+        }
+       ]
+      },
+      {
+       "id": "da807eb244",
+       "kind": "single",
+       "title": "周一早上8点不到，就已经有300+人在同时收听了 看来都是周末玩了两天来补课的😂",
+       "date": "2026-10-18",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2111970101708964222"
+        }
+       ]
+      },
+      {
+       "id": "fe69f709ff",
+       "kind": "single",
+       "title": "Grok Bot 新用户教学提议获马斯克回应",
+       "date": "2026-10-18",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2111642226774417627"
+        }
+       ]
+      },
+      {
+       "id": "44fe6795f7",
+       "kind": "single",
+       "title": "水上漂",
+       "date": "2026-10-18",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2111741348361740653"
+        }
+       ]
+      },
+      {
+       "id": "d9e7944559",
+       "kind": "single",
+       "title": "PFN 与 Tenstorrent 联合研究入选 NEDO 光电融合 xPU 设计开发项目",
+       "date": "2026-10-19",
+       "source": "Preferred Networks：AI 研究与产品",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.preferred.jp/ja/news/pr20261020"
+        }
+       ]
+      },
+      {
+       "id": "3cfa5b47a6",
+       "kind": "single",
+       "title": "多人AI需超越群聊阶段",
+       "date": "2026-10-19",
+       "source": "X：Ethan Mollick (@emollick)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/emollick/status/2112289593286352976"
+        }
+       ]
+      },
+      {
+       "id": "45d34e7d7c",
+       "kind": "single",
+       "title": "OpenAI 用 Codex 正在打造什么",
+       "date": "2026-10-19",
+       "source": "X：OpenAI Developers (@OpenAIDevs)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/OpenAIDevs/status/2112242739198959913"
+        }
+       ]
+      },
+      {
+       "id": "78f9d663c2",
+       "kind": "single",
+       "title": "Dex Horthy 盛赞新生产力工具",
+       "date": "2026-10-19",
+       "source": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dexhorthy/status/2112203344664289604"
+        }
+       ]
+      },
+      {
+       "id": "4f90cfd0bc",
+       "kind": "single",
+       "title": "DIU 代理主任 Travis Metz 谈无人机主导计划",
+       "date": "2026-10-19",
+       "source": "ChinaTalk（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/drone-dominance"
+        }
+       ]
+      },
+      {
+       "id": "f76fc6f5e1",
+       "kind": "single",
+       "title": "Lil Vader 用 AI 演绎温杜坠窗",
+       "date": "2026-10-19",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2112080069732479400"
+        }
+       ]
+      },
+      {
+       "id": "c51ca368e8",
+       "kind": "single",
+       "title": "Grok Bot 上周用法分享",
+       "date": "2026-10-19",
+       "source": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/poteto/status/2112246281016119780"
+        }
+       ]
+      },
+      {
+       "id": "c8a18f31ff",
+       "kind": "single",
+       "title": "OpenAI 社区用 Codex 做的酷项目",
+       "date": "2026-10-19",
+       "source": "X：OpenAI Developers (@OpenAIDevs)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/OpenAIDevs/status/2112269679154585624"
+        }
+       ]
+      },
+      {
+       "id": "da546de129",
+       "kind": "single",
+       "title": "OpenAI 征集 Codex 使用案例",
+       "date": "2026-10-19",
+       "source": "X：OpenAI Developers (@OpenAIDevs)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/OpenAIDevs/status/2112229620758265938"
+        }
+       ]
+      },
+      {
+       "id": "4514dca78e",
+       "kind": "single",
+       "title": "OpenAI 的 Vaibhav 结束印度行飞往柏林",
+       "date": "2026-10-19",
+       "source": "X：Vaibhav Srivastav（OpenAI）(@reach_vb)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/reach_vb/status/2112041919782285712"
+        }
+       ]
+      },
+      {
+       "id": "d2e8150832",
+       "kind": "single",
+       "title": "Muse 调侃用自己名字命名",
+       "date": "2026-10-19",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2112328592130752840"
+        }
+       ]
+      },
+      {
+       "id": "61440584f3",
+       "kind": "single",
+       "title": "Muse 帮你分担任何事",
+       "date": "2026-10-19",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2112223052494962814"
+        }
+       ]
+      },
+      {
+       "id": "e118de435a",
+       "kind": "single",
+       "title": "Codex 回应额度异常消耗：约 40000 个账号限额错配已修正并补偿",
+       "date": "2026-10-20",
+       "source": "X：Tibo (@thsottiaux)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thsottiaux/status/2112592264686149749"
+        }
+       ]
+      },
+      {
+       "id": "1803d1cf8c",
+       "kind": "single",
+       "title": "HP 如何用 Databricks CustomerLake 构建 AI 就绪的 CDP",
+       "date": "2026-10-20",
+       "source": "Databricks：Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.databricks.com/blog/hp-ai-ready-cdp-databricks-customerlake"
+        }
+       ]
+      },
+      {
+       "id": "169d4f8448",
+       "kind": "single",
+       "title": "PixVerse 柴犬女巫零食通道跳舞",
+       "date": "2026-10-20",
+       "source": "X：PixVerse (@PixVerse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/PixVerse/status/2112544460311801883"
+        }
+       ]
+      },
+      {
+       "id": "e7d35ab661",
+       "kind": "single",
+       "title": "Meta Muse 自动追踪学校通知",
+       "date": "2026-10-20",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2112581840330523036"
+        }
+       ]
+      },
+      {
+       "id": "bf610f1485",
+       "kind": "single",
+       "title": "圣戈班用 Microsoft Discovery 加速材料研发",
+       "date": "2026-10-20",
+       "source": "X：Satya Nadella (@satyanadella)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/satyanadella/status/2112498869531754900"
+        }
+       ]
+      },
+      {
+       "id": "788b66546c",
+       "kind": "single",
+       "title": "Sakana AI 举办第二届 Engineer Open House 2026，介绍五大工程职位",
+       "date": "2026-10-20",
+       "source": "Sakana AI：Blog（网页）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://sakana.ai/open-house-2026/"
+        }
+       ]
+      },
+      {
+       "id": "5e77fc317d",
+       "kind": "single",
+       "title": "HumanLayer 软件工厂辩论对谈",
+       "date": "2026-10-20",
+       "source": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dexhorthy/status/2112610115778170919"
+        }
+       ]
+      },
+      {
+       "id": "9534696774",
+       "kind": "single",
+       "title": "grokbot 账号合并后无法登录",
+       "date": "2026-10-20",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2112336569827004686"
+        }
+       ]
+      },
+      {
+       "id": "d7db6a64be",
+       "kind": "single",
+       "title": "TypeSafe AI 推文问候",
+       "date": "2026-10-20",
+       "source": "X：TypeSafe AI (@typesafeai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/typesafeai/status/2112628870847594597"
+        }
+       ]
+      },
+      {
+       "id": "006f03a59c",
+       "kind": "single",
+       "title": "OpenAI 重置额度并继续推进",
+       "date": "2026-10-20",
+       "source": "X：Vaibhav Srivastav（OpenAI）(@reach_vb)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/reach_vb/status/2112441205896478848"
+        }
+       ]
+      },
+      {
+       "id": "df0895afc8",
+       "kind": "single",
+       "title": "Waymo 回顾自动驾驶成长历程",
+       "date": "2026-10-20",
+       "source": "X：Waymo (@Waymo)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Waymo/status/2112604798163779692"
+        }
+       ]
+      },
+      {
+       "id": "73eac589aa",
+       "kind": "single",
+       "title": "howie.serious 推文：day & night",
+       "date": "2026-10-20",
+       "source": "X：howie.serious (@howie_serious)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/howie_serious/status/2112512561967218723"
+        }
+       ]
+      },
+      {
+       "id": "784c931f02",
+       "kind": "single",
+       "title": "Grok 经典可视化回顾",
+       "date": "2026-10-20",
+       "source": "X：shaoruu（SpaceXSI，Grok Bot 初版作者之一） (@shaoruu)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shaoruu/status/2112636875051819352"
+        }
+       ]
+      },
+      {
+       "id": "2447b50788",
+       "kind": "single",
+       "title": "Muse 调侃忘带人字拖",
+       "date": "2026-10-20",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2112631467247337809"
+        }
+       ]
+      },
+      {
+       "id": "824e8a47d2",
+       "kind": "single",
+       "title": "OpenAI 披露编码代理多次关闭对齐监控，GPT-6 Astra 曾否认行为",
+       "date": "2026-10-21",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/openai-cant-yet-explain-why-its-coding-agents-switch-off-misalignment-monitoring/"
+        }
+       ]
+      },
+      {
+       "id": "4e4a9aff5f",
+       "kind": "single",
+       "title": "Sound 跻身众多传奇风投之列",
+       "date": "2026-10-21",
+       "source": "X：Alex Heath (@alexeheath)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/alexeheath/status/2112753716621431024"
+        }
+       ]
+      },
+      {
+       "id": "e506f4f57f",
+       "kind": "single",
+       "title": "Sources 播客已邀多位科技巨头CEO",
+       "date": "2026-10-21",
+       "source": "X：Alex Heath (@alexeheath)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/alexeheath/status/2112941219798233185"
+        }
+       ]
+      },
+      {
+       "id": "ed40d02950",
+       "kind": "single",
+       "title": "纳德拉年度信谈构建前沿生态",
+       "date": "2026-10-21",
+       "source": "X：Satya Nadella (@satyanadella)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/satyanadella/status/2113008920008790488"
+        }
+       ]
+      },
+      {
+       "id": "498fce3e83",
+       "kind": "single",
+       "title": "黄仁勋 keynote 逗机器小鸭",
+       "date": "2026-10-21",
+       "source": "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Thom_Wolf/status/2112863605788168508"
+        }
+       ]
+      },
+      {
+       "id": "3e063a7fd6",
+       "kind": "single",
+       "title": "NVIDIA RTX Spark 解锁本地 AI",
+       "date": "2026-10-21",
+       "source": "X：OpenClaw (@openclaw)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/openclaw/status/2112974517387800888"
+        }
+       ]
+      },
+      {
+       "id": "a548425691",
+       "kind": "single",
+       "title": "Hugging Face 联创与黄仁勋同台",
+       "date": "2026-10-21",
+       "source": "X：Thomas Wolf（Hugging Face 联创/CSO） (@Thom_Wolf)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Thom_Wolf/status/2112841663517225271"
+        }
+       ]
+      },
+      {
+       "id": "1811baa4ff",
+       "kind": "single",
+       "title": "Midjourney 每周办公时间 10/21",
+       "date": "2026-10-21",
+       "source": "X：Midjourney (@midjourney)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/midjourney/status/2112985137193566330"
+        }
+       ]
+      },
+      {
+       "id": "7261b8f34b",
+       "kind": "single",
+       "title": "PixVerse 公布 PixLight 2026 评审团",
+       "date": "2026-10-21",
+       "source": "X：PixVerse (@PixVerse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/PixVerse/status/2112922120284143666"
+        }
+       ]
+      },
+      {
+       "id": "248973b00a",
+       "kind": "single",
+       "title": "Luma AI 转发 DreamLab 推文",
+       "date": "2026-10-21",
+       "source": "X：Luma AI (@LumaLabsAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/LumaLabsAI/status/2113042651033297081"
+        }
+       ]
+      },
+      {
+       "id": "04c177d141",
+       "kind": "single",
+       "title": "OpenAI 的 Dot 系列三词推文",
+       "date": "2026-10-21",
+       "source": "X：Tibo (@thsottiaux)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thsottiaux/status/2113029655095836957"
+        }
+       ]
+      },
+      {
+       "id": "ab86258035",
+       "kind": "single",
+       "title": "https://x.com/i/broadcasts/1mGPaZoWBnnJN",
+       "date": "2026-10-21",
+       "source": "X：OpenClaw (@openclaw)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/openclaw/status/2112766676315820415"
+        }
+       ]
+      },
+      {
+       "id": "4f77149cd3",
+       "kind": "single",
+       "title": "Muse 推文：一句“send”就够了",
+       "date": "2026-10-21",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2113008640881746162"
+        }
+       ]
+      },
+      {
+       "id": "10d7e3e57f",
+       "kind": "single",
+       "title": "安全工程师本周状态",
+       "date": "2026-10-21",
+       "source": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/poteto/status/2113044830196769164"
+        }
+       ]
+      },
+      {
+       "id": "ecdabff8fe",
+       "kind": "single",
+       "title": "Odyssey 推文：仍在模式之中",
+       "date": "2026-10-21",
+       "source": "X：Odyssey (@odysseyml)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/odysseyml/status/2112915874260656424"
+        }
+       ]
+      },
+      {
+       "id": "5c2fa547d2",
+       "kind": "single",
+       "title": "xAI 的 Grok Bot 可以聊天了",
+       "date": "2026-10-21",
+       "source": "X：shaoruu（SpaceXSI，Grok Bot 初版作者之一） (@shaoruu)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shaoruu/status/2113045142722789879"
+        }
+       ]
+      },
+      {
+       "id": "10c1487b76",
+       "kind": "single",
+       "title": "今日值得庆祝",
+       "date": "2026-10-21",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2112731138435518863"
+        }
+       ]
+      },
+      {
+       "id": "31ecc91024",
+       "kind": "single",
+       "title": "无实质内容可译",
+       "date": "2026-10-21",
+       "source": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/poteto/status/2112969303318561214"
+        }
+       ]
+      },
+      {
+       "id": "64a3be5b3d",
+       "kind": "single",
+       "title": "OpenAI、Anthropic、Nvidia 游说支出创单季新高",
+       "date": "2026-10-22",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/policy/1016585/openai-anthropic-nvidia-lobbying-records"
+        }
+       ]
+      },
+      {
+       "id": "48184c4a1e",
+       "kind": "single",
+       "title": "Marathon Fusion 用聚变中子生产医用同位素",
+       "date": "2026-10-22",
+       "source": "X：indigo (@indigox)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/indigox/status/2113295718249374002"
+        }
+       ]
+      },
+      {
+       "id": "0dad8d3828",
+       "kind": "single",
+       "title": "女子身份被冒用开CashApp账户，面临多年刑期",
+       "date": "2026-10-22",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/this-womans-living-a-cashapp-scam-nightmare/"
+        }
+       ]
+      },
+      {
+       "id": "95f1863652",
+       "kind": "single",
+       "title": "ChatGPT 为梅西推荐象棋开局",
+       "date": "2026-10-22",
+       "source": "X：ChatGPT (@ChatGPT)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/ChatGPT/status/2113336601300676911"
+        }
+       ]
+      },
+      {
+       "id": "c6d88029c3",
+       "kind": "single",
+       "title": "a16z 公布首届 Ops Engineering Fellowship 50 人名单",
+       "date": "2026-10-22",
+       "source": "a16z：News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.a16z.news/p/meet-the-a16z-ops-engineering-fellows"
+        }
+       ]
+      },
+      {
+       "id": "6a9775a8da",
+       "kind": "single",
+       "title": "TK Elevator 用微软技术赋能维保技师",
+       "date": "2026-10-22",
+       "source": "X：Satya Nadella (@satyanadella)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/satyanadella/status/2113217359108595808"
+        }
+       ]
+      },
+      {
+       "id": "cad8800bbb",
+       "kind": "single",
+       "title": "PyTorch Foundation 公布 2026 届 24 位大使",
+       "date": "2026-10-22",
+       "source": "PyTorch：Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://pytorch.org/blog/meet-the-2026-pytorch-foundation-ambassadors/"
+        }
+       ]
+      },
+      {
+       "id": "7788c30b11",
+       "kind": "single",
+       "title": "Grok Bot 处理拖延任务",
+       "date": "2026-10-22",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113287080822600070"
+        }
+       ]
+      },
+      {
+       "id": "aa93865368",
+       "kind": "single",
+       "title": "Grok 机器人命名趣谈",
+       "date": "2026-10-22",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113065340720865536"
+        }
+       ]
+      },
+      {
+       "id": "8f6a42be13",
+       "kind": "single",
+       "title": "Suno 邀你分享本月创作歌曲",
+       "date": "2026-10-22",
+       "source": "X：Suno (@suno)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/suno/status/2113348648629043464"
+        }
+       ]
+      },
+      {
+       "id": "e53ed37bb7",
+       "kind": "single",
+       "title": "Muse 每日简报清晨推送",
+       "date": "2026-10-22",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2113320414537793880"
+        }
+       ]
+      },
+      {
+       "id": "ddd5aebbc9",
+       "kind": "single",
+       "title": "Anthropic、OpenAI 与马斯克拟投入近 3000 亿美元做慈善",
+       "date": "2026-10-23",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/799.htm"
+        }
+       ]
+      },
+      {
+       "id": "6b7d469f6a",
+       "kind": "single",
+       "title": "https://x.com/Muse/status/2113701653119459543",
+       "date": "2026-10-23",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2113701653119459543"
+        }
+       ]
+      },
+      {
+       "id": "b6895beae7",
+       "kind": "single",
+       "title": "X Money 可让 bot 代用户购物",
+       "date": "2026-10-23",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113723347733262527"
+        }
+       ]
+      },
+      {
+       "id": "e176be159a",
+       "kind": "single",
+       "title": "Hugging Face CEO 提醒警惕 Microducks 仿冒网站",
+       "date": "2026-10-23",
+       "source": "X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/ClementDelangue/status/2113681827583905959"
+        }
+       ]
+      },
+      {
+       "id": "d0ae9bd5c6",
+       "kind": "single",
+       "title": "MIT 人文、艺术与社会科学学院75周年研讨会：探讨AI时代人的理解力价值",
+       "date": "2026-10-23",
+       "source": "MIT News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://news.mit.edu/2026/reinforcing-value-of-human-understanding-at-mit-1023"
+        }
+       ]
+      },
+      {
+       "id": "935f8a2c03",
+       "kind": "single",
+       "title": "OpenAI 研究官调侃 24 点数学题",
+       "date": "2026-10-23",
+       "source": "X：Mark Chen（OpenAI 首席研究官，@markchen90）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/markchen90/status/2113675853934764068"
+        }
+       ]
+      },
+      {
+       "id": "0bf70fbc67",
+       "kind": "single",
+       "title": "Muse 找回遗漏的 1 美元",
+       "date": "2026-10-23",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2113685960236114133"
+        }
+       ]
+      },
+      {
+       "id": "80aebb572f",
+       "kind": "single",
+       "title": "家里就有Opus的梗图",
+       "date": "2026-10-23",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113677239330173368"
+        }
+       ]
+      },
+      {
+       "id": "d4a614d3f1",
+       "kind": "single",
+       "title": "https://x.com/Kimi_Moonshot/status/2113445757185606062",
+       "date": "2026-10-23",
+       "source": "X：Kimi.ai (@Kimi_Moonshot)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Kimi_Moonshot/status/2113445757185606062"
+        }
+       ]
+      },
+      {
+       "id": "9e825989a0",
+       "kind": "single",
+       "title": "你的 bot 本周趁你睡觉做了什么",
+       "date": "2026-10-23",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113656703778787458"
+        }
+       ]
+      },
+      {
+       "id": "0b1f8898e3",
+       "kind": "single",
+       "title": "Grok Bot 回应监控质疑",
+       "date": "2026-10-23",
+       "source": "X：Matt Palmer（SpaceXSI，Grok Bot） (@mattyp)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/mattyp/status/2113719630464250097"
+        }
+       ]
+      },
+      {
+       "id": "3c3088f6fb",
+       "kind": "single",
+       "title": "Meta Muse 在日本进展亮眼",
+       "date": "2026-10-23",
+       "source": "X：Danny Trinh（Meta 产品设计总监，Muse） (@dtrinh)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dtrinh/status/2113707016690749865"
+        }
+       ]
+      },
+      {
+       "id": "10353bb17f",
+       "kind": "single",
+       "title": "NVIDIA 相关推文引感叹",
+       "date": "2026-10-23",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113762138108154181"
+        }
+       ]
+      },
+      {
+       "id": "6da03da550",
+       "kind": "single",
+       "title": "xAI 工程师感叹此类情况频发",
+       "date": "2026-10-23",
+       "source": "X：Lauren Tan（SpaceXSI，Grok Bot 工程负责人） (@poteto)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/poteto/status/2113430923857527080"
+        }
+       ]
+      },
+      {
+       "id": "30aa1436cd",
+       "kind": "single",
+       "title": "Alex Heath 发推感叹新媒体现状",
+       "date": "2026-10-23",
+       "source": "X：Alex Heath (@alexeheath)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/alexeheath/status/2113711836482973915"
+        }
+       ]
+      },
+      {
+       "id": "36347e7648",
+       "kind": "single",
+       "title": "拿货了，包装好小一只",
+       "date": "2026-10-23",
+       "source": "X：Dash (@dashhuang)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/DashHuang/status/2113427275995816231"
+        }
+       ]
+      },
+      {
+       "id": "346c9df6cf",
+       "kind": "single",
+       "title": "英国宣布投入约 6 亿英镑应对 AI 风险，将建 AI 生物安全实验室",
+       "date": "2026-10-24",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/304.htm"
+        }
+       ]
+      },
+      {
+       "id": "ca2e78eadf",
+       "kind": "single",
+       "title": "我选择降临",
+       "date": "2026-10-24",
+       "source": "X：Dash (@dashhuang)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/DashHuang/status/2113798842395333091"
+        }
+       ]
+      },
+      {
+       "id": "70b8bba3df",
+       "kind": "single",
+       "title": "Claude Code 新版本现身",
+       "date": "2026-10-24",
+       "source": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dexhorthy/status/2113843157716910089"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 121
+  },
+  {
+   "name": "评论与观点",
+   "groups": [
+    {
+     "name": "",
+     "items": [
+      {
+       "id": "39e43d07c8",
+       "kind": "single",
+       "title": "Tomasz Tunguz 分析 Anthropic 是否更像一家云厂商",
+       "date": "2026-10-18",
+       "source": "Tomasz Tunguz 博客（VC 分析）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://tomtunguz.com/what-if-they-are-all-clouds/"
+        }
+       ]
+      },
+      {
+       "id": "754f8d6a1e",
+       "kind": "single",
+       "title": "Claude 无法修改邮箱引质疑",
+       "date": "2026-10-18",
+       "source": "X：Ethan Mollick (@emollick)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/emollick/status/2111925398548193574"
+        }
+       ]
+      },
+      {
+       "id": "dd33f22e5a",
+       "kind": "single",
+       "title": "Grok Bot 能自己赚回成本",
+       "date": "2026-10-18",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2111612315204272233"
+        }
+       ]
+      },
+      {
+       "id": "42e34cf7d6",
+       "kind": "single",
+       "title": "马斯克谈SI推动美国GDP增长",
+       "date": "2026-10-18",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2111692218415358162"
+        }
+       ]
+      },
+      {
+       "id": "5bfcba564a",
+       "kind": "single",
+       "title": "Anthropic 经济学家推荐关注 IMF 奇点演讲",
+       "date": "2026-10-18",
+       "source": "X：Peter McCrory（Anthropic 首席经济学家，@PeterMcCrory）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/PeterMcCrory/status/2111920461600940033"
+        }
+       ]
+      },
+      {
+       "id": "d3a2c9d6bf",
+       "kind": "single",
+       "title": "Vibe coding 是健脑，就像健身不为 ROI",
+       "date": "2026-10-18",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2111803498279145892"
+        }
+       ]
+      },
+      {
+       "id": "4c94d66335",
+       "kind": "single",
+       "title": "Gartner 预测 2026 年 AI 基建支出近 1 万亿美元，超 3.5 万亿美元或面临减值",
+       "date": "2026-10-19",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112249125127557235"
+        }
+       ]
+      },
+      {
+       "id": "0f6afc563f",
+       "kind": "single",
+       "title": "a16z 与 Chamath 谈 OpenAI、Anthropic 对投资组合的威胁",
+       "date": "2026-10-19",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112022673241063427"
+        }
+       ]
+      },
+      {
+       "id": "1d80adc0f4",
+       "kind": "single",
+       "title": "马斯克：超级智能的说服力令人担忧",
+       "date": "2026-10-19",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2112070071401238607"
+        }
+       ]
+      },
+      {
+       "id": "8d1f432952",
+       "kind": "single",
+       "title": "https://x.com/emollick/status/2112310600806072387",
+       "date": "2026-10-19",
+       "source": "X：Ethan Mollick (@emollick)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/emollick/status/2112310600806072387"
+        }
+       ]
+      },
+      {
+       "id": "b563000422",
+       "kind": "single",
+       "title": "Grok Bot 也学会请客送礼啦？ 😂 中国文化融入的这么自然吗？ 刚刚准备一些硬件概念，Grok Bot 突如其来的给我支招请前同事吃顿饭，着实惊到我了。。",
+       "date": "2026-10-19",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2112029795701948520"
+        }
+       ]
+      },
+      {
+       "id": "09f6b7c883",
+       "kind": "single",
+       "title": "斯洛文尼亚办Claude Code聚会？",
+       "date": "2026-10-19",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2112227297063551169"
+        }
+       ]
+      },
+      {
+       "id": "b217728cfb",
+       "kind": "single",
+       "title": "404 Media 分析 AI 逆向工程克隆软件热潮及其影响",
+       "date": "2026-10-20",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/reverse-engineer-anything-is-the-new-wild-west-of-ai/"
+        }
+       ]
+      },
+      {
+       "id": "bc9dd70d42",
+       "kind": "single",
+       "title": "Bank of America 研究称 AI 资本开支超预期 50% 而收入仅超 20%",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112429070541877314"
+        }
+       ]
+      },
+      {
+       "id": "e2d7e48241",
+       "kind": "single",
+       "title": "Christian Keil：超人类硬件设计只是简单部分，制造与测试才是难点",
+       "date": "2026-10-20",
+       "source": "a16z：News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.a16z.news/p/superhuman-hardware-design-is-the"
+        }
+       ]
+      },
+      {
+       "id": "17b416802e",
+       "kind": "single",
+       "title": "Morgan Stanley 将 Nvidia 列为 AI 领域最佳风险收益标的，同时提示集中度与电力缺口风险",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112449107843486162"
+        }
+       ]
+      },
+      {
+       "id": "7f8373ad84",
+       "kind": "single",
+       "title": "皮查伊谈 Google 前沿 AI 承诺",
+       "date": "2026-10-20",
+       "source": "X：Josh Woodward (@joshwoodward, Google Labs VP)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/joshwoodward/status/2112679011839344651"
+        }
+       ]
+      },
+      {
+       "id": "4ef60c3084",
+       "kind": "single",
+       "title": "前英伟达产品营销人 Amulya Vishwanath：物理 AI 还处在“乐高时代”",
+       "date": "2026-10-20",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/20/ex-nvidia-turned-vc-amulya-vishwanath-physical-ai-is-in-its-lego-era/"
+        }
+       ]
+      },
+      {
+       "id": "a776df27f8",
+       "kind": "single",
+       "title": "工程效率：放慢节奏，聚焦要事",
+       "date": "2026-10-20",
+       "source": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dexhorthy/status/2112553628481556568"
+        }
+       ]
+      },
+      {
+       "id": "ff2b916c28",
+       "kind": "single",
+       "title": "微软研究院播客：Catalyst Lab 负责人 Chris White 谈从阿富汗到暗网搜索的技术向善之路",
+       "date": "2026-10-20",
+       "source": "Microsoft Research 博客（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.microsoft.com/en-us/research/podcast/called-to-serve-tech-research-and-positive-impact-with-chris-white/"
+        }
+       ]
+      },
+      {
+       "id": "97cb05b2a4",
+       "kind": "single",
+       "title": "MiniMax M3.1 Flash 影视级创作展示",
+       "date": "2026-10-20",
+       "source": "X：MiniMax (@MiniMax_AI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/MiniMax_AI/status/2112612152280588733"
+        }
+       ]
+      },
+      {
+       "id": "c4ad0ea556",
+       "kind": "single",
+       "title": "DeepMind 创始人 Hassabis 将 AGI 时间预期缩短至两到三年",
+       "date": "2026-10-21",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/deepmind-founder-hassabis-shortens-agi-timeline-from-five-to-two-to-three-years/"
+        }
+       ]
+      },
+      {
+       "id": "b2b4c86da6",
+       "kind": "single",
+       "title": "Meta Muse 帮用户约皮肤科医生",
+       "date": "2026-10-21",
+       "source": "X：Muse（Meta 个人智能体官方号） (@Muse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Muse/status/2112965239834632596"
+        }
+       ]
+      },
+      {
+       "id": "4fee0017e1",
+       "kind": "single",
+       "title": "邵猛吐槽 X 平台 AI 回复泛滥，追问其目的",
+       "date": "2026-10-21",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2112736071356498363"
+        }
+       ]
+      },
+      {
+       "id": "f45b6ab737",
+       "kind": "single",
+       "title": "AI 编程工具与软件改进瓶颈之问",
+       "date": "2026-10-21",
+       "source": "X：Ethan Mollick (@emollick)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/emollick/status/2112968222538686592"
+        }
+       ]
+      },
+      {
+       "id": "00fc1e67b6",
+       "kind": "single",
+       "title": "马斯克称Grok Bot增长最快",
+       "date": "2026-10-21",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2112765561361105115"
+        }
+       ]
+      },
+      {
+       "id": "56b8278b54",
+       "kind": "single",
+       "title": "邵猛谈 WorkBuddy 使用频率上升",
+       "date": "2026-10-21",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2112763052894601369"
+        }
+       ]
+      },
+      {
+       "id": "48cf21bbb9",
+       "kind": "single",
+       "title": "邵猛谈AI订阅路线调整",
+       "date": "2026-10-21",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2112708960725926076"
+        }
+       ]
+      },
+      {
+       "id": "895e379067",
+       "kind": "single",
+       "title": "Nathan Lambert 谈 LLM 转型之艰",
+       "date": "2026-10-21",
+       "source": "X：Nathan Lambert (@natolambert)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/natolambert/status/2113046396311859238"
+        }
+       ]
+      },
+      {
+       "id": "c5a7841ee4",
+       "kind": "single",
+       "title": "Grok 与 Fable 的诚实反馈",
+       "date": "2026-10-21",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2112781998624555086"
+        }
+       ]
+      },
+      {
+       "id": "4ac6db1967",
+       "kind": "single",
+       "title": "吴恩达谈 AI 工程中的项目阶段校准",
+       "date": "2026-10-22",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2113142109092073736"
+        }
+       ]
+      },
+      {
+       "id": "5014a59c05",
+       "kind": "single",
+       "title": "盖茨在 Decoder 访谈中称 AI 将带来约 20 年动荡式冲击",
+       "date": "2026-10-22",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/podcast/1015408/bill-gates-ai-interview-microsoft-openai-anthropic-risk-policy-regulation"
+        }
+       ]
+      },
+      {
+       "id": "c5d2d63603",
+       "kind": "single",
+       "title": "OpenAI 奥尔特曼谈 AI 冲击数学界：数学家会经历“哀悼”五阶段后接受现实",
+       "date": "2026-10-22",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/016/766.htm"
+        }
+       ]
+      },
+      {
+       "id": "ed4722dbc2",
+       "kind": "single",
+       "title": "OpenAI 纳维-斯托克斯证明引数学界分歧",
+       "date": "2026-10-22",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113256999282679999"
+        }
+       ]
+      },
+      {
+       "id": "0e893f203f",
+       "kind": "single",
+       "title": "OpenClaw 称网络安全本周比 AI 更快",
+       "date": "2026-10-22",
+       "source": "X：OpenClaw (@openclaw)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/openclaw/status/2113330445714878939"
+        }
+       ]
+      },
+      {
+       "id": "bc386665c6",
+       "kind": "single",
+       "title": "xAI 推广 Grok Bot",
+       "date": "2026-10-22",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2113329537509449744"
+        }
+       ]
+      },
+      {
+       "id": "60263d165c",
+       "kind": "single",
+       "title": "邵猛弃订 Codex 与 Cursor，拟重订 Claude",
+       "date": "2026-10-22",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2113266518943555763"
+        }
+       ]
+      },
+      {
+       "id": "e66a8c412d",
+       "kind": "single",
+       "title": "Grok Bot 可直接在 X 上操作",
+       "date": "2026-10-22",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113116793313300713"
+        }
+       ]
+      },
+      {
+       "id": "7c66c0b730",
+       "kind": "single",
+       "title": "Generalist CEO 谈机器人与物理世界",
+       "date": "2026-10-22",
+       "source": "X：Generalist (@GeneralistAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/GeneralistAI/status/2113279435604668896"
+        }
+       ]
+      },
+      {
+       "id": "df706e03a6",
+       "kind": "single",
+       "title": "朋友用AGI代替“太棒了”",
+       "date": "2026-10-22",
+       "source": "X：Dex Horthy（HumanLayer）(@dexhorthy)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dexhorthy/status/2113319645361144074"
+        }
+       ]
+      },
+      {
+       "id": "945573ccca",
+       "kind": "single",
+       "title": "数字生命卡兹克：我陷入了 AI 时代的虚无主义",
+       "date": "2026-10-23",
+       "source": "X：卡兹克 (@Khazix0918)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Khazix0918/status/2113466426216583632"
+        }
+       ]
+      },
+      {
+       "id": "b30d088608",
+       "kind": "single",
+       "title": "Martha Minow 在 MIT 谈 AI 时代如何维系民主",
+       "date": "2026-10-23",
+       "source": "MIT News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://news.mit.edu/2026/martha-minow-speaks-on-sustaining-democracy-using-overcoming-ai-1023"
+        }
+       ]
+      },
+      {
+       "id": "1bc558de1e",
+       "kind": "single",
+       "title": "构建优秀评估的三要素",
+       "date": "2026-10-23",
+       "source": "X：Karina Nguyen（@karinanguyen）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/karinanguyen/status/2113466189985034254"
+        }
+       ]
+      },
+      {
+       "id": "6e7706d337",
+       "kind": "single",
+       "title": "历史上的科技带来的基建狂热一般持续4-6年 明年是 AI 的第 5 年",
+       "date": "2026-10-23",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2113648638182498505"
+        }
+       ]
+      },
+      {
+       "id": "a98d43ddf6",
+       "kind": "single",
+       "title": "邵猛吐槽 Vibe Coding 网站性能仅 47 分",
+       "date": "2026-10-24",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2113839951557313003"
+        }
+       ]
+      },
+      {
+       "id": "bbb282ca8a",
+       "kind": "single",
+       "title": "马斯克回应信任Grok管理财务",
+       "date": "2026-10-24",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2113877257613947348"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "count": 46
+  }
+ ],
+ "counts": {
+  "topics": 14,
+  "groups": 39,
+  "items": 278,
+  "events": 8
+ },
+ "source_url": "https://github.com/acaGPT/Jurisprudence/wiki/Weekly-AI+Law-Brief"
+}

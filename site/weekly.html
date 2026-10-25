@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>本周 AI+法律动态 · Weekly AI+Law Brief</title>
+  <meta name="description" content="《法理学》课程每周 AI 与法律动态：按制度主题与事件类型整理，每条注明日期与出处，可标为 Law 或 Tech 反馈分类偏差。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="本周 AI+法律动态">
+  <meta property="og:description" content="每周 AI 与法律动态，按制度主题整理，可标注 Law / Tech。">
+</head>
+<body>
+  <a class="skip" href="#brief">跳到正文</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <p class="eyebrow">Jurisprudence · Weekly Brief</p>
+      <h1>本周 AI+法律动态</h1>
+      <p class="week-line" id="week-line"></p>
+      <p class="lede">
+        每周从课程 Wiki 同步。同一件事的多条报道收在一张卡片里，按日期排开；
+        只发生一次的消息就是一行。每条都可以标 <strong>Law</strong> 或
+        <strong>Tech</strong>——标为 Tech 的意思是「这条更像技术动态，不该占法律新闻的位置」，
+        导出的标记会用来修正下一轮的分类。
+      </p>
+      <dl class="stats" id="stats"></dl>
+      <p class="head-link">
+        配套页面：<a href="index.html">课程地图</a> ·
+        <a href="references.html">文献库</a> ·
+        <a id="wiki-link" href="#">Wiki 原文</a>
+      </p>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="field">
+        <input id="q" type="search" placeholder="搜索标题、正文或来源…"
+               autocomplete="off" spellcheck="false" aria-label="搜索本周条目">
+        <kbd>/</kbd>
+      </div>
+      <div class="chips" id="topic-filter" role="group" aria-label="按主题筛选"></div>
+      <div class="chips" id="mark-filter" role="group" aria-label="按标记筛选"></div>
+      <div class="actions">
+        <button type="button" id="toggle-overview" class="plain" aria-pressed="true">概览</button>
+        <button type="button" id="copy-labels" class="plain" title="复制为 JSON，可粘贴交回课程维护者">复制标记</button>
+        <button type="button" id="download-labels" class="plain">下载标记</button>
+        <button type="button" id="reset-labels" class="plain" hidden>清除标记</button>
+        <button type="button" id="theme" class="plain" aria-label="切换深浅色">深色</button>
+      </div>
+      <p class="count" id="count"></p>
+    </div>
+  </div>
+
+  <main id="brief" class="wrap">
+    <noscript>
+      <p class="empty">
+        本页需要启用 JavaScript 才能按主题浏览与标记。全文请见
+        <a href="https://github.com/acaGPT/Jurisprudence/wiki/Weekly-AI%2BLaw-Brief">课程 Wiki</a>。
+      </p>
+    </noscript>
+
+    <section class="wk-overview" id="overview" aria-label="本周概览"></section>
+    <p class="mark-note" id="mark-note" hidden></p>
+    <div id="topics"></div>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="source" id="provenance"></p>
+      <p class="source">
+        Law / Tech 标记只存在这台设备的浏览器里，不会上传，也不需要登录。
+        标完点「复制标记」或「下载标记」，把结果交给课程维护者即可——
+        标为 Tech 的条目会在下一轮分类中作为反例重新核查。
+      </p>
+      <p class="rights">
+        © 2026 iLINGBIN. 保留所有权利。未获书面许可，不得以复制、改写、汇编、翻译、
+        上传网络或商业性使用等方式利用；课堂内为教学目的之讲授、投影、复印属许可范围。
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/weekly.js"></script>
+</body>
+</html>

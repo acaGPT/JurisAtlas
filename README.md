@@ -1,10 +1,10 @@
 # JurisAtlas
 
-《法理学》课程地图与文献库 —— 把课程大纲从一篇长文还原为可检索、可筛选的索引页。
+《法理学》课程地图、文献库与每周动态 —— 把课程大纲从一篇长文还原为可检索、可筛选的索引页。
 
 - **站点地址**：<https://acagpt.github.io/JurisAtlas/>
 - **数据来源**：<https://github.com/acaGPT/Jurisprudence.wiki>
-- **当前版本**：v0.3.4
+- **当前版本**：v0.4.0
 
 ## 这个站点做什么
 
@@ -12,7 +12,7 @@
 想知道「第四单元有哪几章」「哪几章已经有了课前概览」「哪一章讨论哈特与富勒之争」，
 都只能在长文里翻。
 
-本站把大纲解析为结构化数据，提供两页：
+本站把大纲解析为结构化数据，提供三页：
 
 **课程地图（`index.html`）**
 
@@ -31,11 +31,22 @@
 5. **单条引注复制**——每条可一键复制 APA 或 MLA 引注，纯客户端生成；
 6. **导出书目**——一键导出全部条目的 BibTeX 或 RIS（固定全量，不随筛选变化）。
 
+**本周 AI+法律动态（`weekly.html`）**
+
+1. **三层结构浏览**——制度主题 → 事件类型 → 条目，可先按主题收窄再读；
+2. **事件而非消息**——同一件事的多条报道收在一张卡片里按日期排开，跨周的接上「此前」进展；
+3. **逐条出处**——每条注明日期、来源与原文链接，判断依据可以直接点开核对；
+4. **人工标记**——每条可标 Law 或 Tech（默认 Law），标为 Tech 的条目会作为分类反例交回，
+   用来修正「什么算法律动态」这条线。
+
 ## 内容边界
 
 本站**不复制正文**。章节梗概、文献条目、课前概览链接均取自大纲原文，
 阅读入口一律指向课程 Wiki。正文与文献的增删改，只在 Wiki 一处发生；
 本站的数据层由脚本从 Wiki 重新生成，不手工维护第二份内容。
+
+周报页同理：`weekly.json` 是 Wiki 上周报页的读回结果，站内不做二次编辑。
+页面上唯一由读者产生的东西是 Law / Tech 标记，它只存在浏览器本地、不写回 Wiki。
 
 `index.html` 页脚与 `LICENSE` 载明本站的版权条款。
 
@@ -48,22 +59,29 @@
 ├── tools/
 │   ├── extract-syllabus.py    # 从 Wiki 大纲抽取课程地图数据层
 │   ├── extract-references.py  # 从 Wiki 大纲抽取文献库数据层
+│   ├── extract-weekly.py      # 从 Wiki 周报页抽取「本周 AI+法律动态」数据层
+│   ├── apply-weekly-labels.py # 把周报页导出的人工 Law/Tech 标记整理为反馈表
 │   ├── check-sync.py          # 三级比对：Wiki → 数据层 → 线上 Pages
 │   ├── bump-version.py        # 递增 README 版本号，供自动发版取号
-│   └── qa-references.js       # 文献库断言式 QA（playwright + Chrome）
+│   ├── qa-references.js       # 文献库断言式 QA（playwright + Chrome）
+│   └── qa-weekly.js           # 周报断言式 QA（渲染、标记、持久化、导出）
 ├── site/                      # 站点源（发布到 gh-pages 分支）
 │   ├── index.html              # 课程地图
 │   ├── references.html         # 文献库
+│   ├── weekly.html             # 本周 AI+法律动态（每条可标 Law / Tech）
 │   ├── 404.html                # 容错页（自包含，根路径运行时推导）
 │   ├── .nojekyll
 │   └── assets/
 │       ├── css/site.css
 │       ├── js/app.js
 │       ├── js/references.js
+│       ├── js/weekly.js
 │       ├── data/syllabus.json          # 生成物（纯数据，字节稳定）
 │       ├── data/meta.json              # 生成物（含生成时间与源 commit）
 │       ├── data/references.json        # 生成物（纯数据，字节稳定）
 │       ├── data/references-meta.json   # 生成物（含生成时间与源 commit）
+│       ├── data/weekly.json            # 生成物（纯数据，字节稳定）
+│       ├── data/weekly-meta.json       # 生成物（含生成时间与源 commit）
 │       └── favicon.svg
 └── README.md
 ```
@@ -84,16 +102,23 @@ python3 tools/extract-references.py \
   --wiki Jurisprudence.wiki \
   --out site/assets/data \
   --auto
+
+python3 tools/extract-weekly.py \
+  --wiki Jurisprudence.wiki \
+  --out site/assets/data \
+  --auto
 ```
 
 课程地图输出 `syllabus.json`（单元、章节、文献计数、课前概览链接）与 `meta.json`；
 文献库输出 `references.json`（逐条作者、年份、题名、获取渠道）与
-`references-meta.json`。`*-meta.json` 含生成时间与源 commit；两个数据文件为纯数据、
+`references-meta.json`；周报输出 `weekly.json`（主题 → 事件类型 → 条目三层）与
+`weekly-meta.json`。`*-meta.json` 含生成时间与源 commit；三个数据文件为纯数据、
 不含时间戳，字节比较稳定，CI 的发版判定正建立于此。控制的输出样例：
 
 ```
 单元 9 · 章节 46 · 经典文献 235 · 延伸阅读 128 · 已有课前概览 15
 文献 363 · 经典 235 · 延伸 128 · 全文直读 294 · 需定位或订阅 69 · 解析失败 0
+周次 2026-W43 · 主题 14 · 事件类型 39 · 条目 278 · 事件卡 8
 ```
 
 `meta.json` 里的 `source_commit` 是数据层的溯源凭据——抽取时写入的 Wiki commit，
@@ -104,7 +129,9 @@ python3 tools/extract-references.py \
 Wiki 大纲更新后，站点数据层由 GitHub Actions 自动跟上，无需人工介入。
 
 ```
-Course-Syllabus.md ──抽取器──▶ syllabus.json / meta.json ──推送──▶ gh-pages ──▶ Pages
+Course-Syllabus.md  ──抽取器──▶ syllabus.json / meta.json             ─┐
+Course-Syllabus.md  ──抽取器──▶ references.json / references-meta.json ─┼─推送──▶ gh-pages ──▶ Pages
+Weekly-AI+Law-Brief ──抽取器──▶ weekly.json / weekly-meta.json         ─┘
 ```
 
 工作流 `.github/workflows/sync-wiki.yml` 每日北京时间 07:17 运行一次，也可手动触发。
@@ -113,16 +140,16 @@ Course-Syllabus.md ──抽取器──▶ syllabus.json / meta.json ──推�
 | 步骤 | 行为 | 失败时 |
 |---|---|---|
 | 判定 | 比对 Wiki `master` 的 HEAD 与 `gh-pages` 上 `meta.json` 的 `source_commit` | 取不到基准即判定为「无法判定」，本轮不动任何东西 |
-| 抽取 | 重跑两个抽取器，产物写临时目录 | 抽取异常退出，`gh-pages` 不被触碰 |
-| 推送 | 只替换 `assets/data/` 四个 JSON，站点其余文件沿用分支现状 | 抽取结果与现状一致时不产生空提交 |
+| 抽取 | 重跑三个抽取器，产物写临时目录 | 抽取异常退出，`gh-pages` 不被触碰；周报页单独缺失只告警不中断 |
+| 推送 | 只替换 `assets/data/` 六个 JSON，站点其余文件沿用分支现状 | 抽取结果与现状一致时不产生空提交 |
 | 部署 | 推送后由 Pages 自行部署，工作流不再单独轮询 `/pages` 的 `status` | 该字段反映的是上一次**已完成**构建，会把本次失败读成 `building` |
 | 回流 | 同一份数据层提交回 `main`；版本号有变化时一并提交 README | `main` 侧无差异则跳过；两者合并为一次提交，避免第二次推送非快进 |
-| 发版 | 仅在 `syllabus.json` / `references.json` **确有字节级变化**时递增版本号并建 Release | 无实质变化时只更新溯源信息，不占版本号 |
+| 发版 | 仅在 `syllabus.json` / `references.json` / `weekly.json` **确有字节级变化**时递增版本号并建 Release | 无实质变化时只更新溯源信息，不占版本号 |
 | 复核 | 以**本轮刚推送的产物**为基准比对线上 Pages，轮询至 30 分钟上限 | 仍不一致才报错；期间若查到 Pages 最近构建 `errored` 立即失败 |
 
 判定与发版的分流是刻意设计：源 commit 变化可能来自首页或其他非大纲页面的改动，
-此时站点内容其实没变，不应白耗一个版本号。分流依据是 `syllabus.json` 与
-`references.json` 的字节差异，而非 commit 本身。
+此时站点内容其实没变，不应白耗一个版本号。分流依据是三个纯数据 JSON 的字节差异，
+而非 commit 本身。
 
 **数据层必须回流 `main`。** 若只推 `gh-pages`，`main` 上的 `site/assets/data` 会永远
 停在上一轮，本地 `check-sync.py` 的「数据层」这一级就恒判落后、失去判定意义。
@@ -151,6 +178,47 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 
 退出码：`0` 对齐、`1` 落后、`2` 无法判定——可直接用于其他脚本或本地钩子。
 
+## 周报页与人工标记
+
+`weekly.html` 是课程 Wiki 上周报页（`Weekly-AI+Law-Brief`）的镜像。周报由
+`pre-class-overview-writing` 技能生成，格式固定为「主题 → 事件类型 → 条目」三层；
+`tools/extract-weekly.py` 只把它读回来，不改写一个字，所以站点上与 Wiki 上看到的
+是同一条信息、同一个日期、同一处出处。同一件事的多条报道是一张卡片（按日期排开，
+跨周的事件把此前的进展收在「此前 …」一行），只发生一次的消息就是一行。
+
+**人工标记是这一页的核心，不是装饰。** 每条信息右侧有 Law 与 Tech 两个并列标签：
+
+| 状态 | 怎么进入 | 含义 |
+|---|---|---|
+| 未表态（默认） | 什么都不用点 | 页面按 Law 呈现，Law 显示为淡色——生效但没人确认过 |
+| 已标 Law | 点一下 Law | 人工确认：这确实是法律动态 |
+| 已标 Tech | 点一下 Tech | 人工否定：这条更像技术动态，不该占法律新闻的位置 |
+
+再点一次已选中的那一侧即撤回未表态。标记存在浏览器本地存储
+（键 `jcm-weekly-marks:<周次>`，逐周独立），**不上传、不需要登录、不跨设备**。
+
+标记怎么变成分类反馈：
+
+```bash
+# 读者在页面上点「下载标记」，得到 ai-weekly-2026-W43-marks.json
+python3 tools/apply-weekly-labels.py --in ~/Downloads/ai-weekly-2026-W43-marks.json
+# → weekly-reports/human-labels-2026-W43.jsonl
+```
+
+输出每行一个条目，带 `label`、`votes` 与 `agree`。**标为 `tech` 的条目就是
+`classify_domain` 的候选假阳性**——它们本来被判定为法律新闻，人读下来认为不是，
+下一轮校准应当逐条复核；标为 `law` 的是显式正例。多个人各导一份可以一起传：
+
+```bash
+python3 tools/apply-weekly-labels.py --in a.json b.json c.json
+```
+
+同一 id 被标过多次就计票，票数打平按待复核记 `agree: false`。不同周的导出不能
+合并（脚本会拒绝）——跨周的同 id 不相干。
+
+标记只收人不收机器：这一页不自动改分类，也不回写 Wiki。反馈表交回课程维护者，
+由人决定下一轮要不要调整判据——与 `relation-gold.jsonl` 那套金标维护是同一个口径。
+
 ## 发布
 
 站点为纯静态页，无构建步骤、无第三方依赖。**数据层不由这条链路发布**——它由上面的
@@ -160,7 +228,7 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 python3 ~/.workbuddy/skills/gh-pages-maker/scripts/new_pages_site.py \
   --name JurisAtlas \
   --source site \
-  --description "《法理学》课程地图与文献库：四十六章与全部阅读文献的可检索索引" \
+  --description "《法理学》课程地图、文献库与每周 AI+法律动态：四十六章与全部阅读文献的可检索索引" \
   --org acaGPT --copyright iLINGBIN --branch gh-pages --auto
 ```
 
@@ -183,7 +251,7 @@ python3 -m http.server 8899 --directory site
 
 两分支内容并不相同：`gh-pages` 不含 `tools/` 与本文件，站点 `README` 也与本文件不同。
 因此改站点代码、手动发版走 `gh-pages`，改脚本与文档走 `main`；同步工作流只往
-`gh-pages` 替换 `assets/data/` 两个 JSON，不触碰站点其余文件。
+`gh-pages` 替换 `assets/data/` 六个 JSON，不触碰站点其余文件。
 
 ## 已知事项
 
@@ -220,6 +288,14 @@ python3 -m http.server 8899 --directory site
   概览增至 13。站点上的数字一律由抽取器生成。
 - CI 在 UTC 环境运行，`meta.json` 的 `generated_at` 时区写作 `+0000`，与本地生成的
   `+0800` 不同。这是环境差异而非错误，比对请以 `source_commit` 为准。
+- 周报页只有一份、每周被覆盖：`weekly.json` 里只有**当周**的条目，历史周次留在课程仓
+  的 `weekly-reports/`。因此 `weekly.html` 永远显示最新一周，不提供周次切换——同一周内
+  重跑周报会刷新数据层（条数可能因信源增删而变），`content_changed` 也随之触发。
+- 抽取器认页名 `Weekly-AI+Law-Brief`。Wiki 侧若改名或删页，工作流会打印告警并跳过周报，
+  其余数据照常同步——此时站点上的周报会停在上一轮，而不是变成空白页。
+- 条目的 `id` 由「主题 + 事件类型 + 标题」哈希而来。周报重跑若改了标题（例如把「OpenAI
+  融资」改成「OpenAI 估值」），该条的 id 会变，读者此前对旧条目的标记就对不上新条目；
+  这是有意的取舍——宁可丢一条标记，也不让两条不同消息共用一个 id。
 
 ## 版权
 

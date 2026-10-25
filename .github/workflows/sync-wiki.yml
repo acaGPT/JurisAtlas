@@ -58,14 +58,16 @@ jobs:
           echo "wiki_sha=$(git -C wiki rev-parse --short HEAD)" >> "$GITHUB_ENV"
           python3 tools/extract-syllabus.py --wiki wiki --out /tmp/data --auto
           python3 tools/extract-references.py --wiki wiki --out /tmp/data --auto
+          # 周报页可能整页被替换或暂缺；缺了只跳过周报，不拖累地图与文献库的同步
+          python3 tools/extract-weekly.py --wiki wiki --out /tmp/data --auto \
+            || echo "::warning::周报页缺失或格式异常，本次跳过周报同步"
           # 源 commit 变了不等于内容变了：改动可能落在首页等非数据页面。
-          # 按 syllabus.json 与 references.json 的字节差异区分「内容更新」与
-          # 「仅溯源信息更新」（两者都是纯数据、不含时间戳，字节比较可靠；
-          # 时间戳在 meta.json / references-meta.json 里，不参与判定），
-          # 否则每次同步都会白耗一个版本号与一个 Release。
+          # 按数据文件的字节差异区分「内容更新」与「仅溯源信息更新」（都是纯数据、
+          # 不含时间戳，字节比较可靠；时间戳在 meta.json / references-meta.json /
+          # weekly-meta.json 里，不参与判定），否则每次同步都会白耗一个版本号。
           changed=false
-          for f in syllabus.json references.json; do
-            if ! diff -q "/tmp/data/$f" "$PUBLISH_DIR/assets/data/$f" >/dev/null; then
+          for f in syllabus.json references.json weekly.json; do
+            if ! diff -q "/tmp/data/$f" "$PUBLISH_DIR/assets/data/$f" >/dev/null 2>&1; then
               changed=true
               echo "内容有变化：$f"
             fi
@@ -76,6 +78,7 @@ jobs:
           fi
           cp /tmp/data/syllabus.json /tmp/data/meta.json \
              /tmp/data/references.json /tmp/data/references-meta.json \
+             /tmp/data/weekly.json /tmp/data/weekly-meta.json \
              "$PUBLISH_DIR/assets/data/"
 
       - name: 推送 gh-pages
@@ -103,6 +106,7 @@ jobs:
           # 本地 check-sync.py 的「数据层」这一级会恒判落后、失去判定意义。
           cp /tmp/data/syllabus.json /tmp/data/meta.json \
              /tmp/data/references.json /tmp/data/references-meta.json \
+             /tmp/data/weekly.json /tmp/data/weekly-meta.json \
              site/assets/data/
           git add site/assets/data
           if [ "${{ steps.extract.outputs.content_changed }}" = "true" ]; then

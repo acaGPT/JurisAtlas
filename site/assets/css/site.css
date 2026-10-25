@@ -336,6 +336,163 @@ mark { background: var(--mark); color: inherit; border-radius: 2px; }
 /* 文献库的章分组头复用 .unit-head，其内 h2 略小 */
 .ref-group .unit-head h2 { font-size: clamp(17px, 2vw, 20px); }
 
+/* ---------- 周报（weekly.html） ---------- */
+
+/* 人工标记用的琥珀色。与 --ok 一样成对出现：文字色 + 极浅底色，
+   两套主题各给一份，避免深色下浅底刺眼。 */
+:root {
+  --warn: #8a5a00;
+  --warn-soft: #fbf0d9;
+}
+html[data-theme="dark"] {
+  --warn: #e8bd72;
+  --warn-soft: #33280f;
+}
+
+.week-line {
+  margin: 10px 0 0; font: 400 14px/1.6 var(--sans); color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-overview {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px 26px; margin: 0 0 40px;
+}
+.wk-overview[hidden] { display: none; }
+.wk-overview p {
+  margin: 0 0 15px; font-size: 15.5px; line-height: 1.9; color: var(--text);
+}
+.wk-overview p:last-child { margin-bottom: 0; }
+.wk-overview-toggle { margin: 0 0 28px; }
+
+.topic { margin-bottom: 46px; scroll-margin-top: 132px; }
+.topic[hidden] { display: none; }
+.topic-head {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--line); padding-bottom: 9px; margin-bottom: 4px;
+}
+.topic-head h2 { margin: 0; font-size: clamp(18px, 2.2vw, 21px); }
+.topic-count {
+  font: 400 12px/1 var(--sans); color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.type-head {
+  font: 500 12.5px/1.4 var(--sans); color: var(--muted);
+  letter-spacing: .04em; margin: 24px 0 10px;
+}
+.type-head[hidden] { display: none; }
+.type-head .num {
+  color: var(--faint); font-variant-numeric: tabular-nums; margin-left: 6px;
+}
+
+/* grid 的隐式列默认按 min-content 撑开：标题里一个长串（拉丁专名、连写的
+   型号）就能把整列顶出屏幕。minmax(0, 1fr) 把轨道锁在容器宽度内，长串交给
+   下面的 overflow-wrap 断行。 */
+.wk-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px;
+}
+
+.wk {
+  position: relative; display: grid; gap: 7px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 14px 16px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.wk:hover { border-color: var(--line-strong); }
+.wk[hidden] { display: none; }
+/* 人工标记过的条目挂一条左侧竖条：翻到底时一眼看得出自己标过哪些 */
+.wk[data-mark="tech"] { border-left: 3px solid var(--warn); }
+.wk[data-mark="law"] { border-left: 3px solid var(--accent); }
+
+.wk-top { display: flex; align-items: flex-start; gap: 12px; }
+.wk-when {
+  flex-shrink: 0; min-width: 76px; padding-top: 3px;
+  font: 400 12px/1.5 var(--sans); color: var(--faint);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.wk-title {
+  margin: 0; flex: 1; min-width: 0;
+  font-size: 15.5px; line-height: 1.62; font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Law / Tech：两个标签并列，默认落在 Law 上。
+   `unset` = 用户还没表过态，Law 只是默认值，所以画成空心；
+   一旦人工选过，选中的那一侧才填实。 */
+.wk-mark {
+  display: inline-flex; flex-shrink: 0; overflow: hidden;
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  background: var(--surface-2); padding: 2px; gap: 2px;
+}
+.wk-mark button {
+  font: 500 11.5px/1 var(--sans); letter-spacing: .02em;
+  padding: 5px 10px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--faint); cursor: pointer;
+  transition: color .15s ease, background .15s ease;
+}
+.wk-mark button:hover { color: var(--text); }
+.wk-mark button:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 1px;
+}
+/* 默认态：Law 就是当前值，所以照样上色，只是压淡——「生效但你没确认过」。
+   人工选过之后才填满底色，两者一眼能分。 */
+.wk[data-mark="unset"] .wk-mark button[data-label="law"] {
+  color: var(--accent); opacity: .55;
+}
+.wk[data-mark="law"] .wk-mark button[data-label="law"] {
+  color: var(--accent); background: var(--accent-soft);
+}
+.wk[data-mark="tech"] .wk-mark button[data-label="tech"] {
+  color: var(--warn); background: var(--warn-soft);
+}
+
+.wk-stages {
+  list-style: none; margin: 0; padding: 0 0 0 88px;
+  display: grid; gap: 4px;
+}
+.wk-stage {
+  font: 400 13.5px/1.7 var(--sans); color: var(--muted);
+}
+.wk-stage .d {
+  color: var(--faint); font-variant-numeric: tabular-nums; margin-right: 6px;
+}
+.wk-stage .s { color: var(--text); margin-right: 6px; }
+.wk-carried {
+  font: 400 12.5px/1.7 var(--sans); color: var(--faint);
+  padding: 0 0 0 88px; margin: 0;
+}
+.wk-fact {
+  margin: 0; padding: 0 0 0 88px;
+  font-size: 14.5px; line-height: 1.8; color: var(--muted);
+}
+.wk-foot {
+  margin: 2px 0 0; padding: 0 0 0 88px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  font: 400 12.5px/1.5 var(--sans); color: var(--faint);
+}
+.wk-src { color: var(--muted); }
+.wk-foot a { color: var(--faint); }
+.wk-foot a:hover { color: var(--accent); }
+
+/* 标记面板：导出与清空都收在这里，别让工具栏长到两行 */
+.mark-note {
+  font: 400 12.5px/1.7 var(--sans); color: var(--muted);
+  background: var(--surface-2); border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-sm); padding: 12px 14px; margin: 0 0 32px;
+}
+.mark-note strong { color: var(--text); font-weight: 600; }
+.mark-note[hidden] { display: none; }
+
+@media (max-width: 720px) {
+  .wk-top { flex-wrap: wrap; }
+  .wk-when { min-width: 0; padding-top: 0; }
+  .wk-mark { order: 3; }
+  .wk-stages, .wk-fact, .wk-foot, .wk-carried { padding-left: 0; }
+  .wk-overview { padding: 18px; }
+}
+
 /* ---------- 页脚 ---------- */
 
 .site-foot {
