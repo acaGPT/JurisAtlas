@@ -36,6 +36,21 @@ const EXPECT = {
   week: data.week
 };
 
+/* 同主体初审的数据层。缺了不致命——页面会退化成只有主题视图，
+   但那样「按主体」那几项断言应当明确失败，而不是悄悄跳过。 */
+const subjectsPath = path.resolve(__dirname, '..', 'site', 'assets', 'data',
+  'weekly-subjects.json');
+const AUDIT = fs.existsSync(subjectsPath)
+  ? JSON.parse(fs.readFileSync(subjectsPath, 'utf8')) : null;
+const SUBJ = {
+  multi: AUDIT ? AUDIT.subjects.filter(s => s.count > 1).length : 0,
+  items: AUDIT ? AUDIT.subjects.filter(s => s.count > 1)
+    .reduce((sum, s) => sum + s.count, 0) : 0,
+  dupItems: AUDIT ? AUDIT.review.duplicate_items : 0,
+  flagged: AUDIT ? AUDIT.subjects.reduce((sum, s) =>
+    sum + s.duplicates.reduce((n, d) => n + d.ids.length, 0), 0) : 0
+};
+
 const results = [];
 function check(name, actual, expected) {
   const pass = expected === undefined ? actual === true : actual === expected;
@@ -254,6 +269,60 @@ function check(name, actual, expected) {
     await viewer.evaluate(k => localStorage.getItem(k),
       'jcm-weekly-marks:' + EXPECT.week), null);
   await viewer.close();
+
+  /* ---------- 按主体看：视图切换与同主体初审 ---------- */
+
+  await page.setViewportSize({ width: 1280, height: 1000 });
+  check('有视图切换的两个按钮',
+    await page.locator('#view-switch button[data-view]').count(), 2);
+  check('默认按制度主题',
+    await page.locator('#view-switch button[data-view="topic"]').getAttribute('aria-pressed'),
+    'true');
+
+  await page.locator('#view-switch button[data-view="subject"]').click();
+  await page.waitForTimeout(260);
+  check('主体视图渲染主体卡', await page.locator('.subject').count(), SUBJ.multi);
+  check('主体视图条目数与初审一致',
+    await page.locator('.subject .wk').count(), SUBJ.items);
+  check('主体卡内按制度主题分块',
+    (await page.locator('.subject').first().locator('.type-head').count()) > 1);
+  check('初审说明在主体视图顶部', await page.locator('.audit-head').count(), 1);
+  check('初审统计与数据层一致',
+    (await page.locator('.audit-head').innerText()).includes(
+      `${SUBJ.dupItems} 条`));
+  check('主体名出现在卡头',
+    (await page.locator('.subject .topic-head h2').allInnerTexts())
+      .some(name => name === 'Anthropic'));
+  await page.screenshot({ path: path.join(OUT, 'weekly-subject.png'), fullPage: false });
+
+  check('疑重复徽标数与初审一致',
+    await page.locator('.wk-tag[data-kind="dup"]').count(), SUBJ.dupItems);
+  check('主体视图仍可改标',
+    await page.locator('.subject .wk-mark button[data-label="tech"]').first().isEnabled());
+
+  /* 徽标是可点的：从主题视图点它，应当落到主体视图里对应的那张卡 */
+  await page.locator('#view-switch button[data-view="topic"]').click();
+  await page.waitForTimeout(220);
+  check('切回主题视图条目完整', await page.locator('#topics .wk').count(), EXPECT.items);
+  await page.locator('.wk-tag[data-kind="dup"]').first().click();
+  await page.waitForTimeout(320);
+  check('点疑重复徽标切到主体视图',
+    await page.locator('#view-switch button[data-view="subject"]').getAttribute('aria-pressed'),
+    'true');
+  check('点徽标后落在对应主体卡', await page.locator('.subject[data-flash="1"]').count(), 1);
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.waitForTimeout(340);
+  const subjectOverflow = await page.evaluate(() =>
+    document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  check('主体视图移动端无横向溢出', subjectOverflow, 0);
+  await page.screenshot({ path: path.join(OUT, 'weekly-subject-mobile.png') });
+
+  await page.setViewportSize({ width: 1280, height: 1000 });
+  await page.waitForTimeout(220);
+  await page.locator('#view-switch button[data-view="topic"]').click();
+  await page.waitForTimeout(240);
+  check('回到主题视图', await page.locator('#topics .wk').count(), EXPECT.items);
 
   check('控制台无错误', errors.length, 0);
 

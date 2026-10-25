@@ -3,6 +3,11 @@
         Law / Tech 两个并列标签（默认 Law，没有第三种状态）。
    用法：由 weekly.html 以 <script> 引入；数据取自 assets/data/weekly*.json。
 
+   两种看法：按制度主题（原样，周报的组织方式）、按主体（把同一家公司的三十条
+   归到一处）。主体那一路同时带出同主体初审的结论——哪几条疑是同一件事、哪几条
+   构成一条链——结论由 tools/audit-subjects.py 算出，页面只负责显示，不改写周报
+   一个字，也不删任何条目。
+
    工具栏只留搜索框与主题 chip：标记筛选、导出面板、深浅色切换都不在页面上了。
    标记按周存在本机（jcm-weekly-marks:<周次>），刷新不丢；改动后不再需要「导出」——
    正文上方那行提示里直接给「交回」，点了就打开一条正文已填好的 GitHub issue，
@@ -16,6 +21,7 @@
   var THEME_KEY = 'jcm-theme';
   var MARK_KEY_PREFIX = 'jcm-weekly-marks:';
   var SUBMIT_KEY_PREFIX = 'jcm-weekly-submitted:';
+  var VIEW_KEY = 'jcm-weekly-view';
   var DEBOUNCE_MS = 110;
   var CHIP_GAP = 5;
 
@@ -32,7 +38,7 @@
      点一次就把这一批全部送出去。要单条即送，把这里改成 true。 */
   var AUTO_OPEN = false;
 
-  var state = { q: '', topic: 'all', topicsExpanded: false };
+  var state = { q: '', topic: 'all', view: 'topic', topicsExpanded: false };
   /* 只记被人工改过的：id -> 'tech'。没有键就是默认 Law——
      默认值即当前值，不再有「未表态」这个中间态。 */
   var marks = {};
@@ -47,10 +53,18 @@
   var autoOpened = false;
   var data = null;
   var meta = null;
+  var audit = null;
   var timer = null;
   var layoutTimer = null;
   /* id -> {title, topic, group, date}：交回时要把 id 还原成人能读的标题 */
   var itemIndex = {};
+  /* 同主体初审的索引：id -> 所属主体 / 疑重复组 / 待复核组 / 链 */
+  var subjectOf = {};
+  var dupOf = {};
+  var suspectOf = {};
+  var chainOf = {};
+  /* id -> 原始条目。主体数据层只带摘要字段，渲染还得回周报数据里取整条。 */
+  var rawItems = {};
 
   var el = {
     weekLine: document.getElementById('week-line'),
@@ -61,6 +75,7 @@
     topicFilter: document.getElementById('topic-filter'),
     count: document.getElementById('count'),
     note: document.getElementById('mark-note'),
+    viewSwitch: document.getElementById('view-switch'),
     wikiLink: document.getElementById('wiki-link'),
     provenance: document.getElementById('provenance')
   };
@@ -234,6 +249,47 @@
     }
   }
 
+  /* ---------------- 同主体初审的索引 ---------------- */
+
+  function indexAudit() {
+    subjectOf = {}; dupOf = {}; suspectOf = {}; chainOf = {};
+    if (!audit || !audit.subjects) { return; }
+    audit.subjects.forEach(function (group) {
+      (group.items || []).forEach(function (row) { subjectOf[row.id] = group; });
+      (group.duplicates || []).forEach(function (cluster) {
+        cluster.ids.forEach(function (id) { dupOf[id] = cluster; });
+      });
+      (group.suspects || []).forEach(function (cluster) {
+        cluster.ids.forEach(function (id) { suspectOf[id] = cluster; });
+      });
+      (group.chains || []).forEach(function (chain) {
+        chain.ids.forEach(function (id) { chainOf[id] = chain; });
+      });
+    });
+  }
+
+  /* 条目上的小徽标：这是机器的初审结论，不是定论，所以措辞用「疑」「待复核」，
+     并且点一下能跳到主体视图里同组的那几条去对照。 */
+  function tagsHtml(item) {
+    var out = [];
+    var cluster = dupOf[item.id];
+    var group = subjectOf[item.id];
+    if (cluster) {
+      out.push('<button type="button" class="wk-tag" data-kind="dup" data-goto-subject="' +
+        esc(group ? group.key : '') + '" title="' + esc(cluster.reason || '') +
+        '">疑重复 · 同组 ' + cluster.ids.length + ' 条</button>');
+    }
+    if (suspectOf[item.id] && !cluster) {
+      out.push('<span class="wk-tag" data-kind="suspect" title="' +
+        esc(suspectOf[item.id].reason || '') + '">待复核</span>');
+    }
+    if (chainOf[item.id]) {
+      out.push('<span class="wk-tag" data-kind="chain" title="' + esc(chainOf[item.id].reason || '') +
+        '">' + esc(chainOf[item.id].type || '连锁') + '</span>');
+    }
+    return out.length ? '<div class="wk-tags">' + out.join('') + '</div>' : '';
+  }
+
   /* ---------------- 渲染 ---------------- */
 
   function renderHead() {
@@ -284,6 +340,8 @@
   function haystackOf(entry) {
     var item = entry.item;
     var parts = [item.title, item.fact || '', item.source || '', entry.topic, entry.group];
+    var group = subjectOf[item.id];
+    if (group) { parts.push(group.name || ''); }
     (item.stages || []).forEach(function (stage) {
       parts.push(stage.stage || '', stage.text || '');
     });
@@ -338,7 +396,9 @@
 
     var imported = readOnly && mark === 'tech' ? ' data-imported="1"' : '';
     return '<li class="wk" data-id="' + esc(item.id) + '" data-mark="' + esc(mark) + '"' +
-      imported + ' data-haystack="' + esc(haystackOf(entry)) + '">' + head + body + foot + '</li>';
+      ' data-own-topic="' + esc(entry.topic) + '"' +
+      imported + ' data-haystack="' + esc(haystackOf(entry)) + '">' +
+      head + tagsHtml(item) + body + foot + '</li>';
   }
 
   function renderTopics() {
@@ -358,6 +418,83 @@
         '<span class="topic-count">' + (topic.count || 0) + ' 条</span></div>' +
         groups + '</section>';
     }).join('');
+  }
+
+  /* 主体视图：把同一主体的条目从各主题里收回来，卡内仍按制度主题分块、块内按
+     日期排——那就是这家公司这一周的线索。同主体初审的结论挂在卡头。 */
+  function subjectNote(group) {
+    var bits = [];
+    if (group.duplicates && group.duplicates.length) {
+      bits.push('疑重复 ' + group.duplicates.length + ' 组');
+    }
+    if (group.suspects && group.suspects.length) {
+      bits.push('待复核 ' + group.suspects.length + ' 簇');
+    }
+    if (group.chains && group.chains.length) {
+      bits.push('连锁 ' + group.chains.length + ' 条');
+    }
+    return bits.length ? '机器初审：' + bits.join(' · ') : '';
+  }
+
+  function renderSubjects() {
+    var groups = ((audit && audit.subjects) || []).filter(function (group) {
+      return group.count > 1;
+    });
+    if (!groups.length) {
+      el.topics.innerHTML = '<p class="empty">本周没有识别出可归拢的主体，' +
+        '请按制度主题浏览。</p>';
+      return;
+    }
+    var review = (audit && audit.review) || {};
+    var head = '<div class="audit-head">' +
+      '<h2>同主体初审</h2>' +
+      '<p>' + esc(review.items_checked || 0) + ' 条里认出 ' + esc(review.subjects || 0) +
+      ' 个主体（2 条以上 ' + esc(review.subjects_multi || 0) + ' 个）· 疑重复 ' +
+      esc(review.duplicate_groups || 0) + ' 组（' + esc(review.duplicate_items || 0) +
+      ' 条）· 待复核 ' + esc(review.suspects || 0) + ' 簇 · 跨主题连锁 ' +
+      esc(review.chains || 0) + ' 条。这是机器按标题、摘要与制度动作序列算的初审，' +
+      '不是定论；条目上的徽标可点，点了会停在本主体里对照同组的那几条。</p></div>';
+
+    el.topics.innerHTML = head + groups.map(function (group) {
+      var order = [];
+      var byTopic = {};
+      (group.items || []).forEach(function (row) {
+        if (!byTopic[row.topic]) { byTopic[row.topic] = []; order.push(row.topic); }
+        byTopic[row.topic].push(row);
+      });
+      var body = order.map(function (topic) {
+        var rows = byTopic[topic];
+        return '<h3 class="type-head">' + esc(topic) +
+          '<span class="num">' + rows.length + '</span></h3>' +
+          '<ul class="wk-list">' + rows.map(function (row) {
+            var item = rawItems[row.id];
+            return item ? itemHtml({ topic: row.topic, group: row.group, item: item }) : '';
+          }).join('') + '</ul>';
+      }).join('');
+      var note = subjectNote(group);
+      return '<section class="topic subject" data-subject="' + esc(group.key) +
+        '" data-topic="' + esc(group.name) + '">' +
+        '<div class="topic-head"><h2>' + esc(group.name) + '</h2>' +
+        '<span class="topic-count">' + group.count + ' 条 · 跨 ' +
+        group.topics.length + ' 个主题</span></div>' +
+        (note ? '<p class="subject-note">' + esc(note) + '</p>' : '') +
+        body + '</section>';
+    }).join('');
+  }
+
+  function renderView() {
+    document.body.dataset.view = state.view;
+    if (state.view === 'subject' && audit) {
+      renderSubjects();
+    } else {
+      renderTopics();
+    }
+    Array.prototype.forEach.call(
+      el.viewSwitch.querySelectorAll('button[data-view]'), function (button) {
+        button.setAttribute('aria-pressed', String(button.dataset.view === state.view));
+      });
+    try { localStorage.setItem(VIEW_KEY, state.view); } catch (error) { /* 隐私模式 */ }
+    applyFilters();
   }
 
   function renderFilters() {
@@ -448,7 +585,9 @@
       var visibleInTopic = 0;
       Array.prototype.forEach.call(section.querySelectorAll('.wk'), function (item) {
         total += 1;
-        item.dataset.topic = section.dataset.topic;
+        /* 主体卡里的条目来自不同制度主题，各自带着自己的主题走；主题卡里则由
+           所在的 section 决定。 */
+        item.dataset.topic = item.dataset.ownTopic || section.dataset.topic;
         var visible = matches(item, item.dataset.haystack || '');
         item.hidden = !visible;
         if (visible) { shown += 1; visibleInTopic += 1; }
@@ -555,10 +694,35 @@
     });
 
     el.topics.addEventListener('click', function (event) {
+      /* 徽标先处理：它也是 button，别被下面的标签判断抢走 */
+      var badge = event.target.closest('[data-goto-subject]');
+      if (badge) {
+        var key = badge.dataset.gotoSubject;
+        if (key && state.view !== 'subject') {
+          state.view = 'subject';
+          renderView();
+        }
+        var target = el.topics.querySelector('[data-subject="' + key + '"]');
+        if (target) {
+          target.scrollIntoView({ block: 'start' });
+          target.setAttribute('data-flash', '1');
+          setTimeout(function () { target.removeAttribute('data-flash'); }, 1600);
+        }
+        return;
+      }
       var button = event.target.closest('.wk-mark button[data-label]');
       if (!button) { return; }
       var node = button.closest('.wk');
       setMark(node, button.dataset.label);
+    });
+
+    el.viewSwitch.addEventListener('click', function (event) {
+      var button = event.target.closest('button[data-view]');
+      if (!button || button.dataset.view === state.view) { return; }
+      state.view = button.dataset.view;
+      renderView();
+      /* 两套内容毫无重合，留在原地只会让人以为页面没换 */
+      window.scrollTo({ top: 0, behavior: 'auto' });
     });
 
     /* 「交回」是提示行里的一个链接，不用按钮：交回是标记动作的收尾，不是另一套面板 */
@@ -599,10 +763,14 @@
       }),
       fetch(DATA_DIR + 'weekly-meta.json').then(function (res) {
         return res.ok ? res.json() : null;
+      }).catch(function () { return null; }),
+      fetch(DATA_DIR + 'weekly-subjects.json').then(function (res) {
+        return res.ok ? res.json() : null;
       }).catch(function () { return null; })
     ]).then(function (results) {
       data = results[0];
       meta = results[1];
+      audit = results[2];
       markKey = MARK_KEY_PREFIX + (data.week || 'latest');
       submitKey = SUBMIT_KEY_PREFIX + (data.week || 'latest');
       loadMarks();
@@ -614,12 +782,21 @@
         marks = imported;
         readOnly = true;
       }
+      (data.topics || []).forEach(function (topic) {
+        (topic.groups || []).forEach(function (group) {
+          (group.items || []).forEach(function (item) { rawItems[item.id] = item; });
+        });
+      });
+      indexAudit();
+      /* 交回视图固定按主题：核对改标的那几条时，位置要跟 issue 里列的顺序一致 */
+      var stored = null;
+      try { stored = localStorage.getItem(VIEW_KEY); } catch (error) { stored = null; }
+      if (!readOnly && stored === 'subject' && audit) { state.view = 'subject'; }
       renderHead();
-      renderTopics();
       renderFilters();
       layoutTopics();
       window.addEventListener('load', layoutTopics);
-      applyFilters();
+      renderView();
       bind();
       if (meta) {
         el.provenance.textContent = '数据同步自课程 Wiki' +

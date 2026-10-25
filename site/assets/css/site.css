@@ -491,15 +491,80 @@ html[data-theme="dark"] {
 }
 .mark-note a.submit:hover { color: var(--text); border-bottom-color: var(--text); }
 .mark-note a.submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- 按主体看：视图切换、主体卡、初审徽标 ---------- */
+
+/* 两个视图的按钮，跟 stats 排在一处。不做成 chip——chip 是筛选，这里是换看法 */
+.view-switch {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 14px 0 0;
+}
+.view-switch .label {
+  font: 400 12px/1 var(--sans); color: var(--faint); letter-spacing: .04em;
+  margin-right: 2px;
+}
+.view-switch button {
+  font: 500 12px/1 var(--sans); padding: 6px 12px; border-radius: 999px;
+  color: var(--muted); background: transparent; border: 1px solid var(--line);
+  cursor: pointer; transition: color .15s ease, border-color .15s ease;
+}
+.view-switch button:hover { color: var(--text); border-color: var(--line-strong); }
+.view-switch button[aria-pressed="true"] {
+  color: var(--accent); border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.view-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* 按主体看时收起本周概览：概览是按制度主题串的一条叙事，和「一家公司这一周
+   走到哪一步」不是一套读法；留着它，主体卡要滚过五段才露头。 */
+body[data-view="subject"] .wk-overview { display: none; }
+
+.audit-head {
+  border: 1px dashed var(--line-strong); border-radius: var(--radius);
+  padding: 18px 20px; margin: 0 0 34px; background: var(--surface-2);
+}
+.audit-head h2 { margin: 0 0 8px; font-size: 15px; letter-spacing: .04em; }
+.audit-head p {
+  margin: 0; font: 400 12.5px/1.8 var(--sans); color: var(--muted);
+}
+
+.subject .topic-head { margin-bottom: 2px; }
+.subject-note {
+  margin: 8px 0 0; font: 400 12px/1.6 var(--sans); color: var(--warn);
+}
+/* 从主题视图点徽标跳过来时，闪一下边，让人知道落在哪 */
+.subject[data-flash="1"] .topic-head { animation: wk-flash 1.5s ease-out; }
+@keyframes wk-flash {
+  0% { background: var(--accent-soft); }
+  100% { background: transparent; }
+}
+
+/* 初审徽标：挂在条目正文与标题之间。疑重复可点（跳到主体视图对照），
+   待复核与连锁只提示——它们没有可以带人去的落点。 */
+.wk-tags { display: flex; gap: 6px; flex-wrap: wrap; padding-left: 88px; }
+.wk-tag {
+  font: 500 11px/1 var(--sans); letter-spacing: .02em;
+  padding: 4px 8px; border-radius: 999px;
+  color: var(--faint); background: var(--surface-2);
+  border: 1px solid var(--line); white-space: nowrap;
+}
+button.wk-tag { cursor: pointer; }
+button.wk-tag:hover { color: var(--text); border-color: var(--line-strong); }
+button.wk-tag:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wk-tag[data-kind="dup"] { color: var(--warn); border-color: var(--warn); }
+.wk-tag[data-kind="chain"] { color: var(--accent); border-color: var(--accent); }
+
 /* 交回视图：从 issue 里的链接打开时，被改标的条目描一圈，方便逐条核对 */
 .wk[data-imported="1"] { box-shadow: 0 0 0 2px var(--accent-soft), 0 0 0 3px var(--accent); }
 .wk-mark button:disabled { cursor: default; opacity: 1; }
 
 @media (max-width: 720px) {
+  /* 窄屏上 Law/Tech 两个标签会把标题挤成四五行——宁可让标签另起一行，
+     也别把标题压成竖排的字块 */
   .wk-top { flex-wrap: wrap; }
-  .wk-when { min-width: 0; padding-top: 0; }
+  .wk-when { order: 1; min-width: 0; padding-top: 0; }
+  .wk-title { order: 2; flex: 1 1 100%; }
   .wk-mark { order: 3; }
-  .wk-stages, .wk-fact, .wk-foot, .wk-carried { padding-left: 0; }
+  .wk-stages, .wk-fact, .wk-foot, .wk-carried, .wk-tags { padding-left: 0; }
   .wk-overview { padding: 18px; }
 }
 
