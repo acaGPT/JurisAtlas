@@ -432,7 +432,7 @@ html[data-theme="dark"] {
   background: var(--surface-2); padding: 2px; gap: 2px;
 }
 .wk-mark button {
-  font: 500 11.5px/1 var(--sans); letter-spacing: .02em;
+  font: 700 11.5px/1 var(--sans); letter-spacing: .02em;
   padding: 5px 10px; border: 0; border-radius: 999px;
   background: transparent; color: var(--faint); cursor: pointer;
   transition: color .15s ease, background .15s ease;
@@ -474,7 +474,7 @@ html[data-theme="dark"] {
 .wk-foot a { color: var(--faint); }
 .wk-foot a:hover { color: var(--accent); }
 
-/* 标记面板：导出与清空都收在这里，别让工具栏长到两行 */
+/* 标记提示：只说这次改标了几条。导出与清空都不在页面上了，工具栏只剩搜索与主题 */
 .mark-note {
   font: 400 12.5px/1.7 var(--sans); color: var(--muted);
   background: var(--surface-2); border: 1px dashed var(--line-strong);

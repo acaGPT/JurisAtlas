@@ -1,7 +1,10 @@
 /* 《法理学》周报 —— 页面逻辑
    用途：读取周报数据层，渲染「主题 → 事件类型 → 条目」三层结构，并给每条挂
-        Law / Tech 两个并列标签（默认 Law，没有第三种状态），标记存在浏览器本地，可导出交回。
+        Law / Tech 两个并列标签（默认 Law，没有第三种状态），标记存在浏览器本地。
    用法：由 weekly.html 以 <script> 引入；数据取自 assets/data/weekly*.json。
+
+   工具栏只留搜索框与主题 chip：标记筛选、导出、深浅色切换都不在页面上了。
+   标记仍按周存在本机（jcm-weekly-marks:<周次>），刷新不丢，但不出这台设备。
 */
 
 (function () {
@@ -13,7 +16,7 @@
   var DEBOUNCE_MS = 110;
   var CHIP_GAP = 5;
 
-  var state = { q: '', topic: 'all', mark: 'all', topicsExpanded: false };
+  var state = { q: '', topic: 'all', topicsExpanded: false };
   /* 只记被人工改过的：id -> 'tech'。没有键就是默认 Law——
      默认值即当前值，不再有「未表态」这个中间态。 */
   var marks = {};
@@ -30,23 +33,11 @@
     topics: document.getElementById('topics'),
     q: document.getElementById('q'),
     topicFilter: document.getElementById('topic-filter'),
-    markFilter: document.getElementById('mark-filter'),
     count: document.getElementById('count'),
     note: document.getElementById('mark-note'),
-    toggleOverview: document.getElementById('toggle-overview'),
-    copyLabels: document.getElementById('copy-labels'),
-    downloadLabels: document.getElementById('download-labels'),
-    resetLabels: document.getElementById('reset-labels'),
-    theme: document.getElementById('theme'),
     wikiLink: document.getElementById('wiki-link'),
     provenance: document.getElementById('provenance')
   };
-
-  var MARK_FILTERS = [
-    { key: 'all', label: '全部' },
-    { key: 'law', label: 'Law' },
-    { key: 'tech', label: 'Tech' }
-  ];
 
   /* ---------------- 工具 ---------------- */
 
@@ -74,18 +65,6 @@
     } catch (error) {
       /* 隐私模式下列浏览器禁用写入：标记当次有效，不拦路 */
     }
-  }
-
-  function allItems() {
-    var out = [];
-    (data.topics || []).forEach(function (topic) {
-      (topic.groups || []).forEach(function (group) {
-        (group.items || []).forEach(function (item) {
-          out.push({ topic: topic.name, group: group.name, item: item });
-        });
-      });
-    });
-    return out;
   }
 
   function countMarks() {
@@ -230,11 +209,6 @@
       .join('') +
       '<button type="button" class="more" data-more="1" aria-expanded="false" hidden>' +
         '更多主题</button>';
-
-    el.markFilter.innerHTML = MARK_FILTERS.map(function (entry) {
-      return '<button type="button" data-mark-filter="' + entry.key + '" aria-pressed="' +
-        (state.mark === entry.key ? 'true' : 'false') + '">' + esc(entry.label) + '</button>';
-    }).join('');
   }
 
   /* 主题 chip 收成一行。14 个主题铺开要占三行，把工具栏顶得很高；
@@ -295,7 +269,6 @@
 
   function matches(item, haystack) {
     if (state.topic !== 'all' && item.dataset.topic !== state.topic) { return false; }
-    if (state.mark !== 'all' && item.dataset.mark !== state.mark) { return false; }
     if (state.q && haystack.indexOf(state.q) === -1) { return false; }
     return true;
   }
@@ -327,18 +300,15 @@
       section.hidden = visibleInTopic === 0;
     });
 
-    var counts = countMarks();
     el.count.textContent = shown === total
       ? '共 ' + total + ' 条'
       : '显示 ' + shown + ' / ' + total + ' 条';
+
+    var counts = countMarks();
+    el.note.hidden = !counts.total;
     if (counts.total) {
-      el.note.hidden = false;
       el.note.innerHTML = '已把 <strong>' + counts.total + '</strong> 条改标为 Tech。' +
-        '标记只存在这台设备上，标完点「复制标记」或「下载标记」交回。';
-      el.resetLabels.hidden = false;
-    } else {
-      el.note.hidden = true;
-      el.resetLabels.hidden = true;
+        '标记只存在这台设备的浏览器里，刷新仍在，不会上传。';
     }
   }
 
@@ -375,99 +345,17 @@
     });
   }
 
-  function exportPayload() {
-    /* 导出的是一份「例外清单」：只含被人工改判为 Tech 的条目。
-       默认 Law 的条目不必逐条记录——它们是基线，不是判断。 */
-    var labels = [];
-    allItems().forEach(function (entry) {
-      if (marks[entry.item.id] !== 'tech') { return; }
-      var item = entry.item;
-      labels.push({
-        id: item.id,
-        label: 'tech',
-        title: item.title,
-        topic: entry.topic,
-        group: entry.group,
-        kind: item.kind,
-        date: item.kind === 'event' && item.stages && item.stages.length
-          ? item.stages[0].date : (item.date || ''),
-        source: item.source || '',
-        url: item.links && item.links.length ? item.links[0].url : ''
-      });
-    });
-    var counts = countMarks();
-    return {
-      schema: 'jurisatlas-weekly-labels/v1',
-      week: data.week || '',
-      title: data.title || '',
-      default_label: 'law',
-      page: location.href.split('#')[0],
-      exported_at: new Date().toISOString(),
-      counts: { items: data.counts.items, marked: counts.total, law: 0, tech: counts.tech },
-      labels: labels
-    };
-  }
-
-  function payloadText() {
-    return JSON.stringify(exportPayload(), null, 1);
-  }
-
-  function copyText(text, button) {
-    var original = button.textContent;
-    var done = function (ok) {
-      button.textContent = ok ? '已复制' : '复制失败';
-      setTimeout(function () { button.textContent = original; }, 1600);
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { done(true); },
-        function () { done(false); });
-      return;
-    }
-    var area = document.createElement('textarea');
-    area.value = text;
-    area.setAttribute('readonly', 'readonly');
-    area.style.position = 'fixed';
-    area.style.left = '-9999px';
-    document.body.appendChild(area);
-    area.select();
-    var ok = false;
-    try { ok = document.execCommand('copy'); } catch (error) { ok = false; }
-    document.body.removeChild(area);
-    done(ok);
-  }
-
-  function download() {
-    var counts = countMarks();
-    if (!counts.total) {
-      window.alert('还没有标记。点条目右侧的 Tech（或 Law）先标几条。');
-      return;
-    }
-    var name = 'ai-weekly-' + (data.week || 'marks') + '-marks.json';
-    var blob = new Blob([payloadText()], { type: 'application/json;charset=utf-8' });
-    var url = URL.createObjectURL(blob);
-    var link = document.createElement('a');
-    link.href = url;
-    link.download = name;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
-  }
-
   /* ---------------- 主题 ---------------- */
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    el.theme.textContent = theme === 'dark' ? '浅色' : '深色';
-    localStorage.setItem(THEME_KEY, theme);
-  }
-
+  /* 页面上没有切换按钮了，但仍跟随站点在别处设过的偏好（课程地图／文献库的
+     深色按钮写的是同一个键），没设过就跟系统走。 */
   function initTheme() {
-    var stored = localStorage.getItem(THEME_KEY);
+    var stored = null;
+    try { stored = localStorage.getItem(THEME_KEY); } catch (error) { stored = null; }
     if (stored !== 'light' && stored !== 'dark') {
       stored = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-    applyTheme(stored);
+    document.documentElement.setAttribute('data-theme', stored);
   }
 
   /* ---------------- 事件 ---------------- */
@@ -495,59 +383,11 @@
       applyFilters();
     });
 
-    el.markFilter.addEventListener('click', function (event) {
-      var button = event.target.closest('button[data-mark-filter]');
-      if (!button) { return; }
-      state.mark = button.dataset.markFilter;
-      el.markFilter.querySelectorAll('button').forEach(function (node) {
-        node.setAttribute('aria-pressed', String(node === button));
-      });
-      applyFilters();
-    });
-
     el.topics.addEventListener('click', function (event) {
       var button = event.target.closest('.wk-mark button[data-label]');
       if (!button) { return; }
       var node = button.closest('.wk');
       setMark(node, button.dataset.label);
-    });
-
-    el.toggleOverview.addEventListener('click', function () {
-      var showing = el.overview.hidden;
-      el.overview.hidden = !showing;
-      el.toggleOverview.setAttribute('aria-pressed', String(showing));
-    });
-
-    el.copyLabels.addEventListener('click', function () {
-      var counts = countMarks();
-      if (!counts.total) {
-        window.alert('还没有标记。点条目右侧的 Tech（或 Law）先标几条。');
-        return;
-      }
-      copyText(payloadText(), el.copyLabels);
-    });
-
-    el.downloadLabels.addEventListener('click', download);
-
-    el.resetLabels.addEventListener('click', function () {
-      var counts = countMarks();
-      if (!window.confirm('把 ' + counts.total + ' 条改标恢复为默认 Law？')) {
-        return;
-      }
-      marks = {};
-      saveMarks();
-      Array.prototype.forEach.call(el.topics.querySelectorAll('.wk'), function (node) {
-        node.dataset.mark = 'law';
-        syncButtons(node);
-      });
-      applyFilters();
-      refreshStat();
-    });
-
-    el.theme.addEventListener('click', function () {
-      var next = document.documentElement.getAttribute('data-theme') === 'dark'
-        ? 'light' : 'dark';
-      applyTheme(next);
     });
 
     document.addEventListener('keydown', function (event) {

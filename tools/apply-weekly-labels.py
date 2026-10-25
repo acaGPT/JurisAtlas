@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""把周报页上导出的人工标记，整理为下一轮分类可用的反馈表。
+"""把周报页上的人工标记，整理为下一轮分类可用的反馈表。
 
 用途
-    weekly.html 上每条信息可以标 Law 或 Tech（默认 Law，没有第三种状态）。标记只存在
-    读者浏览器的本地存储里，由读者点「下载标记」导出成 JSON 再交回。本脚本读取一份或
-    多份导出文件，按条目 id 合并（同一份被多人标过就投票），写出 JSONL 供分类校准使用。
+    weekly.html 上每条信息可以标 Law 或 Tech（默认 Law，没有第三种状态）。标记存在
+    读者浏览器的本地存储里（键 jcm-weekly-marks:<周次>），页面已不提供导出按钮；
+    需要成批收集时，取其值按 jurisatlas-weekly-labels/v1 包一层即可（字段见下方
+    「输入格式」）。本脚本读取一份或多份这样的文件，按条目 id 合并（同一份被多人标过
+    就投票），写出 JSONL 供分类校准使用。
 
-    导出的是一份**例外清单**：只含被读者改判为 Tech 的条目——默认 Law 的条目不进文件，
+    文件是一份**例外清单**：只列被读者改判为 Tech 的条目——默认 Law 的条目不进文件，
     因为它们是基线而不是判断。因此标为 tech 的条目就是 `classify_domain` 的候选假阳性。
-    若要记录「我认为是 Law」的异见，可手工在导出文件里补一行 label: "law"。
+    若要记录「我认为是 Law」的异见，可手工补一行 label: "law"。
 
-    多份导出必须属于同一周——不同周的同 id 不相干，混在一起会串味。
+    多份文件必须属于同一周——不同周的同 id 不相干，混在一起会串味。
 
 用法
-    python3 tools/apply-weekly-labels.py --in <导出.json> [<导出2.json> ...] \
+    python3 tools/apply-weekly-labels.py --in <标记.json> [<标记2.json> ...] \
         [--out <反馈.jsonl>] [--json]
 
 参数
-    --in    一份或多份从 weekly.html 导出的标记文件
+    --in    一份或多份标记文件（jurisatlas-weekly-labels/v1）
     --out   输出路径；默认 weekly-reports/human-labels-<周次>.jsonl
     --json  以 JSON 打印汇总，便于其他脚本消费
 
@@ -26,10 +28,14 @@
      "votes":{"law":0,"tech":2},"agree":true,"title":"…","topic":"…","group":"…",
      "kind":"single","date":"…","source":"…","url":"…"}
 
+输入格式
+    {"schema":"jurisatlas-weekly-labels/v1","week":"2026-W43",
+     "default_label":"law","labels":[{"id":"…","label":"tech"}, …]}
+
 返回值
     0  成功
     1  输入不可读或字段缺失
-    2  多份导出不属于同一周
+    2  多份文件不属于同一周
 """
 
 from __future__ import annotations
@@ -57,7 +63,7 @@ def load_exports(paths: list[Path]) -> tuple[str, list[dict]]:
             raise ValueError(f"{path}：读不出来（{error}）") from error
         if payload.get("schema") != SCHEMA_IN:
             raise ValueError(f"{path}：schema 是 {payload.get('schema')!r}，"
-                             f"不是 {SCHEMA_IN}——请确认文件来自 weekly.html 的「下载标记」")
+                             f"不是 {SCHEMA_IN}——请按脚本头部「输入格式」重包一次")
         this_week = payload.get("week") or ""
         if not this_week:
             raise ValueError(f"{path}：缺少 week 字段")

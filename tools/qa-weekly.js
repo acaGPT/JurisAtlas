@@ -1,5 +1,5 @@
-/* 周报断言式 QA —— 渲染、默认标记、人工标记与持久化、筛选、检索、导出、主题、
- * 响应式与移动端溢出，并留取截图。
+/* 周报断言式 QA —— 渲染、工具栏结构、默认标记、人工标记与持久化、筛选、检索、
+ * 深色跟随、响应式与移动端溢出，并留取截图。
  *
  * 用法：
  *   NODE_PATH=<node workspace>/node_modules node tools/qa-weekly.js <baseUrl> <outDir>
@@ -69,6 +69,21 @@ function check(name, actual, expected) {
     await page.locator('.wk').first().locator('button[data-label="law"]')
       .getAttribute('aria-pressed'), 'true');
 
+  /* 工具栏只剩三组：搜索框、主题 chip、条数。标记筛选与操作按钮都不在了。 */
+  check('工具栏只剩三组', await page.locator('.toolbar .wrap > *').count(), 3);
+  check('没有标记筛选', await page.locator('#mark-filter').count(), 0);
+  check('没有操作按钮行', await page.locator('.toolbar .actions').count(), 0);
+  check('工具栏里的按钮全在主题 chip 内',
+    await page.locator('.toolbar .wrap button').count(),
+    await page.locator('#topic-filter button').count());
+
+  /* Law / Tech 标签加粗 */
+  const weights = await page.evaluate(() => Array.from(
+    document.querySelectorAll('.wk-mark button'))
+    .map(b => Number(getComputedStyle(b).fontWeight)));
+  check('标签字重不低于 600', weights.every(w => w >= 600));
+  check('标签字重在 700 档', weights.every(w => w === 700));
+
   /* 主题 chip 收成一行：可见 chip 的 offsetTop 应当只有一个值 */
   const chipRows = await page.evaluate(() => {
     const chips = Array.from(document.querySelectorAll('#topic-filter button:not([hidden])'));
@@ -106,24 +121,30 @@ function check(name, actual, expected) {
   check('Tech 按钮进入按下态',
     await first.locator('button[data-label="tech"]').getAttribute('aria-pressed'), 'true');
   check('标记提示出现', await page.locator('#mark-note').isVisible());
+  check('统计项「条标为 Tech」同步为 1', await page.evaluate(() => {
+    const dt = Array.from(document.querySelectorAll('#stats dt'))
+      .find(node => node.textContent === '条标为 Tech');
+    return dt ? dt.nextElementSibling.textContent : null;
+  }), '1');
   const stored = await page.evaluate(key => localStorage.getItem(key),
     'jcm-weekly-marks:' + EXPECT.week);
   check('标记写入本地存储', typeof stored === 'string' && stored.includes('tech'));
+
+  await first.screenshot({ path: path.join(OUT, 'weekly-marked.png') });
 
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForSelector('.wk');
   check('刷新后标记保留',
     await page.locator(`.wk[data-id="${firstId}"]`).getAttribute('data-mark'), 'tech');
 
-  check('标记筛选只剩三档',
-    (await page.locator('#mark-filter').innerText()).replace(/\s+/g, ' ').trim(),
-    '全部 Law Tech');
-  await page.locator('#mark-filter button[data-mark-filter="tech"]').click();
-  check('只看 Tech 只剩改标条目', await page.locator('.wk:not([hidden])').count(), 1);
-  await page.locator('#mark-filter button[data-mark-filter="law"]').click();
-  check('只看 Law 是其余全部', await page.locator('.wk:not([hidden])').count(),
-    EXPECT.items - 1);
-  await page.locator('#mark-filter button[data-mark-filter="all"]').click();
+  /* 点 Law 即撤回：没有第三种状态 */
+  await page.locator(`.wk[data-id="${firstId}"]`).locator('button[data-label="law"]').click();
+  await page.waitForTimeout(150);
+  check('点 Law 撤回默认', await page.locator('.wk[data-mark="law"]').count(), EXPECT.items);
+  check('撤回后标记提示收起', await page.locator('#mark-note').isVisible(), false);
+  check('撤回后本地存储清空',
+    await page.evaluate(key => localStorage.getItem(key) || '{}',
+      'jcm-weekly-marks:' + EXPECT.week), '{}');
 
   await page.locator('#q').fill('Anthropic');
   await page.waitForTimeout(260);
@@ -138,24 +159,15 @@ function check(name, actual, expected) {
   check('主题筛选只留一个主题', await page.locator('.topic:not([hidden])').count(), 1);
   await page.locator('#topic-filter button[data-topic="all"]').click();
 
-  const downloadPromise = page.waitForEvent('download');
-  await page.locator('#download-labels').click();
-  const download = await downloadPromise;
-  const payload = JSON.parse(fs.readFileSync(await download.path(), 'utf8'));
-  check('导出文件名带周次', download.suggestedFilename().includes(EXPECT.week));
-  check('导出 schema', payload.schema, 'jurisatlas-weekly-labels/v1');
-  check('导出只含已标记条目', payload.labels.length, 1);
-  check('导出声明默认值为 Law', payload.default_label, 'law');
-  check('导出计数与标记一致',
-    payload.counts.marked === 1 && payload.counts.tech === 1);
-  check('导出条目可回指（含 id 与 topic）',
-    Boolean(payload.labels[0] && payload.labels[0].id && payload.labels[0].topic));
-
-  await page.locator('#theme').click();
-  check('切换深色', await page.getAttribute('html', 'data-theme'), 'dark');
-  await page.waitForTimeout(220);
+  /* 页面上没有深色按钮了，但仍要跟随站点在别处设过的偏好 */
+  await page.evaluate(() => localStorage.setItem('jcm-theme', 'dark'));
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('.wk');
+  check('跟随站点深色偏好', await page.getAttribute('html', 'data-theme'), 'dark');
   await page.screenshot({ path: path.join(OUT, 'weekly-dark.png') });
-  await page.locator('#theme').click();
+  await page.evaluate(() => localStorage.setItem('jcm-theme', 'light'));
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('.wk');
   await page.waitForTimeout(220);
   await page.screenshot({ path: path.join(OUT, 'weekly-light.png') });
 
@@ -174,10 +186,15 @@ function check(name, actual, expected) {
 
   // 收尾：清空标记，别把测试痕迹留在这台机器上
   await page.setViewportSize({ width: 1280, height: 1000 });
-  page.on('dialog', dialog => dialog.accept());
-  await page.locator('#reset-labels').click();
-  await page.waitForTimeout(220);
-  check('恢复默认后全部回到 Law',
+  await page.evaluate(() => {
+    Object.keys(localStorage)
+      .filter(k => k.indexOf('jcm-weekly-marks:') === 0)
+      .forEach(k => localStorage.removeItem(k));
+    localStorage.setItem('jcm-theme', 'light');
+  });
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('.wk');
+  check('清理后全部回到 Law',
     await page.locator('.wk[data-mark="law"]').count(), EXPECT.items);
 
   await browser.close();
