@@ -13,8 +13,8 @@
   "subjects": 28,
   "subjects_multi": 14,
   "unassigned": 131,
-  "duplicate_groups": 5,
-  "duplicate_items": 12,
+  "duplicate_groups": 4,
+  "duplicate_items": 10,
   "suspects": 4,
   "chains": 0,
   "chain_items": 0,
@@ -734,14 +734,6 @@
     }
    ],
    "duplicates": [
-    {
-     "ids": [
-      "bbb282ca8a",
-      "fe69f709ff"
-     ],
-     "confidence": 0.88,
-     "reason": "共同短语「马斯克回应」等 5 处"
-    },
     {
      "ids": [
       "5c2fa547d2",

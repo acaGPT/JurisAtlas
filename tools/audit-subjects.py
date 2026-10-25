@@ -358,6 +358,9 @@ def rare_terms(record: dict, idf: dict[str, float], floor: float) -> set[str]:
 
 
 RE_NUMERIC_PHRASE = re.compile(r"[0-9０-９%％]|亿|万元|美元|亿元")
+"""表态短语也不算事件名。「马斯克回应」「某某表示」在两条不相干的新闻里都会出现，
+共享它不是同一件事的证据——它们相似只因为都引了一个人的话。"""
+RE_SPEECH_PHRASE = re.compile(r"回应|表示|调侃|吐槽|认为|称赞|抱怨|透露|澄清")
 
 
 def rare_phrases(record: dict, pdf: Counter[str], limit_df: int = 6) -> set[str]:
@@ -385,7 +388,13 @@ def duplicate_evidence(a: dict, b: dict, idf: dict[str, float], floor: float,
         return 1.0, "共享同一链接"
 
     shared_phrases = rare_phrases(a, pdf) & rare_phrases(b, pdf)
-    strong = {phrase for phrase in shared_phrases if len(phrase) >= 4}
+    """先取极大短语：所有 3–6 字窗口都会命中，「马斯克回应」的每个四字片段也在里面，
+    只按长度过滤会挑出「马斯克回」这种切掉一个字的残片，反而躲过表态词的过滤。"""
+    ordered = sorted(shared_phrases, key=len, reverse=True)
+    maximal = [phrase for phrase in ordered
+               if not any(phrase != other and phrase in other for other in ordered)]
+    strong = {phrase for phrase in maximal
+              if len(phrase) >= 4 and not RE_SPEECH_PHRASE.search(phrase)}
     """「无投票权股票类别」与「无投票权股份」这类，标题词集只有 0.3 的重合，但共享
     整段稀有短语——这才是同一件事的硬证据。还要过一道摘要：只共享短语、正文毫无
     交集的，是标题撞词（「ChinaTalk」和一篇政策解读都写着「出口管制」）。"""
