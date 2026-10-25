@@ -59,10 +59,45 @@ function check(name, actual, expected) {
   check('主题数与数据层一致', await page.locator('.topic').count(), EXPECT.topics);
   check('周次行显示当周',
     (await page.locator('#week-line').innerText()).includes(data.week_line));
-  check('默认全部未表态', await page.locator('.wk[data-mark="unset"]').count(), EXPECT.items);
+  check('周次行不再重复起止日期',
+    (await page.locator('#week-line').innerText()).includes(data.period.start), false);
+  check('没有说明段落', await page.locator('.lede').count(), 0);
+  check('统计标签用「连锁事件」',
+    (await page.locator('#stats').innerText()).includes('件连锁事件'));
+  check('每一条默认都是 Law', await page.locator('.wk[data-mark="law"]').count(), EXPECT.items);
   check('默认 Law 为按下态',
     await page.locator('.wk').first().locator('button[data-label="law"]')
       .getAttribute('aria-pressed'), 'true');
+
+  /* 主题 chip 收成一行：可见 chip 的 offsetTop 应当只有一个值 */
+  const chipRows = await page.evaluate(() => {
+    const chips = Array.from(document.querySelectorAll('#topic-filter button:not([hidden])'));
+    return { rows: new Set(chips.map(c => c.offsetTop)).size, shown: chips.length };
+  });
+  check('主题 chip 只占一行', chipRows.rows, 1);
+  check('放不下的主题收进「更多主题」',
+    await page.locator('#topic-filter button[data-more]').isVisible());
+
+  await page.locator('#topic-filter button[data-more]').click();
+  await page.waitForTimeout(200);
+  check('展开后露出全部主题',
+    await page.locator('#topic-filter button[data-topic]:not([hidden])').count(),
+    EXPECT.topics + 1);
+  /* 从展开态选最后一个主题，再收起：选中项必须留在可见的一行里 */
+  const lastChip = page.locator('#topic-filter button[data-topic]').last();
+  const lastTopic = await lastChip.getAttribute('data-topic');
+  await lastChip.click();
+  await page.waitForTimeout(150);
+  await page.locator('#topic-filter button[data-more]').click();
+  await page.waitForTimeout(200);
+  check('收起后选中的主题仍可见',
+    await page.locator(`#topic-filter button[data-topic="${lastTopic}"]`).isVisible());
+  check('收起后仍是一行', await page.evaluate(() => {
+    const chips = Array.from(document.querySelectorAll('#topic-filter button:not([hidden])'));
+    return new Set(chips.map(c => c.offsetTop)).size;
+  }), 1);
+  await page.locator('#topic-filter button[data-topic="all"]').click();
+  await page.waitForTimeout(150);
 
   const first = page.locator('.wk').first();
   const firstId = await first.getAttribute('data-id');
@@ -80,9 +115,14 @@ function check(name, actual, expected) {
   check('刷新后标记保留',
     await page.locator(`.wk[data-id="${firstId}"]`).getAttribute('data-mark'), 'tech');
 
+  check('标记筛选只剩三档',
+    (await page.locator('#mark-filter').innerText()).replace(/\s+/g, ' ').trim(),
+    '全部 Law Tech');
   await page.locator('#mark-filter button[data-mark-filter="tech"]').click();
-  check('只看 Tech 只剩已标记条目',
-    await page.locator('.wk:not([hidden])').count(), 1);
+  check('只看 Tech 只剩改标条目', await page.locator('.wk:not([hidden])').count(), 1);
+  await page.locator('#mark-filter button[data-mark-filter="law"]').click();
+  check('只看 Law 是其余全部', await page.locator('.wk:not([hidden])').count(),
+    EXPECT.items - 1);
   await page.locator('#mark-filter button[data-mark-filter="all"]').click();
 
   await page.locator('#q').fill('Anthropic');
@@ -105,6 +145,7 @@ function check(name, actual, expected) {
   check('导出文件名带周次', download.suggestedFilename().includes(EXPECT.week));
   check('导出 schema', payload.schema, 'jurisatlas-weekly-labels/v1');
   check('导出只含已标记条目', payload.labels.length, 1);
+  check('导出声明默认值为 Law', payload.default_label, 'law');
   check('导出计数与标记一致',
     payload.counts.marked === 1 && payload.counts.tech === 1);
   check('导出条目可回指（含 id 与 topic）',
@@ -136,7 +177,8 @@ function check(name, actual, expected) {
   page.on('dialog', dialog => dialog.accept());
   await page.locator('#reset-labels').click();
   await page.waitForTimeout(220);
-  check('清除后回到未表态', await page.locator('.wk[data-mark="unset"]').count(), EXPECT.items);
+  check('恢复默认后全部回到 Law',
+    await page.locator('.wk[data-mark="law"]').count(), EXPECT.items);
 
   await browser.close();
 

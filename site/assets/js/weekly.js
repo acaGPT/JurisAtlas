@@ -1,6 +1,6 @@
 /* 《法理学》周报 —— 页面逻辑
    用途：读取周报数据层，渲染「主题 → 事件类型 → 条目」三层结构，并给每条挂
-        Law / Tech 两个并列标签（默认 Law），标记存在浏览器本地，可导出交回。
+        Law / Tech 两个并列标签（默认 Law，没有第三种状态），标记存在浏览器本地，可导出交回。
    用法：由 weekly.html 以 <script> 引入；数据取自 assets/data/weekly*.json。
 */
 
@@ -11,14 +11,17 @@
   var THEME_KEY = 'jcm-theme';
   var MARK_KEY_PREFIX = 'jcm-weekly-marks:';
   var DEBOUNCE_MS = 110;
+  var CHIP_GAP = 5;
 
-  var state = { q: '', topic: 'all', mark: 'all' };
-  /* id -> 'law' | 'tech'。没有键就是「没表过态」，页面按默认 Law 呈现。 */
+  var state = { q: '', topic: 'all', mark: 'all', topicsExpanded: false };
+  /* 只记被人工改过的：id -> 'tech'。没有键就是默认 Law——
+     默认值即当前值，不再有「未表态」这个中间态。 */
   var marks = {};
   var markKey = '';
   var data = null;
   var meta = null;
   var timer = null;
+  var layoutTimer = null;
 
   var el = {
     weekLine: document.getElementById('week-line'),
@@ -41,9 +44,8 @@
 
   var MARK_FILTERS = [
     { key: 'all', label: '全部' },
-    { key: 'none', label: '未标记' },
-    { key: 'law', label: '已标 Law' },
-    { key: 'tech', label: '已标 Tech' }
+    { key: 'law', label: 'Law' },
+    { key: 'tech', label: 'Tech' }
   ];
 
   /* ---------------- 工具 ---------------- */
@@ -55,7 +57,7 @@
   }
 
   function markOf(id) {
-    return marks[id] || 'unset';
+    return marks[id] === 'tech' ? 'tech' : 'law';
   }
 
   function loadMarks() {
@@ -87,31 +89,27 @@
   }
 
   function countMarks() {
-    var law = 0;
+    /* 只有 Tech 才算「标过」：Law 是默认值，不需要有人确认也存在。 */
     var tech = 0;
     Object.keys(marks).forEach(function (id) {
       if (marks[id] === 'tech') { tech += 1; }
-      else if (marks[id] === 'law') { law += 1; }
     });
-    return { law: law, tech: tech, total: law + tech };
+    return { tech: tech, total: tech };
   }
 
   /* ---------------- 渲染 ---------------- */
 
   function renderHead() {
+    /* 周次行本身已经带了日期区间，不再另接一段起止日。 */
     el.weekLine.textContent = data.week_line || '';
-    var period = data.period || {};
-    if (period.start && period.end) {
-      el.weekLine.textContent += '　·　' + period.start + ' — ' + period.end;
-    }
     el.weekLine.className = 'week-line';
 
     var counts = data.counts || {};
     el.stats.innerHTML = [
       stat(counts.items, '条信息'),
-      stat(counts.events, '件有后续的事'),
+      stat(counts.events, '件连锁事件'),
       stat(counts.topics, '个制度主题'),
-      stat(Object.keys(marks).length, '条已标记')
+      stat(countMarks().total, '条标为 Tech')
     ].join('');
 
     el.overview.innerHTML = (data.overview || [])
@@ -228,7 +226,10 @@
         return '<button type="button" data-topic="' + esc(entry.name) + '" aria-pressed="' +
           (state.topic === entry.name ? 'true' : 'false') + '">' + esc(label) +
           '<span class="num">' + entry.count + '</span></button>';
-      }).join('');
+      })
+      .join('') +
+      '<button type="button" class="more" data-more="1" aria-expanded="false" hidden>' +
+        '更多主题</button>';
 
     el.markFilter.innerHTML = MARK_FILTERS.map(function (entry) {
       return '<button type="button" data-mark-filter="' + entry.key + '" aria-pressed="' +
@@ -236,14 +237,65 @@
     }).join('');
   }
 
+  /* 主题 chip 收成一行。14 个主题铺开要占三行，把工具栏顶得很高；
+     这里按容器实际宽度逐个量，放不下的收进「更多主题 N」，点一下再展开。
+     选中的主题永远留在可见的一行里——否则筛选生效了却看不到自己在筛什么。 */
+  function layoutTopics() {
+    var buttons = Array.prototype.slice.call(
+      el.topicFilter.querySelectorAll('button[data-topic]'));
+    var more = el.topicFilter.querySelector('button[data-more]');
+    if (!buttons.length || !more) { return; }
+
+    buttons.forEach(function (button) { button.hidden = false; });
+    more.hidden = false;
+
+    if (state.topicsExpanded) {
+      more.textContent = '收起主题';
+      more.setAttribute('aria-expanded', 'true');
+      return;
+    }
+
+    var avail = el.topicFilter.clientWidth;
+    more.textContent = '更多主题 ' + buttons.length;
+    var reserve = more.getBoundingClientRect().width + CHIP_GAP;
+    var fitted = [];
+    var used = 0;
+
+    function fit(index, force) {
+      if (fitted.indexOf(index) !== -1) { return true; }
+      var need = used + (fitted.length ? CHIP_GAP : 0) +
+        buttons[index].getBoundingClientRect().width;
+      /* 第一个与选中项可以挤进去；其余要留出「更多主题」的位置 */
+      if (!force && fitted.length && need + reserve > avail) { return false; }
+      used = need;
+      fitted.push(index);
+      return true;
+    }
+
+    fit(0, true);
+
+    var selected = 0;
+    buttons.forEach(function (button, index) {
+      if (button.dataset.topic === state.topic) { selected = index; }
+    });
+    fit(selected, true);
+
+    for (var i = 1; i < buttons.length; i += 1) { fit(i, false); }
+
+    buttons.forEach(function (button, index) {
+      button.hidden = fitted.indexOf(index) === -1;
+    });
+    var hiddenCount = buttons.length - fitted.length;
+    more.hidden = hiddenCount === 0;
+    more.textContent = '更多主题 ' + hiddenCount;
+    more.setAttribute('aria-expanded', 'false');
+  }
+
   /* ---------------- 筛选 ---------------- */
 
   function matches(item, haystack) {
     if (state.topic !== 'all' && item.dataset.topic !== state.topic) { return false; }
-    var mark = item.dataset.mark;
-    if (state.mark === 'none' && mark !== 'unset') { return false; }
-    if (state.mark === 'law' && mark !== 'law') { return false; }
-    if (state.mark === 'tech' && mark !== 'tech') { return false; }
+    if (state.mark !== 'all' && item.dataset.mark !== state.mark) { return false; }
     if (state.q && haystack.indexOf(state.q) === -1) { return false; }
     return true;
   }
@@ -281,9 +333,8 @@
       : '显示 ' + shown + ' / ' + total + ' 条';
     if (counts.total) {
       el.note.hidden = false;
-      el.note.innerHTML = '已标记 <strong>' + counts.total + '</strong> 条：Law ' +
-        counts.law + ' · Tech ' + counts.tech +
-        '。标记只存在这台设备上，标完点「复制标记」或「下载标记」交回。';
+      el.note.innerHTML = '已把 <strong>' + counts.total + '</strong> 条改标为 Tech。' +
+        '标记只存在这台设备上，标完点「复制标记」或「下载标记」交回。';
       el.resetLabels.hidden = false;
     } else {
       el.note.hidden = true;
@@ -300,41 +351,40 @@
 
   function setMark(node, label) {
     var id = node.dataset.id;
-    var current = markOf(id);
-    if (current === label) {
-      delete marks[id];               // 再点一次撤回到「没表过态」
-      node.dataset.mark = 'unset';
-    } else {
-      marks[id] = label;
-      node.dataset.mark = label;
-    }
+    /* 两态：Tech 是人工改判，Law 是默认值。点 Law 即撤回，不存第三种状态。 */
+    if (label === 'tech') { marks[id] = 'tech'; } else { delete marks[id]; }
+    node.dataset.mark = markOf(id);
     saveMarks();
-    node.querySelectorAll('.wk-mark button').forEach(function (button) {
-      button.setAttribute('aria-pressed',
-        String(button.dataset.label === (markOf(id) === 'tech' ? 'tech' : 'law')));
-    });
+    syncButtons(node);
     applyFilters();
     refreshStat();
   }
 
+  function syncButtons(node) {
+    var mark = markOf(node.dataset.id);
+    Array.prototype.forEach.call(node.querySelectorAll('.wk-mark button'), function (button) {
+      button.setAttribute('aria-pressed', String(button.dataset.label === mark));
+    });
+  }
+
   function refreshStat() {
-    var nodes = el.stats.querySelectorAll('dt');
-    Array.prototype.forEach.call(nodes, function (node) {
-      if (node.textContent === '条已标记') {
-        node.nextElementSibling.textContent = String(Object.keys(marks).length);
+    Array.prototype.forEach.call(el.stats.querySelectorAll('dt'), function (node) {
+      if (node.textContent === '条标为 Tech') {
+        node.nextElementSibling.textContent = String(countMarks().total);
       }
     });
   }
 
   function exportPayload() {
+    /* 导出的是一份「例外清单」：只含被人工改判为 Tech 的条目。
+       默认 Law 的条目不必逐条记录——它们是基线，不是判断。 */
     var labels = [];
     allItems().forEach(function (entry) {
-      var label = marks[entry.item.id];
-      if (!label) { return; }
+      if (marks[entry.item.id] !== 'tech') { return; }
       var item = entry.item;
       labels.push({
         id: item.id,
-        label: label,
+        label: 'tech',
         title: item.title,
         topic: entry.topic,
         group: entry.group,
@@ -350,9 +400,10 @@
       schema: 'jurisatlas-weekly-labels/v1',
       week: data.week || '',
       title: data.title || '',
+      default_label: 'law',
       page: location.href.split('#')[0],
       exported_at: new Date().toISOString(),
-      counts: { items: data.counts.items, marked: counts.total, law: counts.law, tech: counts.tech },
+      counts: { items: data.counts.items, marked: counts.total, law: 0, tech: counts.tech },
       labels: labels
     };
   }
@@ -428,12 +479,19 @@
     });
 
     el.topicFilter.addEventListener('click', function (event) {
+      var more = event.target.closest('button[data-more]');
+      if (more) {
+        state.topicsExpanded = !state.topicsExpanded;
+        layoutTopics();
+        return;
+      }
       var button = event.target.closest('button[data-topic]');
       if (!button) { return; }
       state.topic = button.dataset.topic;
-      el.topicFilter.querySelectorAll('button').forEach(function (node) {
+      el.topicFilter.querySelectorAll('button[data-topic]').forEach(function (node) {
         node.setAttribute('aria-pressed', String(node === button));
       });
+      layoutTopics();          /* 选中的主题要留在可见的一行里 */
       applyFilters();
     });
 
@@ -473,16 +531,14 @@
 
     el.resetLabels.addEventListener('click', function () {
       var counts = countMarks();
-      if (!window.confirm('清除这台设备上的 ' + counts.total + ' 条标记？此操作不能撤销。')) {
+      if (!window.confirm('把 ' + counts.total + ' 条改标恢复为默认 Law？')) {
         return;
       }
       marks = {};
       saveMarks();
       Array.prototype.forEach.call(el.topics.querySelectorAll('.wk'), function (node) {
-        node.dataset.mark = 'unset';
-        node.querySelectorAll('.wk-mark button').forEach(function (button) {
-          button.setAttribute('aria-pressed', String(button.dataset.label === 'law'));
-        });
+        node.dataset.mark = 'law';
+        syncButtons(node);
       });
       applyFilters();
       refreshStat();
@@ -500,6 +556,12 @@
       if (tag === 'input' || tag === 'textarea' || event.target.isContentEditable) { return; }
       event.preventDefault();
       el.q.focus();
+    });
+
+    /* 窗口一改宽度，能塞进一行 chip 的数量就变了 */
+    window.addEventListener('resize', function () {
+      clearTimeout(layoutTimer);
+      layoutTimer = setTimeout(layoutTopics, 120);
     });
   }
 
@@ -527,6 +589,8 @@
       renderHead();
       renderTopics();
       renderFilters();
+      layoutTopics();
+      window.addEventListener('load', layoutTopics);
       applyFilters();
       bind();
       if (meta) {

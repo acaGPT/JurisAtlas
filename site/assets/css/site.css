@@ -134,6 +134,12 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .chips button[aria-pressed="true"] .num { color: inherit; opacity: .7; }
 
+/* 主题 chip 收成一行后，一行放不下的收进这个按钮；点开即露出全部主题 */
+.chips button.more {
+  color: var(--accent); border-color: var(--line-strong); border-style: dashed;
+}
+.chips button.more:hover { background: var(--accent-soft); color: var(--accent); }
+
 .actions { display: flex; gap: 5px; margin-left: auto; }
 button.plain {
   font: 400 13px/1.3 var(--sans); color: var(--muted); cursor: pointer;
@@ -402,9 +408,8 @@ html[data-theme="dark"] {
 }
 .wk:hover { border-color: var(--line-strong); }
 .wk[hidden] { display: none; }
-/* 人工标记过的条目挂一条左侧竖条：翻到底时一眼看得出自己标过哪些 */
+/* 只有人工改判为 Tech 的条目挂左侧竖条：Law 是默认值，278 条全挂等于没挂 */
 .wk[data-mark="tech"] { border-left: 3px solid var(--warn); }
-.wk[data-mark="law"] { border-left: 3px solid var(--accent); }
 
 .wk-top { display: flex; align-items: flex-start; gap: 12px; }
 .wk-when {
@@ -418,9 +423,9 @@ html[data-theme="dark"] {
   overflow-wrap: anywhere;
 }
 
-/* Law / Tech：两个标签并列，默认落在 Law 上。
-   `unset` = 用户还没表过态，Law 只是默认值，所以画成空心；
-   一旦人工选过，选中的那一侧才填实。 */
+/* Law / Tech：两个标签并列，默认落在 Law 上，没有第三种状态。
+   Law 是默认值，只用强调色标出、不填底——不然每条都挂一个色块，页面就花了；
+   Tech 是人工作出的判断，填实、加底，卡片另挂琥珀竖条，翻到底也认得出。 */
 .wk-mark {
   display: inline-flex; flex-shrink: 0; overflow: hidden;
   border: 1px solid var(--line-strong); border-radius: 999px;
@@ -436,14 +441,7 @@ html[data-theme="dark"] {
 .wk-mark button:focus-visible {
   outline: 2px solid var(--accent); outline-offset: 1px;
 }
-/* 默认态：Law 就是当前值，所以照样上色，只是压淡——「生效但你没确认过」。
-   人工选过之后才填满底色，两者一眼能分。 */
-.wk[data-mark="unset"] .wk-mark button[data-label="law"] {
-  color: var(--accent); opacity: .55;
-}
-.wk[data-mark="law"] .wk-mark button[data-label="law"] {
-  color: var(--accent); background: var(--accent-soft);
-}
+.wk[data-mark="law"] .wk-mark button[data-label="law"] { color: var(--accent); }
 .wk[data-mark="tech"] .wk-mark button[data-label="tech"] {
   color: var(--warn); background: var(--warn-soft);
 }
