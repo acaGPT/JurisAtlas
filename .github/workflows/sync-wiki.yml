@@ -67,13 +67,20 @@ jobs:
             python3 tools/audit-subjects.py --data /tmp/data/weekly.json \
               --out /tmp/data/weekly-subjects.json --write --quiet \
               || echo "::warning::同主体初审失败，本次沿用上一版审查数据"
+            # 初审之后串系列：跨条目的同一件事按时间排成一条线。
+            # 依赖初审的疑重复簇（同一次报道在轴上并成一个节点），顺序不能反。
+            python3 tools/build-series.py --data /tmp/data/weekly.json \
+              --subjects /tmp/data/weekly-subjects.json \
+              --out /tmp/data/weekly-series.json --write --quiet \
+              || echo "::warning::系列构建失败，本次沿用上一版系列数据"
           fi
           # 源 commit 变了不等于内容变了：改动可能落在首页等非数据页面。
           # 按数据文件的字节差异区分「内容更新」与「仅溯源信息更新」（都是纯数据、
           # 不含时间戳，字节比较可靠；时间戳在 meta.json / references-meta.json /
           # weekly-meta.json 里，不参与判定），否则每次同步都会白耗一个版本号。
           changed=false
-          for f in syllabus.json references.json weekly.json weekly-subjects.json; do
+          for f in syllabus.json references.json weekly.json weekly-subjects.json \
+                   weekly-series.json; do
             if ! diff -q "/tmp/data/$f" "$PUBLISH_DIR/assets/data/$f" >/dev/null 2>&1; then
               changed=true
               echo "内容有变化：$f"
@@ -85,7 +92,8 @@ jobs:
           fi
           # 逐个复制：周报或初审缺失时其余数据仍要同步，不能被一个文件拖住
           for f in syllabus.json meta.json references.json references-meta.json \
-                   weekly.json weekly-meta.json weekly-subjects.json; do
+                   weekly.json weekly-meta.json weekly-subjects.json \
+                   weekly-series.json; do
             [ -f "/tmp/data/$f" ] && cp "/tmp/data/$f" "$PUBLISH_DIR/assets/data/"
           done
 
@@ -113,7 +121,8 @@ jobs:
           # 数据层必须一并回流 main，否则 main 上的 site/assets/data 永远停在上一轮，
           # 本地 check-sync.py 的「数据层」这一级会恒判落后、失去判定意义。
           for f in syllabus.json meta.json references.json references-meta.json \
-                   weekly.json weekly-meta.json weekly-subjects.json; do
+                   weekly.json weekly-meta.json weekly-subjects.json \
+                   weekly-series.json; do
             [ -f "/tmp/data/$f" ] && cp "/tmp/data/$f" site/assets/data/
           done
           git add site/assets/data

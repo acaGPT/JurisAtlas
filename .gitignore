@@ -6,3 +6,5 @@ report.json
 __pycache__/
 *.pyc
 .DS_Store
+# 人工反馈是本地记录，不进仓库：里面是「谁觉得哪条不像法律新闻」，属于课堂内部信息
+feedback/

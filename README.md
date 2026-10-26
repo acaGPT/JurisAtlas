@@ -4,7 +4,7 @@
 
 - **站点地址**：<https://acagpt.github.io/JurisAtlas/>
 - **数据来源**：<https://github.com/acaGPT/Jurisprudence.wiki>
-- **当前版本**：v0.6.0
+- **当前版本**：v0.7.0
 
 ## 这个站点做什么
 
@@ -62,11 +62,14 @@
 │   ├── extract-references.py  # 从 Wiki 大纲抽取文献库数据层
 │   ├── extract-weekly.py      # 从 Wiki 周报页抽取「本周 AI+法律动态」数据层
 │   ├── audit-subjects.py      # 同主体初审：判重、找连锁（只出候选，不改周报）
+│   ├── build-series.py        # 串系列：同一件事按时间排成进展链
+│   ├── serve-weekly.py        # 本地预览周报页，并把改标与判定即时写进 feedback/
+│   ├── import-feedback.py     # 读回反馈，整理成周更第一步可以直接吃的一叠数据
 │   ├── apply-weekly-labels.py # 把交回的标记清单（issue 正文或 JSON）整理为反馈表
 │   ├── check-sync.py          # 三级比对：Wiki → 数据层 → 线上 Pages
 │   ├── bump-version.py        # 递增 README 版本号，供自动发版取号
 │   ├── qa-references.js       # 文献库断言式 QA（playwright + Chrome）
-│   └── qa-weekly.js           # 周报断言式 QA（渲染、工具栏、标记、持久化、深色跟随）
+│   └── qa-weekly.js           # 周报断言式 QA（渲染、三视图、标记与判定、反馈通道、深色跟随）
 ├── site/                      # 站点源（发布到 gh-pages 分支）
 │   ├── index.html              # 课程地图
 │   ├── references.html         # 文献库
@@ -77,6 +80,7 @@
 │       ├── css/site.css
 │       ├── js/app.js
 │       ├── js/references.js
+│       ├── js/feedback.js
 │       ├── js/weekly.js
 │       ├── data/syllabus.json          # 生成物（纯数据，字节稳定）
 │       ├── data/meta.json              # 生成物（含生成时间与源 commit）
@@ -85,7 +89,10 @@
 │       ├── data/weekly.json            # 生成物（纯数据，字节稳定）
 │       ├── data/weekly-meta.json       # 生成物（含生成时间与源 commit）
 │       ├── data/weekly-subjects.json   # 生成物（同主体初审，纯数据）
+│       ├── data/weekly-series.json     # 生成物（系列，纯数据）
 │       └── favicon.svg
+├── feedback/                  # 人工反馈（本地记录，不入库：见 .gitignore）
+│   └── 2026-W43.jsonl         # 一行一条 {week, kind, target, value, at}
 └── README.md
 ```
 
@@ -110,12 +117,17 @@ python3 tools/extract-weekly.py \
   --wiki Jurisprudence.wiki \
   --out site/assets/data \
   --auto
+
+# 周报之后是两步派生：先初审（判重、找连锁），再串系列（依赖初审的疑重复簇）
+python3 tools/audit-subjects.py --write --quiet
+python3 tools/build-series.py --write --quiet
 ```
 
 课程地图输出 `syllabus.json`（单元、章节、文献计数、课前概览链接）与 `meta.json`；
 文献库输出 `references.json`（逐条作者、年份、题名、获取渠道）与
 `references-meta.json`；周报输出 `weekly.json`（主题 → 事件类型 → 条目三层）与
-`weekly-meta.json`。`*-meta.json` 含生成时间与源 commit；三个数据文件为纯数据、
+`weekly-meta.json`，派生层输出 `weekly-subjects.json`（同主体初审）与
+`weekly-series.json`（系列）。`*-meta.json` 含生成时间与源 commit；三个数据文件为纯数据、
 不含时间戳，字节比较稳定，CI 的发版判定正建立于此。控制的输出样例：
 
 ```
@@ -144,7 +156,7 @@ Weekly-AI+Law-Brief ──抽取器──▶ weekly.json / weekly-meta.json     
 |---|---|---|
 | 判定 | 比对 Wiki `master` 的 HEAD 与 `gh-pages` 上 `meta.json` 的 `source_commit` | 取不到基准即判定为「无法判定」，本轮不动任何东西 |
 | 抽取 | 重跑三个抽取器，产物写临时目录 | 抽取异常退出，`gh-pages` 不被触碰；周报页单独缺失只告警不中断 |
-| 推送 | 只替换 `assets/data/` 六个 JSON，站点其余文件沿用分支现状 | 抽取结果与现状一致时不产生空提交 |
+| 推送 | 只替换 `assets/data/` 八个 JSON，站点其余文件沿用分支现状 | 抽取结果与现状一致时不产生空提交 |
 | 部署 | 推送后由 Pages 自行部署，工作流不再单独轮询 `/pages` 的 `status` | 该字段反映的是上一次**已完成**构建，会把本次失败读成 `building` |
 | 回流 | 同一份数据层提交回 `main`；版本号有变化时一并提交 README | `main` 侧无差异则跳过；两者合并为一次提交，避免第二次推送非快进 |
 | 发版 | 仅在 `syllabus.json` / `references.json` / `weekly.json` / `weekly-subjects.json` **确有字节级变化**时递增版本号并建 Release | 无实质变化时只更新溯源信息，不占版本号 |
@@ -198,28 +210,47 @@ python3 tools/check-sync.py --offline # 只比本地，跳过联网
 | Tech | 点一下 Tech | 人工否定：这条更像技术动态，不该占法律新闻的位置 |
 
 Law 是默认值，所以只用强调色标出、不填底——278 条全挂底色等于没有标记；Tech 是
-人工作出的判断，填实并给卡片挂一条琥珀竖条，翻到底也认得出自己改过哪些。标记先落在
-本机（键 `jcm-weekly-marks:<周次>`，逐周独立），刷新不丢。
+人工作出的判断，填实并给卡片挂一条琥珀竖条，翻到底也认得出自己改过哪些。
 
-工具栏只留搜索框与主题 chip：标记筛选、导出面板、深浅色切换都不在页面上了，深色跟随
+工具栏只留搜索框与 chip：标记筛选、导出面板、深浅色切换都不在页面上了，深色跟随
 课程地图／文献库上设过的偏好（同一个 `jcm-theme` 键），没设过就跟系统走。
 
-**没有「导出」这一步。** 改完标，正文上方那行提示里直接给「交回给课程维护者」；点它
-打开一条正文已填好的 issue（本仓库，标签 `weekly-labels`），在 GitHub 按 Create 即入库。
+### 反馈怎么回流
 
-- 正文里有三样东西：可读的标题清单、一条回链（点开是高亮视图，逐条核对被改标的是哪几条）、
-  一段机读清单（`<id>:tech`，一行一条）。
+**两条通道，按页面从哪儿打开自动选，页面自己说得清走的哪条**：
+
+| 通道 | 什么时候 | 落点 | 要不要点 |
+|---|---|---|---|
+| 本地写盘 | 用 `tools/serve-weekly.py` 打开（`127.0.0.1`） | `feedback/<周次>.jsonl` | 不用 |
+| 浏览器存储 | 线上 GitHub Pages | 这台设备的 localStorage | 改完点一次「交回这一批」 |
+
+本地这条是零点击的：改标、点「判为重复」、点「是同一系列」，每次动作即时 POST 到
+`api/feedback`，写进 `feedback/<周次>.jsonl`（一行一条 `{week, kind, target, value, at}`，
+同一 target 以最后一次为准）。反馈是课堂内部信息，`feedback/` 在 `.gitignore` 里，不进仓库。
+
+```bash
+python3 tools/serve-weekly.py                   # 起页面 + 写入端点，自动开浏览器
+python3 tools/import-feedback.py                # 汇总：改标几条、判定几项、对不上当周的几处
+python3 tools/import-feedback.py --emit-labels  # 只出 id:tech 清单，可直接喂分类校准
+```
+
+线上没有后端，这一点不假装解决：GitHub Pages 是纯静态的，读者标完的结论只在他自己
+的浏览器里，页面读不到别人的磁盘。所以线上保留一次点击——正文上方给「交回这一批
+（N 条）」，点开一条正文已填好的 issue（本仓库，标签 `weekly-labels`），按 Create 入库。
+
+- 正文里有三样东西：可读的清单、一条回链（点开是只列改标条目的视图）、一段机读清单
+  （`<id>:tech`，以及 `dup:<ids>:yes`、`series:<id>:no` 这样的关系判定，一行一条）。
 - 交回按批走：已交回的 id 记在本机（`jcm-weekly-submitted:<周次>`），下次只送新改的。
-  所以标 20 条是**一次交回、一条 issue**，不是 20 条——这也是点标签本身不跳转的原因：
-  自动打开时 issue 里只有当时那一条，后续改标进不去。
+  所以标 20 条是**一次交回、一条 issue**；点标签本身不跳转，正是为了这一点。
 - 条数多到 URL 装不下时，正文自动退成「只列 id」：中文标题经 URL 编码一个字占九个
   字节，三十条就顶到浏览器上限，标题靠回链看。
 
-维护者收：把 issue 正文另存成 `.md`（或直接复制正文）喂给脚本：
+维护者收线上那份：把 issue 正文另存成 `.md`（或直接复制正文）喂给脚本：
 
 ```bash
 python3 tools/apply-weekly-labels.py --in issue.md
 # → weekly-reports/human-labels-2026-W43.jsonl
+#   若正文里带关系判定，同时写 human-labels-2026-W43-verdicts.jsonl
 ```
 
 输出每行一个条目，带 `label`、`votes` 与 `agree`。**标为 `tech` 的条目就是
@@ -235,12 +266,15 @@ python3 tools/apply-weekly-labels.py --in issue.md
 
 周报按**制度主题**组织，同一条主体的信息因此被拆到不同主题里去：2026-W43 的
 Anthropic 有 29 条散在 7 个主题，OpenAI 有 28 条同样散在 7 个。按主题读没问题，
-按「这家公司这一周走到哪一步」读就没法读了。所以页首多了一个视图切换：
+按「这家公司这一周走到哪一步」读就没法读了。所以页首有视图切换，检索框下方那行
+chip 跟着视图换内容——按主题时是主题名，按主体时是主体名，按系列时是系列名，
+都收成一行、放不下的折叠在「更多… N」里。
 
 | 视图 | 组织方式 | 用处 |
 |---|---|---|
-| 按制度主题（默认） | 主题 → 事件类型 → 条目，即 Wiki 的原样 | 看这一周的制度动向 |
-| 按主体 | 主体 → 制度主题 → 条目（按日期排） | 看一家公司／一个机关的线索 |
+| 按主题（默认） | 主题 → 事件类型 → 条目，即 Wiki 的原样 | 看这一周的制度动向 |
+| 按主体 | 主体 → 主题 → 条目（按日期排） | 看一家公司／一个机关的线索 |
+| 按系列 | 一条系列一张卡，卡内是时间轴 | 看一件事走到第几步 |
 
 主体那一路同时带出**同主体初审**的结论。`tools/audit-subjects.py` 对每个主体组
 逐对回答两个问题，只出候选、不改周报一个字、也不删任何条目：
@@ -274,6 +308,34 @@ Anthropic 有 29 条散在 7 个主题，OpenAI 有 28 条同样散在 7 个。�
 字节稳定），由同步工作流每天跟着 `weekly.json` 一起重算。页面缺了它只会退化成
 只有主题视图，不会报错。
 
+## 按系列看与系列构建
+
+按主题读是「这一周发生了什么」，按系列读是「一件事走到第几步」。同一件事的几步常被
+拆到不同主题下：2026-W43 的中国 AI 出口管制，草案在「出口管制与制裁」、企业履行
+登记在「禁用与移除」，分开读就是两条互不相干的新闻。
+
+`tools/build-series.py` 把这类条目串成时间轴，输出 `weekly-series.json`
+（`jurisatlas-weekly-series/v1`，纯数据、字节稳定），由同步工作流跟着初审一起重算。
+
+判据只认两条路，宁可少认，不硬凑：
+
+| 类型 | 怎么来的 | 2026-W43 |
+|---|---|---|
+| 本周多阶段 | 条目内自带 stages（周报生成时就写好的时间线） | 8 条 |
+| 进展链 | 共享一个 4 字以上、全周出现 ≤ 6 次的短语；两条都带制度动作词；日期不同 | 1 条 |
+
+三个条件各有各的用：**稀有短语**保证说的是同一个对象（「出口管制」而不是「AI」）；
+**制度动作词**（拟议／草案／登记／裁决…）挡掉播客栏目名与社群碎片帖——它们会和很多
+新闻共享关键词，但没有制度动作；**日期不同**挡掉重复报道，同一天两家媒体各报一次
+是重复，归初审管，不是进展。
+
+轴上不重复：同一件事的多条报道先按初审的疑重复簇并成一个节点，节点下方注明「另有
+N 条同义报道」。名字挂在机关上不挂在公司上——「商务部出台出口管制、DeepSeek 去登记」
+这条线挂到 DeepSeek 名下，被监管的一方就成了主角。
+
+机器只出候选：每张系列卡右侧有「是同一系列 / 不是」，点一下即记录，与改标进同一份
+反馈。系列也会出现在「待复核」口径里——判据只到 0.72，不替人下结论。
+
 ## 发布
 
 站点为纯静态页，无构建步骤、无第三方依赖。**数据层不由这条链路发布**——它由上面的
@@ -291,10 +353,19 @@ python3 ~/.workbuddy/skills/gh-pages-maker/scripts/new_pages_site.py \
 仓库已有同名分支，需加 `--skip-repo` 复用；清空 `.build` 目录若被安全删除保护拦住，
 改用 `git worktree add .build/wt origin/gh-pages` 装配后再推。
 
-本地预览：
+本地预览（周报页要用带反馈端点的那条，否则改标只能落浏览器存储）：
 
 ```bash
-python3 -m http.server 8899 --directory site
+python3 tools/serve-weekly.py --port 8899
+# 只看静态页：python3 -m http.server 8899 --directory site
+```
+
+周报页断言（三视图、标记与判定、反馈通道、移动端溢出，共 86 项）：
+
+```bash
+NODE_PATH=<node 工作区>/node_modules \
+  QA_FEEDBACK_DIR=/tmp/qa-feedback \
+  node tools/qa-weekly.js http://127.0.0.1:8899 /tmp/qa-weekly
 ```
 
 ## 分支

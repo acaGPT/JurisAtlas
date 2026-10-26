@@ -22,8 +22,9 @@
       <dl class="stats" id="stats"></dl>
       <p class="view-switch" id="view-switch">
         <span class="label">浏览</span>
-        <button type="button" data-view="topic" aria-pressed="true">按制度主题</button>
+        <button type="button" data-view="topic" aria-pressed="true">按主题</button>
         <button type="button" data-view="subject" aria-pressed="false">按主体</button>
+        <button type="button" data-view="series" aria-pressed="false">按系列</button>
       </p>
       <p class="head-link">
         配套页面：<a href="index.html">课程地图</a> ·
@@ -62,9 +63,10 @@
     <div class="wrap">
       <p class="source" id="provenance"></p>
       <p class="source">
-        标为 Tech 的意思是「这条更像技术动态，不该占法律新闻的位置」。标记先存在这台设备的
-        浏览器里，改完在正文上方点「交回」，正文会自动带进一条 GitHub issue 交给课程维护者；
-        不需要导出文件，也不需要注册本站。
+        标为 Tech 的意思是「这条更像技术动态，不该占法律新闻的位置」。改标与「是 / 不是」
+        的判定会即时记录：用课程仓库的 <code>tools/serve-weekly.py</code> 在本地打开时
+        直接写入 <code>feedback/&lt;周次&gt;.jsonl</code>，下次周更自动读入，不需要交回；
+        线上页面没有写盘能力，记录存在这台设备的浏览器里，并在正文上方给一次交回入口。
       </p>
       <p class="rights">
         © 2026 iLINGBIN. 保留所有权利。未获书面许可，不得以复制、改写、汇编、翻译、
@@ -73,6 +75,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/feedback.js"></script>
   <script src="assets/js/weekly.js"></script>
 </body>
 </html>

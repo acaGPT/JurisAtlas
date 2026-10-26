@@ -1,0 +1,342 @@
+{
+ "schema": "jurisatlas-weekly-series/v1",
+ "week": "2026-W43",
+ "generated_from": "weekly.json",
+ "params": {
+  "min_phrase_len": 4,
+  "max_phrase_df": 6
+ },
+ "counts": {
+  "series": 9,
+  "progression": 1,
+  "event": 8,
+  "items": 11
+ },
+ "series": [
+  {
+   "id": "sr07d461cd",
+   "name": "OpenAI · 融资与估值",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 3 个阶段（定价、定价、定价）",
+   "ids": [
+    "4c19024337"
+   ],
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "subjects": [
+    "openai"
+   ],
+   "nodes": [
+    {
+     "date": "10-20",
+     "ids": [
+      "4c19024337"
+     ],
+     "count": 1,
+     "title": "路透：OpenAI 拟在 Anthropic 上市前加速融资约 300 亿美元，估值超 1.4 万亿美元"
+    },
+    {
+     "date": "10-22",
+     "ids": [
+      "4c19024337"
+     ],
+     "count": 1,
+     "title": "OpenAI 据报道正洽谈以 1.25 万亿美元估值融资至多 300 亿美元"
+    },
+    {
+     "date": "10-23",
+     "ids": [
+      "4c19024337"
+     ],
+     "count": 1,
+     "title": "Bloomberg：OpenAI 约 300 亿美元融资目标估值从 1.4T 降至 1.25T"
+    }
+   ]
+  },
+  {
+   "id": "sr85cc880f",
+   "name": "Alfozan 案",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（强制措施、裁决）",
+   "ids": [
+    "bd8b0452db"
+   ],
+   "topics": [
+    "司法与诉讼"
+   ],
+   "subjects": [
+    "openai"
+   ],
+   "nodes": [
+    {
+     "date": "10-19",
+     "ids": [
+      "bd8b0452db"
+     ],
+     "count": 1,
+     "title": "FBI 称前 OpenAI 工程师涉嫌窃密，手机中发现 Saudi Gov Docs 文件夹"
+    },
+    {
+     "date": "10-20",
+     "ids": [
+      "bd8b0452db"
+     ],
+     "count": 1,
+     "title": "联邦法官拒绝沙特担保的 100 万美元保释，前 OpenAI 工程师 Abdulrahman Alfozan 继续羁押"
+    }
+   ]
+  },
+  {
+   "id": "sr6072cbd3",
+   "name": "ChinaTalk · 出口管制与制裁",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（报道、报道）",
+   "ids": [
+    "31a4c1f265"
+   ],
+   "topics": [
+    "出口管制、制裁与投资审查"
+   ],
+   "subjects": [
+    "mofcom"
+   ],
+   "nodes": [
+    {
+     "date": "10-20",
+     "ids": [
+      "31a4c1f265"
+     ],
+     "count": 1,
+     "title": "ChinaTalk 访谈解析 MATCH 法案与 DUV 浸没式光刻出口管控"
+    },
+    {
+     "date": "10-21",
+     "ids": [
+      "31a4c1f265"
+     ],
+     "count": 1,
+     "title": "ChinaTalk 解读商务部第48号公告对AI技术出口管制的影响"
+    }
+   ]
+  },
+  {
+   "id": "sr8b71e11b",
+   "name": "DeepSeek · 其他执法事项",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（进展、进展）",
+   "ids": [
+    "dd51bf42f9"
+   ],
+   "topics": [
+    "监管执法与行政处罚"
+   ],
+   "subjects": [
+    "deepseek"
+   ],
+   "nodes": [
+    {
+     "date": "10-20",
+     "ids": [
+      "dd51bf42f9"
+     ],
+     "count": 1,
+     "title": "外交部回应美政府要求机构停用 DeepSeek：反对将科技经贸问题政治化"
+    },
+    {
+     "date": "10-21",
+     "ids": [
+      "dd51bf42f9"
+     ],
+     "count": 1,
+     "title": "美国禁政府系统使用 DeepSeek，中国抗议并指其歧视，但国内仍封锁 ChatGPT、Claude 和 Gemini"
+    }
+   ]
+  },
+  {
+   "id": "sr940aba60",
+   "name": "DeepSeek · 禁用与移除",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（报道、报道）",
+   "ids": [
+    "deaca4f5dc"
+   ],
+   "topics": [
+    "出口管制、制裁与投资审查"
+   ],
+   "subjects": [
+    "deepseek"
+   ],
+   "nodes": [
+    {
+     "date": "10-19",
+     "ids": [
+      "deaca4f5dc"
+     ],
+     "count": 1,
+     "title": "美国国土安全部下令所有联邦文职机构移除 DeepSeek 及基于其开发的产品"
+    },
+    {
+     "date": "10-20",
+     "ids": [
+      "deaca4f5dc"
+     ],
+     "count": 1,
+     "title": "美国国土安全部禁止联邦民用机构使用 DeepSeek 技术"
+    }
+   ]
+  },
+  {
+   "id": "src9a028f5",
+   "name": "Disney · 并购与收购",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（进展、洽谈）",
+   "ids": [
+    "db1e48e5ea"
+   ],
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "subjects": [
+    "disney"
+   ],
+   "nodes": [
+    {
+     "date": "10-18",
+     "ids": [
+      "db1e48e5ea"
+     ],
+     "count": 1,
+     "title": "Disney 同意雇佣 Character.AI 大部分员工"
+    },
+    {
+     "date": "10-19",
+     "ids": [
+      "db1e48e5ea"
+     ],
+     "count": 1,
+     "title": "Disney 拟通过破产程序收购 Character.AI 团队与技术、绕开其诉讼"
+    }
+   ]
+  },
+  {
+   "id": "srdd192c82",
+   "name": "Google · 个人信息保护",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（报道、报道）",
+   "ids": [
+    "3e38c58b6e"
+   ],
+   "topics": [
+    "数据保护与个人信息"
+   ],
+   "subjects": [
+    "google"
+   ],
+   "nodes": [
+    {
+     "date": "10-20",
+     "ids": [
+      "3e38c58b6e"
+     ],
+     "count": 1,
+     "title": "Google 将 Personal Intelligence 个性化功能引入车载 Gemini"
+    },
+    {
+     "date": "10-23",
+     "ids": [
+      "3e38c58b6e"
+     ],
+     "count": 1,
+     "title": "Google 更新隐私政策：Personal Intelligence 开启后 Gmail、Drive 和 Photos 数据可能用于个性化广告"
+    }
+   ]
+  },
+  {
+   "id": "sr4a8f6076",
+   "name": "Microduck · 观点与转述",
+   "kind": "event",
+   "confidence": 1.0,
+   "evidence": "条目自带 2 个阶段（进展、进展）",
+   "ids": [
+    "49766244c2"
+   ],
+   "topics": [
+    "产业与商业动向"
+   ],
+   "subjects": [
+    "huggingface"
+   ],
+   "nodes": [
+    {
+     "date": "10-21",
+     "ids": [
+      "49766244c2"
+     ],
+     "count": 1,
+     "title": "Hugging Face CEO：欧洲AI机会更大，Microduck已售1.5万台"
+    },
+    {
+     "date": "10-22",
+     "ids": [
+      "49766244c2"
+     ],
+     "count": 1,
+     "title": "Hugging Face CEO 称 Microduck 预订单将破 2 万"
+    }
+   ]
+  },
+  {
+   "id": "srcfd4f285",
+   "name": "商务部 · 技术出口",
+   "kind": "progression",
+   "confidence": 0.72,
+   "evidence": "共享「技术出口」（2 条直接命中）；3 个进展节点",
+   "ids": [
+    "422aa71f0a",
+    "c84589aba5",
+    "e3c7b89e60"
+   ],
+   "topics": [
+    "出口管制、制裁与投资审查"
+   ],
+   "subjects": [
+    "deepseek",
+    "mofcom"
+   ],
+   "nodes": [
+    {
+     "date": "2026-10-18",
+     "ids": [
+      "c84589aba5"
+     ],
+     "count": 1,
+     "title": "中国拟议 AI 出口管制，DeepSeek 投资机器人，Infinigence 完成 3.34 亿美元融资"
+    },
+    {
+     "date": "2026-10-21",
+     "ids": [
+      "e3c7b89e60"
+     ],
+     "count": 1,
+     "title": "中国 AI 技术出口管制草案澄清：开放权重模型不在禁止范围"
+    },
+    {
+     "date": "2026-10-23",
+     "ids": [
+      "422aa71f0a"
+     ],
+     "count": 1,
+     "title": "DeepSeek、MiniMax 已就AI技术出口新规履行登记手续并完成开源和海外授权"
+    }
+   ]
+  }
+ ]
+}

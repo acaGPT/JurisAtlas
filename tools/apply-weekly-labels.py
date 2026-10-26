@@ -35,7 +35,8 @@
 
 输入格式
     ① issue 正文（推荐）：任意文本，只要能找到周次（形如 2026-W43）与机读清单行，
-       形如 `076ff717d2:tech`，一行一条。
+       形如 `076ff717d2:tech`，一行一条。同一段里若还有 `dup:<ids>:yes` /
+       `series:<id>:no` 这样的关系判定行，一并收进 <反馈>-verdicts.jsonl。
     ② 标记 JSON：
        {"schema":"jurisatlas-weekly-labels/v1","week":"2026-W43",
         "default_label":"law","labels":[{"id":"…","label":"tech"}, …]}
@@ -56,9 +57,12 @@ from pathlib import Path
 
 SCHEMA_IN = "jurisatlas-weekly-labels/v1"
 SCHEMA_OUT = "weekly-human-labels/v1"
+SCHEMA_VERDICT = "weekly-human-verdicts/v1"
 
 # issue 正文里那段机读清单：一行一条 id:label
 ISSUE_LINE = re.compile(r"^\s*([0-9a-f]{10}):(law|tech)\s*$", re.M)
+# 关系判定：dup/suspect/series:<target>:yes|no
+ISSUE_VERDICT = re.compile(r"^\s*(dup|suspect|series):([0-9a-zA-Z+]+):(yes|no)\s*$", re.M)
 ISSUE_WEEK = re.compile(r"(20\d{2}-W\d{2})")
 
 
@@ -66,24 +70,33 @@ class WeekMismatch(ValueError):
     """多份导出不属于同一周：合并会串味，直接拒绝。"""
 
 
-def parse_issue_text(text: str, path: Path) -> tuple[str, list[dict]]:
+def parse_issue_text(text: str, path: Path) -> tuple[str, list[dict], list[dict]]:
     """把 issue 正文里的 id:label 清单读成与导出同形的条目。
 
     weekly.html 的「交回」会开一条 issue，正文折叠块里就是这个形状。维护者把
     issue 正文存成 .md/.txt 丢进来即可，不必再去掏浏览器存储。只认清单行，
     其余文字（标题、回链）一概不猜。
+
+    同一段里可能还带关系判定（`dup:<ids>:yes`、`series:<id>:no`）——线上读者的
+    那些「这两条是不是同一件事」的判断，与改标一起回来，一并收下。
     """
     rows = [{"id": m.group(1), "label": m.group(2)} for m in ISSUE_LINE.finditer(text)]
-    if not rows:
+    verdicts: dict[str, dict] = {}
+    for match in ISSUE_VERDICT.finditer(text):
+        target = match.group(1) + ":" + match.group(2)
+        verdicts[target] = {"target": target, "kind": match.group(1),
+                            "ids": match.group(2).split("+"), "value": match.group(3)}
+    if not rows and not verdicts:
         raise ValueError(f"{path}：既不是 {SCHEMA_IN} 的 JSON，也没有 id:label 清单行")
     hit = ISSUE_WEEK.search(text)
     if not hit:
         raise ValueError(f"{path}：正文里找不到周次（形如 2026-W43），无法归周")
-    return hit.group(1), rows
+    return hit.group(1), rows, list(verdicts.values())
 
 
-def load_exports(paths: list[Path]) -> tuple[str, list[dict]]:
+def load_exports(paths: list[Path]) -> tuple[str, list[dict], list[dict]]:
     labels: list[dict] = []
+    verdicts: list[dict] = []
     week = ""
     for path in paths:
         try:
@@ -103,19 +116,21 @@ def load_exports(paths: list[Path]) -> tuple[str, list[dict]]:
             for row in rows:
                 if not row.get("id") or row.get("label") not in ("law", "tech"):
                     raise ValueError(f"{path}：有条目缺少 id 或 label 非法：{row}")
+            this_verdicts: list[dict] = []
         elif isinstance(payload, dict) and payload.get("schema"):
             raise ValueError(f"{path}：schema 是 {payload.get('schema')!r}，"
                              f"不是 {SCHEMA_IN}——请按脚本头部「输入格式」重包一次")
         else:
             # 不是 JSON：当作 issue 正文读
-            this_week, rows = parse_issue_text(raw, path)
+            this_week, rows, this_verdicts = parse_issue_text(raw, path)
 
         if week and this_week != week:
             raise WeekMismatch(f"{path}：周次是 {this_week}，与已有的 {week} 不同，"
                                f"不同周的标记不能合并")
         week = this_week
         labels.extend(rows)
-    return week, labels
+        verdicts.extend(this_verdicts)
+    return week, labels, verdicts
 
 
 def merge(labels: list[dict]) -> list[dict]:
@@ -171,7 +186,7 @@ def main() -> int:
     paths = [Path(name).expanduser().resolve() for name in args.inputs]
 
     try:
-        week, labels = load_exports(paths)
+        week, labels, verdicts = load_exports(paths)
     except WeekMismatch as error:
         print(f"错误：{error}", file=sys.stderr)
         return 2
@@ -179,7 +194,7 @@ def main() -> int:
         print(f"错误：{error}", file=sys.stderr)
         return 1
 
-    if not labels:
+    if not labels and not verdicts:
         print("提示：这些导出里没有任何标记，未写出文件。", file=sys.stderr)
         return 0
 
@@ -190,8 +205,17 @@ def main() -> int:
     out = Path(args.out).expanduser().resolve() if args.out else \
         Path("weekly-reports") / f"human-labels-{week}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in merged),
-                   encoding="utf-8")
+    if merged:
+        out.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in merged),
+                       encoding="utf-8")
+
+    verdict_out = None
+    if verdicts:
+        verdict_out = out.with_name(out.stem + "-verdicts.jsonl")
+        verdict_out.write_text(
+            "".join(json.dumps({"schema": SCHEMA_VERDICT, "week": week, **row},
+                               ensure_ascii=False) + "\n" for row in verdicts),
+            encoding="utf-8")
 
     tech = [row for row in merged if row["label"] == "tech"]
     law = [row for row in merged if row["label"] == "law"]
@@ -202,6 +226,8 @@ def main() -> int:
         "items": len(merged),
         "tech": len(tech),
         "law": len(law),
+        "verdicts": len(verdicts),
+        "verdicts_out": str(verdict_out) if verdict_out else "",
         "disagree": [row["id"] for row in merged if not row["agree"]],
         "out": str(out),
     }
@@ -213,6 +239,10 @@ def main() -> int:
     print(f"周次 {week} · 收到 {len(labels)} 条标记（{len(paths)} 份）· "
           f"涉及 {len(merged)} 个条目")
     print(f"标为 Tech {len(tech)} 条（分类的候选假阳性）· 标为 Law {len(law)} 条")
+    if verdicts:
+        yes = sum(1 for row in verdicts if row["value"] == "yes")
+        print(f"关系判定 {len(verdicts)} 项（判为是 {yes} · 判为不是 {len(verdicts) - yes}）"
+              f"→ {verdict_out}")
     if summary["disagree"]:
         print(f"票数打平 {len(summary['disagree'])} 条，已按待复核处理："
               f"{', '.join(summary['disagree'][:6])}")

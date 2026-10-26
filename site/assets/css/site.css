@@ -491,6 +491,11 @@ html[data-theme="dark"] {
 }
 .mark-note a.submit:hover { color: var(--text); border-bottom-color: var(--text); }
 .mark-note a.submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.mark-note code {
+  font: 400 11.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 1px 4px; border-radius: 4px; background: var(--surface-2);
+}
+.mark-note .warn { color: var(--warn); }
 
 /* ---------- 按主体看：视图切换、主体卡、初审徽标 ---------- */
 
@@ -517,6 +522,8 @@ html[data-theme="dark"] {
 /* 按主体看时收起本周概览：概览是按制度主题串的一条叙事，和「一家公司这一周
    走到哪一步」不是一套读法；留着它，主体卡要滚过五段才露头。 */
 body[data-view="subject"] .wk-overview { display: none; }
+/* 按系列看同理：系列本身就是一条叙事，前面再放五段概览只会把时间轴推下去 */
+body[data-view="series"] .wk-overview { display: none; }
 
 .audit-head {
   border: 1px dashed var(--line-strong); border-radius: var(--radius);
@@ -552,6 +559,47 @@ button.wk-tag:hover { color: var(--text); border-color: var(--line-strong); }
 button.wk-tag:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .wk-tag[data-kind="dup"] { color: var(--warn); border-color: var(--warn); }
 .wk-tag[data-kind="chain"] { color: var(--accent); border-color: var(--accent); }
+
+/* 关系判定：判定针对「这一组条目」，不落在某一条上，所以按钮跟着徽标排在同一行。
+   虚线边框表示还能改，点过之后变实线并写「已判…」，右边留一个撤销。 */
+.wk-rel { display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.wk-verdict {
+  font: 600 11px/1 var(--sans); padding: 4px 9px; border-radius: 999px;
+  color: var(--muted); background: transparent; border: 1px dashed var(--line-strong);
+  cursor: pointer; white-space: nowrap;
+}
+.wk-verdict:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.wk-verdict:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wk-verdict.done {
+  border-style: solid; border-color: var(--accent); color: var(--accent);
+  background: var(--accent-soft); cursor: default;
+}
+.wk-verdict.undo { border-style: solid; border-color: var(--line); color: var(--faint); }
+
+/* ---------- 按系列看：一条系列一张卡，卡内是时间轴 ---------- */
+
+.series-evidence {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin: 8px 0 16px; font: 400 12px/1.7 var(--sans); color: var(--muted);
+}
+.wk-series {
+  list-style: none; margin: 0; padding: 0 0 0 22px; position: relative;
+}
+/* 竖线从第一个节点连到最后一个：不连到卡底，避免尾巴悬空 */
+.wk-series::before {
+  content: ''; position: absolute; left: 5px; top: 22px; bottom: 22px;
+  width: 1px; background: var(--line-strong);
+}
+.series-node { position: relative; padding-bottom: 12px; }
+.series-node:last-child { padding-bottom: 0; }
+.series-node::before {
+  content: ''; position: absolute; left: -21px; top: 22px; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 0 3px var(--surface);
+}
+.series-extra {
+  margin: 6px 0 0; font: 400 11.5px/1.6 var(--sans); color: var(--faint);
+}
 
 /* 交回视图：从 issue 里的链接打开时，被改标的条目描一圈，方便逐条核对 */
 .wk[data-imported="1"] { box-shadow: 0 0 0 2px var(--accent-soft), 0 0 0 3px var(--accent); }
