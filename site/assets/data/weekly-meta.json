@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-25 07:15 +0000",
+ "generated_at": "2026-10-27 02:07 +0000",
  "source_repo": "https://github.com/acaGPT/Jurisprudence.wiki",
- "source_commit": "bf0ded2",
+ "source_commit": "900a0cb",
  "source_page": "Weekly-AI+Law-Brief",
  "source_url": "https://github.com/acaGPT/Jurisprudence/wiki/Weekly-AI+Law-Brief",
  "week": "2026-W43",
  "stats": {
   "topics": 14,
-  "groups": 39,
-  "items": 278,
-  "events": 8
+  "groups": 38,
+  "items": 305,
+  "events": 7
  }
 }

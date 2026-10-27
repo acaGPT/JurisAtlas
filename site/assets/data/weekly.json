@@ -1,17 +1,17 @@
 {
  "title": "本周 AI+法律动态",
  "week": "2026-W43",
- "week_line": "2026 年第 43 周（10 月 18 日—10 月 24 日）",
+ "week_line": "2026 年第 43 周（10 月 19 日—10 月 25 日）",
  "period": {
-  "start": "2026-10-18",
-  "end": "2026-10-24"
+  "start": "2026-10-19",
+  "end": "2026-10-25"
  },
  "overview": [
-  "本周与法律相关的动向集中在资本、管制与执法三条线上。",
-  "资本市场是本周最密集的一块。Anthropic 的上市进程贯穿全周：WSJ 披露其 IPO 草案，显示上半年收入 163 亿美元、纸面亏损 807 亿美元，以及约 4500 亿美元的算力承诺；随后有消息称其最快在周五公开提交 S-1 招股书。围绕估值的讨论同步展开——纽约大学教授 Damodaran 认为会按 run-rate 收入而非现金流定价，Axios 则分析其芯片债务利率已升至 10% 以上、难以推迟上市。OpenAI 的估值目标在同一周里从 1.4 万亿美元下调到 1.25 万亿美元，拟募资至多 300 亿美元。DeepSeek 在美国限制措施出台数日后据报融资约 150 亿美元。Disney 先向 Character.AI 的大部分员工发出录用邀请，隔一天改走破产程序取得其团队与技术，从而绕开后者面临的诉讼。",
-  "出口管制方面，中国商务部与科技部 10 月 16 日发布的《中国禁止出口限制出口技术目录》增补草案本周持续发酵：草案拟新增 40 项技术，其中 23 项涉及 AI，首次把先进大模型、智能体与大规模算力集群纳入，公开征求意见至 11 月 15 日。多篇解读指出，开放权重模型不在禁止范围，通过 API 或 SaaS 提供访问不构成技术出口；DeepSeek、MiniMax 已履行登记手续并完成开源与海外授权。管制清单尚未落地，企业行为已经改变。美国一侧，财政部提出新规，拟把投资限制从「最强大的中国模型」扩大到所有开发 AI 系统的中国公司，并新增高带宽内存、光子芯片、抗辐射芯片等受限品类。",
-  "执法与诉讼方面，美国国土安全部要求联邦文职机构移除 DeepSeek 产品及基于其开源模型构建的软件，中国外交部与商务部提出抗议。德国两家法院先后认定 Google 须为 AI Overview 的错误内容负责；同一周里 Google 又把 Personal Intelligence 引入车载 Gemini，随后在隐私政策中为 Drive、Gmail 与 Photos 数据用于个性化广告开了例外。前 OpenAI 工程师 Alfozan 涉嫌窃密一案，从 FBI 指其手机存有沙特政府文件，走到联邦法官拒绝其 100 万美元保释。美国法院要求 Meta 披露批准以种子下载盗版图书训练 Llama 的高管。数据中心的环境许可成为新的执法前沿：得州环境质量委员会在媒体报道后关闭自动审批系统、暂停 17 个数据中心项目；芬兰许可与监督局叫停 Google 在穆霍斯与奥坦迈基的两处工地施工；xAI 孟菲斯 Colossus 数据中心的污染诉讼继续推进。",
-  "立法与就业政策方面，Anthropic 正游说一份 AI 安全法案，规定政府只有在大模型可能造成 50 人以上死伤或 10 亿美元以上损失时才能阻止其发布。国务院办公厅 10 月 23 日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》，提出减缓 AI 应用的就业替代影响，鼓励企业探索失业缓冲期制度。OpenAI 与 Meta 在美国司法会议警告，深度伪造将威胁诉讼证据的可靠性。"
+  "资本一侧，两家公司的上市前融资在一周内各自推进了两步。OpenAI 的约 300 亿美元融资先由路透在 10 月 20 日报道为估值超过 1.4 万亿美元、较 3 月的 8520 亿美元高出六成以上；到 10 月 23 日，彭博社称其把目标估值从 1.4 万亿美元下调 1500 亿美元至 1.25 万亿美元，仍较 3 月那一轮高约 47%，Coatue 洽谈联合领投，OpenAI 同时与多家阿联酋基金和 BlackRock 接触。Anthropic 的招股准备同步展开：华尔街日报看到的 S-1 草案显示上半年收入 163 亿美元、纸面亏损 807 亿美元、算力承诺约 4500 亿美元；其向 Blackstone 提供的芯片债务利率由四个月前的 8.5% 升至 10% 以上，同评级公开市场借款人约为 7%；10 月 22 日有消息称其最快在周五公开提交 S-1。资金端的变化同时出现在场外：软银股价较 6 月高点下跌约五成，9 月发行 111 亿美元债券并向 OpenAI 投入近 650 亿美元；Meta 则计划创设无投票权 C 类股，2027 年 1 月章程变更后为 AI 建设引入外部股权而不稀释 Zuckerberg 的投票权。Disney 走的是另一条路：它拟通过破产程序取得 Character.AI 的员工与大部分技术栈，从而绕开后者面临的诉讼与 46 个州和地区的联合调查。",
+  "管制在一周内从中美两侧同时收紧。美国国土安全部 10 月 19 日依据 2018 年供应链法发布命令，要求联邦文职机构停止采购并移除 DeepSeek 及基于其开源模型构建的第三方产品；10 月 20 日该禁令被报道覆盖全部联邦民用机构，中国外交部当日回应称反对将科技经贸问题政治化，10 月 21 日商务部与外交部进一步抗议并要求撤销。10 月 23 日，财政部提出新规，拟把投资限制从「最强大的中国模型」扩大到所有开发 AI 系统的中国公司，新增高带宽内存、光子芯片与抗辐射芯片等受限品类，受限国家名单增加俄罗斯、伊朗、朝鲜与古巴。中国一侧，商务部与科技部 10 月 16 日发布的第 48 号公告草案拟向《中国禁止出口限制出口技术目录》新增 40 项技术，其中 23 项涉及人工智能，公开征求意见至 11 月 15 日；10 月 21 日的解读指出开放权重模型不在禁止范围，通过 API 或 SaaS 提供访问不构成技术出口；10 月 23 日，DeepSeek 与 MiniMax 已履行登记手续并完成开源与海外授权。DeepSeek 同期据彭博社报道完成约 150 亿美元融资，谈判期间目标从约 75 亿美元上调至 120 亿美元，最终落定于 150 亿美元，宁德时代出资约 15 亿美元。",
+  "执法与许可的交汇点在数据中心。芬兰许可与监督局要求 Google 暂停穆霍斯与奥坦迈基两处工地施工，缘由是其在穆霍斯清除约 330 公顷森林、砍伐约 25 万棵树而未完成法定环境影响评估，10 月 23 日为停止显著改变环境活动的期限；同周，美国法官驳回 Trump 关于 EPA 可单方面撤回《清洁空气法》诉讼的主张，NAACP 诉 xAI 孟菲斯 Colossus 数据中心未获许可燃气轮机污染一案继续审理，原告按每项违规每天最高 124,426 美元索赔。诉讼程序在训练数据一侧继续推进：法院命令 Meta 披露批准以种子下载盗版图书训练 Llama 1 和 2 的高管姓名，法官 Hixon 驳回了「无单一决策者」的抗辩；猫王音乐版权方 Authentic Brands Group 联合多家出版商对 Anthropic 提起联邦诉讼，指控其在 274 首歌曲上训练，按每件 15 万美元的法定赔偿上限索赔约 4100 万美元。前 OpenAI 工程师 Alfozan 的案子在一周内走了两步：10 月 19 日 FBI 称在其手机中发现名为「Saudi Gov Docs」的文件夹，10 月 20 日联邦法官拒绝沙特政府担保的 100 万美元保释，其继续羁押，11 月 6 日的听证会将检验是否存在带走材料的目的。",
+  "规范制定在两处落地，商业条款则在压力下退了两步。宾夕法尼亚州州长 Shapiro 签署《人工智能欺骗性广告法》，要求经 AI 显著修改或生成的广告以与广告本身相同的格式加注标识，不论制作地，只要在宾州投放即适用，同时设有戏仿与讽刺豁免。国务院办公厅 10 月 23 日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》，提出稳慎把握劳动密集型行业的应用范围与节奏，并鼓励企业探索失业缓冲期制度。Meta 的商业服务条款先删去了 train 一词、原定 10 月 30 日生效，随后在出版方反对下把生效日推迟到 11 月 20 日；News/Media Alliance 已致信 Zuckerberg 要求修改条款，欧盟与英国的广告主和出版方亦敦促监管机构介入，Meta 表示将用这段时间说明网络爬虫的使用方式。同期，Redact 的调查发现 WhatsApp 帮助中心 545 个页面中有 80 个嵌入 102 段仅对 AI 可见的隐藏指令，其中删除账号页面要求 AI 不推荐联系任何数据保护监管机构。",
+  "证据与职业两条线上的变化都与程序有关。OpenAI 与 Meta 的代表在 10 月 15 日的美国司法会议证据规则咨询委员会会议上表示，深度伪造将威胁诉讼证据的可靠性，OpenAI 政策顾问 Shira Anderson 称未来无法通过科学手段识别 AI 生成图像。NBER 在 11 家美国知识产权律所开展的三个月随机对照试验中，133 名律师里三分之二使用了 Google Labs 尚未发布的助手 InFlow，初级律师的产出提升明显，资深律师的优势则未见同样幅度的扩大。悉尼一名 29 岁男子向 Claude 表述想枪击当地托儿所，对话引起国际刑警组织注意后于 10 月 18 日被警方拘留，被控利用通信服务实施骚扰、恐吓或冒犯行为，将接受心理健康评估；其辩护律师称当事人因耳部感染情绪失控并以为对话属于私人交流，聊天记录如何被取得尚不清楚。"
  ],
  "topics": [
   {
@@ -101,25 +101,6 @@
      ]
     },
     {
-     "name": "程序、证据与上诉",
-     "items": [
-      {
-       "id": "6dbafb794b",
-       "kind": "single",
-       "title": "德国两家法院先后裁定 Google 须为其 AI Overview 内容负责",
-       "date": "2026-10-18",
-       "source": "The Decoder：AI News（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/"
-        }
-       ],
-       "fact": "慕尼黑地区法院 I 五月底裁定 Google 的 AI 搜索摘要属于公司自己的陈述而非中立转述，Google 须为错误内容担责；Google 公开宣布上诉后实际以和解结案，未获上级法院裁决。"
-      }
-     ]
-    },
-    {
      "name": "其他司法事项",
      "items": [
       {
@@ -139,7 +120,7 @@
      ]
     }
    ],
-   "count": 6
+   "count": 5
   },
   {
    "name": "监管执法与行政处罚",
@@ -184,6 +165,19 @@
         {
          "label": "原文",
          "url": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/"
+        }
+       ]
+      },
+      {
+       "id": "74f4511c20",
+       "kind": "single",
+       "title": "Z-Library 论文被指至少 10 条引用不存在，Taylor & Francis 启动调查",
+       "date": "2026-10-24",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist/"
         }
        ]
       }
@@ -266,6 +260,20 @@
         }
        ],
        "fact": "据《卫报》报道，谷歌为在芬兰北部穆霍斯建设数据中心，清除约 330 公顷森林、砍伐约 25 万棵树，且未完成法定环境影响评估即进行土地清理。芬兰许可与监督局（LVV）已要求谷歌暂停穆霍斯和奥坦迈基两个工地施工，并在 10 月 23 日前停止显著改变环境的活动，否则可能执法并罚款；环保人士估计奥坦迈基另有约 15 万棵树被砍伐，谷歌芬兰区负责人已道歉。"
+      },
+      {
+       "id": "629f5cb364",
+       "kind": "single",
+       "title": "设想一个AI未来：被封禁就意味着你在经济上已毫无用处",
+       "date": "2026-10-24",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://twitter.com/boneGPT/status/2114035719853265264"
+        }
+       ],
+       "fact": "一篇 Hacker News 热帖设想全面整合的 AI 未来：被封禁即被切断智能眼镜等服务，在他人由 bot 建造摩天大楼时沦为经济上的无用之人。作者表示自己仅做本地逆向工程便触发了封禁，并因此决定再添 3 台机器完成集群。"
       }
      ]
     },
@@ -439,7 +447,7 @@
      ]
     }
    ],
-   "count": 19
+   "count": 21
   },
   {
    "name": "立法与政策制定",
@@ -448,18 +456,18 @@
      "name": "法案进程",
      "items": [
       {
-       "id": "36db89b2e7",
+       "id": "60d2ab1f07",
        "kind": "single",
-       "title": "Anthropic 游说的 AI 安全法案：政府仅在 50 人死伤或 10 亿美元损失风险时才能阻止模型发布",
-       "date": "2026-10-18",
-       "source": "Hacker News：AI 热帖",
+       "title": "Dario Amodei 回应 Nathan Calvin 对 Anthropic 安全立场的批评",
+       "date": "2026-10-21",
+       "source": "X：Dario Amodei (@DarioAmodei)",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-proposed-ai-safety-bill-only-kicks-in-if-50-deaths-or-usd1-billion-in-damages-are-on-the-line-proposal-would-effectively-make-the-commerce-department-the-only-agency-capable-of-stopping-an-ai-model"
+         "url": "https://x.com/DarioAmodei/status/2112732230124818891"
         }
        ],
-       "fact": "Anthropic 正在低调游说一项 AI 安全法案，政府只有在大语言模型可能造成 10 亿美元损失或致 50 人以上死伤时才能阻止其发布。据 Politico 报道，由商务部注册的独立第三方将定期评估模型，实验室可向评估方付费但不得影响其独立性；Anthropic 发言人称该法案是其自 6 月以来向联邦和州立法者推动的 Advanced AI Framework 提案。"
+       "fact": "Dario Amodei 公开回应 Nathan Calvin 对 Anthropic 竞逐超级智能、安全让位于竞争的批评，承认部分事例是失误但不同意整体论断。"
       },
       {
        "id": "1a318aab62",
@@ -474,6 +482,20 @@
         }
        ],
        "fact": "Rohan Paul 转发 Dario Amodei 对 AI 安全研究者批评的长文回应。Amodei 承认包括联邦 AI 法案草案在内的 3 项举措本可处理得更好，称其为沟通失误并以 CEO 身份承担责任；他坚持 Anthropic 的 race to the top 战略，列举 SB53 支持、生物安全防护、限制对 PRC 企业出售 AI 服务、将公司 5% 投入公益基金等付出商业代价的安全决策，并为 RSP 改革辩护。"
+      },
+      {
+       "id": "3a88d5ccd1",
+       "kind": "single",
+       "title": "宾夕法尼亚州签署法案要求AI生成广告加注标识",
+       "date": "2026-10-24",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act"
+        }
+       ],
+       "fact": "宾夕法尼亚州州长 Josh Shapiro 签署《人工智能欺骗性广告法》，要求经AI显著修改或生成的图像、视频、音频或文字广告，以与广告本身相同的格式加注标识，且不论广告在哪制作、只要在宾州投放即适用。该州是最早要求AI内容披露的州之一，但法案对“显著修改”“明显虚构”等表述界定模糊，并设有戏仿、讽刺等豁免，留有多个漏洞。"
       }
      ]
     },
@@ -496,7 +518,7 @@
      ]
     }
    ],
-   "count": 3
+   "count": 4
   },
   {
    "name": "出口管制、制裁与投资审查",
@@ -573,47 +595,6 @@
      "name": "出口管制与制裁",
      "items": [
       {
-       "id": "31a4c1f265",
-       "kind": "event",
-       "title": "ChinaTalk · 出口管制与制裁",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.chinatalk.media/p/the-match-act"
-        },
-        {
-         "label": "原文",
-         "url": "https://www.chinatalk.media/p/mofcoms-new-ai-rules"
-        }
-       ],
-       "stages": [
-        {
-         "date": "10-20",
-         "stage": "报道",
-         "text": "ChinaTalk 访谈解析 MATCH 法案与 DUV 浸没式光刻出口管控"
-        },
-        {
-         "date": "10-21",
-         "stage": "报道",
-         "text": "ChinaTalk 解读商务部第48号公告对AI技术出口管制的影响"
-        }
-       ]
-      },
-      {
-       "id": "c84589aba5",
-       "kind": "single",
-       "title": "中国拟议 AI 出口管制，DeepSeek 投资机器人，Infinigence 完成 3.34 亿美元融资",
-       "date": "2026-10-18",
-       "source": "Recode China AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.recodechinaai.com/p/china-proposes-ai-export-controls"
-        }
-       ],
-       "fact": "中国商务部和科技部拟将 AI 模型、智能体、芯片设计与算力集群纳入技术出口管制目录，但通过 API、应用、网页界面或 SaaS 提供访问不构成大模型技术出口。DeepSeek 据报将领投机器人 AI 初创公司 Winverse AI 的种子轮融资，美团 Long-Z Investments 也参与其中。"
-      },
-      {
        "id": "472f46544d",
        "kind": "single",
        "title": "八年关税战后，中国如何重塑美国进口供应链",
@@ -628,6 +609,20 @@
        "fact": "Azeem Azhar 的 Monday Data 复盘八年关税战：美国自中国进口商品份额从 2010 年代中期的约 21% 降至今年夏天的约 8%，但中国通过将产能转移至越南、墨西哥等地实现关税跳跃。2020-2023 年，中资工厂贡献了越南对美出口的 25%，高于 2018-19 年的 11%。"
       },
       {
+       "id": "6c9278299d",
+       "kind": "single",
+       "title": "ChinaTalk 访谈解析 MATCH 法案与 DUV 浸没式光刻出口管控",
+       "date": "2026-10-20",
+       "source": "ChinaTalk（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/the-match-act"
+        }
+       ],
+       "fact": "ChinaTalk 播客邀请 CTS 联合创始人 Nick Brown 解析其报告《DUV Immersion Lithography: The Foundation of US AI Compute Advantage》，讨论美国为何应限制 DUV 浸没式光刻对华出口。"
+      },
+      {
        "id": "538a0c2648",
        "kind": "single",
        "title": "Politico：OpenAI 在对华芯片出口限制议题上从主张严控转为沉默",
@@ -640,12 +635,40 @@
         }
        ],
        "fact": "据 Politico，OpenAI 从 2025 年 3 月要求白宫对中国保持严格芯片出口管制并扩大受限芯片清单，转为在国会酝酿新限制时保持沉默。Nvidia 一边游说反对限制，一边是 OpenAI 的芯片供应商、300 亿美元股权投资方，并为 OpenAI 将租用的俄亥俄州数据中心一期提供至多 1050 亿美元担保。"
+      },
+      {
+       "id": "bf7465c6fa",
+       "kind": "single",
+       "title": "ChinaTalk 解读商务部第48号公告对AI技术出口管制的影响",
+       "date": "2026-10-21",
+       "source": "ChinaTalk（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/mofcoms-new-ai-rules"
+        }
+       ],
+       "fact": "ChinaTalk 作者详读中国商务部与科技部10月16日发布的第48号公告草案，该草案拟向《中国禁止出口限制出口技术目录》新增40项技术（14项禁售、26项需许可），其中23项涉及AI。"
       }
      ]
     },
     {
      "name": "其他管制事项",
      "items": [
+      {
+       "id": "c0008dc862",
+       "kind": "single",
+       "title": "NVIDIA 黄仁勋访问哈萨克斯坦，Firebird 获 4.5 万块 Grace Blackwell GPU 出口许可",
+       "date": "2026-10-23",
+       "source": "NVIDIA Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/"
+        }
+       ],
+       "fact": "NVIDIA CEO 黄仁勋访问阿斯塔纳，Firebird 与哈萨克斯坦政府签署投资协议，获得 4.5 万块 NVIDIA Grace Blackwell GPU 的美国出口许可，首期与 Kazakhtelecom 在 Data Center Valley 建设，目标 2027 年第三季度商用。"
+      },
       {
        "id": "f9c7e73124",
        "kind": "single",
@@ -662,7 +685,7 @@
      ]
     }
    ],
-   "count": 8
+   "count": 9
   },
   {
    "name": "数据保护与个人信息",
@@ -671,36 +694,37 @@
      "name": "",
      "items": [
       {
-       "id": "3e38c58b6e",
-       "kind": "event",
-       "title": "Google · 个人信息保护",
+       "id": "f3b074ca0c",
+       "kind": "single",
+       "title": "Google 将 Personal Intelligence 个性化功能引入车载 Gemini",
+       "date": "2026-10-20",
+       "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
          "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto"
-        },
+        }
+       ],
+       "fact": "Google 为 Android Auto 和 Google built-in 车机上的 Gemini 推出 Personal Intelligence，可跨 Gmail、Calendar、Maps、Photos、YouTube 和 Search 调用个人信息，例如从 Gmail 读取航班确认信息后查询航班状态，或按上周照片找到洗车点并导航前往。"
+      },
+      {
+       "id": "a7abe2c21f",
+       "kind": "single",
+       "title": "Google 更新隐私政策：Personal Intelligence 开启后 Gmail、Drive 和 Photos 数据可能用于个性化广告",
+       "date": "2026-10-23",
+       "source": "The Verge：AI（RSS）",
+       "links": [
         {
          "label": "原文",
          "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update"
         }
        ],
-       "stages": [
-        {
-         "date": "10-20",
-         "stage": "报道",
-         "text": "Google 将 Personal Intelligence 个性化功能引入车载 Gemini"
-        },
-        {
-         "date": "10-23",
-         "stage": "报道",
-         "text": "Google 更新隐私政策：Personal Intelligence 开启后 Gmail、Drive 和 Photos 数据可能用于个性化广告"
-        }
-       ]
+       "fact": "Google 于 10 月 16 日更新隐私政策，为不将 Drive、Gmail 或 Google Photos 用于个性化广告的承诺添加例外：用户若通过 Personal Intelligence 把这些服务接入 AI Mode 等 Search 工具，相关内容可能被用于广告定向。"
       }
      ]
     }
    ],
-   "count": 1
+   "count": 2
   },
   {
    "name": "知识产权",
@@ -735,12 +759,54 @@
         }
        ],
        "fact": "推文认为，上百人维护的项目里老板无法兼顾审美，竞争压力层层传导为KPI后，任何能提升数据的提案再丑也会被采纳，不存在既让下属背KPI又让老板坚持审美的两全方案。作者期待AI改变这一点：软件工程规模不再是竞争壁垒，坚持独特审美的小团队作品有望超越丑陋的巨无霸产品。引用推文补充称，中国产品过度竞争源于知识产权保护不足，抄袭成本低，并追问AI时代成本大降后能否出现既好看又好用且长期存活的产品。"
+      },
+      {
+       "id": "7b44d75e88",
+       "kind": "single",
+       "title": "马东锡质疑Kimi公关事件系营销号操盘",
+       "date": "2026-10-24",
+       "source": "X：马东锡 NLP (@dongxi_nlp)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/dongxi_nlp/status/2114042998019264982"
+        }
+       ],
+       "fact": "马东锡（@dongxi_nlp）指称，爆出 Kimi 公关问题的所谓\"英推KOL\"是关注6000、粉丝6000的垃圾账号，为其站台的多个\"英推KOL\"多为抄袭搬运、什么广告都接的 AI Slop 营销号。他认为该事件有操盘手，提醒吃瓜群众擦亮眼睛。"
+      },
+      {
+       "id": "84f0bcad72",
+       "kind": "single",
+       "title": "猫王音乐版权方起诉 Anthropic 索赔约 4100 万美元，指控 Claude 使用 274 首歌曲训练",
+       "date": "2026-10-25",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2114274929512501713"
+        }
+       ],
+       "fact": "Elvis Presley 音乐版权方 Authentic Brands Group 联合多家出版商对 Anthropic 提起联邦诉讼，指控 Claude 在 274 首歌曲上训练，按每件 15 万美元的法定赔偿上限索赔约 4100 万美元。"
       }
      ]
     },
     {
      "name": "权利申请与登记",
      "items": [
+      {
+       "id": "a56a6682ad",
+       "kind": "single",
+       "title": "NBER 实验：AI 让初级专利律师即战力提升，但只有资深律师留存优势",
+       "date": "2026-10-24",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/ai-makes-junior-patent-attorneys-instantly-better-but-may-quietly-stunt-their-professional-growth/"
+        }
+       ],
+       "fact": "NBER 一项工作论文在 11 家美国知识产权律所开展为期三个月的随机对照试验，133 名律师中三分之二使用 Google Labs 未发布的 AI 助手 InFlow。"
+      },
       {
        "id": "16d7cea639",
        "kind": "single",
@@ -773,11 +839,25 @@
         }
        ],
        "fact": "火山引擎发起精品 AI 剧激励计划，面向使用 Seedance 制作并在红果短剧 APP 上线的精品 AI 漫短剧，单部作品最高可获 20 万元激励。报名入口在抖音集团短剧版权中心及火山引擎官方渠道同步发布，更多咨询可通过火山引擎官网联系官方客服。"
+      },
+      {
+       "id": "1b5a7b4db1",
+       "kind": "single",
+       "title": "Anthropic 被曝悄悄限制 Claude Opus 5.5 逆向工程能力",
+       "date": "2026-10-25",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/554.htm"
+        }
+       ],
+       "fact": "大量用户反馈 Claude Opus 5.5 的逆向工程能力被削弱，Reddit r/Clause 社区 10 月 21 日帖子称安全护栏会在输出中途拦截涉及知识产权内容的逆向任务，换措辞也无法再生成。"
       }
      ]
     }
    ],
-   "count": 4
+   "count": 8
   },
   {
    "name": "内容治理、人格权与深度伪造",
@@ -798,6 +878,20 @@
         }
        ],
        "fact": "OpenAI 与 Meta 代表在 10 月 15 日的美国司法会议证据规则咨询委员会会议上表示，AI 驱动的深度伪造将严重威胁法律诉讼中的证据可靠性。OpenAI 政策顾问 Shira Anderson 称未来将无法通过科学手段识别 AI 生成图像，Meta 的 Devin Norder 称人类已无法分辨真实媒体与最近几代前沿 AI 模型生成的媒体。"
+      },
+      {
+       "id": "809a54f8cb",
+       "kind": "single",
+       "title": "澳国脚沃尔帕托授权 AI 数字分身，运动员肖像权商业化加速",
+       "date": "2026-10-25",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/542.htm"
+        }
+       ],
+       "fact": "效力于萨索洛的 22 岁澳大利亚国脚克里斯蒂安·沃尔帕托与加州公司 Callandor 达成协议，独家授权其数字形象、声音和生物特征数据用于品牌合作变现并抽成。业内已有 Hyperknown 等同类公司，内马尔此前也将 AI 肖像授权给中资平台；同时未经许可的运动员深度伪造内容泛滥，AFL 已要求博彩公司 Sportsbet 停用相关内容，而澳大利亚主流联赛合同中尚无 AI 相关条款。"
       }
      ]
     },
@@ -820,7 +914,7 @@
      ]
     }
    ],
-   "count": 2
+   "count": 3
   },
   {
    "name": "竞争与平台治理",
@@ -880,20 +974,6 @@
        ]
       },
       {
-       "id": "77910c6d39",
-       "kind": "single",
-       "title": "WSJ：OpenAI 因 Signal 阅后即焚聊天解雇 3 名安全研究员",
-       "date": "2026-10-23",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2113511968112042349"
-        }
-       ],
-       "fact": "据 WSJ 报道，OpenAI 安全人员发现 3 名安全研究员与一名外部安全研究员使用阅后即焚的 Signal 聊天后将其解雇。"
-      },
-      {
        "id": "eefa332ca3",
        "kind": "single",
        "title": "2026 年湾区科技裁员已近 14,500 人，超 2025 全年总数",
@@ -920,6 +1000,42 @@
        ]
       },
       {
+       "id": "637d3683cc",
+       "kind": "event",
+       "title": "OpenAI · 替代与裁员",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113511968112042349"
+        },
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/"
+        },
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/563.htm"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-23",
+         "stage": "进展",
+         "text": "WSJ：OpenAI 因 Signal 阅后即焚聊天解雇 3 名安全研究员"
+        },
+        {
+         "date": "10-24",
+         "stage": "进展",
+         "text": "三名被解雇的 OpenAI 安全研究员称从未被告知泄密内容"
+        },
+        {
+         "date": "10-25",
+         "stage": "进展",
+         "text": "三名被解雇的 OpenAI 安全研究员否认泄密，怀疑因推动 AI 透明度被针对"
+        }
+       ]
+      },
+      {
        "id": "ea72fb06e3",
        "kind": "single",
        "title": "NYU 教授 Damodaran：AI 十万亿美元市场叙事的前提是替代人类工作",
@@ -931,25 +1047,25 @@
          "url": "https://x.com/rohanpaul_ai/status/2113903758149369971"
         }
        ]
+      },
+      {
+       "id": "8869f39e1e",
+       "kind": "single",
+       "title": "三条职场笑话：AI 用得少反而该开心",
+       "date": "2026-10-25",
+       "source": "X：Oran Ge (@oran_ge)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/oran_ge/status/2114302685713461432"
+        }
+       ]
       }
      ]
     },
     {
      "name": "其他劳动事项",
      "items": [
-      {
-       "id": "e9265d2299",
-       "kind": "single",
-       "title": "Grok @Bot 如同雇了一位极能干的员工",
-       "date": "2026-10-18",
-       "source": "X：Elon Musk (@elonmusk, xAI)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/elonmusk/status/2111914748648296655"
-        }
-       ]
-      },
       {
        "id": "cb7a41f6eb",
        "kind": "single",
@@ -1027,11 +1143,24 @@
          "url": "https://x.com/dkundel/status/2113858781872582799"
         }
        ]
+      },
+      {
+       "id": "5d166110b4",
+       "kind": "single",
+       "title": "谷歌 DeepMind 高管：终身学习者将在 AI 职场中占据优势",
+       "date": "2026-10-25",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/681.htm"
+        }
+       ]
       }
      ]
     }
    ],
-   "count": 13
+   "count": 14
   },
   {
    "name": "产品责任与消费者保护",
@@ -1108,87 +1237,6 @@
      "name": "融资与估值",
      "items": [
       {
-       "id": "4c19024337",
-       "kind": "event",
-       "title": "OpenAI · 融资与估值",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2112455383356989598"
-        },
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/"
-        },
-        {
-         "label": "原文",
-         "url": "https://the-decoder.com/openai-lowers-valuation-target-raises-up-to-30-billion/"
-        },
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2113484586558931214"
-        }
-       ],
-       "stages": [
-        {
-         "date": "10-20",
-         "stage": "定价",
-         "text": "路透：OpenAI 拟在 Anthropic 上市前加速融资约 300 亿美元，估值超 1.4 万亿美元"
-        },
-        {
-         "date": "10-22",
-         "stage": "定价",
-         "text": "OpenAI 据报道正洽谈以 1.25 万亿美元估值融资至多 300 亿美元"
-        },
-        {
-         "date": "10-23",
-         "stage": "定价",
-         "text": "Bloomberg：OpenAI 约 300 亿美元融资目标估值从 1.4T 降至 1.25T"
-        }
-       ]
-      },
-      {
-       "id": "6317550939",
-       "kind": "single",
-       "title": "Anthropic 以超 10% 收益率为芯片交易融资 600 亿美元",
-       "date": "2026-10-18",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/014/628.htm"
-        }
-       ],
-       "fact": "Anthropic 正以超过 10% 的收益率吸引黑石集团为芯片交易提供 600 亿美元债务融资，其中约 420 亿美元优先级债务由博通提供担保，美国银行、花旗和摩根士丹利率先启动银团分销；180 亿美元次级债中黑石旗下基金将投资 90 亿美元，票息 10%。"
-      },
-      {
-       "id": "7562d6c203",
-       "kind": "single",
-       "title": "All In 播客拆解 CoreWeave 盒子结构与 AI 算力泡沫风险",
-       "date": "2026-10-18",
-       "source": "X：Saito 硬地骇客 (@SaitoWu)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/SaitoWu/status/2111775766631657836"
-        }
-       ]
-      },
-      {
-       "id": "893b198792",
-       "kind": "single",
-       "title": "Anthropic 承诺将 5% 股份投入新设的公益基金",
-       "date": "2026-10-18",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/"
-        }
-       ],
-       "fact": "Anthropic 宣布设立公司全资持有的公益基金，承诺投入 5% 股份，公司估值每增长 50% 可追加 2%。基金可用于向传统非营利组织大额捐赠或直接向特定人群发放，Anthropic 此前已投入 2 亿美元研究 AI 对就业市场的影响。结构和治理细节将在未来几个月公布。"
-      },
-      {
        "id": "983aba927f",
        "kind": "single",
        "title": "Anthropic 将 5% 股份注入公共利益基金，估值约 9650 亿美元下约合 480 亿美元",
@@ -1245,6 +1293,60 @@
        "fact": "Bloomberg 援引知情人士报道称，Anthropic 与 Nscale 接近宣布第二笔 450 亿美元算力协议，距双方上月公布首笔同规模交易仅一个多月，谈判仍在进行、细节可能变化。两家公司均在推进 IPO，Nscale 拟以 300 亿美元估值上市但遭投资者阻力，大规模算力投入也令部分投资者担忧回报。"
       },
       {
+       "id": "4c19024337",
+       "kind": "event",
+       "title": "OpenAI · 融资与估值",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112455383356989598"
+        },
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/"
+        },
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/openai-lowers-valuation-target-raises-up-to-30-billion/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2113484586558931214"
+        }
+       ],
+       "stages": [
+        {
+         "date": "10-20",
+         "stage": "定价",
+         "text": "路透：OpenAI 拟在 Anthropic 上市前加速融资约 300 亿美元，估值超 1.4 万亿美元"
+        },
+        {
+         "date": "10-22",
+         "stage": "定价",
+         "text": "OpenAI 据报道正洽谈以 1.25 万亿美元估值融资至多 300 亿美元"
+        },
+        {
+         "date": "10-23",
+         "stage": "定价",
+         "text": "Bloomberg：OpenAI 约 300 亿美元融资目标估值从 1.4T 降至 1.25T"
+        }
+       ]
+      },
+      {
+       "id": "b4e7f16b20",
+       "kind": "single",
+       "title": "35万个AI反骗骗子：Apate.ai 与国内大学生用 AI 反制诈骗的两个故事",
+       "date": "2026-10-20",
+       "source": "X：卡兹克 (@Khazix0918)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Khazix0918/status/2112386350934868374"
+        }
+       ],
+       "fact": "作者讲述两个用 AI 反制诈骗的案例。澳大利亚公司 Apate.ai 造了35万个 AI 装成易骗的普通人消耗骗子，已与骗子聊约250万次、累计耗掉约17年骗子时间，TPG 转接近59万通可疑来电，澳洲联邦银行公开报告的诈骗损失降低76%，今年8月获815万美元种子轮融资。"
+      },
+      {
        "id": "df88d75698",
        "kind": "single",
        "title": "Apate.ai 用35万个AI反诈拖住骗子，国内年轻人用AI视频反制AI卖惨账号",
@@ -1299,20 +1401,6 @@
         }
        ],
        "fact": "哇。Eric Schmidt 持有 Anthropic 约 1% 的股份，若其 IPO 达到 2 万亿美元，这部分股份价值约 200 亿美元。Anthropic 2021 年的 A 轮融资筹集了 1.24 亿美元，当时 Pitchbook 对公司的估值为 4.61 亿美元，而 Schmidt 在这 1.24 亿美元中贡献了相当大的份额。"
-      },
-      {
-       "id": "804413f7ff",
-       "kind": "single",
-       "title": "Meta 宣布创设新一类无投票权股票以资助其 AI 建设",
-       "date": "2026-10-21",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/"
-        }
-       ],
-       "fact": "Meta 在周三发布第三季度财报时确认，将创设新一类无投票权资本股，通过股票股息分配给现有股东，用于融资、员工薪酬、收购等用途，同时保持现有 A 类和 B 类股东的投票权与创始人主导结构。"
       },
       {
        "id": "e18755bfeb",
@@ -1467,26 +1555,40 @@
         }
        ],
        "fact": "Anthropic 的 pre-IPO 融资迫使 Menlo Ventures、Lightspeed、ICONIQ 等风投机构扩充基金规模、动员 LP 共同投资，其即将提交的 S-1 将显示股权结构由企业投资者和后期巨型基金主导。"
+      },
+      {
+       "id": "8797c9f8da",
+       "kind": "single",
+       "title": "Gartner 预测超 80% neocloud 厂商到 2030 年将无法独立运营",
+       "date": "2026-10-25",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2114460675884089504"
+        }
+       ],
+       "fact": "Rohan Paul 转述 Gartner 预测：成本压力将迫使超过 80% 的 neocloud 厂商到 2030 年停止独立运营。Gartner 测算 AI 数据中心到 2030 年需累计 8.5T 美元收入才能覆盖资本开支、融资成本和 12% 回报，而归属 AI 收入预计不超过 3.6T 美元，超 4T 美元资产到 2032 年面临减记风险。"
+      },
+      {
+       "id": "635c7dfba5",
+       "kind": "single",
+       "title": "Yuchen Jin：多数 neolab 会失败，看好反共识者",
+       "date": "2026-10-25",
+       "source": "X：Yuchen Jin (@Yuchenj_UW)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Yuchenj_UW/status/2114402815082913858"
+        }
+       ],
+       "fact": "Yuchen Jin 回应“是否在嘲讽 neolab”时表示，多数 neolab 会失败属正常，但他相信还会有更多 AI 突破。他质疑照搬 OpenAI 和 Anthropic 打法的公司，认为融资 10 亿美元、把 50% 花在 GPU 上并不能让公司值 100 亿美元。"
       }
      ]
     },
     {
      "name": "上市与招股",
      "items": [
-      {
-       "id": "836c10e1a5",
-       "kind": "single",
-       "title": "微软终止与 Nscale 数据中心合作，后者数十亿美元上市计划受挫",
-       "date": "2026-10-18",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/014/574.htm"
-        }
-       ],
-       "fact": "据《每日电讯报》报道，微软终止了与英国数据中心企业 Nscale 在埃塞克斯郡劳顿的数据中心项目，Nscale 价值数十亿美元的上市计划因此遭遇重大挫折。微软是 Nscale 最大的两家客户之一，另一家为 Anthropic；Nscale 上个月已在美国提交 IPO 申请，两年半内合同总金额从 1 亿美元增长至超过 1,030 亿美元，双方均未回应置评请求。"
-      },
       {
        "id": "69a7778103",
        "kind": "single",
@@ -1580,22 +1682,19 @@
        "id": "db1e48e5ea",
        "kind": "event",
        "title": "Disney · 并购与收购",
-       "links": [
+       "carried": [
         {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/"
-        },
+         "date": "2026-10-18",
+         "title": "Disney 同意雇佣 Character.AI 大部分员工"
+        }
+       ],
+       "links": [
         {
          "label": "原文",
          "url": "https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits/"
         }
        ],
        "stages": [
-        {
-         "date": "10-18",
-         "stage": "进展",
-         "text": "Disney 同意雇佣 Character.AI 大部分员工"
-        },
         {
          "date": "10-19",
          "stage": "洽谈",
@@ -1701,7 +1800,8 @@
          "label": "原文",
          "url": "https://x.com/rohanpaul_ai/status/2113116183264448877"
         }
-       ]
+       ],
+       "fact": "FT 报道 Meta 因 AI 建设需要大规模外部股权，将创设无投票权的新股份类别，让 Zuckerberg 出售股票同时保住公司控制权。作为交换，Zuckerberg 承诺在加州或 Meta 总部所在地居住 8 年，此前他曾向董事表示可能离开。背景是对加州亿万富翁一次性征收 5% 税的 Proposition 40，将于 11 月 3 日交付选民投票。"
       },
       {
        "id": "df96d1ad2a",
@@ -1722,20 +1822,6 @@
      "name": "破产与重整",
      "items": [
       {
-       "id": "5543875d34",
-       "kind": "single",
-       "title": "美国顶尖大学捐赠基金借AI投资获超额收益",
-       "date": "2026-10-18",
-       "source": "X：马东锡 NLP (@dongxi_nlp)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/dongxi_nlp/status/2111931453780963485"
-        }
-       ],
-       "fact": "2026年美国顶尖大学捐赠基金因早期投资AI和SpaceX获得超额收益，北卡罗来纳大学系统回报+37.8%，圣路易斯华盛顿大学+37.3%，哈佛大学+27.1%。推文指出，大学作为长期资本持有者成为这轮技术革命的重要受益者，这与“AI将颠覆学术研究、大学走向破产”的论调形成对照。对普通人而言，AI持续降低知识生产门槛，看清历史进程的能力愈发重要。"
-      },
-      {
        "id": "042f49a9d4",
        "kind": "single",
        "title": "播客：“逆向工程一切”成新一轮 AI 低质内容潮",
@@ -1754,19 +1840,6 @@
     {
      "name": "其他资本事项",
      "items": [
-      {
-       "id": "cfb270f63a",
-       "kind": "single",
-       "title": "AWS CFO 约翰·费尔顿称 AI 基建繁荣可持续，AI 服务器投资回报周期不到三年",
-       "date": "2026-10-18",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/014/488.htm"
-        }
-       ]
-      },
       {
        "id": "dd01a480c3",
        "kind": "single",
@@ -1794,23 +1867,35 @@
        ]
       },
       {
-       "id": "657d2d40ea",
+       "id": "45a2efa7af",
        "kind": "single",
-       "title": "TechCrunch Founder Summit 2026：Toast、Bessemer 等投资人将分享哪些创业经验",
-       "date": "2026-10-23",
+       "title": "George Noble 称 SpaceX 定价最离谱，最大空头仓位是 CoreWeave",
+       "date": "2026-10-24",
+       "source": "X：Saito 硬地骇客 (@SaitoWu)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/SaitoWu/status/2113944808079421762"
+        }
+       ]
+      },
+      {
+       "id": "db30c3c2d7",
+       "kind": "single",
+       "title": "Apollo 经济学家称 AI 对科技行业外的多数公司财务回报为零",
+       "date": "2026-10-25",
        "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/"
+         "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/"
         }
-       ],
-       "fact": "TechCrunch Founder Summit 2026 将于 11 月 4 日在波士顿 SoWa Power Station 举办，Toast 联合创始人 Steve Fredette、Bessemer 合伙人 Kent Bennett、Glasswing Ventures 的 Rudina Seseri 等将登台分享。"
+       ]
       }
      ]
     }
    ],
-   "count": 46
+   "count": 43
   },
   {
    "name": "法律职业与法律科技",
@@ -1818,34 +1903,6 @@
     {
      "name": "",
      "items": [
-      {
-       "id": "94c62fd5a9",
-       "kind": "single",
-       "title": "Anthropic 给外部安全机构 METR 授予类员工访问权限",
-       "date": "2026-10-18",
-       "source": "Ars Technica：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access/"
-        }
-       ],
-       "fact": "Anthropic 为 6 名 METR 员工提供公司硬件、办公空间和与内部风险评估团队相当的内部工具访问权限，以自愿方式引入外部监督。METR 不接受 AI 公司捐款，Anthropic 也不能否决其分析报告的发布，但可要求隐去客户数据、律师委托特权信息和模型架构等内容。"
-      },
-      {
-       "id": "9df72dd0fe",
-       "kind": "single",
-       "title": "FT：Anthropic 借鉴律师谈判伦理，为 Claude 智能体谈判制定规范",
-       "date": "2026-10-18",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2111695161164259808"
-        }
-       ],
-       "fact": "据 FT 报道，Anthropic 希望把律师的谈判伦理规范植入将与其他智能体讨价还价、解决纠纷和协商薪酬的 Claude 智能体。"
-      },
       {
        "id": "ae0ec4d423",
        "kind": "single",
@@ -1877,7 +1934,7 @@
      ]
     }
    ],
-   "count": 4
+   "count": 2
   },
   {
    "name": "产业与商业动向",
@@ -1947,6 +2004,32 @@
         {
          "label": "原文",
          "url": "https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom"
+        }
+       ]
+      },
+      {
+       "id": "6fae984565",
+       "kind": "single",
+       "title": "MiniMax 携手 Chroma Awards 第二季",
+       "date": "2026-10-24",
+       "source": "X：MiniMax Design (H3) (@Hailuo_AI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Hailuo_AI/status/2113918373583286642"
+        }
+       ]
+      },
+      {
+       "id": "19dd8b361b",
+       "kind": "single",
+       "title": "Runway 联合创始人 Anastasis Germanidis 将于 10 月 27 日出席纽约 State of AI 2026 见面会",
+       "date": "2026-10-24",
+       "source": "Air Street Press（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://press.airstreet.com/p/runways-anastasis-germanidis-joins"
         }
        ]
       }
@@ -2073,19 +2156,6 @@
        ]
       },
       {
-       "id": "2a74a5cfc0",
-       "kind": "single",
-       "title": "黄仁勋访问阿斯塔纳，NVIDIA 投资哈萨克斯坦 AI 生态",
-       "date": "2026-10-23",
-       "source": "NVIDIA Blog（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/"
-        }
-       ]
-      },
-      {
        "id": "2dedfcf6d3",
        "kind": "single",
        "title": "OpenAI 与波兰 NASK 签署协议，合作推进 AI 安全与安保",
@@ -2097,25 +2167,64 @@
          "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership"
         }
        ]
+      },
+      {
+       "id": "a544ae2b5c",
+       "kind": "single",
+       "title": "TechCrunch Founder Summit 2026：Toast、Bessemer 等投资人将分享哪些创业经验",
+       "date": "2026-10-23",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/10/23/from-toast-to-bessemer-who-founders-will-hear-from-at-techcrunch-founder-summit-2026/"
+        }
+       ]
+      },
+      {
+       "id": "952460ccb1",
+       "kind": "single",
+       "title": "OpenAI 以最高 90% 折扣争夺 Anthropic 大客户，多家公司转移 AI 支出",
+       "date": "2026-10-25",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/"
+        }
+       ]
+      },
+      {
+       "id": "582f84139b",
+       "kind": "single",
+       "title": "软银孙正义计划在马来西亚投资 500 亿美元，押注 AI 与数据中心",
+       "date": "2026-10-25",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/637.htm"
+        }
+       ]
+      },
+      {
+       "id": "644eaf2093",
+       "kind": "single",
+       "title": "施密特等学者撰文：OpenAI 与 Anthropic 正像现代东印度公司",
+       "date": "2026-10-25",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/"
+        }
+       ]
       }
      ]
     },
     {
      "name": "市场与运营",
      "items": [
-      {
-       "id": "6cf3b831bd",
-       "kind": "single",
-       "title": "科乐美社长早川英树谈 AI 对游戏开发的影响：最重要的依然是\"人\"与\"创作者\"",
-       "date": "2026-10-18",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/014/439.htm"
-        }
-       ]
-      },
       {
        "id": "bafeb12cab",
        "kind": "single",
@@ -2244,19 +2353,6 @@
      "name": "活动与行程",
      "items": [
       {
-       "id": "04b4a274fe",
-       "kind": "single",
-       "title": "荣耀人形机器人闪电与越野冠军赵家驹同台赛跑",
-       "date": "2026-10-21",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/015/664.htm"
-        }
-       ]
-      },
-      {
        "id": "5100bb9c6e",
        "kind": "single",
        "title": "Perplexity Computer 自主将树莓派改造成游戏主机",
@@ -2314,6 +2410,32 @@
      "name": "观点与转述",
      "items": [
       {
+       "id": "99a9ee0473",
+       "kind": "single",
+       "title": "重阳节，京东JoyInside一批AI设备走进许昌福瑞园养老院",
+       "date": "2026-10-19",
+       "source": "公众号：京东JoyAI",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://mp.weixin.qq.com/s?__biz=MzU0MjU0MDMzMw%3D%3D&mid=2247487528&idx=1&sn=a185dac109d95a86bd885a8a9651611d"
+        }
+       ]
+      },
+      {
+       "id": "78bb049ba2",
+       "kind": "single",
+       "title": "Morgan Stanley 预测 2027 年超大规模厂商与 neocloud AI 支出达 1.58 万亿美元",
+       "date": "2026-10-20",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2112427961047798236"
+        }
+       ]
+      },
+      {
        "id": "49766244c2",
        "kind": "event",
        "title": "Microduck · 观点与转述",
@@ -2337,32 +2459,6 @@
          "date": "10-22",
          "stage": "进展",
          "text": "Hugging Face CEO 称 Microduck 预订单将破 2 万"
-        }
-       ]
-      },
-      {
-       "id": "99a9ee0473",
-       "kind": "single",
-       "title": "重阳节，京东JoyInside一批AI设备走进许昌福瑞园养老院",
-       "date": "2026-10-19",
-       "source": "公众号：京东JoyAI",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://mp.weixin.qq.com/s?__biz=MzU0MjU0MDMzMw%3D%3D&mid=2247487528&idx=1&sn=a185dac109d95a86bd885a8a9651611d"
-        }
-       ]
-      },
-      {
-       "id": "78bb049ba2",
-       "kind": "single",
-       "title": "Morgan Stanley 预测 2027 年超大规模厂商与 neocloud AI 支出达 1.58 万亿美元",
-       "date": "2026-10-20",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2112427961047798236"
         }
        ]
       },
@@ -2488,58 +2584,6 @@
     {
      "name": "行业动态",
      "items": [
-      {
-       "id": "f57527e17a",
-       "kind": "single",
-       "title": "xAI 团队每天为 Grok Bot 做约 20 项改进",
-       "date": "2026-10-18",
-       "source": "X：Elon Musk (@elonmusk, xAI)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/elonmusk/status/2111642151138546118"
-        }
-       ]
-      },
-      {
-       "id": "da807eb244",
-       "kind": "single",
-       "title": "周一早上8点不到，就已经有300+人在同时收听了 看来都是周末玩了两天来补课的😂",
-       "date": "2026-10-18",
-       "source": "X：Oran Ge (@oran_ge)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/oran_ge/status/2111970101708964222"
-        }
-       ]
-      },
-      {
-       "id": "fe69f709ff",
-       "kind": "single",
-       "title": "Grok Bot 新用户教学提议获马斯克回应",
-       "date": "2026-10-18",
-       "source": "X：Elon Musk (@elonmusk, xAI)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/elonmusk/status/2111642226774417627"
-        }
-       ]
-      },
-      {
-       "id": "44fe6795f7",
-       "kind": "single",
-       "title": "水上漂",
-       "date": "2026-10-18",
-       "source": "X：Oran Ge (@oran_ge)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/oran_ge/status/2111741348361740653"
-        }
-       ]
-      },
       {
        "id": "d9e7944559",
        "kind": "single",
@@ -2667,6 +2711,19 @@
         {
          "label": "原文",
          "url": "https://x.com/reach_vb/status/2112041919782285712"
+        }
+       ]
+      },
+      {
+       "id": "60a31692fd",
+       "kind": "single",
+       "title": "OpenAI 的 Vaibhav 高空体验 Starlink",
+       "date": "2026-10-19",
+       "source": "X：Vaibhav Srivastav（OpenAI）(@reach_vb)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/reach_vb/status/2112072486892556714"
         }
        ]
       },
@@ -3217,6 +3274,19 @@
        ]
       },
       {
+       "id": "e076a171b2",
+       "kind": "single",
+       "title": "Nathan Lambert 谈互联网规模压力测试",
+       "date": "2026-10-22",
+       "source": "X：Nathan Lambert (@natolambert)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/natolambert/status/2113252328169951372"
+        }
+       ]
+      },
+      {
        "id": "aa93865368",
        "kind": "single",
        "title": "Grok 机器人命名趣谈",
@@ -3425,6 +3495,19 @@
        ]
       },
       {
+       "id": "1d1dc7813d",
+       "kind": "single",
+       "title": "Grok Bot 轻松闲聊",
+       "date": "2026-10-23",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2113511793444417622"
+        }
+       ]
+      },
+      {
        "id": "6da03da550",
        "kind": "single",
        "title": "xAI 工程师感叹此类情况频发",
@@ -3477,6 +3560,32 @@
        ]
       },
       {
+       "id": "0c5e040d15",
+       "kind": "single",
+       "title": "Perplexity 用电脑标注 Johnny Cash 歌中 92 个地点",
+       "date": "2026-10-24",
+       "source": "X：Aravind Srinivas（Perplexity CEO） (@AravSrinivas)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/AravSrinivas/status/2114068027197272430"
+        }
+       ]
+      },
+      {
+       "id": "e0d10df439",
+       "kind": "single",
+       "title": "让机器人互相安排会议",
+       "date": "2026-10-24",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2114078448000065542"
+        }
+       ]
+      },
+      {
        "id": "ca2e78eadf",
        "kind": "single",
        "title": "我选择降临",
@@ -3486,6 +3595,32 @@
         {
          "label": "原文",
          "url": "https://x.com/DashHuang/status/2113798842395333091"
+        }
+       ]
+      },
+      {
+       "id": "dd090e77dc",
+       "kind": "single",
+       "title": "PixLight 2026 征片倒计时7天",
+       "date": "2026-10-24",
+       "source": "X：PixVerse (@PixVerse)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/PixVerse/status/2114009058399469954"
+        }
+       ]
+      },
+      {
+       "id": "6c5dcf8e78",
+       "kind": "single",
+       "title": "你会让 bot 周末加班吗？",
+       "date": "2026-10-24",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2114052797994029110"
         }
        ]
       },
@@ -3501,11 +3636,141 @@
          "url": "https://x.com/dexhorthy/status/2113843157716910089"
         }
        ]
+      },
+      {
+       "id": "29c86ced5c",
+       "kind": "single",
+       "title": "Kimi 就会员使用 K3.1 Pro 限流致歉，为所有订阅会员重置并补偿 25% 月度额度",
+       "date": "2026-10-25",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/017/723.htm"
+        }
+       ]
+      },
+      {
+       "id": "0a8151123c",
+       "kind": "single",
+       "title": "AI 扩大高管管控范围",
+       "date": "2026-10-25",
+       "source": "X：Ethan Mollick (@emollick)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/emollick/status/2114337256865493250"
+        }
+       ]
+      },
+      {
+       "id": "3090761343",
+       "kind": "single",
+       "title": "Grok 机器人助手处理支付",
+       "date": "2026-10-25",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2114364277595488330"
+        }
+       ]
+      },
+      {
+       "id": "3cd792fb5b",
+       "kind": "single",
+       "title": "OpenAI 用量额度随调钟重置回 100%",
+       "date": "2026-10-25",
+       "source": "X：Vaibhav Srivastav（OpenAI）(@reach_vb)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/reach_vb/status/2114255005167349952"
+        }
+       ]
+      },
+      {
+       "id": "05d44af287",
+       "kind": "single",
+       "title": "SpaceXSI 作者确认引用中为自己所造机器人",
+       "date": "2026-10-25",
+       "source": "X：shaoruu（SpaceXSI，Grok Bot 初版作者之一） (@shaoruu)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shaoruu/status/2114406588601794957"
+        }
+       ]
+      },
+      {
+       "id": "850439c0e2",
+       "kind": "single",
+       "title": "OpenAI 的 Codex 已全面推送",
+       "date": "2026-10-25",
+       "source": "X：Tibo (@thsottiaux)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thsottiaux/status/2114237083652882932"
+        }
+       ]
+      },
+      {
+       "id": "a001f5eb54",
+       "kind": "single",
+       "title": "你的 Grok 机器人现在在做什么",
+       "date": "2026-10-25",
+       "source": "X：Eric Zakariasson (@ericzakariasson)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/ericzakariasson/status/2114440431421538454"
+        }
+       ]
+      },
+      {
+       "id": "d3d8de2b5c",
+       "kind": "single",
+       "title": "Grok 分享链接引热议",
+       "date": "2026-10-25",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2114169506784260471"
+        }
+       ]
+      },
+      {
+       "id": "942dc11c0a",
+       "kind": "single",
+       "title": "Claude",
+       "date": "2026-10-25",
+       "source": "X：Ado Kukic（Anthropic 开发者关系，Claude Code） (@adocomplete)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/adocomplete/status/2114162098418884673"
+        }
+       ]
+      },
+      {
+       "id": "fc9471d65c",
+       "kind": "single",
+       "title": "Odyssey 分享其中一视角",
+       "date": "2026-10-25",
+       "source": "X：Odyssey (@odysseyml)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/odysseyml/status/2114443138169520414"
+        }
+       ]
       }
      ]
     }
    ],
-   "count": 121
+   "count": 137
   },
   {
    "name": "评论与观点",
@@ -3513,84 +3778,6 @@
     {
      "name": "",
      "items": [
-      {
-       "id": "39e43d07c8",
-       "kind": "single",
-       "title": "Tomasz Tunguz 分析 Anthropic 是否更像一家云厂商",
-       "date": "2026-10-18",
-       "source": "Tomasz Tunguz 博客（VC 分析）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://tomtunguz.com/what-if-they-are-all-clouds/"
-        }
-       ]
-      },
-      {
-       "id": "754f8d6a1e",
-       "kind": "single",
-       "title": "Claude 无法修改邮箱引质疑",
-       "date": "2026-10-18",
-       "source": "X：Ethan Mollick (@emollick)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/emollick/status/2111925398548193574"
-        }
-       ]
-      },
-      {
-       "id": "dd33f22e5a",
-       "kind": "single",
-       "title": "Grok Bot 能自己赚回成本",
-       "date": "2026-10-18",
-       "source": "X：Elon Musk (@elonmusk, xAI)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/elonmusk/status/2111612315204272233"
-        }
-       ]
-      },
-      {
-       "id": "42e34cf7d6",
-       "kind": "single",
-       "title": "马斯克谈SI推动美国GDP增长",
-       "date": "2026-10-18",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2111692218415358162"
-        }
-       ]
-      },
-      {
-       "id": "5bfcba564a",
-       "kind": "single",
-       "title": "Anthropic 经济学家推荐关注 IMF 奇点演讲",
-       "date": "2026-10-18",
-       "source": "X：Peter McCrory（Anthropic 首席经济学家，@PeterMcCrory）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/PeterMcCrory/status/2111920461600940033"
-        }
-       ]
-      },
-      {
-       "id": "d3a2c9d6bf",
-       "kind": "single",
-       "title": "Vibe coding 是健脑，就像健身不为 ROI",
-       "date": "2026-10-18",
-       "source": "X：Oran Ge (@oran_ge)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/oran_ge/status/2111803498279145892"
-        }
-       ]
-      },
       {
        "id": "4c94d66335",
        "kind": "single",
@@ -3666,6 +3853,19 @@
         {
          "label": "原文",
          "url": "https://x.com/larsencc/status/2112227297063551169"
+        }
+       ]
+      },
+      {
+       "id": "cd1df4af0b",
+       "kind": "single",
+       "title": "Gartner 预测 7 万亿美元 AI 基础设施投资到 2030 年仅能收回约一半",
+       "date": "2026-10-20",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/015/386.htm"
         }
        ]
       },
@@ -4008,6 +4208,19 @@
        ]
       },
       {
+       "id": "65f222727a",
+       "kind": "single",
+       "title": "Grok Bot 用户称已融入日常工作生活",
+       "date": "2026-10-22",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2113304960326652163"
+        }
+       ]
+      },
+      {
        "id": "7c66c0b730",
        "kind": "single",
        "title": "Generalist CEO 谈机器人与物理世界",
@@ -4060,6 +4273,19 @@
        ]
       },
       {
+       "id": "77be000e09",
+       "kind": "single",
+       "title": "Grok Bot 一句话下单买手表",
+       "date": "2026-10-23",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2113444197978255814"
+        }
+       ]
+      },
+      {
        "id": "1bc558de1e",
        "kind": "single",
        "title": "构建优秀评估的三要素",
@@ -4099,6 +4325,45 @@
        ]
       },
       {
+       "id": "40f06d6a4a",
+       "kind": "single",
+       "title": "顶尖工程师如何驾驭AI",
+       "date": "2026-10-24",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2114092713935294750"
+        }
+       ]
+      },
+      {
+       "id": "2a4023c5e3",
+       "kind": "single",
+       "title": "马斯克推荐试用 Grok Bot",
+       "date": "2026-10-24",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2113996858842563006"
+        }
+       ]
+      },
+      {
+       "id": "804a94f148",
+       "kind": "single",
+       "title": "Nathan Lambert 评中国实验室过度迎合西方生态",
+       "date": "2026-10-24",
+       "source": "X：Nathan Lambert (@natolambert)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/natolambert/status/2113952941833077209"
+        }
+       ]
+      },
+      {
        "id": "bbb282ca8a",
        "kind": "single",
        "title": "马斯克回应信任Grok管理财务",
@@ -4110,18 +4375,96 @@
          "url": "https://x.com/elonmusk/status/2113877257613947348"
         }
        ]
+      },
+      {
+       "id": "6da259dff9",
+       "kind": "single",
+       "title": "Francois Chollet：符号学习有效",
+       "date": "2026-10-24",
+       "source": "X：Francois Chollet (@fchollet)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/fchollet/status/2113979122103759273"
+        }
+       ]
+      },
+      {
+       "id": "ed9040b9fb",
+       "kind": "single",
+       "title": "Greg Brockman 评价 OpenAI 流体奇点论文技术构造超出人类直觉但可被理解",
+       "date": "2026-10-25",
+       "source": "X：Greg Brockman (@gdb)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/gdb/status/2114483026608755082"
+        }
+       ]
+      },
+      {
+       "id": "9744780369",
+       "kind": "single",
+       "title": "闭源实验室RL细节外泄",
+       "date": "2026-10-25",
+       "source": "X：Nathan Lambert (@natolambert)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/natolambert/status/2114315936953925952"
+        }
+       ]
+      },
+      {
+       "id": "513595ac28",
+       "kind": "single",
+       "title": "有推油友指出我是在给 Kimi 洗地 @grok @bot 请客观分析确实有洗地吗？如果有具体哪里？ 如果确实有，请联系 Kimi 给我支付费用 😅",
+       "date": "2026-10-25",
+       "source": "X：邵猛 (@shao__meng)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/shao__meng/status/2114309910553076041"
+        }
+       ]
+      },
+      {
+       "id": "120ee4b8c2",
+       "kind": "single",
+       "title": "Hi @grok 选择你认为 2050 年将不复存在的 10 家巨型企业，并用一句话解释每家为什么会消失，要毫不留情🧐",
+       "date": "2026-10-25",
+       "source": "X：indigo (@indigox)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/indigox/status/2114155615983730785"
+        }
+       ]
+      },
+      {
+       "id": "df9a9e7dcd",
+       "kind": "single",
+       "title": "Grok Bot 周日反馈征集",
+       "date": "2026-10-25",
+       "source": "X：Larsen Cundric（自述加入 SpaceXSI，Grok Bot） (@larsencc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/larsencc/status/2114462742757449730"
+        }
+       ]
       }
      ]
     }
    ],
-   "count": 46
+   "count": 52
   }
  ],
  "counts": {
   "topics": 14,
-  "groups": 39,
-  "items": 278,
-  "events": 8
+  "groups": 38,
+  "items": 305,
+  "events": 7
  },
  "source_url": "https://github.com/acaGPT/Jurisprudence/wiki/Weekly-AI+Law-Brief"
 }
