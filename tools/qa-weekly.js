@@ -76,6 +76,13 @@ const SER = {
   names: SERIES ? SERIES.series.map(s => s.name) : []
 };
 
+/* 主体与系列两段摘要：与主题概览分开存放，按周次核对，对不上就不显示。 */
+const DIGEST = readJson('weekly-digest.json');
+const DIGEST_OK = !!(DIGEST && DIGEST.week === data.week);
+function digest(key) {
+  return DIGEST_OK && Array.isArray(DIGEST[key]) ? DIGEST[key] : [];
+}
+
 const results = [];
 function check(name, actual, expected) {
   const pass = expected === undefined ? actual === true : actual === expected;
@@ -112,6 +119,14 @@ function check(name, actual, expected) {
   check('周次行不再重复起止日期',
     (await page.locator('#week-line').innerText()).includes(data.period.start), false);
   check('没有说明段落', await page.locator('.lede').count(), 0);
+  /* 三个视图各有一段摘要，形态一致，标题分清读的是哪一层。 */
+  check('主题摘要有标题',
+    await page.locator('#overview h2').innerText(), '本周主题摘要');
+  check('主题摘要段落数与数据层一致',
+    await page.locator('#overview p').count(), (data.overview || []).length);
+  check('主题摘要不含工序词',
+    !/初审|机器|判据|候选|口径|去重|复核|台账/.test(
+      await page.locator('#overview').innerText()));
   check('统计标签用「连锁事件」',
     (await page.locator('#stats').innerText()).includes('件连锁事件'));
   check('每一条默认都是 Law', await page.locator('.wk[data-mark="law"]').count(), EXPECT.items);
@@ -319,14 +334,20 @@ function check(name, actual, expected) {
     await page.locator('.subject .wk').count(), SUBJ.items);
   check('主体卡内按主题分块',
     (await page.locator('.subject').first().locator('.type-head').count()) > 1);
-  /* 视图引言讲的是本周的事实分布，不是机器怎么判。工序词一律不许上页面：
-     这条断言是给下一次改文案留的绊马索——「同主体初审」那种写法已经复发过。 */
-  check('主体分布在主体视图顶部', await page.locator('.view-intro').count(), 1);
-  const subjectIntro = await page.locator('.view-intro').innerText();
-  check('主体分布给出主体数', subjectIntro.includes(`${SUBJ.total} 个主体`));
-  check('主体分布点出最集中的主体', subjectIntro.includes(SUBJ.top.name));
-  check('主体分布不含工序词',
+  /* 主体摘要与主题摘要同形态：写作者给的一段叙事，不是「305 条落到 28 个主体」
+     这类关于数据的统计。工序词与统计句式都设成绊马索，防下一次改回去。 */
+  check('摘要文件与当周一致', DIGEST_OK, true);
+  check('主体摘要在主体视图顶部',
+    await page.locator('.wk-digest h2').innerText(), '本周主体摘要');
+  check('主体摘要段落数与摘要文件一致',
+    await page.locator('.wk-digest p').count(), digest('subject').length);
+  const subjectIntro = await page.locator('.wk-digest').innerText();
+  check('主体摘要提到多家主体',
+    ['OpenAI', 'Anthropic'].every(name => subjectIntro.includes(name)));
+  check('主体摘要不含工序词',
     !/初审|机器|判据|候选|口径|去重|复核|台账/.test(subjectIntro));
+  check('主体摘要不再逐项报数',
+    /条信息落到|占全部信息的|个主体横跨/.test(subjectIntro), false);
   check('主体名出现在卡头',
     (await page.locator('.subject .topic-head h2').allInnerTexts()).includes('Anthropic'));
 
@@ -381,13 +402,17 @@ function check(name, actual, expected) {
   await page.locator('#view-switch button[data-view="series"]').click();
   await page.waitForTimeout(320);
   check('系列数与数据层一致', await page.locator('section.series').count(), SER.count);
-  const seriesIntroText = await page.locator('.view-intro').innerText();
-  check('系列条数写入页面', seriesIntroText.includes(`${SER.count} 条系列`));
-  check('多阶段条数写入页面', seriesIntroText.includes(`${SER.event} 条是同一件事`));
-  check('进展链条数写入页面',
-    seriesIntroText.includes(`${SER.progression} 条是几条报道`));
-  check('系列引言不含工序词',
+  check('系列摘要在系列视图顶部',
+    await page.locator('.wk-digest h2').innerText(), '本周系列摘要');
+  check('系列摘要段落数与摘要文件一致',
+    await page.locator('.wk-digest p').count(), digest('series').length);
+  const seriesIntroText = await page.locator('.wk-digest').innerText();
+  check('系列摘要提到多步事件',
+    /两步|三步|两次/.test(seriesIntroText));
+  check('系列摘要不含工序词',
     !/初审|机器|判据|候选|口径|去重|复核|台账/.test(seriesIntroText));
+  check('系列摘要不再逐项报数',
+    /条系列：|条是同一件事|条是几条报道/.test(seriesIntroText), false);
   check('系列名出现在卡头',
     (await page.locator('section.series .topic-head h2').allInnerTexts())
       .some(name => SER.names.includes(name)));
