@@ -1,0 +1,648 @@
+/* 《法理学》课程地图 —— 站点样式
+   用途：课程地图页的全部视觉与响应式规则，含深浅色两套变量。
+   用法：由 index.html 引入；主题由 app.js 写入 <html data-theme>。
+*/
+
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --surface-2: #f4f2ec;
+  --text: #1b1a18;
+  --muted: #6d6a63;
+  --faint: #96938b;
+  --line: #e4e1d9;
+  --line-strong: #cdc8bb;
+  --accent: #2b4a6f;
+  --accent-soft: #eaeff6;
+  --ok: #2f6b4f;
+  --ok-soft: #e8f2ec;
+  --mark: #fbe9a8;
+  --radius: 12px;
+  --radius-sm: 7px;
+  --serif: "Songti SC", "Source Han Serif SC", "Noto Serif SC", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+}
+
+html[data-theme="dark"] {
+  --bg: #15171a;
+  --surface: #1c1f23;
+  --surface-2: #23272c;
+  --text: #e9e7e2;
+  --muted: #9d9a92;
+  --faint: #78756e;
+  --line: #2c3035;
+  --line-strong: #3d434a;
+  --accent: #9dc0e6;
+  --accent-soft: #1e2937;
+  --ok: #7fc9a0;
+  --ok-soft: #1a2a22;
+  --mark: #5b4a1c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.7 var(--serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.wrap { width: min(1120px, 100% - 48px); margin-inline: auto; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; background: var(--surface);
+  padding: 10px 16px; border-radius: var(--radius-sm); z-index: 100;
+}
+.skip:focus { left: 16px; top: 16px; }
+
+/* ---------- 页头 ---------- */
+
+.site-head { padding: 56px 0 32px; }
+.eyebrow {
+  margin: 0 0 10px; font: 500 12px/1 var(--sans); letter-spacing: .14em;
+  text-transform: uppercase; color: var(--faint);
+}
+.site-head h1 {
+  margin: 0 0 14px; font-size: clamp(28px, 4vw, 40px); font-weight: 500;
+  letter-spacing: .01em; line-height: 1.25;
+}
+.lede {
+  margin: 0; max-width: 62ch; color: var(--muted);
+  font-size: clamp(15px, 1.6vw, 17px);
+}
+
+.stats {
+  display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 28px 0 0;
+  padding: 18px 0 0; border-top: 1px solid var(--line);
+}
+.stats div { display: flex; align-items: baseline; gap: 7px; }
+.stats dt {
+  font: 400 13px/1.4 var(--sans); color: var(--muted); order: 2;
+}
+.stats dd {
+  margin: 0; order: 1; font: 500 20px/1.2 var(--sans);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 工具栏 ---------- */
+
+.toolbar {
+  position: sticky; top: 0; z-index: 20; background: var(--bg);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.toolbar .wrap {
+  display: flex; align-items: center; gap: 12px 18px; flex-wrap: wrap;
+  padding: 12px 0;
+}
+
+.field { position: relative; flex: 1 1 260px; min-width: 220px; }
+.field input {
+  width: 100%; padding: 9px 38px 9px 13px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong); background: var(--surface);
+  color: var(--text); font: 400 14px/1.4 var(--sans);
+}
+.field input:focus {
+  outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent;
+}
+.field kbd {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font: 400 11px/1 var(--sans); color: var(--faint);
+  border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chips button {
+  font: 400 13px/1.3 var(--sans); color: var(--muted); cursor: pointer;
+  background: transparent; border: 1px solid transparent; border-radius: 999px;
+  padding: 6px 11px;
+}
+.chips button:hover { background: var(--surface-2); color: var(--text); }
+.chips button[aria-pressed="true"] {
+  background: var(--accent-soft); color: var(--accent);
+  border-color: var(--accent); font-weight: 500;
+}
+.chips .num {
+  display: inline-block; margin-left: 5px; font-size: 11px; color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+.chips button[aria-pressed="true"] .num { color: inherit; opacity: .7; }
+
+/* 主题 chip 收成一行后，一行放不下的收进这个按钮；点开即露出全部主题 */
+.chips button.more {
+  color: var(--accent); border-color: var(--line-strong); border-style: dashed;
+}
+.chips button.more:hover { background: var(--accent-soft); color: var(--accent); }
+
+.actions { display: flex; gap: 5px; margin-left: auto; }
+button.plain {
+  font: 400 13px/1.3 var(--sans); color: var(--muted); cursor: pointer;
+  background: transparent; border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm); padding: 6px 11px;
+}
+button.plain:hover { background: var(--surface-2); color: var(--text); }
+button.plain[aria-pressed="true"] {
+  background: var(--accent-soft); color: var(--accent); border-color: var(--accent);
+}
+
+.count {
+  flex: 1 1 100%; margin: 0; font: 400 13px/1.4 var(--sans); color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 单元与卡片 ---------- */
+
+main { padding: 36px 0 72px; }
+
+.unit { margin-bottom: 52px; scroll-margin-top: 128px; }
+.unit[hidden] { display: none; }
+
+.unit-head {
+  display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  padding-bottom: 12px; margin-bottom: 22px; border-bottom: 1px solid var(--line);
+}
+.unit-num {
+  font: 500 12px/1 var(--sans); letter-spacing: .06em; color: var(--accent);
+  background: var(--accent-soft); padding: 5px 9px; border-radius: 6px;
+  white-space: nowrap;
+}
+.unit-head h2 {
+  margin: 0; font-size: clamp(19px, 2.2vw, 23px); font-weight: 500;
+}
+.unit-en {
+  font: 400 13px/1.4 var(--sans); color: var(--faint); margin-left: auto;
+}
+
+.cards {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(316px, 1fr));
+}
+
+.card {
+  display: flex; flex-direction: column; gap: 10px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 18px;
+  transition: border-color .15s ease;
+}
+.card:hover { border-color: var(--line-strong); }
+.card[hidden] { display: none; }
+
+.card-top { display: flex; align-items: center; gap: 8px; }
+.code {
+  font: 500 12px/1 var(--sans); letter-spacing: .04em; color: var(--muted);
+  background: var(--surface-2); padding: 5px 8px; border-radius: 6px;
+}
+.badge {
+  font: 400 12px/1 var(--sans); padding: 5px 9px; border-radius: 999px;
+  margin-left: auto; white-space: nowrap;
+}
+.badge.has { color: var(--ok); background: var(--ok-soft); }
+.badge.todo { color: var(--faint); border: 1px dashed var(--line-strong); }
+
+.card h3 { margin: 0; font-size: 17px; font-weight: 500; line-height: 1.45; }
+.card h3 a { color: var(--text); }
+.card h3 a:hover { color: var(--accent); }
+.card .en-title {
+  margin: -4px 0 0; font: 400 13px/1.5 var(--sans); color: var(--faint);
+}
+
+.desc { margin: 0; font-size: 14.5px; line-height: 1.75; color: var(--muted); }
+.desc.clamp {
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+details.en { margin: 0; }
+details.en summary {
+  cursor: pointer; font: 400 12px/1.4 var(--sans); color: var(--faint);
+  list-style: none; user-select: none;
+}
+details.en summary::-webkit-details-marker { display: none; }
+details.en summary::before { content: "▸ "; }
+details.en[open] summary::before { content: "▾ "; }
+details.en p {
+  margin: 8px 0 0; font-size: 13.5px; line-height: 1.7; color: var(--faint);
+}
+
+.card-foot {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line);
+  font: 400 12.5px/1.4 var(--sans); color: var(--faint);
+}
+.card-foot .go { margin-left: auto; color: var(--accent); white-space: nowrap; }
+
+mark { background: var(--mark); color: inherit; border-radius: 2px; }
+
+.empty {
+  padding: 56px 0; text-align: center; color: var(--muted);
+  font: 400 15px/1.7 var(--sans);
+}
+
+/* ---------- 文献库（references.html） ---------- */
+
+.head-link {
+  margin: 16px 0 0; font: 400 14px/1.6 var(--sans); color: var(--muted);
+}
+
+.sort {
+  display: inline-flex; align-items: center; gap: 7px;
+  font: 400 13px/1.3 var(--sans); color: var(--muted);
+}
+.sort select {
+  font: 400 13px/1.3 var(--sans); color: var(--text); cursor: pointer;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm); padding: 6px 8px;
+}
+.sort select:focus {
+  outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent;
+}
+
+.ref-group { margin-bottom: 44px; scroll-margin-top: 128px; }
+.ref-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 10px;
+}
+
+.ref-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 14px 16px;
+  transition: border-color .15s ease;
+}
+.ref-item:hover { border-color: var(--line-strong); }
+
+.ref-side {
+  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+  min-width: 118px; flex-wrap: wrap;
+}
+.ref-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--line); object-fit: cover; background: var(--surface-2);
+}
+
+.kind {
+  font: 400 11.5px/1 var(--sans); padding: 5px 8px; border-radius: 999px;
+  white-space: nowrap;
+}
+.kind-classic { color: var(--accent); background: var(--accent-soft); }
+.kind-further { color: var(--muted); background: var(--surface-2); }
+.kind-en {
+  display: none; font: 400 11px/1 var(--sans); color: var(--faint);
+}
+.ref-side:hover .kind-en { display: inline; }
+
+.ref-main { flex: 1; min-width: 0; }
+.ref-title { margin: 0; font-size: 15.5px; line-height: 1.65; }
+.ref-meta {
+  font: 400 13.5px/1.6 var(--sans); color: var(--muted); margin-right: 6px;
+}
+.ref-meta .year { font-variant-numeric: tabular-nums; color: var(--text); }
+.warn {
+  font: 400 11.5px/1 var(--sans); color: var(--faint);
+  border: 1px dashed var(--line-strong); border-radius: 999px; padding: 4px 8px;
+}
+
+.ref-foot {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin: 6px 0 0; font: 400 12.5px/1.4 var(--sans); color: var(--faint);
+}
+.channel { color: var(--accent); }
+.access-kind::before { content: "· "; }
+
+/* 跨章共引标记：同一著作在多章出现，拼阅读清单时可据此去重 */
+.dup {
+  font: 400 11.5px/1 var(--sans); padding: 4px 8px; border-radius: 999px;
+  color: var(--text); background: var(--surface-2); border: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+/* 单条引注复制：APA / MLA */
+.cite { display: inline-flex; gap: 6px; margin-left: auto; }
+.cite button {
+  font: 400 11.5px/1 var(--sans); padding: 4px 8px; border-radius: 6px;
+  color: var(--muted); background: transparent; border: 1px solid var(--line);
+  cursor: pointer; transition: color .15s ease, border-color .15s ease;
+}
+.cite button:hover { color: var(--accent); border-color: var(--line-strong); }
+
+/* 长尾渠道的展开开关：与筛选 chip 同排，虚线边框区别于可筛选项 */
+.tail-toggle {
+  font: 400 12px/1 var(--sans); padding: 5px 10px; border-radius: 999px;
+  color: var(--muted); background: var(--surface-2);
+  border: 1px dashed var(--line-strong); cursor: pointer;
+}
+.tail-toggle:hover { color: var(--accent); }
+
+/* 文献库的章分组头复用 .unit-head，其内 h2 略小 */
+.ref-group .unit-head h2 { font-size: clamp(17px, 2vw, 20px); }
+
+/* ---------- 周报（weekly.html） ---------- */
+
+/* 人工标记用的琥珀色。与 --ok 一样成对出现：文字色 + 极浅底色，
+   两套主题各给一份，避免深色下浅底刺眼。 */
+:root {
+  --warn: #8a5a00;
+  --warn-soft: #fbf0d9;
+}
+html[data-theme="dark"] {
+  --warn: #e8bd72;
+  --warn-soft: #33280f;
+}
+
+.week-line {
+  margin: 10px 0 0; font: 400 14px/1.6 var(--sans); color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.wk-overview {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px 26px; margin: 0 0 40px;
+}
+.wk-overview[hidden] { display: none; }
+/* 三个视图各一段摘要，段落样式完全一致，只有标题不同。 */
+.wk-overview h2 {
+  margin: 0 0 12px; font: 700 13px/1 var(--sans);
+  letter-spacing: .08em; color: var(--faint);
+}
+.wk-overview p {
+  margin: 0 0 15px; font-size: 15.5px; line-height: 1.9; color: var(--text);
+}
+.wk-overview p:last-child { margin-bottom: 0; }
+/* 主体与系列摘要一段一个对象：名字当段首标签，正文接着讲事实。 */
+.wk-digest-name {
+  font-weight: 700; color: var(--text); margin-right: .55em;
+}
+.wk-overview-toggle { margin: 0 0 28px; }
+
+.topic { margin-bottom: 46px; scroll-margin-top: 132px; }
+.topic[hidden] { display: none; }
+.topic-head {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--line); padding-bottom: 9px; margin-bottom: 4px;
+}
+.topic-head h2 { margin: 0; font-size: clamp(18px, 2.2vw, 21px); }
+.topic-count {
+  font: 400 12px/1 var(--sans); color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.type-head {
+  font: 500 12.5px/1.4 var(--sans); color: var(--muted);
+  letter-spacing: .04em; margin: 24px 0 10px;
+}
+.type-head[hidden] { display: none; }
+.type-head .num {
+  color: var(--faint); font-variant-numeric: tabular-nums; margin-left: 6px;
+}
+
+/* grid 的隐式列默认按 min-content 撑开：标题里一个长串（拉丁专名、连写的
+   型号）就能把整列顶出屏幕。minmax(0, 1fr) 把轨道锁在容器宽度内，长串交给
+   下面的 overflow-wrap 断行。 */
+.wk-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px;
+}
+
+.wk {
+  position: relative; display: grid; gap: 7px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 14px 16px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.wk:hover { border-color: var(--line-strong); }
+.wk[hidden] { display: none; }
+/* 只有人工改判为 Tech 的条目挂左侧竖条：Law 是默认值，278 条全挂等于没挂 */
+.wk[data-mark="tech"] { border-left: 3px solid var(--warn); }
+
+.wk-top { display: flex; align-items: flex-start; gap: 12px; }
+.wk-when {
+  flex-shrink: 0; min-width: 76px; padding-top: 3px;
+  font: 400 12px/1.5 var(--sans); color: var(--faint);
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.wk-title {
+  margin: 0; flex: 1; min-width: 0;
+  font-size: 15.5px; line-height: 1.62; font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Law / Tech：两个标签并列，默认落在 Law 上，没有第三种状态。
+   Law 是默认值，只用强调色标出、不填底——不然每条都挂一个色块，页面就花了；
+   Tech 是人工作出的判断，填实、加底，卡片另挂琥珀竖条，翻到底也认得出。 */
+.wk-mark {
+  display: inline-flex; flex-shrink: 0; overflow: hidden;
+  border: 1px solid var(--line-strong); border-radius: 999px;
+  background: var(--surface-2); padding: 2px; gap: 2px;
+}
+.wk-mark button {
+  font: 700 11.5px/1 var(--sans); letter-spacing: .02em;
+  padding: 5px 10px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--faint); cursor: pointer;
+  transition: color .15s ease, background .15s ease;
+}
+.wk-mark button:hover { color: var(--text); }
+.wk-mark button:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 1px;
+}
+.wk[data-mark="law"] .wk-mark button[data-label="law"] { color: var(--accent); }
+.wk[data-mark="tech"] .wk-mark button[data-label="tech"] {
+  color: var(--warn); background: var(--warn-soft);
+}
+
+.wk-stages {
+  list-style: none; margin: 0; padding: 0 0 0 88px;
+  display: grid; gap: 4px;
+}
+.wk-stage {
+  font: 400 13.5px/1.7 var(--sans); color: var(--muted);
+}
+.wk-stage .d {
+  color: var(--faint); font-variant-numeric: tabular-nums; margin-right: 6px;
+}
+.wk-stage .s { color: var(--text); margin-right: 6px; }
+.wk-carried {
+  font: 400 12.5px/1.7 var(--sans); color: var(--faint);
+  padding: 0 0 0 88px; margin: 0;
+}
+.wk-fact {
+  margin: 0; padding: 0 0 0 88px;
+  font-size: 14.5px; line-height: 1.8; color: var(--muted);
+}
+.wk-foot {
+  margin: 2px 0 0; padding: 0 0 0 88px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  font: 400 12.5px/1.5 var(--sans); color: var(--faint);
+}
+.wk-src { color: var(--muted); }
+.wk-foot a { color: var(--faint); }
+.wk-foot a:hover { color: var(--accent); }
+
+/* 标记提示：只说这次改标了几条。导出与清空都不在页面上了，工具栏只剩搜索与主题 */
+.mark-note {
+  font: 400 12.5px/1.7 var(--sans); color: var(--muted);
+  background: var(--surface-2); border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-sm); padding: 12px 14px; margin: 0 0 32px;
+}
+.mark-note strong { color: var(--text); font-weight: 600; }
+.mark-note[hidden] { display: none; }
+/* 交回入口做成行内的下划线链接，不做按钮：它是标记动作的收尾，
+   不是第二套面板。 */
+.mark-note a.submit {
+  margin-left: 4px; font-weight: 700; color: var(--accent);
+  text-decoration: none; border-bottom: 1px solid currentColor;
+  cursor: pointer;
+}
+.mark-note a.submit:hover { color: var(--text); border-bottom-color: var(--text); }
+.mark-note a.submit:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.mark-note code {
+  font: 400 11.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 1px 4px; border-radius: 4px; background: var(--surface-2);
+}
+.mark-note .warn { color: var(--warn); }
+
+/* ---------- 按主体看：视图切换、主体卡、初审徽标 ---------- */
+
+/* 两个视图的按钮，跟 stats 排在一处。不做成 chip——chip 是筛选，这里是换看法 */
+.view-switch {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin: 14px 0 0;
+}
+.view-switch .label {
+  font: 400 12px/1 var(--sans); color: var(--faint); letter-spacing: .04em;
+  margin-right: 2px;
+}
+.view-switch button {
+  font: 500 12px/1 var(--sans); padding: 6px 12px; border-radius: 999px;
+  color: var(--muted); background: transparent; border: 1px solid var(--line);
+  cursor: pointer; transition: color .15s ease, border-color .15s ease;
+}
+.view-switch button:hover { color: var(--text); border-color: var(--line-strong); }
+.view-switch button[aria-pressed="true"] {
+  color: var(--accent); border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.view-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* 按主体看时收起主题摘要：主题摘要按制度主题串，和「一家公司这一周走到哪一步」
+   不是一套读法；留着它，主体卡要滚过五段才露头。主体摘要与系列摘要各自留着。 */
+body[data-view="subject"] #overview { display: none; }
+/* 按系列看同理：系列自己的摘要替代主题摘要 */
+body[data-view="series"] #overview { display: none; }
+
+.subject .topic-head { margin-bottom: 2px; }
+/* 从主题视图点徽标跳过来时，闪一下边，让人知道落在哪 */
+.subject[data-flash="1"] .topic-head { animation: wk-flash 1.5s ease-out; }
+@keyframes wk-flash {
+  0% { background: var(--accent-soft); }
+  100% { background: transparent; }
+}
+
+/* 初审徽标：挂在条目正文与标题之间。疑重复可点（跳到主体视图对照），
+   待复核与连锁只提示——它们没有可以带人去的落点。 */
+.wk-tags { display: flex; gap: 6px; flex-wrap: wrap; padding-left: 88px; }
+.wk-tag {
+  font: 500 11px/1 var(--sans); letter-spacing: .02em;
+  padding: 4px 8px; border-radius: 999px;
+  color: var(--faint); background: var(--surface-2);
+  border: 1px solid var(--line); white-space: nowrap;
+}
+button.wk-tag { cursor: pointer; }
+button.wk-tag:hover { color: var(--text); border-color: var(--line-strong); }
+button.wk-tag:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wk-tag[data-kind="dup"] { color: var(--warn); border-color: var(--warn); }
+.wk-tag[data-kind="chain"] { color: var(--accent); border-color: var(--accent); }
+
+/* 关系判定：判定针对「这一组条目」，不落在某一条上，所以按钮跟着徽标排在同一行。
+   虚线边框表示还能改，点过之后变实线并写「已判…」，右边留一个撤销。 */
+.wk-rel { display: inline-flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.wk-verdict {
+  font: 600 11px/1 var(--sans); padding: 4px 9px; border-radius: 999px;
+  color: var(--muted); background: transparent; border: 1px dashed var(--line-strong);
+  cursor: pointer; white-space: nowrap;
+}
+.wk-verdict:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.wk-verdict:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wk-verdict.done {
+  border-style: solid; border-color: var(--accent); color: var(--accent);
+  background: var(--accent-soft); cursor: default;
+}
+.wk-verdict.undo { border-style: solid; border-color: var(--line); color: var(--faint); }
+
+/* ---------- 按系列看：一条系列一张卡，卡内是时间轴 ---------- */
+
+.series-evidence {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin: 8px 0 16px; font: 400 12px/1.7 var(--sans); color: var(--muted);
+}
+.wk-series {
+  list-style: none; margin: 0; padding: 0 0 0 22px; position: relative;
+}
+/* 竖线从第一个节点连到最后一个：不连到卡底，避免尾巴悬空 */
+.wk-series::before {
+  content: ''; position: absolute; left: 5px; top: 22px; bottom: 22px;
+  width: 1px; background: var(--line-strong);
+}
+.series-node { position: relative; padding-bottom: 12px; }
+.series-node:last-child { padding-bottom: 0; }
+.series-node::before {
+  content: ''; position: absolute; left: -21px; top: 22px; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 0 3px var(--surface);
+}
+.series-extra {
+  margin: 6px 0 0; font: 400 11.5px/1.6 var(--sans); color: var(--faint);
+}
+
+/* 交回视图：从 issue 里的链接打开时，被改标的条目描一圈，方便逐条核对 */
+.wk[data-imported="1"] { box-shadow: 0 0 0 2px var(--accent-soft), 0 0 0 3px var(--accent); }
+.wk-mark button:disabled { cursor: default; opacity: 1; }
+
+@media (max-width: 720px) {
+  /* 窄屏上 Law/Tech 两个标签会把标题挤成四五行——宁可让标签另起一行，
+     也别把标题压成竖排的字块 */
+  .wk-top { flex-wrap: wrap; }
+  .wk-when { order: 1; min-width: 0; padding-top: 0; }
+  .wk-title { order: 2; flex: 1 1 100%; }
+  .wk-mark { order: 3; }
+  .wk-stages, .wk-fact, .wk-foot, .wk-carried, .wk-tags { padding-left: 0; }
+  .wk-overview { padding: 18px; }
+}
+
+/* ---------- 页脚 ---------- */
+
+.site-foot {
+  border-top: 1px solid var(--line); padding: 32px 0 48px;
+  background: var(--surface-2);
+}
+.site-foot p { margin: 0 0 10px; font: 400 13px/1.75 var(--sans); color: var(--muted); }
+.site-foot .rights { margin-bottom: 0; color: var(--faint); max-width: 78ch; }
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 720px) {
+  .wrap { width: min(1120px, 100% - 32px); }
+  .site-head { padding: 36px 0 24px; }
+  .actions { margin-left: 0; }
+  .unit-en { margin-left: 0; flex-basis: 100%; }
+  .cards { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+@media print {
+  .toolbar, .skip, .cite { display: none; }
+  .card { break-inside: avoid; }
+  .ref-item { break-inside: avoid; }
+}
+
+@media (max-width: 720px) {
+  .ref-item { flex-direction: column; gap: 8px; }
+  .ref-side { min-width: 0; }
+}
