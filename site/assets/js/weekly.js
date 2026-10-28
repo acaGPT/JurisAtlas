@@ -509,39 +509,72 @@
   }
 
   /* 主体视图：把同一主体的条目从各主题里收回来，卡内仍按制度主题分块、块内按
-     日期排——那就是这家公司这一周的线索。同主体初审的结论挂在卡头。 */
-  function subjectNote(group) {
+     日期排——那就是这家公司这一周的线索。 */
+
+  /* 本周主体分布的概括：只讲这一周的事实——多少条落到多少主体、集中在谁身上、
+     多少个主体横跨多个主题。不写机器怎么判、候选怎么来、下次周更读什么：那是
+     工序，读者的页面不欠这一段。 */
+  function subjectOverview(review, groups) {
+    var checked = review.items_checked || 0;
+    var total = review.subjects || groups.length;
+    var multi = review.subjects_multi || 0;
+    var unassigned = review.unassigned || 0;
+    var text = checked + ' 条信息落到 ' + total + ' 个主体，其中 ' + multi +
+      ' 个出现在两条以上' +
+      (unassigned ? '；另有 ' + unassigned + ' 条没有归到具体主体' : '') + '。';
+    var top = groups.slice(0, 3);
+    if (top.length) {
+      text += '最集中的是 ' + top.map(function (group) {
+        return group.name + ' ' + group.count + ' 条（跨 ' +
+          (group.topics || []).length + ' 个主题）';
+      }).join('、') + '。';
+      if (checked) {
+        var sum = top.reduce(function (n, group) { return n + group.count; }, 0);
+        text += (top.length === 3 ? '这三家' : '前 ' + top.length + ' 家') +
+          '合计 ' + sum + ' 条，占全部信息的 ' + Math.round(sum / checked * 100) + '%。';
+      }
+    }
+    var spread = groups.filter(function (group) {
+      return (group.topics || []).length >= 3;
+    }).length;
+    if (spread) {
+      text += '有 ' + spread + ' 个主体横跨三个以上主题。';
+    }
+    return text;
+  }
+
+  /* 系列视图的引言同理：几条系列、几条是本周走了多步的事、几条是跨主题串起来的
+     线索。判定按钮自己会说话，不需要在旁边解释「机器只出候选」。 */
+  function seriesIntro(counts) {
+    var total = counts.series || 0;
+    var event = counts.event || 0;
+    var progression = counts.progression || 0;
     var bits = [];
-    if (group.duplicates && group.duplicates.length) {
-      bits.push('疑重复 ' + group.duplicates.length + ' 组');
+    if (event) {
+      bits.push(event + ' 条是同一件事在本周内走过多个阶段');
     }
-    if (group.suspects && group.suspects.length) {
-      bits.push('待复核 ' + group.suspects.length + ' 簇');
+    if (progression) {
+      bits.push(progression + ' 条是几条报道串起来的一条线索，散在不同主题里');
     }
-    if (group.chains && group.chains.length) {
-      bits.push('连锁 ' + group.chains.length + ' 条');
+    if (!bits.length) {
+      return total + ' 条系列，按时间先后排开。';
     }
-    return bits.length ? '机器初审：' + bits.join(' · ') : '';
+    return total + ' 条系列：' + bits.join('；') + '。';
   }
 
   function renderSubjects() {
     var groups = ((audit && audit.subjects) || []).filter(function (group) {
       return group.count > 1;
-    });
+    }).sort(function (a, b) { return b.count - a.count; });
     if (!groups.length) {
       el.topics.innerHTML = '<p class="empty">本周没有识别出可归拢的主体，' +
         '请按主题浏览。</p>';
       return;
     }
     var review = (audit && audit.review) || {};
-    var head = '<div class="audit-head">' +
-      '<h2>同主体初审</h2>' +
-      '<p>' + esc(review.items_checked || 0) + ' 条里认出 ' + esc(review.subjects || 0) +
-      ' 个主体（2 条以上 ' + esc(review.subjects_multi || 0) + ' 个）· 疑重复 ' +
-      esc(review.duplicate_groups || 0) + ' 组（' + esc(review.duplicate_items || 0) +
-      ' 条）· 待复核 ' + esc(review.suspects || 0) + ' 簇 · 跨主题连锁 ' +
-      esc(review.chains || 0) + ' 条。徽标右侧的「是 / 不是」是给人定的：点一下即记录，' +
-      '下次周更读入修正判据。</p></div>';
+    var head = '<div class="view-intro">' +
+      '<h2>本周主体分布</h2>' +
+      '<p>' + esc(subjectOverview(review, groups)) + '</p></div>';
 
     el.topics.innerHTML = head + groups.map(function (group) {
       var order = [];
@@ -559,12 +592,10 @@
             return item ? itemHtml({ topic: row.topic, group: row.group, item: item }) : '';
           }).join('') + '</ul>';
       }).join('');
-      var note = subjectNote(group);
       return '<section class="topic subject" data-chip="' + esc(group.key) + '">' +
         '<div class="topic-head"><h2>' + esc(group.name) + '</h2>' +
         '<span class="topic-count">' + group.count + ' 条 · 跨 ' +
         group.topics.length + ' 个主题</span></div>' +
-        (note ? '<p class="subject-note">' + esc(note) + '</p>' : '') +
         body + '</section>';
     }).join('');
   }
@@ -579,11 +610,8 @@
       return;
     }
     var counts = series.counts || {};
-    var head = '<div class="audit-head"><h2>本周系列</h2><p>' +
-      esc(counts.series || 0) + ' 条系列：跨条目进展链 ' + esc(counts.progression || 0) +
-      ' 条（共用一个稀有短语、各自带制度动作、日期不同），本周多阶段事件 ' +
-      esc(counts.event || 0) + ' 条（条目内自带时间线）。机器只出候选，' +
-      '卡头右侧的「是 / 不是」由人确认。</p></div>';
+    var head = '<div class="view-intro"><h2>本周系列</h2><p>' +
+      esc(seriesIntro(counts)) + '</p></div>';
 
     el.topics.innerHTML = head + list.map(function (entry) {
       var target = 'series:' + entry.id;
@@ -599,7 +627,8 @@
           var item = rawItems[node.ids[0]];
           if (!item) { return ''; }
           var extra = node.count > 1
-            ? '<p class="series-extra">另有 ' + (node.count - 1) + ' 条同义报道，已并入这个节点</p>'
+            ? '<p class="series-extra">另有 ' + (node.count - 1) +
+              ' 条报道讲的是同一件事</p>'
             : '';
           return '<li class="series-node"><ul class="wk-list">' +
             itemHtml({ topic: '', group: '', item: item, bare: true }) + '</ul>' +
@@ -608,9 +637,11 @@
       }
       return '<section class="topic series" data-chip="' + esc(entry.id) + '">' +
         '<div class="topic-head"><h2>' + esc(entry.name) + '</h2>' +
-        '<span class="topic-count">' + esc(entry.kind === 'event' ? '本周多阶段' : '进展链') +
-        ' · ' + (entry.nodes || []).length + ' 个节点</span></div>' +
-        '<p class="series-evidence">' + esc(entry.evidence) +
+        '<span class="topic-count">' +
+        (entry.kind === 'event' ? '本周 ' : '跨主题 ') +
+        (entry.nodes || []).length + ' 步</span></div>' +
+        '<p class="series-evidence">' +
+        (entry.evidence ? esc(entry.evidence) + ' ' : '') +
         '<span class="wk-rel" data-target="' + esc(target) + '">' +
         verdictButtons(target, '是同一系列', '已判同一系列') + '</span></p>' +
         body + '</section>';

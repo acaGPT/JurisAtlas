@@ -52,6 +52,9 @@ const AUDIT = readJson('weekly-subjects.json');
 const SERIES = readJson('weekly-series.json');
 
 const SUBJ = {
+  total: AUDIT ? AUDIT.review.subjects : 0,
+  top: AUDIT ? (AUDIT.subjects.slice()
+    .sort((a, b) => b.count - a.count)[0] || {}) : {},
   multi: AUDIT ? AUDIT.subjects.filter(s => s.count > 1).length : 0,
   items: AUDIT ? AUDIT.subjects.filter(s => s.count > 1)
     .reduce((sum, s) => sum + s.count, 0) : 0,
@@ -316,9 +319,14 @@ function check(name, actual, expected) {
     await page.locator('.subject .wk').count(), SUBJ.items);
   check('主体卡内按主题分块',
     (await page.locator('.subject').first().locator('.type-head').count()) > 1);
-  check('初审说明在主体视图顶部', await page.locator('.audit-head').count(), 1);
-  check('初审统计与数据层一致',
-    (await page.locator('.audit-head').innerText()).includes(`${SUBJ.dupItems} 条`));
+  /* 视图引言讲的是本周的事实分布，不是机器怎么判。工序词一律不许上页面：
+     这条断言是给下一次改文案留的绊马索——「同主体初审」那种写法已经复发过。 */
+  check('主体分布在主体视图顶部', await page.locator('.view-intro').count(), 1);
+  const subjectIntro = await page.locator('.view-intro').innerText();
+  check('主体分布给出主体数', subjectIntro.includes(`${SUBJ.total} 个主体`));
+  check('主体分布点出最集中的主体', subjectIntro.includes(SUBJ.top.name));
+  check('主体分布不含工序词',
+    !/初审|机器|判据|候选|口径|去重|复核|台账/.test(subjectIntro));
   check('主体名出现在卡头',
     (await page.locator('.subject .topic-head h2').allInnerTexts()).includes('Anthropic'));
 
@@ -373,10 +381,13 @@ function check(name, actual, expected) {
   await page.locator('#view-switch button[data-view="series"]').click();
   await page.waitForTimeout(320);
   check('系列数与数据层一致', await page.locator('section.series').count(), SER.count);
-  check('进展链数写入页面',
-    (await page.locator('.audit-head').innerText()).includes(`进展链 ${SER.progression}`));
-  check('本周多阶段数写入页面',
-    (await page.locator('.audit-head').innerText()).includes(`多阶段事件 ${SER.event}`));
+  const seriesIntroText = await page.locator('.view-intro').innerText();
+  check('系列条数写入页面', seriesIntroText.includes(`${SER.count} 条系列`));
+  check('多阶段条数写入页面', seriesIntroText.includes(`${SER.event} 条是同一件事`));
+  check('进展链条数写入页面',
+    seriesIntroText.includes(`${SER.progression} 条是几条报道`));
+  check('系列引言不含工序词',
+    !/初审|机器|判据|候选|口径|去重|复核|台账/.test(seriesIntroText));
   check('系列名出现在卡头',
     (await page.locator('section.series .topic-head h2').allInnerTexts())
       .some(name => SER.names.includes(name)));

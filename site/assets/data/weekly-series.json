@@ -18,7 +18,6 @@
    "name": "OpenAI · 替代与裁员",
    "kind": "event",
    "confidence": 1.0,
-   "evidence": "条目自带 3 个阶段（进展、进展、进展）",
    "ids": [
     "637d3683cc"
    ],
@@ -60,7 +59,6 @@
    "name": "OpenAI · 融资与估值",
    "kind": "event",
    "confidence": 1.0,
-   "evidence": "条目自带 3 个阶段（定价、定价、定价）",
    "ids": [
     "4c19024337"
    ],
@@ -102,7 +100,6 @@
    "name": "Alfozan 案",
    "kind": "event",
    "confidence": 1.0,
-   "evidence": "条目自带 2 个阶段（强制措施、裁决）",
    "ids": [
     "bd8b0452db"
    ],
@@ -136,7 +133,6 @@
    "name": "DeepSeek · 其他执法事项",
    "kind": "event",
    "confidence": 1.0,
-   "evidence": "条目自带 2 个阶段（进展、进展）",
    "ids": [
     "dd51bf42f9"
    ],
@@ -170,7 +166,6 @@
    "name": "DeepSeek · 禁用与移除",
    "kind": "event",
    "confidence": 1.0,
-   "evidence": "条目自带 2 个阶段（报道、报道）",
    "ids": [
     "deaca4f5dc"
    ],
@@ -204,7 +199,6 @@
    "name": "Microduck · 观点与转述",
    "kind": "event",
    "confidence": 1.0,
-   "evidence": "条目自带 2 个阶段（进展、进展）",
    "ids": [
     "49766244c2"
    ],
@@ -238,7 +232,7 @@
    "name": "商务部 · 技术出口",
    "kind": "progression",
    "confidence": 0.72,
-   "evidence": "共享「技术出口」（2 条直接命中）；2 个进展节点",
+   "evidence": "围绕「技术出口」，2 个时间点依次推进",
    "ids": [
     "422aa71f0a",
     "e3c7b89e60"

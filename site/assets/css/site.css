@@ -525,19 +525,15 @@ body[data-view="subject"] .wk-overview { display: none; }
 /* 按系列看同理：系列本身就是一条叙事，前面再放五段概览只会把时间轴推下去 */
 body[data-view="series"] .wk-overview { display: none; }
 
-.audit-head {
-  border: 1px dashed var(--line-strong); border-radius: var(--radius);
-  padding: 18px 20px; margin: 0 0 34px; background: var(--surface-2);
-}
-.audit-head h2 { margin: 0 0 8px; font-size: 15px; letter-spacing: .04em; }
-.audit-head p {
-  margin: 0; font: 400 12.5px/1.8 var(--sans); color: var(--muted);
+/* 视图引言：一段事实概括。不加边框、不填底色——虚线框会被读成机器说明，
+   而这里要说的是本周的主体分布与系列形态。 */
+.view-intro { margin: 0 0 34px; max-width: 68ch; }
+.view-intro h2 { margin: 0 0 8px; font-size: 15px; letter-spacing: .04em; }
+.view-intro p {
+  margin: 0; font: 400 13px/1.85 var(--sans); color: var(--muted);
 }
 
 .subject .topic-head { margin-bottom: 2px; }
-.subject-note {
-  margin: 8px 0 0; font: 400 12px/1.6 var(--sans); color: var(--warn);
-}
 /* 从主题视图点徽标跳过来时，闪一下边，让人知道落在哪 */
 .subject[data-flash="1"] .topic-head { animation: wk-flash 1.5s ease-out; }
 @keyframes wk-flash {

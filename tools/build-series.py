@@ -208,13 +208,13 @@ def collect(data_path: Path, subjects_path: Path) -> dict:
         if record["kind"] != "event" or len(stages) < 2:
             continue
         subject = audit.primary_subject(record)
+        # 不写证据行：卡头已经给了步数、卡内时间轴逐条列了进展，再加一句
+        # 「本周 N 次进展」是重复，写「条目自带 N 个阶段」则是把数据形状当内容。
         entries.append({
             "id": series_id("event:" + record["title"]),
             "name": record["title"],
             "kind": "event",
             "confidence": 1.0,
-            "evidence": "条目自带 " + str(len(stages)) + " 个阶段（" +
-                        "、".join(stage.get("stage") or "" for stage in stages).strip("、") + "）",
             "ids": [record["id"]],
             "topics": [record["topic"]],
             "subjects": [subject] if subject else [],
@@ -239,8 +239,9 @@ def collect(data_path: Path, subjects_path: Path) -> dict:
             "name": name,
             "kind": "progression",
             "confidence": 0.72,
-            "evidence": "共享「" + cluster["phrase"] + "」（" + str(cluster["covered"]) +
-                        " 条直接命中）；" + str(len(nodes)) + " 个进展节点",
+            # 同上：不说「共享短语、几条直接命中」，说这条线索围绕什么、走了几步。
+            "evidence": "围绕「" + cluster["phrase"] + "」，" + str(len(nodes)) +
+                        " 个时间点依次推进",
             "ids": ids,
             "topics": sorted({by_id[item_id]["topic"] for item_id in ids}),
             "subjects": subjects,
@@ -270,7 +271,8 @@ def report(series: dict) -> None:
           f"本周多阶段 {counts['event']}），涉及 {counts['items']} 条信息")
     for entry in series["series"]:
         print(f"  [{entry['kind'][:4]}] {entry['name']}（{len(entry['ids'])} 条）")
-        print(f"      {entry['evidence']}")
+        if entry.get("evidence"):
+            print(f"      {entry['evidence']}")
         for node in entry["nodes"]:
             print(f"        {node['date']}  {node['title'][:52]}")
 
