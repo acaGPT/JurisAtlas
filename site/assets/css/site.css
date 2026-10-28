@@ -365,6 +365,11 @@ html[data-theme="dark"] {
   border-radius: var(--radius); padding: 22px 26px; margin: 0 0 40px;
 }
 .wk-overview[hidden] { display: none; }
+/* 三个视图各一段摘要，段落样式完全一致，只有标题不同。 */
+.wk-overview h2 {
+  margin: 0 0 12px; font: 700 13px/1 var(--sans);
+  letter-spacing: .08em; color: var(--faint);
+}
 .wk-overview p {
   margin: 0 0 15px; font-size: 15.5px; line-height: 1.9; color: var(--text);
 }
@@ -519,19 +524,11 @@ html[data-theme="dark"] {
 }
 .view-switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* 按主体看时收起本周概览：概览是按制度主题串的一条叙事，和「一家公司这一周
-   走到哪一步」不是一套读法；留着它，主体卡要滚过五段才露头。 */
-body[data-view="subject"] .wk-overview { display: none; }
-/* 按系列看同理：系列本身就是一条叙事，前面再放五段概览只会把时间轴推下去 */
-body[data-view="series"] .wk-overview { display: none; }
-
-/* 视图引言：一段事实概括。不加边框、不填底色——虚线框会被读成机器说明，
-   而这里要说的是本周的主体分布与系列形态。 */
-.view-intro { margin: 0 0 34px; max-width: 68ch; }
-.view-intro h2 { margin: 0 0 8px; font-size: 15px; letter-spacing: .04em; }
-.view-intro p {
-  margin: 0; font: 400 13px/1.85 var(--sans); color: var(--muted);
-}
+/* 按主体看时收起主题摘要：主题摘要按制度主题串，和「一家公司这一周走到哪一步」
+   不是一套读法；留着它，主体卡要滚过五段才露头。主体摘要与系列摘要各自留着。 */
+body[data-view="subject"] #overview { display: none; }
+/* 按系列看同理：系列自己的摘要替代主题摘要 */
+body[data-view="series"] #overview { display: none; }
 
 .subject .topic-head { margin-bottom: 2px; }
 /* 从主题视图点徽标跳过来时，闪一下边，让人知道落在哪 */

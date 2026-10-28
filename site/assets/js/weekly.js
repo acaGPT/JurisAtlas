@@ -52,6 +52,8 @@
   var meta = null;
   var audit = null;
   var series = null;
+  /* 主体与系列两段摘要：与主题概览同形态，由写作者给，不带统计。 */
+  var digest = null;
   var timer = null;
   var layoutTimer = null;
   /* id -> {title, topic, group, date}：交回时要把 id 还原成人能读的标题 */
@@ -391,9 +393,15 @@
       stat(countMarks().total, '条标为 Tech')
     ].join('');
 
-    el.overview.innerHTML = (data.overview || [])
-      .map(function (para) { return '<p>' + esc(para) + '</p>'; })
-      .join('');
+    var paras = (data.overview || []).filter(function (para) {
+      return para && para.trim();
+    });
+    el.overview.innerHTML = paras.length
+      ? '<h2>本周主题摘要</h2>' + paras.map(function (para) {
+        return '<p>' + esc(para) + '</p>';
+      }).join('')
+      : '';
+    el.overview.hidden = !paras.length;
 
     if (data.source_url) { el.wikiLink.href = data.source_url; }
   }
@@ -511,55 +519,22 @@
   /* 主体视图：把同一主体的条目从各主题里收回来，卡内仍按制度主题分块、块内按
      日期排——那就是这家公司这一周的线索。 */
 
-  /* 本周主体分布的概括：只讲这一周的事实——多少条落到多少主体、集中在谁身上、
-     多少个主体横跨多个主题。不写机器怎么判、候选怎么来、下次周更读什么：那是
-     工序，读者的页面不欠这一段。 */
-  function subjectOverview(review, groups) {
-    var checked = review.items_checked || 0;
-    var total = review.subjects || groups.length;
-    var multi = review.subjects_multi || 0;
-    var unassigned = review.unassigned || 0;
-    var text = checked + ' 条信息落到 ' + total + ' 个主体，其中 ' + multi +
-      ' 个出现在两条以上' +
-      (unassigned ? '；另有 ' + unassigned + ' 条没有归到具体主体' : '') + '。';
-    var top = groups.slice(0, 3);
-    if (top.length) {
-      text += '最集中的是 ' + top.map(function (group) {
-        return group.name + ' ' + group.count + ' 条（跨 ' +
-          (group.topics || []).length + ' 个主题）';
-      }).join('、') + '。';
-      if (checked) {
-        var sum = top.reduce(function (n, group) { return n + group.count; }, 0);
-        text += (top.length === 3 ? '这三家' : '前 ' + top.length + ' 家') +
-          '合计 ' + sum + ' 条，占全部信息的 ' + Math.round(sum / checked * 100) + '%。';
-      }
-    }
-    var spread = groups.filter(function (group) {
-      return (group.topics || []).length >= 3;
-    }).length;
-    if (spread) {
-      text += '有 ' + spread + ' 个主体横跨三个以上主题。';
-    }
-    return text;
+  /* 三个视图各有一段摘要，形态一致：按主题读的是这一周发生的事，按主体读的是谁
+     在动，按系列读的是哪几件事走了多步。三段都由写作者给出——脚本拼出来的只能
+     是「305 条落到 28 个主体」这类关于数据的话，读者要知道的不是这个。 */
+  function digestOf(key) {
+    if (!digest || !data || digest.week !== data.week) { return []; }
+    var paras = digest[key];
+    return Array.isArray(paras) ? paras.filter(function (para) {
+      return para && para.trim();
+    }) : [];
   }
 
-  /* 系列视图的引言同理：几条系列、几条是本周走了多步的事、几条是跨主题串起来的
-     线索。判定按钮自己会说话，不需要在旁边解释「机器只出候选」。 */
-  function seriesIntro(counts) {
-    var total = counts.series || 0;
-    var event = counts.event || 0;
-    var progression = counts.progression || 0;
-    var bits = [];
-    if (event) {
-      bits.push(event + ' 条是同一件事在本周内走过多个阶段');
-    }
-    if (progression) {
-      bits.push(progression + ' 条是几条报道串起来的一条线索，散在不同主题里');
-    }
-    if (!bits.length) {
-      return total + ' 条系列，按时间先后排开。';
-    }
-    return total + ' 条系列：' + bits.join('；') + '。';
+  function digestHtml(title, paragraphs) {
+    if (!paragraphs.length) { return ''; }
+    return '<section class="wk-overview wk-digest"><h2>' + esc(title) + '</h2>' +
+      paragraphs.map(function (para) { return '<p>' + esc(para) + '</p>'; }).join('') +
+      '</section>';
   }
 
   function renderSubjects() {
@@ -571,10 +546,7 @@
         '请按主题浏览。</p>';
       return;
     }
-    var review = (audit && audit.review) || {};
-    var head = '<div class="view-intro">' +
-      '<h2>本周主体分布</h2>' +
-      '<p>' + esc(subjectOverview(review, groups)) + '</p></div>';
+    var head = digestHtml('本周主体摘要', digestOf('subject'));
 
     el.topics.innerHTML = head + groups.map(function (group) {
       var order = [];
@@ -609,9 +581,7 @@
         '请按主题或主体浏览。</p>';
       return;
     }
-    var counts = series.counts || {};
-    var head = '<div class="view-intro"><h2>本周系列</h2><p>' +
-      esc(seriesIntro(counts)) + '</p></div>';
+    var head = digestHtml('本周系列摘要', digestOf('series'));
 
     el.topics.innerHTML = head + list.map(function (entry) {
       var target = 'series:' + entry.id;
@@ -999,12 +969,16 @@
       }),
       fetchJson('weekly-meta.json'),
       fetchJson('weekly-subjects.json'),
-      fetchJson('weekly-series.json')
+      fetchJson('weekly-series.json'),
+      /* 两段人写的摘要。可能还没写，也可能还是上一周的——按周次核对，对不上就不显示，
+         宁可没有引言，也不拿数字凑一段。 */
+      fetchJson('weekly-digest.json')
     ]).then(function (results) {
       data = results[0];
       meta = results[1];
       audit = results[2];
       series = results[3];
+      digest = results[4];
       submitKey = SUBMIT_KEY_PREFIX + (data.week || 'latest');
       loadSubmitted();
       /* ?marks= 优先于本机记录：链接里带的是「这一批交回的条目」，
