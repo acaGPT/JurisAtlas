@@ -341,6 +341,20 @@ function check(name, actual, expected) {
     await page.locator('.wk-digest h2').innerText(), '本周主体摘要');
   check('主体摘要段落数与摘要文件一致',
     await page.locator('.wk-digest p').count(), digest('subject').length);
+  check('主体摘要每段挂着主体名',
+    await page.locator('.wk-digest-name').count(), digest('subject').length);
+  /* 一段一个主体，正文直接从事实说起：不许用「同一家公司同时在几个场域出现，
+     是这一周的主体线索」这类开场交代自己怎么组织材料。 */
+  const subjectLeads = await page.evaluate(() =>
+    Array.from(document.querySelectorAll('.wk-digest p')).map(p => {
+      const name = p.querySelector('.wk-digest-name');
+      let text = p.innerText.replace(/\s+/g, '');
+      if (name) { text = text.slice(name.innerText.replace(/\s+/g, '').length); }
+      return text.slice(0, 6);
+    }));
+  check('主体摘要不从引导句开始',
+    subjectLeads.every(t => !/^(同一家|这一周|本周|这几|其中|另外|其余|其他)/.test(t)),
+    true);
   const subjectIntro = await page.locator('.wk-digest').innerText();
   check('主体摘要提到多家主体',
     ['OpenAI', 'Anthropic'].every(name => subjectIntro.includes(name)));
@@ -406,9 +420,24 @@ function check(name, actual, expected) {
     await page.locator('.wk-digest h2').innerText(), '本周系列摘要');
   check('系列摘要段落数与摘要文件一致',
     await page.locator('.wk-digest p').count(), digest('series').length);
+  check('系列摘要每段挂着系列名',
+    await page.locator('.wk-digest-name').count(), digest('series').length);
+  const seriesLeads = await page.evaluate(() =>
+    Array.from(document.querySelectorAll('.wk-digest p')).map(p => {
+      const name = p.querySelector('.wk-digest-name');
+      let text = p.innerText.replace(/\s+/g, '');
+      if (name) { text = text.slice(name.innerText.replace(/\s+/g, '').length); }
+      return text.slice(0, 6);
+    }));
+  check('系列摘要不从引导句开始',
+    seriesLeads.every(t => !/^(同一家|这一周|本周|这几|其中|另外|其余|其他)/.test(t)),
+    true);
   const seriesIntroText = await page.locator('.wk-digest').innerText();
-  check('系列摘要提到多步事件',
-    /两步|三步|两次/.test(seriesIntroText));
+  /* 一段一条系列，写清从哪一步走到哪一步：每段至少两个日期节点（后一个常写作
+     「22 日」，所以只认「日」不认完整的「月日」）。 */
+  check('系列摘要按日期写清每一步',
+    (await page.locator('.wk-digest p').allInnerTexts())
+      .every(text => (text.match(/\d+\s*月\s*\d+\s*日|\d+\s*日/g) || []).length >= 2), true);
   check('系列摘要不含工序词',
     !/初审|机器|判据|候选|口径|去重|复核|台账/.test(seriesIntroText));
   check('系列摘要不再逐项报数',

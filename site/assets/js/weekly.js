@@ -521,19 +521,28 @@
 
   /* 三个视图各有一段摘要，形态一致：按主题读的是这一周发生的事，按主体读的是谁
      在动，按系列读的是哪几件事走了多步。三段都由写作者给出——脚本拼出来的只能
-     是「305 条落到 28 个主体」这类关于数据的话，读者要知道的不是这个。 */
+     是「305 条落到 28 个主体」这类关于数据的话，读者要知道的不是这个。
+
+     主体与系列两段一段一个对象：{name, text}。名字挂在段首当标签，正文直接讲
+     事实，不要「同一家公司同时在几个场域出现，是这一周的主体线索」这种开场——
+     那是写的人在交代自己怎么组织材料，读者不欠这一段。 */
   function digestOf(key) {
     if (!digest || !data || digest.week !== data.week) { return []; }
-    var paras = digest[key];
-    return Array.isArray(paras) ? paras.filter(function (para) {
-      return para && para.trim();
-    }) : [];
+    var rows = digest[key];
+    if (!Array.isArray(rows)) { return []; }
+    return rows.map(function (row) {
+      if (typeof row === 'string') { return { name: '', text: row }; }
+      return { name: (row && row.name) || '', text: (row && row.text) || '' };
+    }).filter(function (row) { return row.text.trim(); });
   }
 
-  function digestHtml(title, paragraphs) {
-    if (!paragraphs.length) { return ''; }
+  function digestHtml(title, rows) {
+    if (!rows.length) { return ''; }
     return '<section class="wk-overview wk-digest"><h2>' + esc(title) + '</h2>' +
-      paragraphs.map(function (para) { return '<p>' + esc(para) + '</p>'; }).join('') +
+      rows.map(function (row) {
+        var head = row.name ? '<b class="wk-digest-name">' + esc(row.name) + '</b>' : '';
+        return '<p>' + head + esc(row.text) + '</p>';
+      }).join('') +
       '</section>';
   }
 

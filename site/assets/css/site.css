@@ -374,6 +374,10 @@ html[data-theme="dark"] {
   margin: 0 0 15px; font-size: 15.5px; line-height: 1.9; color: var(--text);
 }
 .wk-overview p:last-child { margin-bottom: 0; }
+/* 主体与系列摘要一段一个对象：名字当段首标签，正文接着讲事实。 */
+.wk-digest-name {
+  font-weight: 700; color: var(--text); margin-right: .55em;
+}
 .wk-overview-toggle { margin: 0 0 28px; }
 
 .topic { margin-bottom: 46px; scroll-margin-top: 132px; }
