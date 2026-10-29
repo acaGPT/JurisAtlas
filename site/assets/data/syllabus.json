@@ -692,8 +692,16 @@
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 5,
    "further_count": 1,
-   "preclass": null,
-   "preclass_list": []
+   "preclass": {
+    "title": "PVIII.5.b. 科斯定理（The Coase Theorem）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.5.b.-Coase-Theorem"
+   },
+   "preclass_list": [
+    {
+     "title": "PVIII.5.b. 科斯定理（The Coase Theorem）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.5.b.-Coase-Theorem"
+    }
+   ]
   },
   {
    "code": "PVIII.6",
