@@ -653,8 +653,16 @@
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 7,
    "further_count": 3,
-   "preclass": null,
-   "preclass_list": []
+   "preclass": {
+    "title": "PVIII.2.b. 马克思与《资本论》（Marx and Capital）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.2.b.-Marx-and-Capital"
+   },
+   "preclass_list": [
+    {
+     "title": "PVIII.2.b. 马克思与《资本论》（Marx and Capital）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.2.b.-Marx-and-Capital"
+    }
+   ]
   },
   {
    "code": "PVIII.3",
