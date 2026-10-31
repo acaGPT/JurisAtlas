@@ -378,7 +378,7 @@
    "unit": 4,
    "title_zh": "哈特之后的实证主义",
    "title_en": "Post-Hart Positivism",
-   "desc_zh": "拉兹论权威与排他性理由；包容性实证主义与排他性实证主义；渊源命题。",
+   "desc_zh": "拉兹论权威与排他性理由；包容性法律实证主义与排他性实证主义；渊源命题。",
    "desc_en": "Raz on authority and exclusionary reasons; inclusive versus exclusive positivism; the sources thesis.",
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 6,
@@ -635,7 +635,7 @@
    "unit": 8,
    "title_zh": "黑格尔对马克思：法律的社会理论",
    "title_en": "Hegel versus Marx: The Social Theory of Law",
-   "desc_zh": "黑格尔的法哲学、伦理生活与辩证法对马克思的历史唯物主义与法律的阶级性格；从理性国家到对法律与国家的批判。",
+   "desc_zh": "黑格尔的法哲学、伦理实体与辩证法对马克思的历史唯物主义与法律的阶级性格；从理性国家到对法律与国家的批判。",
    "desc_en": "Hegel's philosophy of right, ethical life and the dialectical method against Marx's historical materialism and the class character of law; from the rational state to the critique of law and the state.",
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 4,
@@ -648,7 +648,7 @@
    "unit": 8,
    "title_zh": "黑格尔与辩证社会理论",
    "title_en": "Hegel and Dialectical Social Theory",
-   "desc_zh": "黑格尔的《法哲学原理》；伦理生活（<em>Sittlichkeit</em>）；辩证法；从黑格尔到马克思。",
+   "desc_zh": "黑格尔的《法哲学原理》；伦理实体（<em>Sittlichkeit</em>）；辩证法；从黑格尔到马克思。",
    "desc_en": "Hegel's <em>Philosophy of Right</em>; ethical life (<em>Sittlichkeit</em>); the dialectical method; from Hegel to Marx.",
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 7,
@@ -693,7 +693,7 @@
   {
    "code": "PVIII.5",
    "unit": 8,
-   "title_zh": "法律与经济学",
+   "title_zh": "法律经济学",
    "title_en": "Law and Economics",
    "desc_zh": "效率与财富最大化；科斯、波斯纳与法律的经济分析。",
    "desc_en": "Efficiency and wealth maximisation; Coase, Posner, and the economic analysis of law.",
@@ -701,10 +701,14 @@
    "refs_count": 5,
    "further_count": 1,
    "preclass": {
-    "title": "PVIII.5.b. 科斯定理（The Coase Theorem）",
-    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.5.b.-Coase-Theorem"
+    "title": "PVIII.5. 法律经济学（Law and Economics）",
+    "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.5.-Law-and-Economics"
    },
    "preclass_list": [
+    {
+     "title": "PVIII.5. 法律经济学（Law and Economics）",
+     "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.5.-Law-and-Economics"
+    },
     {
      "title": "PVIII.5.b. 科斯定理（The Coase Theorem）",
      "url": "https://github.com/acaGPT/Jurisprudence/wiki/PVIII.5.b.-Coase-Theorem"
@@ -716,7 +720,7 @@
    "unit": 8,
    "title_zh": "波斯纳对德沃金：效率与权利",
    "title_en": "Posner versus Dworkin: Efficiency and Rights",
-   "desc_zh": "波斯纳的财富最大化与法律的经济分析对德沃金以权利为基础的理论；作为法律与经济学枢纽的科斯定理，以及价值问题。",
+   "desc_zh": "波斯纳的财富最大化与法律的经济分析对德沃金以权利为基础的理论；作为法律经济学枢纽的科斯定理，以及价值问题。",
    "desc_en": "Posner's wealth maximisation and the economic analysis of law against Dworkin's rights-based theory; the Coase theorem as the pivot of law and economics and the value question.",
    "syllabus_url": "https://github.com/acaGPT/Jurisprudence/wiki/Course-Syllabus",
    "refs_count": 3,
