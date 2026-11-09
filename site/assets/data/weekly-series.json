@@ -1,83 +1,18 @@
 {
  "schema": "jurisatlas-weekly-series/v1",
- "week": "2026-W44",
+ "week": "2026-W45",
  "generated_from": "weekly.json",
  "params": {
   "min_phrase_len": 4,
   "max_phrase_df": 6
  },
  "counts": {
-  "series": 3,
+  "series": 4,
   "progression": 0,
-  "event": 3,
-  "items": 3
+  "event": 4,
+  "items": 4
  },
  "series": [
-  {
-   "id": "srd8184018",
-   "name": "Anthropic · 上市与招股",
-   "kind": "event",
-   "confidence": 1.0,
-   "ids": [
-    "6a58fad123"
-   ],
-   "topics": [
-    "资本市场与公司交易"
-   ],
-   "subjects": [
-    "anthropic"
-   ],
-   "nodes": [
-    {
-     "date": "10-26",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic 在 IPO 文件中披露公司内部也存在对先进 AI 灾难性风险的担忧"
-    },
-    {
-     "date": "10-26",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic 正式提交 IPO 申请，股票代码为 ANT"
-    },
-    {
-     "date": "10-26",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic S-1 文件显示上半年营收 $16.3B、净亏损 $80.7B 主要来自固定价购股权"
-    },
-    {
-     "date": "10-27",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic S-1 上市文件披露 AI 产业严重依赖天然气"
-    },
-    {
-     "date": "10-27",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic 拟以特殊治理结构抵御 IPO 后股东的安全施压"
-    },
-    {
-     "date": "10-27",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic 在 S-1 文件中重申永远不会在 Claude 对话中展示广告"
-    }
-   ]
-  },
   {
    "id": "srb4a15d6b",
    "name": "Anthropic · 融资与估值",
@@ -94,77 +29,143 @@
    ],
    "nodes": [
     {
-     "date": "10-27",
+     "date": "11-02",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "Anthropic 招股书拆解：IPO 计划募资约 1000 亿美元背后的 11 个细节"
+     "title": "WSJ：大投资者希望 Anthropic IPO 估值定在 1.5 万亿至 1.6 万亿美元"
     },
     {
-     "date": "10-27",
+     "date": "11-06",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "WSJ：Anthropic 630 亿美元芯片融资经 Broadcom CEO 促成"
+     "title": "WSJ：投资者将 Anthropic IPO 估值预期从约 $2T 下调至 $1.5T"
     },
     {
-     "date": "10-29",
+     "date": "11-07",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "Bloomberg：得州电网审计致银行搁置 Anthropic 租赁数据中心 50亿至70亿美元垃圾债发行"
+     "title": "Anthropic IPO 估值存分歧，1.5 万亿美元仍被部分投资者嫌贵"
     },
     {
-     "date": "10-29",
+     "date": "11-08",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "估值教授 Aswath Damodaran 发布长文给 Anthropic 1.475 万亿美元估值并批评其投票结构"
-    },
-    {
-     "date": "10-30",
-     "ids": [
-      "bee1f1bf16"
-     ],
-     "count": 1,
-     "title": "多地公共养老金通过 Spark Capital 间接持股 Anthropic，11 月 IPO 若达 1.5 万亿美元估值或获约 9 倍回报"
+     "title": "消息称 Anthropic 仍推进 IPO：拟募资 800 亿至 1000 亿美元，估值预期回落"
     }
    ]
   },
   {
-   "id": "sr1961abbf",
-   "name": "司法部 · 其他执法事项",
+   "id": "sr07d461cd",
+   "name": "OpenAI · 融资与估值",
    "kind": "event",
    "confidence": 1.0,
    "ids": [
-    "1b2bc388d9"
+    "4c19024337"
    ],
    "topics": [
-    "监管执法与行政处罚"
+    "资本市场与公司交易"
    ],
    "subjects": [
-    "doj"
+    "openai"
    ],
    "nodes": [
     {
-     "date": "10-30",
+     "date": "11-03",
      "ids": [
-      "1b2bc388d9"
+      "4c19024337"
      ],
      "count": 1,
-     "title": "美国司法部指控“幽灵学生”用 AI 完成课程骗取学生贷款，已逮捕 5 人"
+     "title": "Ed Zitron 解析 OpenAI 1.25 万亿美元估值融资与 Anthropic S-1/A 中的万亿级算力承诺"
     },
     {
-     "date": "11-01",
+     "date": "11-06",
      "ids": [
-      "1b2bc388d9"
+      "4c19024337"
      ],
      "count": 1,
-     "title": "美国司法部公布 Operation Ghostbusters 行动，AI 假学生骗取超 2 亿美元学生贷款"
+     "title": "OpenAI 传已融资 110 亿美元，估值 1.25 万亿美元"
+    },
+    {
+     "date": "11-07",
+     "ids": [
+      "4c19024337"
+     ],
+     "count": 1,
+     "title": "OpenAI 获得 110 亿美元融资首笔，估值 1.25 万亿美元"
+    }
+   ]
+  },
+  {
+   "id": "srd8184018",
+   "name": "Anthropic · 上市与招股",
+   "kind": "event",
+   "confidence": 1.0,
+   "ids": [
+    "6a58fad123"
+   ],
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "subjects": [
+    "anthropic"
+   ],
+   "nodes": [
+    {
+     "date": "11-02",
+     "ids": [
+      "6a58fad123"
+     ],
+     "count": 1,
+     "title": "Anthropic 在 S-1A 中披露可能很快达到自身 RSI 定义"
+    },
+    {
+     "date": "11-03",
+     "ids": [
+      "6a58fad123"
+     ],
+     "count": 1,
+     "title": "Anthropic 在 S-1/A 招股文件中警示递归自我改进（RSI）临近"
+    }
+   ]
+  },
+  {
+   "id": "sr3f5d83c3",
+   "name": "OpenAI · 其他管制事项",
+   "kind": "event",
+   "confidence": 1.0,
+   "ids": [
+    "c617b75d33"
+   ],
+   "topics": [
+    "出口管制、制裁与投资审查"
+   ],
+   "subjects": [
+    "openai"
+   ],
+   "nodes": [
+    {
+     "date": "11-02",
+     "ids": [
+      "c617b75d33"
+     ],
+     "count": 1,
+     "title": "OpenAI 据报聘请前美国防部长 Mark Esper 扩展军事 AI 业务"
+    },
+    {
+     "date": "11-03",
+     "ids": [
+      "c617b75d33"
+     ],
+     "count": 1,
+     "title": "OpenAI 聘请前美国陆军部长 Dan Driscoll 出任国家安全现代化高级顾问"
     }
    ]
   }
