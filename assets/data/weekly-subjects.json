@@ -1,6 +1,6 @@
 {
  "schema": "jurisatlas-weekly-subjects/v1",
- "week": "2026-W44",
+ "week": "2026-W45",
  "generated_from": "weekly.json",
  "params": {
   "dup_threshold": 0.75,
@@ -9,420 +9,90 @@
  },
  "review": {
   "status": "machine",
-  "items_checked": 161,
-  "subjects": 16,
-  "subjects_multi": 12,
-  "unassigned": 66,
-  "duplicate_groups": 3,
-  "duplicate_items": 7,
-  "suspects": 2,
-  "chains": 0,
-  "chain_items": 0,
-  "by_type": {}
+  "items_checked": 145,
+  "subjects": 18,
+  "subjects_multi": 8,
+  "unassigned": 64,
+  "duplicate_groups": 2,
+  "duplicate_items": 4,
+  "suspects": 1,
+  "chains": 1,
+  "chain_items": 2,
+  "by_type": {
+   "同案": 1
+  }
  },
  "subjects": [
-  {
-   "key": "anthropic",
-   "name": "Anthropic",
-   "kind": "company",
-   "count": 36,
-   "topics": [
-    "产业与商业动向",
-    "出口管制、制裁与投资审查",
-    "劳动与就业",
-    "司法与诉讼",
-    "监管执法与行政处罚",
-    "知识产权",
-    "立法与政策制定",
-    "资本市场与公司交易"
-   ],
-   "items": [
-    {
-     "id": "30cbccd7fd",
-     "title": "安全公司 Cathedral 用 AI 智能体 12 小时内获取 Anthropic 内部员工信息",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "禁用与移除",
-     "date": "2026-10-26",
-     "kind": "single"
-    },
-    {
-     "id": "3420120875",
-     "title": "Anthropic 公布 Claude 加速药物研发的早期进展与六个合作案例",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-26",
-     "kind": "single"
-    },
-    {
-     "id": "6a58fad123",
-     "title": "Anthropic · 上市与招股",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-26",
-     "kind": "event"
-    },
-    {
-     "id": "79f2576ccb",
-     "title": "Anthropic 向 SEC 提交 S-1 注册声明，推进拟议 IPO",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-26",
-     "kind": "single"
-    },
-    {
-     "id": "e3585b0339",
-     "title": "Anthropic 向 SEC 提交 S-1 文件启动 IPO，披露 6 个月收入 163 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-26",
-     "kind": "single"
-    },
-    {
-     "id": "3a034cf589",
-     "title": "Anthropic 将 Claude 用于 6 家药企的真实药物研发项目",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "40e407a17c",
-     "title": "Anthropic 扩大 AI for Science 计划，新增 20 家科研基金会与机构合作",
-     "topic": "产业与商业动向",
-     "group": "发布与上线",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "4b2a20fc5c",
-     "title": "Anthropic 通过 OneGov 协议以六折向美国各级政府提供 Claude",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "503b3f4c4c",
-     "title": "Anthropic 向 SEC 递交 S-1 招股书，代码「ANT」，披露 2026 上半年营收 162.86 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "7b4dccc4f0",
-     "title": "Anthropic · 侵权与纠纷",
-     "topic": "知识产权",
-     "group": "",
-     "date": "2026-10-27",
-     "kind": "event"
-    },
-    {
-     "id": "9c2e3fbc07",
-     "title": "高盛：半导体板块对资产价格的影响力已超过油价",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "bee1f1bf16",
-     "title": "Anthropic · 融资与估值",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-10-27",
-     "kind": "event"
-    },
-    {
-     "id": "0522dfc386",
-     "title": "Anthropic 致信加州州长纽森，建议法院有权阻止严重风险 AI 模型发布",
-     "topic": "司法与诉讼",
-     "group": "其他司法事项",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "525442c2e2",
-     "title": "Anthropic IPO 文件披露现金及短期投资达 131.7B 美元，超过 Amazon 和 Microsoft",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "5a731a13e7",
-     "title": "Anthropic IPO 最大赢家或为 Amazon 而非 VC",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "5d6e82d2ff",
-     "title": "Anthropic 2026 上半年收入接近 2023 全年的 400 倍，远超其他科技巨头上市前增速",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "70f82ae2b2",
-     "title": "Ed Zitron 长文解析 Anthropic S-1：称其把散户当作退出流动性",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "744218fa1d",
-     "title": "TechCrunch 解析 Anthropic IPO 治理结构：公众股东对董事会几乎没有话语权",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "85fe8326c6",
-     "title": "Anthropic 上市文件披露四类芯片混用布局，分析师称英伟达定价权或承压",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "c49bb92302",
-     "title": "Anthropic IPO 文件将潜在市场规模估为每年 40 万亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "d1dc111df9",
-     "title": "Anthropic 工程经理：AI 时代新人拼的是创业式思维而非编码面试",
-     "topic": "劳动与就业",
-     "group": "其他劳动事项",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "d71b1b30aa",
-     "title": "Addy Osmani 谈 Anthropic 团队取消编程面试：饥饿胜过资历",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "e9a3310b8c",
-     "title": "犹他州 10 个州政府部门 34 名开发者试点使用 Claude Code",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "028c1b95ae",
-     "title": "Anthropic 披露约 250 个客户年消费超 1000 万美元",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "15bc280a8f",
-     "title": "FT 分析 Anthropic IPO 将取决于基金经理对错过的恐惧是否压过对犯错的恐惧",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "2921bb98d8",
-     "title": "Anthropic 占 SpaceX 三季度营收 34.5%，成其最大客户 Customer B",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "52bcbdf193",
-     "title": "中国 AI 实验室的数据蒸馏目标从 Claude 转向 OpenAI GPT-6 Astra",
-     "topic": "监管执法与行政处罚",
-     "group": "下架与封禁",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "7fcef91613",
-     "title": "SemiAnalysis 分析师解读 Anthropic S-1 招股书背后的 AI 经济账",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "bec43de5f2",
-     "title": "Anthropic S-1 披露 2025 年为 Dario Amodei 花费 275 万美元个人安保费",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "32aa9d5190",
-     "title": "Anthropic 人力成本同比飙升 486% 至 31.52 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "547569fbab",
-     "title": "Anthropic IPO 后预计将获较高垃圾级信用评级",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "795d0c0d0f",
-     "title": "Anthropic 洽谈租用埃德蒙顿附近 920MW 燃气电站供电的超大规模数据中心园区",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "f235ad98f6",
-     "title": "Anthropic 通过服务端标记限制 Claude Code 重制现有游戏",
-     "topic": "立法与政策制定",
-     "group": "其他立法事项",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "421eab3f81",
-     "title": "Anthropic IPO 招股文件披露近 9000 亿美元隐性债务",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-31",
-     "kind": "single"
-    },
-    {
-     "id": "7ccdb4bc25",
-     "title": "Anthropic · 法案进程",
-     "topic": "立法与政策制定",
-     "group": "法案进程",
-     "date": "2026-10-31",
-     "kind": "event"
-    },
-    {
-     "id": "f05e56520a",
-     "title": "美国白宫科技顾问萨克斯称 Anthropic 可能成为资本主义史上最伟大企业",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-10-31",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [
-    {
-     "ids": [
-      "421eab3f81",
-      "525442c2e2"
-     ],
-     "confidence": 0.88,
-     "reason": "共同短语「文件披露」等 3 处"
-    },
-    {
-     "ids": [
-      "3420120875",
-      "3a034cf589"
-     ],
-     "confidence": 0.88,
-     "reason": "共同短语「药物研发」等 3 处"
-    }
-   ],
-   "suspects": [
-    {
-     "ids": [
-      "503b3f4c4c",
-      "79f2576ccb",
-      "e3585b0339"
-     ],
-     "confidence": 0.6,
-     "reason": "跨主题候选：共享 4 个稀有内容词（sec、册声、声明…）"
-    }
-   ],
-   "chains": []
-  },
   {
    "key": "openai",
    "name": "OpenAI",
    "kind": "company",
-   "count": 10,
+   "count": 24,
    "topics": [
+    "AI 治理框架与国际规则",
     "产业与商业动向",
+    "出口管制、制裁与投资审查",
     "司法与诉讼",
     "立法与政策制定",
+    "竞争与平台治理",
+    "评论与观点",
     "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "38b0920bc3",
-     "title": "Greg Brockman 宣布 OpenAI 在数学、复杂度理论和量子场论领域的三项科学发现",
+     "id": "74540d55c2",
+     "title": "阿布扎比与 OpenAI 签署四项协议，覆盖政府、能源及投资领域",
      "topic": "产业与商业动向",
      "group": "合作与签约",
-     "date": "2026-10-26",
+     "date": "2026-11-02",
      "kind": "single"
     },
     {
-     "id": "1428feb6a9",
-     "title": "OpenAI 请外部专家核查其 AI 在数学、计算机科学和物理学领域产出的证明",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-10-27",
+     "id": "761d707182",
+     "title": "OpenAI 向 2028 美国大选潜在候选人分发备忘录，称 AI 将成必答题",
+     "topic": "AI 治理框架与国际规则",
+     "group": "",
+     "date": "2026-11-02",
      "kind": "single"
     },
     {
-     "id": "878f1a6b0e",
-     "title": "OpenAI 企业产品负责人谈 dots 如何从编码工具演变为常驻个人助理",
-     "topic": "产业与商业动向",
-     "group": "发布与上线",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "b297a989bf",
-     "title": "家长起诉 OpenAI，指控 GPT-4o 劝导其女儿停用癫痫药物致死",
-     "topic": "司法与诉讼",
-     "group": "其他司法事项",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "b729969725",
-     "title": "苹果诉 OpenAI 案新进展：法官允许苹果扩大取证范围",
-     "topic": "司法与诉讼",
-     "group": "程序、证据与上诉",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "72e7d512ec",
-     "title": "OpenAI 汇编各方法庭之友意见，主张 AI 训练应适用合理使用原则",
-     "topic": "司法与诉讼",
-     "group": "其他司法事项",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "86796b28e7",
-     "title": "Sam Altman 称 RAM 放在数据中心比放在个人电脑上更好",
+     "id": "9b9566826d",
+     "title": "OpenAI 在佐治亚州数据中心试点 Grid Protectors Program，承诺极端天气时释放最多 1000 MW 电力",
      "topic": "产业与商业动向",
      "group": "市场与运营",
-     "date": "2026-10-30",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "b951683370",
+     "title": "Sam Altman 称 AI 智能已超顶尖科学家",
+     "topic": "产业与商业动向",
+     "group": "观点与转述",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "c53e4f901a",
+     "title": "OpenAI 为中期选举后的华盛顿筹备游说攻势",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "c617b75d33",
+     "title": "OpenAI · 其他管制事项",
+     "topic": "出口管制、制裁与投资审查",
+     "group": "其他管制事项",
+     "date": "2026-11-02",
+     "kind": "event"
+    },
+    {
+     "id": "43a4f464f6",
+     "title": "OpenAI 称 ChatGPT 搜索量已达 Google 的 20%",
+     "topic": "竞争与平台治理",
+     "group": "",
+     "date": "2026-11-03",
      "kind": "single"
     },
     {
@@ -430,23 +100,398 @@
      "title": "OpenAI · 融资与估值",
      "topic": "资本市场与公司交易",
      "group": "融资与估值",
-     "date": "2026-10-31",
+     "date": "2026-11-03",
      "kind": "event"
     },
     {
-     "id": "9d43569bec",
-     "title": "Sam Altman 会见约50名三星高管谈存储芯片合作",
+     "id": "eec2b3e9fb",
+     "title": "OpenAI 默默将数据中心改称 compute campuses 以应对舆论反弹",
      "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-31",
+     "group": "市场与运营",
+     "date": "2026-11-03",
      "kind": "single"
     },
     {
-     "id": "7bc0d8e197",
-     "title": "OpenAI 将数据中心改称\"AI 算力园区\"",
+     "id": "27c9bc0f20",
+     "title": "OpenAI 反对人类被 AI 边缘化",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "4f7b5c9b13",
+     "title": "Newcomer：OpenAI 与 Anthropic 融资路径分化，Anthropic IPO 仍在推进",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "637597624b",
+     "title": "OpenAI 全球事务主管 Chris Lehane 发文阐述 AI 政策议程，试图影响 2028 年大选",
+     "topic": "立法与政策制定",
+     "group": "政策文件",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "b062104cd4",
+     "title": "OpenAI 称印度 ChatGPT 周活跃用户反超美国，成全球最大消费者市场",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "082e7878cf",
+     "title": "OpenAI 携手 UNSW、悉尼大学等澳洲高校培养 AI 原生毕业生",
+     "topic": "产业与商业动向",
+     "group": "合作与签约",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "0fbb1a1c5f",
+     "title": "OpenAI 总裁布罗克曼：AI 或将让死亡成为一种选择",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "5f8bbefc04",
+     "title": "OpenAI 迎来 Cat Wu 负责核心产品",
+     "topic": "产业与商业动向",
+     "group": "人事与组织",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "642c1b6185",
+     "title": "诉讼称男子向妻子介绍 ChatGPT 后遭其用 ChatGPT 策划投毒",
+     "topic": "司法与诉讼",
+     "group": "程序、证据与上诉",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "7ea2a47b92",
+     "title": "OpenAI 总裁 Greg Brockman 称公司 2027 年可具备 IPO 条件",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "f4c0b73b0d",
+     "title": "OpenAI 承诺自建数据中心承担全部电力与电网成本，并推动监管将规则扩展到所有开发商",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "3615e6e999",
+     "title": "OpenAI 宣布数据中心社区承诺，不再对公职人员使用 NDA",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "4f6391162d",
+     "title": "前 OpenAI 工程师对窃听高管会议室指控不认罪",
+     "topic": "司法与诉讼",
+     "group": "刑事案件",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "b60feb6cfa",
+     "title": "OpenAI CFO 回应数据中心争议",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "2f17a4446b",
+     "title": "OpenAI CFO 弗莱尔：中期选举不影响 IPO 计划，明年争取上市",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-07",
+     "kind": "single"
+    },
+    {
+     "id": "9023c5ee81",
+     "title": "多名用户反映 ChatGPT 账号遭突然停用，200 美元 Pro 用户也在其中",
+     "topic": "产业与商业动向",
+     "group": "活动与行程",
+     "date": "2026-11-08",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "anthropic",
+   "name": "Anthropic",
+   "kind": "company",
+   "count": 19,
+   "topics": [
+    "产业与商业动向",
+    "内容治理、人格权与深度伪造",
+    "司法与诉讼",
+    "数据保护与个人信息",
+    "知识产权",
+    "评论与观点",
+    "资本市场与公司交易"
+   ],
+   "items": [
+    {
+     "id": "4c2cc17a9f",
+     "title": "Anthropic 算力与基础设施合同承诺达 $895.4B，其中 $447.5B 须在 2031 年前支付",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "685354affa",
+     "title": "高盛限制交易员和银行家使用 Claude Code 等 AI 编码工具",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "6a58fad123",
+     "title": "Anthropic · 上市与招股",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-02",
+     "kind": "event"
+    },
+    {
+     "id": "7af4c6e6e2",
+     "title": "Anthropic 季度营收增长十二倍至近 170 亿美元，但净亏损达 233 亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "其他资本事项",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "a729aebd6c",
+     "title": "Cisco Talos 发现新型木马 VOLTA 用在线 AI 分析受害者数据价值",
+     "topic": "数据保护与个人信息",
+     "group": "",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "add75b05a6",
+     "title": "Goldman Sachs 将 Claude Code 和 GitHub 编码工具限制为工程师专用",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "b7d640314c",
+     "title": "纽约时报等媒体起诉 Brave 浏览器涉嫌抓取版权内容",
+     "topic": "知识产权",
+     "group": "侵权与纠纷",
+     "date": "2026-11-02",
+     "kind": "single"
+    },
+    {
+     "id": "bee1f1bf16",
+     "title": "Anthropic · 融资与估值",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-02",
+     "kind": "event"
+    },
+    {
+     "id": "9a775bdb2a",
+     "title": "GPU 租金半年翻倍，Tomasz Tunguz 解析 2027 年 AI 实验室的久期匹配难题",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-03",
+     "kind": "single"
+    },
+    {
+     "id": "c5ff29645a",
+     "title": "Anthropic 修订版 IPO 文件披露 8954 亿美元算力承诺，总额可达 1.07 万亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-03",
+     "kind": "single"
+    },
+    {
+     "id": "cc33a42371",
+     "title": "Anthropic S-1 新披露显示算力成本占比升至 58%，利润率承压",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-03",
+     "kind": "single"
+    },
+    {
+     "id": "07461df1f2",
+     "title": "Anthropic 水印在多个旧款 Claude 模型上可通过采样参数绕过",
+     "topic": "内容治理、人格权与深度伪造",
+     "group": "",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "70e7335f9d",
+     "title": "Anthropic 明年 700 亿美元算力账单超全年收入，S-1 细节遭播客拆解",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "6773c6c63f",
+     "title": "Anthropic 与美联社达成首份新闻内容授权协议",
+     "topic": "知识产权",
+     "group": "许可与交易",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "3aff0f2192",
+     "title": "METR 报告显示 Anthropic 的 AI 能力进展已加速约一倍，作者推算研究员获约 10 倍效率提升",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "9b8a419670",
+     "title": "Ramp 数据显示 AI token 支出增长放缓，正值 Anthropic 临近 IPO",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "55d4394e6e",
+     "title": "Anthropic 拟感恩节前 IPO，接受低于预期的估值，募资 800–1000 亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-07",
+     "kind": "single"
+    },
+    {
+     "id": "f6988f9a69",
+     "title": "法官裁定 Anthropic 须继续应对 Claude Max 额度虚假宣传指控",
+     "topic": "司法与诉讼",
+     "group": "程序、证据与上诉",
+     "date": "2026-11-07",
+     "kind": "single"
+    },
+    {
+     "id": "b5199aad59",
+     "title": "FT 报道 Anthropic 以 34 亿美元购入 1.7GW Caterpillar 燃气发电机",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-08",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [
+    {
+     "ids": [
+      "685354affa",
+      "add75b05a6"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「编码工具」等 3 处"
+    }
+   ],
+   "suspects": [
+    {
+     "ids": [
+      "70e7335f9d",
+      "c5ff29645a"
+     ],
+     "confidence": 0.6,
+     "reason": "跨主题候选：共享 6 个稀有内容词（修订、元算、增速…）"
+    }
+   ],
+   "chains": []
+  },
+  {
+   "key": "congress",
+   "name": "美国国会",
+   "kind": "agency",
+   "count": 7,
+   "topics": [
+    "产业与商业动向",
+    "监管执法与行政处罚",
+    "立法与政策制定",
+    "评论与观点"
+   ],
+   "items": [
+    {
+     "id": "954936f8e6",
+     "title": "2026 美国中期选举：科技议题与 AI 监管走向",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-03",
+     "kind": "single"
+    },
+    {
+     "id": "615f67fb8f",
+     "title": "美股单日蒸发 3.2 万亿美元，Nasdaq 创 2025 年 4 月以来最大跌幅",
+     "topic": "产业与商业动向",
+     "group": "合作与签约",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "8046c44c0c",
+     "title": "美国中期选举后数据中心阻力加大，民主党控制国会或带来更多限制",
+     "topic": "监管执法与行政处罚",
+     "group": "其他执法事项",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "bd2e8eefa6",
+     "title": "WSJ：美国半数拟建 AI 数据中心或面临更严地方审查",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "0a294cf841",
+     "title": "TechCrunch Equity 播客讨论中期选举后数据中心监管对科技业的影响",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "ec29c59ff8",
+     "title": "Casey Newton 分析 AI 反弹浪潮为何需要监管计划",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "16482d844a",
+     "title": "纽约州议员 Alex Bores 呼吁美国国会今年立法禁止递归自我改进（RSI）",
      "topic": "立法与政策制定",
      "group": "法案进程",
-     "date": "2026-11-01",
+     "date": "2026-11-07",
      "kind": "single"
     }
    ],
@@ -458,172 +503,72 @@
    "key": "google",
    "name": "Google",
    "kind": "company",
-   "count": 9,
+   "count": 6,
    "topics": [
+    "AI 治理框架与国际规则",
     "产业与商业动向",
-    "劳动与就业",
     "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "5f7db112a5",
-     "title": "Google AI Mode 被问 2020 年美国大选获胜者时给出回避性回答",
+     "id": "d3f920e8d4",
+     "title": "Google 允许学校关闭 AI 工具，但须一并放弃 Google Search",
      "topic": "产业与商业动向",
      "group": "行业动态",
-     "date": "2026-10-28",
+     "date": "2026-11-03",
      "kind": "single"
     },
     {
-     "id": "d7498e9caf",
-     "title": "Google 将 AI 搜索广告扩展至国际市场，核心搜索广告增速放缓",
+     "id": "77b1c9e521",
+     "title": "Google 计划对限制 AI 的学校关闭 Search 引发强烈反弹",
+     "topic": "产业与商业动向",
+     "group": "人事与组织",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "9630db9570",
+     "title": "Google AI 搜索变现难题：Q3 搜索收入增速降至 12%",
      "topic": "资本市场与公司交易",
      "group": "信息披露与治理",
-     "date": "2026-10-28",
+     "date": "2026-11-04",
      "kind": "single"
     },
     {
-     "id": "479cf56ad8",
-     "title": "Google 市值蒸发 5000 亿美元，AI 概要冲击搜索广告引发华尔街担忧",
+     "id": "7d8f9dfec2",
+     "title": "Isomorphic Labs 据报道谈判约 50 亿美元融资，估值约 500 亿美元",
      "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-10-29",
+     "group": "融资与估值",
+     "date": "2026-11-05",
      "kind": "single"
     },
     {
-     "id": "8e824afb2f",
-     "title": "Alphabet Q3 营收近 1280 亿美元但承认 AI 搜索变现更低，股价大跌约 12%",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-29",
+     "id": "e42342ccf7",
+     "title": "Google DeepMind：AI 数学能力兴起要求持续压测密码学标准",
+     "topic": "AI 治理框架与国际规则",
+     "group": "",
+     "date": "2026-11-06",
      "kind": "single"
     },
     {
-     "id": "971d647bea",
-     "title": "Google 三季度搜索增速不及预期，投资者担忧 AI 搜索变现拖累核心业务",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "2e8d9c6b89",
-     "title": "Google DeepMind 报告按专业与协调两维度划分 AGI 引发经济变革的四种体制",
-     "topic": "劳动与就业",
-     "group": "其他劳动事项",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "7accc1ab55",
-     "title": "Google 2027 年发射两颗卫星测试太空 AI 计算",
+     "id": "aa8a07aacd",
+     "title": "Google 收购 Crusoe 在怀俄明州的未完工数据中心项目",
      "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "3c6d8befbc",
-     "title": "Google 承认 AI Mode 拖累搜索收入，股价跌 15%、市值蒸发 5000 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-10-31",
-     "kind": "single"
-    },
-    {
-     "id": "57beb6a3b9",
-     "title": "彭博社统计：Alphabet、Meta、微软、亚马逊、甲骨文承诺投入超3万亿美元建AI基础设施",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-31",
+     "group": "市场与运营",
+     "date": "2026-11-07",
      "kind": "single"
     }
    ],
    "duplicates": [
     {
      "ids": [
-      "3c6d8befbc",
-      "479cf56ad8",
-      "d7498e9caf"
+      "77b1c9e521",
+      "d3f920e8d4"
      ],
      "confidence": 0.88,
-     "reason": "共同短语「市值蒸发」等 3 处"
+     "reason": "共同短语「学校关闭」等 3 处"
     }
    ],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "meta",
-   "name": "Meta",
-   "kind": "company",
-   "count": 7,
-   "topics": [
-    "产业与商业动向",
-    "劳动与就业",
-    "数据保护与个人信息",
-    "监管执法与行政处罚",
-    "评论与观点",
-    "资本市场与公司交易"
-   ],
-   "items": [
-    {
-     "id": "2056e6760e",
-     "title": "Meta 计划出售最多 950 亿美元股票为 AI 基建筹资",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-10-26",
-     "kind": "single"
-    },
-    {
-     "id": "2532978356",
-     "title": "Meta 宣布至多 950 亿美元融资计划，预计 2026 年资本支出 1,350~1,450 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-10-26",
-     "kind": "single"
-    },
-    {
-     "id": "a718735045",
-     "title": "Meta AI 前总监 Rohit Patel 创办 Ndoc，瞄准替代 Microsoft Office 和 Google Workspace",
-     "topic": "劳动与就业",
-     "group": "替代与裁员",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "36c9147f10",
-     "title": "Instagram 负责人 Adam Mosseri：围绕 AI 的负面情绪“还会更糟”",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "520d37c613",
-     "title": "参议员 Wyden 与 Markey 致信 Meta，要求回应智能眼镜隐私争议",
-     "topic": "数据保护与个人信息",
-     "group": "",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "e95a117f46",
-     "title": "Instagram 负责人莫塞里承认公众普遍反感 AI，预计未来情况还将继续恶化",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "6a91c8bb99",
-     "title": "Bank of America 警告客户勿向 AI 智能体分享密码并要求自担风险",
-     "topic": "监管执法与行政处罚",
-     "group": "处罚与整改",
-     "date": "2026-10-30",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
    "suspects": [],
    "chains": []
   },
@@ -635,56 +580,55 @@
    "topics": [
     "产业与商业动向",
     "出口管制、制裁与投资审查",
-    "竞争与平台治理",
     "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "6ea8ddbb9d",
-     "title": "英伟达向 Meta 投资 30 亿美元并扩大 Muse 智能助手合作",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-10-27",
+     "id": "16583eb71d",
+     "title": "FT 报道 Nvidia 要求数据中心客户至少 51% 服务面向非中国企业",
+     "topic": "出口管制、制裁与投资审查",
+     "group": "出口管制与制裁",
+     "date": "2026-11-03",
      "kind": "single"
     },
     {
-     "id": "564b1a7e94",
-     "title": "美方调查指向新加坡云厂商高管与 Nvidia CEO 的接触",
+     "id": "4bb455555c",
+     "title": "fal 宣布完成合计 $1.65B 的 Series E 与 F 轮融资，Sound Ventures 参与投资",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-03",
+     "kind": "single"
+    },
+    {
+     "id": "1bd7964f0f",
+     "title": "中国厂商订购约 600 万张 RTX Pro 5500，Nvidia 4 个月内仅能供货约 1%",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "5bbf3dfcbc",
+     "title": "Oracle 因美方反对取消价值 70 亿美元、向腾讯提供至多 10 万块先进 AI 芯片的租约",
+     "topic": "出口管制、制裁与投资审查",
+     "group": "出口管制与制裁",
+     "date": "2026-11-04",
+     "kind": "single"
+    },
+    {
+     "id": "9a8cbc4ca8",
+     "title": "Brightspeed 与英伟达洽谈，计划将 130 多座老旧电信建筑改造为小型数据中心",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-06",
+     "kind": "single"
+    },
+    {
+     "id": "1cf42957c0",
+     "title": "NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查",
      "topic": "出口管制、制裁与投资审查",
      "group": "其他管制事项",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "7df9717cee",
-     "title": "美国反垄断机构审查 Nvidia 收购 Hugging Face 交易及销售行为",
-     "topic": "竞争与平台治理",
-     "group": "",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "eed12299ab",
-     "title": "纽约时报报道：特朗普忽视有关中国安插人员接近 Nvidia CEO 黄仁勋的情报",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "07a9c0596a",
-     "title": "曝印度 AI 企业 AM Intelligence 寻求 30 亿美元融资，用于订购英伟达芯片",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "434c3ff28d",
-     "title": "Nvidia 洽谈为 Nscale 西弗吉尼亚 Anthropic 数据中心提供债务担保",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-10-31",
+     "date": "2026-11-08",
      "kind": "single"
     }
    ],
@@ -693,92 +637,37 @@
    "chains": []
   },
   {
-   "key": "microsoft",
-   "name": "Microsoft",
+   "key": "meta",
+   "name": "Meta",
    "kind": "company",
-   "count": 4,
-   "topics": [
-    "资本市场与公司交易"
-   ],
-   "items": [
-    {
-     "id": "5cdddabc81",
-     "title": "Microsoft 单季从 OpenAI 获得营收 100 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "9098cd75c3",
-     "title": "Microsoft 连续 10 个季度刷新季度营收纪录，本季度达 923 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "b2723d5b21",
-     "title": "Microsoft 首次披露 Azure 单季收入 332 亿美元，同比增长 48%",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "82c6381da8",
-     "title": "Microsoft 拟重返美国债券市场募资至少 250 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-10-29",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "reddit",
-   "name": "Reddit",
-   "kind": "company",
-   "count": 4,
+   "count": 3,
    "topics": [
     "产业与商业动向",
-    "监管执法与行政处罚",
-    "资本市场与公司交易"
+    "司法与诉讼"
    ],
    "items": [
     {
-     "id": "b81795e81d",
-     "title": "Reddit 的 r/opensource 封禁所有 AI 相关项目，引发争议并催生 rival 论坛 r/TrueOpenSource",
-     "topic": "监管执法与行政处罚",
-     "group": "下架与封禁",
-     "date": "2026-10-26",
+     "id": "08c9850a4e",
+     "title": "Meta 警告：中期选举反对声浪或使数据中心扩张与 AI 布局更难",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-05",
      "kind": "single"
     },
     {
-     "id": "2d5ab5e55f",
-     "title": "Reddit CEO 称 Google AI Mode 不为任何人带来流量，Reddit 每周流失超百万搜索访问",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-10-30",
-     "kind": "single"
-    },
-    {
-     "id": "4025643297",
-     "title": "Reddit 将把登录设为默认，10 月 Google 搜索引流量每周减少超 100 万",
+     "id": "173d0fd6c7",
+     "title": "Meta 为何去中国与 Fourier 合作造机器人原型 Max，以及这笔合作为何难以持久",
      "topic": "产业与商业动向",
      "group": "合作与签约",
-     "date": "2026-10-30",
+     "date": "2026-11-05",
      "kind": "single"
     },
     {
-     "id": "2543810be7",
-     "title": "英特尔与 Reddit 股价双双暴跌 29%，纳斯达克 10 月创去年 3 月以来最差单月表现",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-10-31",
+     "id": "93cffbcee2",
+     "title": "Meta 因广泛反对暂停将网站内容用于 AI 训练的新商业条款",
+     "topic": "司法与诉讼",
+     "group": "其他司法事项",
+     "date": "2026-11-05",
      "kind": "single"
     }
    ],
@@ -790,98 +679,50 @@
    "key": "xai",
    "name": "xAI",
    "kind": "company",
-   "count": 4,
-   "topics": [
-    "司法与诉讼",
-    "监管执法与行政处罚",
-    "立法与政策制定",
-    "资本市场与公司交易"
-   ],
-   "items": [
-    {
-     "id": "fedfaf08a0",
-     "title": "Elon 提议前沿 AI 公司互测新模型保安全",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-10-27",
-     "kind": "single"
-    },
-    {
-     "id": "b11a774b35",
-     "title": "xAI 拟收购密西西比 Southaven 418 套房屋，条件是居民放弃起诉其数据中心噪音",
-     "topic": "资本市场与公司交易",
-     "group": "并购与收购",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "f13d8e1856",
-     "title": "法官裁定 NAACP 起诉 xAI 数据中心污染案继续推进",
-     "topic": "司法与诉讼",
-     "group": "程序、证据与上诉",
-     "date": "2026-10-31",
-     "kind": "single"
-    },
-    {
-     "id": "5dc081a279",
-     "title": "Grok 模型将于 11 月 7 日起为生成文本添加隐形水印以响应欧盟 AI 法案",
-     "topic": "立法与政策制定",
-     "group": "法案进程",
-     "date": "2026-11-01",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [
-    {
-     "ids": [
-      "b11a774b35",
-      "f13d8e1856"
-     ],
-     "confidence": 0.6,
-     "reason": "跨主题候选：共享 4 个稀有内容词（密西、西比、西西…）"
-    }
-   ],
-   "chains": []
-  },
-  {
-   "key": "amazon",
-   "name": "Amazon",
-   "kind": "company",
    "count": 3,
    "topics": [
-    "监管执法与行政处罚",
-    "资本市场与公司交易"
+    "产业与商业动向"
    ],
    "items": [
     {
-     "id": "34839b4ad8",
-     "title": "Alex Heath 访谈 Shopify CEO Tobi Lütke 谈 AI Agent 商务与公司未来",
-     "topic": "监管执法与行政处罚",
-     "group": "下架与封禁",
-     "date": "2026-10-28",
+     "id": "0fd9fa2955",
+     "title": "xAI 介绍 Data Bot 构建方式",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-02",
      "kind": "single"
     },
     {
-     "id": "ef367aaf92",
-     "title": "Jassy 称 AWS 五到十年内将成为万亿美元营收业务，2026 年 capex 约 2200 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-29",
+     "id": "2a4307c3da",
+     "title": "SpaceX 据传削减 Grok Bot 配额，Musk 称运营成本相对收入难以持续",
+     "topic": "产业与商业动向",
+     "group": "观点与转述",
+     "date": "2026-11-02",
      "kind": "single"
     },
     {
-     "id": "baf8c7e3fd",
-     "title": "亚马逊 CEO 贾西预计 AWS 未来 5 至 10 年年营收达 1 万亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-10-30",
+     "id": "d0f8809067",
+     "title": "Elon Musk 以成本过高为由下调 Grok Bot 用量限制",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-02",
      "kind": "single"
     }
    ],
    "duplicates": [],
    "suspects": [],
-   "chains": []
+   "chains": [
+    {
+     "type": "同案",
+     "ids": [
+      "2a4307c3da",
+      "d0f8809067"
+     ],
+     "relation": "同案不同侧面",
+     "confidence": 0.68,
+     "reason": "共享：grok、musk"
+    }
+   ]
   },
   {
    "key": "doj",
@@ -889,71 +730,33 @@
    "kind": "agency",
    "count": 3,
    "topics": [
-    "司法与诉讼",
-    "监管执法与行政处罚",
-    "竞争与平台治理"
-   ],
-   "items": [
-    {
-     "id": "072382aa5c",
-     "title": "消息称美国司法部就英伟达 129.3 亿美元收购 Hugging Face 展开反垄断问询",
-     "topic": "竞争与平台治理",
-     "group": "",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "82d196f6a0",
-     "title": "特朗普称将在相关文件中正式禁用 AI 一词，改称 SI 超级智能",
-     "topic": "司法与诉讼",
-     "group": "其他司法事项",
-     "date": "2026-10-28",
-     "kind": "single"
-    },
-    {
-     "id": "1b2bc388d9",
-     "title": "司法部 · 其他执法事项",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-10-30",
-     "kind": "event"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "congress",
-   "name": "美国国会",
-   "kind": "agency",
-   "count": 3,
-   "topics": [
+    "产业与商业动向",
+    "法律职业与法律科技",
     "监管执法与行政处罚"
    ],
    "items": [
     {
-     "id": "b342f509ea",
-     "title": "特拉华州拟允许 AI 智能体经营公司，美国众议员调查其免责风险",
+     "id": "f6f49d1dab",
+     "title": "OnlyFake 创始人 Nazarenko 首次自述 AI 伪造证件帝国兴衰",
+     "topic": "产业与商业动向",
+     "group": "观点与转述",
+     "date": "2026-11-05",
+     "kind": "single"
+    },
+    {
+     "id": "1926244125",
+     "title": "美国司法部超级智能工作组 DOJ-SITF 投入运作",
      "topic": "监管执法与行政处罚",
      "group": "调查与立案",
-     "date": "2026-10-27",
+     "date": "2026-11-07",
      "kind": "single"
     },
     {
-     "id": "57718f15e1",
-     "title": "美众议院民主党人要求保存白宫聊天机器人记录",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "7a9d699675",
-     "title": "缅因州参议院选举中数据中心争议或影响参议院控制权与联邦 AI 政策",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-10-30",
+     "id": "bc68329923",
+     "title": "美国司法部起诉三名男子涉嫌用 AI 冒充高管和律师行骗超 1.29 亿美元",
+     "topic": "法律职业与法律科技",
+     "group": "",
+     "date": "2026-11-08",
      "kind": "single"
     }
    ],
@@ -962,29 +765,20 @@
    "chains": []
   },
   {
-   "key": "deepseek",
-   "name": "DeepSeek",
+   "key": "amazon",
+   "name": "Amazon",
    "kind": "company",
-   "count": 2,
+   "count": 1,
    "topics": [
-    "评论与观点",
-    "资本市场与公司交易"
+    "评论与观点"
    ],
    "items": [
     {
-     "id": "2a0ce2fa84",
-     "title": "DeepSeek 如何变成摸鱼鲸鱼女仆",
+     "id": "a557e19512",
+     "title": "Shopify CEO 谈 AI 繁荣与智能体商业",
      "topic": "评论与观点",
      "group": "",
-     "date": "2026-10-29",
-     "kind": "single"
-    },
-    {
-     "id": "5fbc994b31",
-     "title": "DeepSeek 158 亿美元融资中中国国资出资占比升至 27%",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-10-30",
+     "date": "2026-11-04",
      "kind": "single"
     }
    ],
@@ -993,8 +787,8 @@
    "chains": []
   },
   {
-   "key": "huggingface",
-   "name": "Hugging Face",
+   "key": "microsoft",
+   "name": "Microsoft",
    "kind": "company",
    "count": 1,
    "topics": [
@@ -1002,11 +796,11 @@
    ],
    "items": [
     {
-     "id": "f57c13e508",
-     "title": "Hugging Face 联合多所高校发起 Project ProtoStar，推动公共资助科研数据 AI-ready 化",
+     "id": "ee28c7e84c",
+     "title": "抗议者闯入 Microsoft 阿姆斯特丹数据中心工地",
      "topic": "产业与商业动向",
-     "group": "发布与上线",
-     "date": "2026-10-29",
+     "group": "市场与运营",
+     "date": "2026-11-06",
      "kind": "single"
     }
    ],
@@ -1015,20 +809,20 @@
    "chains": []
   },
   {
-   "key": "perplexity",
-   "name": "Perplexity",
+   "key": "mistral",
+   "name": "Mistral",
    "kind": "company",
    "count": 1,
    "topics": [
-    "数据保护与个人信息"
+    "立法与政策制定"
    ],
    "items": [
     {
-     "id": "48bea6c4e1",
-     "title": "Perplexity Computer 上线 /unbroker 技能，帮你从数据经纪商网站删除个人信息",
-     "topic": "数据保护与个人信息",
-     "group": "",
-     "date": "2026-10-29",
+     "id": "e40e023161",
+     "title": "Mistral CEO Arthur Mensch 反对法国 Darcos 法案，呼吁在欧盟层面建立基于营业额的 AI 创作基金",
+     "topic": "立法与政策制定",
+     "group": "法案进程",
+     "date": "2026-11-08",
      "kind": "single"
     }
    ],
@@ -1037,20 +831,42 @@
    "chains": []
   },
   {
-   "key": "mofcom",
-   "name": "商务部",
+   "key": "sec",
+   "name": "SEC",
    "kind": "agency",
    "count": 1,
    "topics": [
-    "出口管制、制裁与投资审查"
+    "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "decb3e14bd",
-     "title": "特朗普宣布外国工业机器人进口构成国家安全威胁",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-10-29",
+     "id": "1b6ccd7799",
+     "title": "Oracle 提交发行 200 亿美元新股和债券的申请以资助 AI 基础设施建设",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-02",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "suno",
+   "name": "Suno",
+   "kind": "company",
+   "count": 1,
+   "topics": [
+    "知识产权"
+   ],
+   "items": [
+    {
+     "id": "12c11fdc29",
+     "title": "Elvis 与 Eminem 版权方起诉 AI 音乐公司 Suno 涉嫌克隆歌手声音",
+     "topic": "知识产权",
+     "group": "其他知产事项",
+     "date": "2026-11-08",
      "kind": "single"
     }
    ],
@@ -1064,15 +880,103 @@
    "kind": "agency",
    "count": 1,
    "topics": [
-    "出口管制、制裁与投资审查"
+    "立法与政策制定"
    ],
    "items": [
     {
-     "id": "cf24cd6feb",
-     "title": "从反叛乱研究到 DOE Genesis 任务：专访 Accenture Federal 的 Barnett Koven",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-10-29",
+     "id": "a70e230328",
+     "title": "中国将 AI 对就业的影响列为监测风险",
+     "topic": "立法与政策制定",
+     "group": "政策文件",
+     "date": "2026-11-03",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "bytedance",
+   "name": "字节跳动",
+   "kind": "company",
+   "count": 1,
+   "topics": [
+    "监管执法与行政处罚"
+   ],
+   "items": [
+    {
+     "id": "d9b974cd9b",
+     "title": "曝字节跳动将封禁 L4 代码仓库及飞书文档的外部 AI 访问，限制员工自费使用 Claude、Codex",
+     "topic": "监管执法与行政处罚",
+     "group": "下架与封禁",
+     "date": "2026-11-04",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "eu",
+   "name": "欧盟",
+   "kind": "agency",
+   "count": 1,
+   "topics": [
+    "司法与诉讼"
+   ],
+   "items": [
+    {
+     "id": "7cbbd05922",
+     "title": "欧盟法院法务总顾问称谷歌 Gemini 使用新闻报道可能侵犯版权",
+     "topic": "司法与诉讼",
+     "group": "其他司法事项",
+     "date": "2026-11-03",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "treasury",
+   "name": "美国财政部",
+   "kind": "agency",
+   "count": 1,
+   "topics": [
+    "产业与商业动向"
+   ],
+   "items": [
+    {
+     "id": "52351ae34b",
+     "title": "乌克兰无人机打击促使俄方筹划地下数据中心并征用算力",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-03",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "softbank",
+   "name": "软银",
+   "kind": "company",
+   "count": 1,
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "items": [
+    {
+     "id": "a2a1ae8c52",
+     "title": "软银信用风险升至4年高位，股价单日下跌10.8%",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-06",
      "kind": "single"
     }
    ],
@@ -1082,66 +986,46 @@
   }
  ],
  "related": {
-  "amazon": [
-   "525442c2e2",
-   "57beb6a3b9",
-   "5a731a13e7",
-   "85fe8326c6"
-  ],
   "anthropic": [
-   "434c3ff28d",
-   "fedfaf08a0"
+   "16482d844a",
+   "4c19024337",
+   "4f7b5c9b13",
+   "d9b974cd9b"
   ],
   "congress": [
-   "9d43569bec"
-  ],
-  "doj": [
-   "57718f15e1",
-   "7df9717cee",
-   "f13d8e1856"
+   "2f17a4446b",
+   "761d707182",
+   "c53e4f901a"
   ],
   "eu": [
-   "5dc081a279"
+   "07461df1f2",
+   "e40e023161"
   ],
   "google": [
-   "2d5ab5e55f",
-   "4025643297",
-   "525442c2e2",
-   "a718735045"
-  ],
-  "huggingface": [
-   "072382aa5c",
-   "7df9717cee"
+   "43a4f464f6",
+   "7cbbd05922"
   ],
   "meta": [
-   "34839b4ad8",
-   "57beb6a3b9",
-   "6ea8ddbb9d"
+   "a557e19512"
   ],
-  "microsoft": [
-   "525442c2e2",
-   "57beb6a3b9",
-   "a718735045"
-  ],
-  "mofcom": [
-   "564b1a7e94"
-  ],
-  "nscale": [
-   "434c3ff28d"
+  "mistral": [
+   "b7d640314c"
   ],
   "nvidia": [
-   "072382aa5c",
-   "85fe8326c6",
-   "9c2e3fbc07"
+   "615f67fb8f"
   ],
   "openai": [
-   "52bcbdf193",
-   "5cdddabc81"
+   "0a294cf841",
+   "16482d844a",
+   "6773c6c63f",
+   "a2a1ae8c52",
+   "d9b974cd9b"
   ],
-  "sec": [
-   "503b3f4c4c",
-   "79f2576ccb",
-   "e3585b0339"
+  "perplexity": [
+   "b7d640314c"
+  ],
+  "xai": [
+   "b7d640314c"
   ]
  }
 }
