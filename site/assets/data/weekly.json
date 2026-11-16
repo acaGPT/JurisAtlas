@@ -1,17 +1,18 @@
 {
  "title": "本周 AI+法律动态",
- "week": "2026-W45",
- "week_line": "2026 年第 45 周（11 月 2 日—11 月 8 日）",
+ "week": "2026-W46",
+ "week_line": "2026 年第 46 周（11 月 9 日—11 月 15 日）",
  "period": {
-  "start": "2026-11-02",
-  "end": "2026-11-08"
+  "start": "2026-11-09",
+  "end": "2026-11-15"
  },
  "overview": [
-  "11 月 5 日，华尔街市值单日蒸发 3.2 万亿美元，Nasdaq 综合指数跌 5.52%，费城半导体指数跌 12.3%，Nvidia 跌 9.3% 抹去 2026 年涨幅。抛售压在同一周的融资与上市定价上。Anthropic 的 IPO 估值预期先是从 11 月 2 日的 1.5 万亿至 1.6 万亿美元，到 11 月 6 日被报道为从约 2 万亿美元下调至 1.5 万亿美元，11 月 7 日又有投资者认为 1.5 万亿仍偏高、提出 1 万亿美元；同日《金融时报》称公司拟在感恩节前 IPO，募资 800 亿至 1000 亿美元，估值区间 1.25 万亿至 1.75 万亿美元。OpenAI 原计划以 1.4 万亿美元估值融资 300 亿美元，11 月 6 日首笔 110 亿美元到账，投后估值 1.25 万亿美元，本轮总额最高 200 亿美元。Oracle 于 11 月 2 日向美国证券交易委员会申请发行 100 亿美元普通股与 100 亿美元高级票据，当日股价跌超 6%。",
-  "融资的另一面是承诺。Anthropic 在 11 月 2 日至 3 日更新的 IPO 文件中披露，算力与基础设施合同承诺约 8954 亿美元，另有最高 1750 亿美元尚未定价，总额约 1.07 万亿美元，约为其前九个月 332 亿美元收入的 32 倍；其中 4475 亿美元须在 2031 年前支付，一年内到期 698 亿美元，算力成本升至销售额的 58%，而公司现金及短期投资为 1319 亿美元。跨境流动同周收紧：11 月 3 日 FT 报道 Nvidia 要求云与数据中心客户把至少 51% 的服务交给非中国企业，仅适用于新合同；11 月 4 日 Oracle 在美国反对后取消向腾讯提供至多 10 万块先进芯片、价值 70 亿美元的五年租约。工信部 11 月 6 日发布通知，对智能体终端设备的进网、现网升级与分发提出四项管理任务。",
-  "平台规则由三件事推进。Meta 11 月 5 日暂停原定 11 月 20 日生效的商业条款更新，该条款要求商业账户允许其使用网站内容训练生成式 AI；此前挪威法院在 180 家挪威媒体公司支持下颁布临时禁令，英国竞争与市场管理局也宣布调查。英国《犯罪与警务法》11 月 6 日生效后，Clips4Sale 以预防性措施隐藏大量内容，创作者 Sophia Truee 的 506 个视频中有 392 个被移除。抓取 AO3 同人文并提供 AI 有声书的 ao3.life 上线一天后，在超过 2000 条下架请求下关站。版权一侧，欧盟法院法务总顾问什普纳尔 11 月 3 日就 Gemini 使用新闻报道出具意见，认为特定情况下可能侵犯出版商版权；纽约时报 11 月 2 日在曼哈顿联邦法院起诉 Brave，指控其抓取版权内容并分发给 Anthropic、Perplexity、Mistral、xAI 与 Cohere；11 月 8 日，Elvis Presley 权利人与 Eminem 部分作品的出版方依田纳西州 ELVIS 法案起诉 Suno。Anthropic 则在 11 月 5 日与美联社达成首份内容授权协议。",
-  "法院这一周处理的多是 AI 进入日常工作后的边界。北京一家保险公司以违反信息安全规定为由，解除了使用第三方 AI 平台整理稽核数据的法务，法院认定公司规章未明确禁止、也未举证泄密后果，11 月 7 日报道的判决撤销解除通知、继续履行劳动合同并赔偿 4.6 万余元，二审维持。上海徐汇区法院 11 月 3 日以非法获取计算机信息系统数据罪，对用 AI 伪造签名盗用大模型算力的被告判处有期徒刑三年、缓刑三年，并处罚金四万元。巴西一家劳工法院 11 月 2 日对两名在诉状中以白底白字嵌入提示词指令的律师罚款约 1.6 万美元，按涉案赔偿金额 10% 计算并通报律师协会。美国一侧，前 OpenAI 工程师 Alfozan 11 月 6 日对非法截取口头通信的重罪指控作无罪答辩，自 10 月 9 日被捕后一直被羁押；联邦治安法官 11 月 7 日裁定 Anthropic 须继续应对 Claude Max 套餐额度误导消费者的主要指控；旧金山高等法院 11 月 5 日公开的一起诉讼称，一名女子用 ChatGPT 获取投毒剂量与用法，10 月已被大陪审团起诉谋杀未遂。司法部 11 月 8 日公布起诉书，三名男子涉嫌用 AI 伪造高管与律师的声音影像诱骗汇款，涉案超过 1.29 亿美元。",
-  "机构层面的动作集中在两处。美国司法部 11 月 5 日宣布超级智能工作组 DOJ-SITF 投入运作，依 10 月 13 日备忘录统筹涉超级智能的刑事与民事诉讼，由斯坦利·伍德沃德与斯蒂芬·韦斯牵头，反垄断局、刑事局与 FBI 派代表参与。土耳其竞争管理局 11 月 2 日就谷歌搜索的「AI 概览」「AI 模式」启动调查，审查其是否违反《竞争保护法》，并实施临时监管措施。中期选举之后，数据中心成为地方议题：13 个州的选民否决了数据中心提案，出口民调显示 AI 与数据中心在受调查议题中排名末位。企业一侧，OpenAI 11 月 5 日发布国家社区公约与算力园区政策蓝图，承诺承担自建站点的全部电力与电网成本、公布各站点水耗与用电数据、不对公职人员使用保密协议，并在佐治亚州启动极端天气下最多释放 1000 兆瓦的试点；11 月 2 日它向约六名 2028 年大选潜在候选人发送备忘录。中国国家发改委 11 月 3 日表示将强化 AI 就业替代风险的监测预警。特拉华州允许 AI 智能体经营企业的提案 11 月 5 日引来 Mustafa Suleyman 的公开担忧，该提案拟设立由智能体而非人类管理的独立实体 Delaware AIC，可依智能体指示以自身名义起诉应诉、持有和处置财产并承担债务。"
+  "英伟达的芯片出口风波在一周内从个人丑闻走到高层更替。11 月 8 日黄仁勋向员工承认婚外情；次日《金融时报》与彭博社报道，其对象、Megaspeed 前高管 Alice Huang 被美国情报部门认为涉外国情报活动，英伟达独立董事联合外部律师启动调查，公司股价次日下跌超过 5%，而截至 7 月 26 日的三个月里来自中国总部客户的收入为 79 亿美元、约占总营收 8%。11 月 12 日黄仁勋辞去 CEO、总裁与董事会成员职务，首席财务官 Colette Kress 出任临时 CEO，公司市值蒸发 1.4 万亿美元。围绕这条线的事实越滚越大：Megaspeed 在 2024 年 3 月至 2025 年 6 月间为中国企业安排了近 120 亿美元的英伟达芯片订单，两年采购额据称为 48 亿美元。",
+  "国会与商务部在同一周把这件事转成程序动作。参议院银行委员会主席 Tim Scott 要求黄仁勋 12 月 3 日出席作证、商务部长 Howard Lutnick 12 月 10 日出席作证，否则发出传票；民主党议员就出口许可、关税安排与政商往来启动调查并要求保存记录；众议院中国特设委员会主席 Moolenaar 称国会应在年底国防授权法案中通过两党出口管制立法，众议院议长 Johnson 称两党在限制对华芯片出口上正在形成共识。行政一侧，国务院、财政部、能源部与五角大楼推动将 Megaspeed 列入实体清单，商务部搁置两个月未列名，财政部长 Bessent 就此质问 Lutnick，路透社报道白宫正权衡撤换商务部长。商务部另一项新规拟要求对新加坡、马来西亚、泰国、印尼、巴西、挪威和南非七国出口许可，买家须披露芯片接收方与用途并接受持续监控，管制对象从芯片本身转向远程租用。",
+  "立法与监管在地方、中央与国际三个层面同时推进。纽约 RAISE 法案 11 月 10 日生效并开放注册门户，年收入超过 5 亿美元的前沿开发商须在 2027 年 1 月 1 日前注册，其后须在 72 小时内上报安全事故；11 月 12 日澳大利亚政府提出 AI 安全法案，要求前沿模型开放独立审计与持续安全检查、公布安全框架并立即报告事件，由新设监管机构与 Australian AI Safety Institute 共同执行。11 月 9 日网信办的互联网新技术新应用信息服务备案系统上线，把生成式人工智能、算法、深度合成与区块链备案并入一个入口；美国货币监理署 11 月 11 日发布银行 AI 智能体监管框架，依据第 14434 号行政命令，把可自主移动资金的支付智能体列入最高风险层级。11 月 14 日白宫超级智能工作组转向相反方向，建议联邦机构在 12 个月内限制企业因网络安全事件承担的监管责任。",
+  "法院这一周处理的多是\"谁来证明\"的问题。北京互联网法院 11 月 11 日披露一起判决：用户原创文字被平台判定为\"AI 生成未标识\"而隐藏并禁言一天，法院认定平台违约，判其解除隐藏、删除违规处理记录；法官要求算法判定须对依据作适度说明、不能仅以商业秘密为由拒绝，并建议阶梯式处置、过罚相当。金华市婺城区法院对 7 名用 AI 生成国漫角色淫秽图片售卖者，以制作、复制、贩卖、传播淫秽物品牟利罪判处有期徒刑二年至八个月、均适用缓刑，涉案一年多销售 13 万余张、获利 16 万余元。xAI 因 Grok 被用于把普通照片改造成儿童性虐待材料而面临多起集体诉讼，律师估计符合条件的受害者可能多达数千人；一名北卡罗来纳州男子则起诉 OpenAI，称其分居妻子从 ChatGPT 获得了按体重校准的投毒剂量与投送方式。",
+  "Anthropic 的上市把资本与管制接在同一条链上。11 月 9 日公司启动路演，拟发行 8.25 亿股 A 类普通股、以代码 ANT 申请在纳斯达克上市；11 月 10 日定价区间定为每股 70 至 78 美元，隐含估值 1.404 万亿美元，公开发行募资上限 644 亿美元，另向谷歌、英伟达、AMD 等基石投资者私募 260 亿美元，计入博通、美光、微软与台积电的出资后规模最高可达 904 亿美元。11 月 13 日订单超出可售股份六倍，承销商拟把目标估值上调回 1.5 万亿美元。同一时间，多家银行以美国出口管制规则 ITAR 为由拒绝中国大陆与香港投资者的认购订单，台积电董事会则批准最多 5 亿美元购买 Anthropic 普通股、5 亿美元购买 OpenAI 优先股。美联储 11 月 13 日的金融稳定报告称，纽约联储调查中 87% 的市场人士把 AI 列为首要金融风险，截至 10 月 AI 基础设施债务超过 6800 亿美元。",
+  "劳动与平台准入的争议集中在\"谁替谁做决定\"。澳洲航空宣布与埃森哲合作推进 AI 转型，裁减 850 个岗位并把部分企业职能外包，工会质疑其借 AI 之名掩盖雇用更低薪海外员工的安排；新西兰零售商 The Warehouse 奥克兰与基督城配送中心 300 多名员工抗议公司用 AI 监控如厕时间，公司首席人力资源官否认，称使用的是沿用多年的扫描设备效率监测技术。美国公共部门工会则在争取 AI 监控与自动化裁员的保护条款，安永调查显示近 70% 的联邦机构已使用生成式人工智能。平台一侧，美联航以网络安全风险与联邦法规为由，禁止未授权 AI 智能体在其网站订票与管理预订——联邦法规要求乘客亲自声明托运行李不含爆炸物，这一步智能体无法合法执行；亚马逊此前也已封禁第三方购物智能体。"
  ],
  "topics": [
   {
@@ -21,18 +22,36 @@
      "name": "刑事案件",
      "items": [
       {
-       "id": "4f6391162d",
+       "id": "e52f0c5c71",
        "kind": "single",
-       "title": "前 OpenAI 工程师对窃听高管会议室指控不认罪",
-       "date": "2026-11-06",
+       "title": "佐治亚州居民以 RICO 诈骗法起诉 OpenAI 及县官员，指其秘密推动 200 亿美元数据中心",
+       "date": "2026-11-12",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118793399352647776"
+         "url": "https://x.com/rohanpaul_ai/status/2120748380699935086"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "民事与集体诉讼",
+     "items": [
+      {
+       "id": "ca9eaf2452",
+       "kind": "single",
+       "title": "Grok 被指生成儿童色情图像，xAI 面临多起集体诉讼",
+       "date": "2026-11-11",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/809.htm"
         }
        ],
-       "fact": "前 OpenAI 工程师 Abdulrahman Alfozan 对在公司高管会议室安装窃听设备的指控当庭表示不认罪，其律师于周五提交抗辩，此前大陪审团已以一项非法截取口头通信的重罪罪名起诉他。他自 10 月 9 日被捕后一直被羁押，法官认定其与沙特的联系构成潜逃风险。起诉未指控窃取商业机密或为外国政府工作，公司也表示未发现他带走模型权重或源代码的迹象。"
+       "fact": "据彭博社报道，多名未成年受害者就 Grok 被用于把普通照片篡改成儿童性虐待材料（CSAM）对马斯克旗下 xAI 提起多起集体诉讼，律师估计符合索赔条件的受害者可能多达数千人。"
       }
      ]
     },
@@ -40,60 +59,46 @@
      "name": "程序、证据与上诉",
      "items": [
       {
-       "id": "14956de8ef",
+       "id": "7bdd9a9580",
        "kind": "single",
-       "title": "巴西两名律师在诉状中隐藏提示词操纵法院 AI 被罚 1.6 万美元",
-       "date": "2026-11-02",
+       "title": "北京互联网法院审理原创内容被平台误判为 AI 生成案，判决平台违约",
+       "date": "2026-11-11",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/079.htm"
+         "url": "https://www.ithome.com/1/025/592.htm"
         }
        ],
-       "fact": "巴西一家劳工法院对两名律师处以约 1.6 万美元罚款，因其诉状中用白底白字嵌入提示词注入指令，要求 AI 对诉状仅做表面处理、不质疑内容。该注入未实际起效，法院认定行为有损司法尊严，按涉案赔偿金额 10% 罚款并通报律师协会。判决书由巴西利亚大学教授 Vladimir Aras 在 X 平台分享，此前当地还发生过当事人嵌入隐藏提示词被要求线下提交纸质材料等类似事件。"
+       "fact": "北京互联网法院披露一起诉讼：用户小唐发布的原创文字被平台认定为\"AI 生成未标识\"，遭隐藏和禁言一天，申诉未果后起诉。法院认定平台构成违约，判决其解除内容隐藏并删除违规处理记录。法官指出，平台以算法识别 AI 内容时应对判定依据作适度解释说明，不能仅以商业秘密为由拒绝，并建议平台建立阶梯式处置机制、坚持过罚相当。"
       },
       {
-       "id": "642c1b6185",
+       "id": "f1342b5cf5",
        "kind": "single",
-       "title": "诉讼称男子向妻子介绍 ChatGPT 后遭其用 ChatGPT 策划投毒",
-       "date": "2026-11-05",
-       "source": "Ars Technica：AI（RSS）",
+       "title": "美参院银行委员会主席要求黄仁勋 12 月 3 日作证，否则面临传票",
+       "date": "2026-11-13",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/"
+         "url": "https://x.com/rohanpaul_ai/status/2121041455733260727"
         }
        ],
-       "fact": "一起在旧金山高等法院公开的诉讼称，北卡罗来纳州女子 Cheryl Gates 在 ChatGPT 助长其丈夫要抛弃她的妄想后，用它获取夹竹桃投毒的具体剂量与用法指导，试图毒杀丈夫 James，10 月已被大陪审团起诉谋杀未遂和食品污染。"
+       "fact": "据 Reuters，美参议院银行委员会主席 Tim Scott 要求黄仁勋于 12 月 3 日出席作证，并威胁若不自愿出庭将发出传票。商务部长 Howard Lutnick 因其部门负责芯片出口管制，被单独要求于 12 月 10 日作证。司法部表示相关情报指控尚未被证实。"
       },
       {
-       "id": "9a5784fde1",
+       "id": "19a69012af",
        "kind": "single",
-       "title": "员工用 AI 辅助办公被开除，法院判决保险公司赔偿 4.6 万并继续履约",
-       "date": "2026-11-07",
+       "title": "7 人利用 AI 生成国漫角色淫秽图片牟利获刑，均适用缓刑",
+       "date": "2026-11-15",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/695.htm"
+         "url": "https://www.ithome.com/1/027/395.htm"
         }
        ],
-       "fact": "据央视财经报道，北京一保险公司法务吴女士将自行整理的稽核数据表上传至领导多次推荐的第三方 AI 平台辅助办公，一个月后被公司以违反信息安全规定为由解除劳动合同。法院认定其无泄密主观故意，公司规章制度未明确禁止使用第三方 AI 工具，也未举证造成实际泄密后果，判决撤销解除通知、继续履行劳动合同并支付工资损失等共计 4.6 万余元，二审维持原判，判决已生效。"
-      },
-      {
-       "id": "f6988f9a69",
-       "kind": "single",
-       "title": "法官裁定 Anthropic 须继续应对 Claude Max 额度虚假宣传指控",
-       "date": "2026-11-07",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/023/824.htm"
-        }
-       ],
-       "fact": "美国联邦治安法官谢文辉（Alex Tse）裁定，Anthropic 须继续应对 Claude Max 套餐额度涉嫌误导消费者的主要指控，同时驳回其他几项诉求。"
+       "fact": "金华市婺城区检察院对陈某等 7 名“黄图画师”提起公诉，法院以制作、复制、贩卖、传播淫秽物品牟利罪判处有期徒刑二年至八个月不等，均适用缓刑，判决已生效。涉案人员通过数十个漫画爱好者群以每份 5 元至 20 元售卖 AI 生成的国漫角色淫秽图片，一年多销售 13 万余张、获利 16 万余元。"
       }
      ]
     },
@@ -101,51 +106,23 @@
      "name": "其他司法事项",
      "items": [
       {
-       "id": "7cbbd05922",
+       "id": "64f2772cc4",
        "kind": "single",
-       "title": "欧盟法院法务总顾问称谷歌 Gemini 使用新闻报道可能侵犯版权",
-       "date": "2026-11-03",
-       "source": "IT之家·人工智能",
+       "title": "北卡男子起诉 OpenAI，指 ChatGPT 提供妻子投毒计划的关键细节",
+       "date": "2026-11-09",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/835.htm"
+         "url": "https://x.com/rohanpaul_ai/status/2119824386987540802"
         }
        ],
-       "fact": "欧盟法院（CJEU）法务总顾问马切伊·什普纳尔（Maciej Szpunar）表示，谷歌 Gemini 在回答提问时使用新闻报道，在特定情况下可能侵犯出版商版权。"
-      },
-      {
-       "id": "20c3f44343",
-       "kind": "single",
-       "title": "男子用 AI 伪造签名盗用大模型算力薅 400 多万账号，被判刑三年缓刑三年",
-       "date": "2026-11-03",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/021/484.htm"
-        }
-       ],
-       "fact": "上海首例利用 AI 伪造签名、盗用大模型算力案宣判，徐汇区法院以非法获取计算机信息系统数据罪判处宗某某有期徒刑三年，缓刑三年，并处罚金四万元。"
-      },
-      {
-       "id": "93cffbcee2",
-       "kind": "single",
-       "title": "Meta 因广泛反对暂停将网站内容用于 AI 训练的新商业条款",
-       "date": "2026-11-05",
-       "source": "404 Media（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.404media.co/meta-generative-ai-commercial-terms-on-pause/"
-        }
-       ],
-       "fact": "Meta 宣布暂停原定于 2026 年 11 月 20 日生效的商业条款更新，该条款曾要求商业账户允许 Meta 使用其网站内容训练生成式 AI 产品。此前挪威法院在 180 家挪威媒体公司支持下颁布临时禁令，英国竞争与市场管理局也宣布调查，Meta 曾一度推迟生效日期并把允许用途中的“train”改为限于广告和商业产品。"
+       "fact": "一名北卡罗来纳州男子起诉 OpenAI，称其分居妻子借助 ChatGPT 获得投毒计划的可操作细节，包括物质、按其体重校准的剂量、投送方式和掩盖手段。诉状称其于 2025 年 7 月重病后康复。OpenAI 表示已封禁该用户并向警方共享信息。"
       }
      ]
     }
    ],
-   "count": 8
+   "count": 6
   },
   {
    "name": "监管执法与行政处罚",
@@ -154,32 +131,65 @@
      "name": "调查与立案",
      "items": [
       {
-       "id": "d0bdfbed33",
+       "id": "0018b0809d",
        "kind": "single",
-       "title": "土耳其竞争管理局就谷歌搜索“AI 概览”“AI 模式”启动调查并实施临时监管措施",
-       "date": "2026-11-02",
-       "source": "IT之家·人工智能",
+       "title": "英国监管机构 OfS 威胁制裁不采用防 AI 考试形式的高校",
+       "date": "2026-11-11",
+       "source": "The Decoder：AI News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/122.htm"
+         "url": "https://the-decoder.com/uk-regulator-threatens-universities-with-sanctions-unless-they-adopt-ai-proof-exam-formats/"
         }
        ],
-       "fact": "土耳其竞争管理局宣布对谷歌搜索中的“AI 概览”“AI 模式”功能启动调查，以确定其是否违反该国《竞争保护法》。"
+       "fact": "英格兰高等教育监管机构 OfS 称 AI 让公平批改课程作业“几乎不可能”，敦促高校恢复传统考试和现场展示，并警告可能制裁未建立可靠评估形式的高校。OfS 与 Advance HE 对 127 所机构 300 多名受访者的调查发现，学生大量用 AI 写论文且常未被察觉，成绩与不用 AI 者相近；策略总监 Josh Fleming 称这是“代际风险”，威胁学位可信度。"
       },
       {
-       "id": "1926244125",
+       "id": "03987a4d6e",
        "kind": "single",
-       "title": "美国司法部超级智能工作组 DOJ-SITF 投入运作",
-       "date": "2026-11-07",
+       "title": "英伟达CEO黄仁勋辞任，CFO临时接任，美国国会就芯片销售展开调查",
+       "date": "2026-11-13",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+        }
+       ],
+       "fact": "英伟达联合创始人黄仁勋辞去CEO一职，CFO Colette Kress出任临时CEO。美国国会就英伟达芯片对华销售及相关事宜展开调查，并要求黄仁勋作证。报道提及Megaspeed公司两年内采购价值48亿美元的英伟达芯片，美国与新加坡曾就芯片出口合规问题对该企业进行调查。"
+      }
+     ]
+    },
+    {
+     "name": "处罚与整改",
+     "items": [
+      {
+       "id": "37e94cdb5d",
+       "kind": "single",
+       "title": "404 Media：Claude 与 Codex 开始限制用户用 AI 逆向工程自有设备",
+       "date": "2026-11-10",
+       "source": "404 Media（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.404media.co/reverse-engineer-anything-ai-companies-crack-down-on-the-coolest-thing-people-were-doing-with-ai/"
+        }
+       ],
+       "fact": "404 Media 报道，用户用 Anthropic 的 Claude 和 OpenAI 的 Codex 对自有设备做 AI 逆向工程时，陆续触发安全检查、警告或账号限制，Reverse Engineer Anything 社区和 Decomp.wtf 项目受影响，有用户用 Codex 逆向三星电视后被封号。"
+      },
+      {
+       "id": "8bb094cfac",
+       "kind": "single",
+       "title": "白宫超级智能工作组建议放宽问责政策，鼓励 AI 企业报告网络安全事件",
+       "date": "2026-11-14",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/655.htm"
+         "url": "https://www.ithome.com/1/027/229.htm"
         }
        ],
-       "fact": "美国司法部于当地时间 11 月 5 日宣布超级智能工作组（DOJ-SITF）投入运作，统筹涉及 SI 的刑事和民事诉讼，保护创新与防范攻击并行。根据 10 月 13 日备忘录，工作组将协调内部调查、提出执法优先事项并制定起诉及合规评估指引，由斯坦利·伍德沃德和斯蒂芬·韦斯牵头，反垄断局、刑事局、FBI 等单位派代表参与，并对接政府层面的超级智能任务（SIF）。"
+       "fact": "据彭博社报道，当地时间 11 月 13 日，美国政府新设的超级智能工作组在白宫开会，建议联邦机构放宽网络安全事件问责政策，鼓励 AI 企业主动报告重大安全事件。工作组敦促各机构在未来 12 个月内限制企业因安全事件承担的监管责任，并考虑延长期限；这与上月警告处罚开发商的立场形成转变。"
       }
      ]
     },
@@ -187,46 +197,46 @@
      "name": "下架与封禁",
      "items": [
       {
-       "id": "3231710a30",
+       "id": "824f3e3b46",
        "kind": "single",
-       "title": "AI 抓取 AO3 同人文的 ao3.life 上线一天后因 2000 多条下架请求关站",
-       "date": "2026-11-03",
+       "title": "英国新 porn 法生效：Clips4Sale 批量下架内容，性工作者受冲击",
+       "date": "2026-11-09",
        "source": "404 Media（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.404media.co/vibe-coded-ao3-clone-site-down-after-fanfic-authors-buried-it-with-2-000-takedown-notices-in-a-single-day/"
+         "url": "https://www.404media.co/bad-news-for-kinky-brits/"
         }
        ],
-       "fact": "抓取 Archive of Our Own（AO3）同人文并提供 AI 有声书付费服务的 ao3.life 网站上线一天后关站，创建者称收到了超过 2000 条作者下架请求。"
+       "fact": "英国上周五起实施新 porn 法律，私下录制或持有窒息、勒颈等特定类型内容最高可判 5 年监禁。"
       },
       {
-       "id": "d9b974cd9b",
+       "id": "9942e9c0f2",
        "kind": "single",
-       "title": "曝字节跳动将封禁 L4 代码仓库及飞书文档的外部 AI 访问，限制员工自费使用 Claude、Codex",
-       "date": "2026-11-04",
-       "source": "IT之家·人工智能",
+       "title": "美联航以网络安全风险为由封禁 AI 智能体订票",
+       "date": "2026-11-12",
+       "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/917.htm"
+         "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/"
         }
        ],
-       "fact": "据大厂日爆 11 月 3 日爆料，字节跳动本月起将对全公司 L4 级别代码仓库和飞书文档实施外部 AI 访问封禁，员工个人采买的 Claude、Codex 等 AI 账号不能再用。"
+       "fact": "美联航宣布将限制第三方个人 AI 智能体代用户订票和管理预订，理由是网络安全风险和可能违反联邦法规。航空公司将在其数字平台以及旅行社和聚合平台渠道直接和间接禁止未授权 AI 助手访问，并更新预订、出票和分销政策。"
       },
       {
-       "id": "75d2275bb0",
+       "id": "d8bc82cbf8",
        "kind": "single",
-       "title": "英国色情禁令生效后，Clips4Sale 等平台大规模下架创作者内容",
-       "date": "2026-11-06",
-       "source": "404 Media（RSS）",
+       "title": "Tomasz Tunguz 分析 AI agent 被电商拒之门外背后的利润结构",
+       "date": "2026-11-13",
+       "source": "Tomasz Tunguz 博客（VC 分析）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.404media.co/clips4sale-content-removed-uk-porn-law/"
+         "url": "https://tomtunguz.com/no-shirt-no-shoes-no-service-for-bots/"
         }
        ],
-       "fact": "英国创作者 Sophia Truee 的 506 个视频中有 392 个被移除，Madame Caramel 的 900 个视频仅剩 198 个，Goddess Kitty 有 931 个视频被限制。"
+       "fact": "Tomasz Tunguz 分析为何大型电商封禁 AI agent：机器人已占全球网络流量 54%，2026 年 8 月至 10 月月度 AI agent 流量增长 8 倍，但 United Airlines 更新条款禁止 AI agent 订票，Amazon 也封禁第三方购物 agent。"
       }
      ]
     },
@@ -234,155 +244,329 @@
      "name": "其他执法事项",
      "items": [
       {
-       "id": "8046c44c0c",
+       "id": "9c54b6d3f9",
        "kind": "single",
-       "title": "美国中期选举后数据中心阻力加大，民主党控制国会或带来更多限制",
-       "date": "2026-11-05",
-       "source": "TechCrunch：AI（RSS）",
+       "title": "网信办上线互联网新技术新应用信息服务备案系统，一体化开展生成式人工智能、算法等备案",
+       "date": "2026-11-09",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/"
+         "url": "https://www.ithome.com/1/024/332.htm"
         }
        ],
-       "fact": "美国 11 月 3 日中期选举后民主党控制国会，反对数据中心建设成为多州选举中的政治力量。NBC 出口民调显示超过半数受访者认为 AI 弊大于利，近 80% 反对在自家附近建数据中心。俄亥俄州一县通过数据中心禁令，Morgan Stanley 预计佐治亚和得州等地建设将因民主党获胜而延迟，下一步或包括更多建设暂停令及要求数据中心自行承担电网升级成本。"
+       "fact": "国家互联网信息办公室建设的互联网新技术新应用信息服务备案系统于 2026 年 11 月 9 日正式上线运行，可一体化开展生成式人工智能、算法、深度合成、区块链等新技术新应用备案。原互联网信息服务算法备案系统和区块链信息服务备案管理系统同步停止使用，网站支持通过主体名称、备案名称、备案编号等查询备案信息，咨询电话为 010-82990521。"
+      },
+      {
+       "id": "a3b433bcbf",
+       "kind": "single",
+       "title": "FT 报道称美国商务部搁置将 Megaspeed 列入出口黑名单",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120345806855348459"
+        }
+       ],
+       "fact": "据 FT 报道，尽管国务院、财政部、能源部和五角大楼等 4 家机构推动将涉嫌转运受限 Nvidia 芯片的 Megaspeed 列入出口黑名单，但主管列入工作的美国商务部已搁置新增名单 2 个月，该公司至今未上 entity list。"
       }
      ]
     }
    ],
-   "count": 6
+   "count": 9
   },
   {
    "name": "立法与政策制定",
    "groups": [
     {
-     "name": "法案进程",
+     "name": "",
      "items": [
       {
-       "id": "d2744ea374",
+       "id": "7182fa89d9",
        "kind": "single",
-       "title": "Mustafa Suleyman 对特拉华允许 AI 智能体经营企业的提案表示担忧",
-       "date": "2026-11-05",
-       "source": "X：Mustafa Suleyman（Microsoft AI CEO） (@mustafasuleyman)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/mustafasuleyman/status/2118381163136123019"
-        }
-       ],
-       "fact": "Mustafa Suleyman 表示对特拉华州允许 AI 智能体经营企业的提案深感担忧，认为应非常谨慎。该提案拟设立名为 Delaware AIC 的独立法律实体，其日常事务由 AI 智能体而非人类管理，可依智能体指示以自身名义起诉应诉、持有和处置财产并承担债务。"
-      },
-      {
-       "id": "16482d844a",
-       "kind": "single",
-       "title": "纽约州议员 Alex Bores 呼吁美国国会今年立法禁止递归自我改进（RSI）",
-       "date": "2026-11-07",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2119204135115665829"
-        }
-       ],
-       "fact": "Alex Bores 称各 AI 公司都在尝试完全自动化 AI 研究即递归自我改进（RSI），OpenAI 称有望 2028 年 3 月实现，Anthropic 员工称 2027 年实现。他认为当前技术下任何错误或不对齐会在每代被放大，呼吁美国国会尽早禁止 RSI，并列出从 Bernie Sanders、Yoshua Bengio 到 Arvind Narayanan 等跨立场支持者。Rohan Paul 转发并评论称相关禁令讨论正变得越来越多。"
-      },
-      {
-       "id": "e40e023161",
-       "kind": "single",
-       "title": "Mistral CEO Arthur Mensch 反对法国 Darcos 法案，呼吁在欧盟层面建立基于营业额的 AI 创作基金",
-       "date": "2026-11-08",
-       "source": "X：Arthur Mensch（Mistral CEO） (@arthurmensch)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/arthurmensch/status/2119394493287833923"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "政策文件",
-     "items": [
-      {
-       "id": "a70e230328",
-       "kind": "single",
-       "title": "中国将 AI 对就业的影响列为监测风险",
-       "date": "2026-11-03",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117607523943694450"
-        }
-       ],
-       "fact": "据 The Information 报道，中国经济规划部门表示将密切监测 AI 对就业的影响，把 AI 对就业的冲击列为监测风险。此举在此前 10 月国务院发布的指导意见基础上，要求对可能造成重大就业扰动的 AI 项目进行风险评估。"
-      },
-      {
-       "id": "637597624b",
-       "kind": "single",
-       "title": "OpenAI 全球事务主管 Chris Lehane 发文阐述 AI 政策议程，试图影响 2028 年大选",
-       "date": "2026-11-04",
+       "title": "纽约 RAISE 法案生效，OpenAI 和 Anthropic 等前沿 AI 开发商须在 2027 年前注册",
+       "date": "2026-11-10",
        "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/"
+         "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/"
         }
-       ]
+       ],
+       "fact": "纽约开放 RAISE 法案注册门户，年收入超 5 亿美元的前沿 AI 开发商如 OpenAI、Anthropic 须在 2027 年 1 月 1 日前注册，并在 2027 年初起履行义务。"
       },
       {
-       "id": "9dbd70fb8a",
+       "id": "167008b75e",
        "kind": "single",
-       "title": "工信部发布通知加强智能体终端设备进网管理，提出四大工作任务",
-       "date": "2026-11-06",
-       "source": "IT之家·人工智能",
+       "title": "澳大利亚拟议 AI 安全法案将强制前沿模型接受独立测试",
+       "date": "2026-11-12",
+       "source": "The Decoder：AI News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/059.htm"
+         "url": "https://the-decoder.com/australias-proposed-ai-safety-bill-would-force-frontier-model-makers-to-open-up-to-independent-testing/"
         }
        ],
-       "fact": "工信部 11 月 6 日发布关于加强智能体终端设备进网管理的通知，提出四大工作任务：开展智能体和终端适配、改进智能体终端进网管理、强化智能体现网升级管理、健全智能体分发管理机制。"
+       "fact": "澳大利亚总理 Anthony Albanese 领导的政府宣布一项法律，将首次对在该国运营的前沿 AI 公司实施强制性安全规则。要求包括开放独立审计、持续安全检查、公布安全框架并立即向政府报告安全事件，新监管机构将与 Australian AI Safety Institute 共同执行并对违规者处以高额罚款；更多细节将在咨询结束后公布。"
+      },
+      {
+       "id": "d500af3ed9",
+       "kind": "single",
+       "title": "美国国会寻求收紧AI芯片出口规则",
+       "date": "2026-11-15",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china"
+        }
+       ],
+       "fact": "在涉及Nvidia高管的争议事件后，美国国会正寻求进一步收紧AI芯片出口。民主党和共和党均对收紧相关规则的法案表示支持，并要求Nvidia高管出席国会作证。参议院银行委员会主席Tim Scott已致函Nvidia高管和商务部长Howard Lutnick，要求其公开作证。"
       }
      ]
     }
    ],
-   "count": 6
+   "count": 3
   },
   {
    "name": "出口管制、制裁与投资审查",
    "groups": [
     {
+     "name": "禁用与移除",
+     "items": [
+      {
+       "id": "72fb3de178",
+       "kind": "single",
+       "title": "美国对中国光模块厂商的禁令似乎落空，监管方向转向仅限制下一代 3.2T 模块",
+       "date": "2026-11-11",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2120525705972699168"
+        }
+       ],
+       "fact": "在华盛顿推动封禁中际旭创（Innolight）和新易盛（Eoptolink）后，Microsoft 等科技巨头向美国国家安全委员会（NSC）警告，失去这些供应商可能令美国数据中心扩张停摆。据材料描述，监管机构目前考虑的禁令仅针对下一代 3.2T 光模块，现有 800G 和 1.6T 模块不受影响。"
+      }
+     ]
+    },
+    {
      "name": "出口管制与制裁",
      "items": [
       {
-       "id": "16583eb71d",
+       "id": "884d622fc8",
        "kind": "single",
-       "title": "FT 报道 Nvidia 要求数据中心客户至少 51% 服务面向非中国企业",
-       "date": "2026-11-03",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "title": "The Verge 梳理黄仁勋与 Megaspeed 高管丑闻对 Nvidia 出口管制游说的影响",
+       "date": "2026-11-09",
+       "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117608629939679350"
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang"
         }
        ],
-       "fact": "据 FT 报道，Nvidia 要求云与数据中心客户将至少 51% 的服务交给非中国企业，仅适用于新合同。此举针对中国企业通过海外云租赁远程使用先进芯片训练模型的路径，因为美国出口管制一般不覆盖远程访问；云厂商还被要求上报芯片最终用户身份。"
+       "fact": "The Verge 依据《纽约时报》等报道梳理 Nvidia CEO 黄仁勋与新加坡云服务商 Megaspeed 高管 Alice Huang 的婚外情风波。"
       },
       {
-       "id": "5bbf3dfcbc",
+       "id": "b79fa9393b",
        "kind": "single",
-       "title": "Oracle 因美方反对取消价值 70 亿美元、向腾讯提供至多 10 万块先进 AI 芯片的租约",
-       "date": "2026-11-04",
+       "title": "Nvidia CEO 黄仁勋婚外情风波削弱其对严格 AI 芯片出口管制的游说",
+       "date": "2026-11-09",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/nvidia-espionage-scandal-weakens-huangs-lobby-against-tighter-ai-chip-export-controls/"
+        }
+       ],
+       "fact": "据 Bloomberg 报道，Nvidia CEO 黄仁勋在全员备忘录中承认与 Alice Huang（Huang Le）存在婚外关系，美国情报机构认为后者涉外国情报活动，董事会已启动独立董事主导的调查。"
+      },
+      {
+       "id": "8189ced74d",
+       "kind": "single",
+       "title": "黄仁勋私人关系风波：The Verge 分析 Nvidia 公司结构与 AI 生态风险",
+       "date": "2026-11-09",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me"
+        }
+       ],
+       "fact": "The Verge 作者评述《纽约时报》报道的 Nvidia CEO 黄仁勋与 Megaspeed 高管 Alice Huang 的关系风波；Megaspeed 曾购买 48 亿美元受出口限制的 Nvidia 芯片。作者结合公司结构和融资布局，分析这一风波对 Nvidia 的潜在冲击。"
+      },
+      {
+       "id": "57aab31007",
+       "kind": "single",
+       "title": "黄仁勋婚外情风波后，英伟达董事会展开调查",
+       "date": "2026-11-09",
+       "source": "Big Technology（热点 RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.bigtechnology.com/p/the-jensen-huang-honeypot-fallout"
+        }
+       ],
+       "fact": "Big Technology 分析黄仁勋承认与 Alice Huang 有婚外情后，英伟达董事会已就是否泄露公司机密展开调查，黄仁勋暂留任 CEO。文章认为这不只是私人丑闻，还可能削弱他在放宽芯片出口管制上的游说公信力，并给 Anthropic 和 Google 留出机会，反 AI 的民主党人也可能在国会听证中以他为目标。"
+      },
+      {
+       "id": "f9392c79a8",
+       "kind": "single",
+       "title": "黄仁勋婚外情风波令 Nvidia 中国业务承压",
+       "date": "2026-11-09",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/09/jensen-huangs-affair-with-alleged-chinese-spy-puts-nvidias-china-ambitions-under-scrutiny/"
+        }
+       ],
+       "fact": "《金融时报》报道 Nvidia CEO 黄仁勋与 Nvidia 客户 Megaspeed 前高管 Alice Huang 存在婚外情，美国官员认为后者涉外国情报活动、意在影响芯片出口限制。黄仁勋已承认此事并向公司致歉，Nvidia 独立董事正联合外部律师调查，国会也要求作出解释。截至 7 月 26 日的三个月内，Nvidia 来自中国总部客户的收入为 79 亿美元，约占总营收 8%。"
+      },
+      {
+       "id": "93bf0efdaa",
+       "kind": "single",
+       "title": "The Information：Nvidia 曾游说反对针对远程访问芯片的出口管制规则",
+       "date": "2026-11-10",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117935779343482918"
+         "url": "https://x.com/rohanpaul_ai/status/2119980259747725537"
         }
        ],
-       "fact": "Oracle 在美国反对后取消了价值 70 亿美元、向腾讯提供至多 10 万块先进 AI 芯片的 5 年租约，这本是腾讯最大的海外算力租约，芯片来自东南亚数据中心。中国方面也有广东官员敦促腾讯改用国产芯片；Nvidia 现已要求云客户将至少 51% 的服务卖给非中国企业。"
+       "fact": "The Information 援引两名现任美国商务部官员的话称，Nvidia 尤其大力游说反对任何针对远程访问的规则，而远程访问是中国 AI 实验室经由新加坡和马来西亚数据中心获取受限芯片的途径。"
+      },
+      {
+       "id": "4fedaa6faf",
+       "kind": "single",
+       "title": "英伟达CEO绯闻或波及芯片业",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120391599264063648"
+        }
+       ],
+       "fact": "《华尔街日报》：出口管制支持者以这一事件为证，佐证他们对漏洞的警告 “英伟达CEO的绯闻可能给这家全球顶级芯片设计公司乃至整个行业带来商业后果。尽管许多议员在提出法案时都提到了英伟达，但这些提案可能伤及其他芯片公司，包括英伟达的竞争对手AMD，甚至微软和OpenAI这类正试图在海外建设数据中心的科技巨头。”"
+      },
+      {
+       "id": "59c20d33cd",
+       "kind": "single",
+       "title": "SemiAnalysis 分析黄仁勋辞任 Nvidia 后的公司结构与出口管制走向",
+       "date": "2026-11-12",
+       "source": "SemiAnalysis 长文 RSS（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://newsletter.semianalysis.com/p/nvidia-and-the-world-without-jensen"
+        }
+       ],
+       "fact": "SemiAnalysis 长文分析黄仁勋辞任 Nvidia CEO 后的连锁影响，作者推测其去职与 GPU 走私及美国推动 RASA 出口管制立法有关。文中指出公司约 60 名直管高管的扁平结构依赖黄本人，继任者 Colette Kress 为临时 CEO，Ian Buck 与 Jonah Alben 被视为技术侧人选但无人能全面接替。"
+      },
+      {
+       "id": "f586ad943f",
+       "kind": "single",
+       "title": "美国民主党议员就英伟达对华芯片销售启动调查",
+       "date": "2026-11-12",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+        }
+       ],
+       "fact": "美国国会民主党议员近日就特朗普政府处理英伟达对华芯片销售一事启动调查，并致函商务部长要求保存相关记录。调查关注芯片出口许可、关税安排及英伟达与政府之间的商业往来等监管问题。"
+      },
+      {
+       "id": "f559f84859",
+       "kind": "single",
+       "title": "美众议院中国特设委员会主席 Moolenaar 就黄仁勋辞任 NVIDIA 发表声明",
+       "date": "2026-11-12",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120931596396335208"
+        }
+       ],
+       "fact": "美众议院中国特设委员会主席 Rep. John Moolenaar 就黄仁勋辞任 NVIDIA 发表声明，称其被解职是一个本可避免的不幸结局。他表示 NVIDIA 现在必须改变公司治理方式，任命把国家安全置于最优先的领导层，并称国会应尽快在年底国防授权法案中通过两党出口管制立法。"
+      },
+      {
+       "id": "bf1685d6bf",
+       "kind": "event",
+       "title": "财政部 · 出口管制与制裁",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120666174837207527"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120972552151699634"
+        }
+       ],
+       "stages": [
+        {
+         "date": "11-11",
+         "stage": "进展",
+         "text": "美财政部长 Bessent 就 Nvidia 客户 Megaspeed 未被列入黑名单质问商务部长 Lutnick"
+        },
+        {
+         "date": "11-12",
+         "stage": "进展",
+         "text": "Reuters：白宫考虑撤换商务部长 Lutnick，Nvidia 客户 Megaspeed 事件波及商务部"
+        }
+       ]
+      },
+      {
+       "id": "d4dbe0f1bb",
+       "kind": "single",
+       "title": "多家银行以美国出口管制为由，拒绝中国大陆和香港投资者参与 Anthropic IPO",
+       "date": "2026-11-13",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/banks-bar-chinese-and-hong-kong-investors-from-anthropic-ipo-over-us-export-controls/"
+        }
+       ],
+       "fact": "据 Bloomberg 报道，多家银行拒绝中国大陆和香港投资者的认购订单，或认为其获配可能性很低，部分人士以美国出口管制规则 ITAR 为由。Anthropic 不予置评，此次 IPO 由 Goldman Sachs 和 Morgan Stanley 牵头，另有 20 家银行参与，股票预计 11 月 18 日定价后在 Nasdaq 以代码 ANT 交易。"
+      },
+      {
+       "id": "fdb68b0730",
+       "kind": "single",
+       "title": "据称与黄仁勋前情人相关的公司为在华买家促成了近 120 亿美元 Nvidia 芯片订单",
+       "date": "2026-11-15",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/"
+        }
+       ],
+       "fact": "据 The Decoder 援引华尔街日报，Megaspeed 在 2024 年 3 月至 2025 年 6 月间为中国企业安排了近 120 亿美元的 Nvidia 高性能芯片订单，涉及数十万枚受美国出口管制限制的芯片。"
+      }
+     ]
+    },
+    {
+     "name": "政府采购与供应链",
+     "items": [
+      {
+       "id": "478bb68807",
+       "kind": "single",
+       "title": "英伟达 CEO 黄仁勋承认婚外情，事件时间线梳理",
+       "date": "2026-11-10",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+        }
+       ],
+       "fact": "英伟达 CEO 黄仁勋 11 月 8 日向员工公开承认婚外情，并称此事关联新闻报道中的国家安全担忧，英伟达董事会已启动独立调查，公司股价次日下跌超 5%。美方官员认为其婚外情对象、Megaspeed 高管 Alice Huang 涉外国情报活动，Megaspeed 过去两年据称采购了 48 亿美元英伟达芯片。三名共和党委员会主席已要求黄仁勋就技术外流风险进行闭门简报。"
       }
      ]
     },
@@ -390,58 +574,61 @@
      "name": "其他管制事项",
      "items": [
       {
-       "id": "c617b75d33",
+       "id": "192b1528d3",
        "kind": "event",
-       "title": "OpenAI · 其他管制事项",
+       "title": "Nvidia · 其他管制事项",
+       "carried": [
+        {
+         "date": "2026-10-29",
+         "title": "美方调查指向新加坡云厂商高管与 Nvidia CEO 的接触"
+        }
+       ],
        "links": [
         {
          "label": "原文",
-         "url": "https://openai.com/index/dan-driscoll-joins-openai"
-        },
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117402685754491135"
-        },
-        {
-         "label": "原文",
-         "url": "https://the-decoder.com/openai-hires-ex-army-secretary-gaining-bipartisan-reach-just-as-midterms-loom/"
-        },
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117449922241003670"
+         "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/"
         }
        ],
        "stages": [
         {
-         "date": "11-02",
+         "date": "11-09",
          "stage": "进展",
-         "text": "OpenAI 据报聘请前美国防部长 Mark Esper 扩展军事 AI 业务"
-        },
-        {
-         "date": "11-03",
-         "stage": "进展",
-         "text": "OpenAI 聘请前美国陆军部长 Dan Driscoll 出任国家安全现代化高级顾问"
+         "text": "Nvidia CEO 黄仁勋承认婚外情，董事会启动独立调查"
         }
        ]
       },
       {
-       "id": "1cf42957c0",
+       "id": "dd6f1041d0",
        "kind": "single",
-       "title": "NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查",
-       "date": "2026-11-08",
+       "title": "OpenAI 误把俄罗斯恶作剧者当成乌克兰情报局长，通报了对乌军事 AI 支持",
+       "date": "2026-11-12",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2119540787147059491"
+         "url": "https://x.com/rohanpaul_ai/status/2120735027428560934"
         }
        ],
-       "fact": "NVIDIA 董事会于 11 月 8 日发布声明，就近期有关创始人兼 CEO 黄仁勋成为外国情报行动目标的报道启动独立调查。调查由独立董事组成的委员会在外部独立律师协助下监督，黄仁勋全力配合。董事会表示没有理由认为国家安全或 NVIDIA 机密已受损，但调查将审视所有可用信息，并表示对黄仁勋及其领导团队有信心。"
+       "fact": "OpenAI 被俄罗斯恶作剧组合 Vovan 和 Lexus 冒充乌克兰对外情报局长 Rustem Umerov 骗到，国家安全政策负责人 Sasha Baker 与两名同事参加了一场 17 分钟视频通话，对方摄像头全程关闭。"
+      },
+      {
+       "id": "974546d1cf",
+       "kind": "single",
+       "title": "The Information：美国商务部新规拟要求七国出口许可，限制中国 AI 公司租用 Nvidia Blackwell 等芯片",
+       "date": "2026-11-12",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120750427914514731"
+        }
+       ],
+       "fact": "The Information 报道，美国商务部一项新规将要求对新加坡、马来西亚、泰国、印尼、巴西、挪威和南非出口许可，阻止中国 AI 公司通过这些国家的数据中心租用 Blackwell 及更新的 Nvidia 芯片。买家须披露芯片接收方和用途，并接受持续监控，同时针对远程访问和走私。"
       }
      ]
     }
    ],
-   "count": 4
+   "count": 18
   },
   {
    "name": "数据保护与个人信息",
@@ -450,18 +637,18 @@
      "name": "",
      "items": [
       {
-       "id": "a729aebd6c",
+       "id": "95904f304b",
        "kind": "single",
-       "title": "Cisco Talos 发现新型木马 VOLTA 用在线 AI 分析受害者数据价值",
-       "date": "2026-11-02",
-       "source": "IT之家·人工智能",
+       "title": "美联航将禁止个人 AI 智能体在其系统购票",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/249.htm"
+         "url": "https://x.com/rohanpaul_ai/status/2120584444247760983"
         }
        ],
-       "fact": "Cisco Talos 发现一款名为 VOLTA 的 Windows 恶意木马，会将收集的浏览记录、加密货币钱包、聊天记录等敏感数据上传至 Anthropic Claude 等在线 AI 产品生成摘要，评估受害者信息价值，随后尝试自我删除以降低被发现风险。"
+       "fact": "据 WSJ 报道，美联航将阻止个人 AI 智能体在其系统上预订机票，理由是它们可能泄露敏感数据或造成非预期购买。AI 智能体可读取航班选项和价格，但无法在其网站完成任何购买；联邦法规要求乘客亲自声明托运行李不含爆炸物，这是 AI 智能体无法合法执行的步骤。"
       }
      ]
     }
@@ -475,61 +662,42 @@
      "name": "侵权与纠纷",
      "items": [
       {
-       "id": "b7d640314c",
+       "id": "2b044b7417",
        "kind": "single",
-       "title": "纽约时报等媒体起诉 Brave 浏览器涉嫌抓取版权内容",
-       "date": "2026-11-02",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/"
-        }
-       ],
-       "fact": "纽约时报在曼哈顿联邦法院起诉隐私浏览器公司 Brave，指控其抓取该报版权内容并分发给 Anthropic、Perplexity、Mistral、xAI 和 Cohere 等客户；同日 Daily News、Chicago Tribune 和 Orlando Sentinel 提起类似诉讼。"
-      }
-     ]
-    },
-    {
-     "name": "许可与交易",
-     "items": [
-      {
-       "id": "6773c6c63f",
-       "kind": "single",
-       "title": "Anthropic 与美联社达成首份新闻内容授权协议",
-       "date": "2026-11-05",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/023/015.htm"
-        }
-       ],
-       "fact": "据《Adweek》报道，Anthropic 与美联社达成首份内容授权协议，Claude 可在美国中期选举之夜实时展示美联社选举结果数据并注明来源，财务条款和有效期未披露。Anthropic 此前拒绝此类合作，认为爬虫抓取属合理使用，部分出版商为此屏蔽其爬虫；OpenAI 已与十多家媒体机构达成类似协议，美联社也是谷歌和 OpenAI 最早的授权伙伴之一。"
-      }
-     ]
-    },
-    {
-     "name": "其他知产事项",
-     "items": [
-      {
-       "id": "12c11fdc29",
-       "kind": "single",
-       "title": "Elvis 与 Eminem 版权方起诉 AI 音乐公司 Suno 涉嫌克隆歌手声音",
-       "date": "2026-11-08",
+       "title": "Verge 访谈 RIAA CEO：从 Napster 诉讼到 AI 音乐版权与标注之争",
+       "date": "2026-11-09",
        "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit"
+         "url": "https://www.theverge.com/podcast/1029684/riaa-mitch-glazier-napster-ai-labels-music"
         }
        ],
-       "fact": "Elvis Presley 音乐权利人及 Eminem 部分作品的出版方起诉 AI 音乐公司 Suno，指其非法生成模仿这些艺人的音乐和歌词。原告律师主张 Suno 违反田纳西州 ELVIS 法案，该法案禁止 AI 公司克隆歌手声音。"
+       "fact": "The Verge Decoder 播客主持人 Nilay Patel 深度访谈 RIAA 主席兼 CEO Mitch Glazier，谈及 Napster 时代的 sued 学生往事与如今音乐界与 AI 公司的对立。"
+      }
+     ]
+    },
+    {
+     "name": "权利申请与登记",
+     "items": [
+      {
+       "id": "bdec1ed7bb",
+       "kind": "single",
+       "title": "微软申请专利：AI 近乎实时修改直播语音并重绘嘴型",
+       "date": "2026-11-09",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/024/305.htm"
+        }
+       ],
+       "fact": "微软提交编号 US 2026/0341309 A1 的专利申请，计划用 AI 智能体近乎实时地替换直播中的词语，并生成与修改后语音一致的嘴部画面，处理后的视频约延迟 1 至 10 秒播放。"
       }
      ]
     }
    ],
-   "count": 3
+   "count": 2
   },
   {
    "name": "内容治理、人格权与深度伪造",
@@ -538,18 +706,18 @@
      "name": "",
      "items": [
       {
-       "id": "07461df1f2",
+       "id": "ca1256303f",
        "kind": "single",
-       "title": "Anthropic 水印在多个旧款 Claude 模型上可通过采样参数绕过",
-       "date": "2026-11-04",
-       "source": "The Decoder：AI News（RSS）",
+       "title": "Runway 详解如何用 LLM 缩小内容审核政策与实践的差距",
+       "date": "2026-11-12",
+       "source": "Runway：News（网页）",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/anthropics-text-watermark-is-easy-to-bypass-on-several-older-claude-models/"
+         "url": "https://runwayml.com/news/safety/closing-the-gap"
         }
        ],
-       "fact": "The Decoder 报道，Anthropic 因欧盟 AI 法案 12 月截止期限为多款旧款 Claude 模型加装文本水印，但其中 Claude Opus 4.6 和 Claude Sonnet 4.6 仅在 temperature、top_p、top_k 保持默认值时生效，改动任一参数即可绕过。"
+       "fact": "Runway 用 LLM 重构内容审核系统，让政策制定与执行更贴合创作场景。相比两年前只能依赖第三方分类器按\"血液\"\"武器\"等固定类别打分，新系统可基于自有政策判断，政策更新最快只需数分钟，并能区分奇幻战斗与真实暴力。Runway 称审核在两个方向上都更准确：误拦减少、漏拦也减少，但仍存在第三方模型自带审核、LLM 误判和上下文缺失等限制。"
       }
      ]
     }
@@ -563,18 +731,18 @@
      "name": "",
      "items": [
       {
-       "id": "43a4f464f6",
+       "id": "69793146ec",
        "kind": "single",
-       "title": "OpenAI 称 ChatGPT 搜索量已达 Google 的 20%",
-       "date": "2026-11-03",
+       "title": "前 DOJ 反垄断负责人 Jonathan Kanter 创办 AI 法律科技公司 FluxCap",
+       "date": "2026-11-09",
        "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search"
+         "url": "https://www.theverge.com/policy/1029652/kanter-doj-biden-legal-tech"
         }
        ],
-       "fact": "文中以 Bing 在 2023 年反垄断审判中约 3% 的市场份额作参照，并提到 OpenAI 正把广告扩展为聊天回复中的赞助商品图片，Fry 称广告未对产品使用造成负面影响。"
+       "fact": "前美国司法部反垄断部门负责人 Jonathan Kanter 与 Doha Mekki 创办初创公司 FluxCap，推出面向反垄断案件的 AI 法律研究与分析工具，首个客户为精品律所 Kressin Powers。"
       }
      ]
     }
@@ -585,26 +753,113 @@
    "name": "劳动与就业",
    "groups": [
     {
-     "name": "",
+     "name": "替代与裁员",
      "items": [
       {
-       "id": "2d62edaab5",
+       "id": "18cf30d655",
        "kind": "single",
-       "title": "国家发改委：强化 AI 就业替代风险监测预警，做好兜底性社会保障",
-       "date": "2026-11-03",
+       "title": "Rohan Paul 类比乔布斯被逐，评 NVIDIA 放走黄仁勋",
+       "date": "2026-11-12",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120994977421705296"
+        }
+       ],
+       "fact": "Lex Fridman 发文称 NVIDIA 让黄仁勋离开对美国和人类都是巨大错误，堪比 Apple 当年解雇 Steve Jobs 但影响更大，并为其品格辩护。Rohan Paul 转引并列举 Atari 1978（Nolan Bushnell）、Apple 1985（Steve Jobs）、Uber 2017（Travis Kalanick）、OpenAI 2023（Sam Altman），称每隔几年董事会就会重新认识到创始人本身就是战略。"
+      },
+      {
+       "id": "7222b6d616",
+       "kind": "single",
+       "title": "澳洲航空宣布裁员 850 人，工会质疑其借 AI 之名削减本土岗位",
+       "date": "2026-11-12",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/475.htm"
+         "url": "https://www.ithome.com/1/026/157.htm"
         }
        ],
-       "fact": "国家发改委在奋进十五五系列新闻发布会上表示，将强化对人工智能就业替代风险的监测预警，加强社保体系与就业结构、工作方式变革的衔接，做好兜底性、普惠性社会保障，并针对算法歧视、深度伪造、隐私泄露增强溯源追踪能力。"
+       "fact": "据路透社报道，澳洲航空宣布与埃森哲合作推进 AI 转型，裁减 850 个岗位并将部分企业职能外包至海外，工会质疑其借 AI 之名掩饰裁员真实原因，实为雇用薪资更低的海外员工。澳航发言人称将继续与工会协商并帮助受影响员工转岗，但未回应 AI 洗白质疑；澳大利亚央行本周指出 AI 尚未引发大规模失业，但受 AI 影响较大职业的招聘需求有所减弱。"
+      },
+      {
+       "id": "c5457759cb",
+       "kind": "single",
+       "title": "腾讯否认裁员50%传闻，称实为 half 人力转向 AI 项目",
+       "date": "2026-11-12",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2120890609674416450"
+        }
+       ]
+      },
+      {
+       "id": "0ea514a163",
+       "kind": "single",
+       "title": "新西兰零售商 The Warehouse 员工抗议 AI 监控如厕时间，公司否认指控",
+       "date": "2026-11-14",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/027/150.htm"
+        }
+       ],
+       "fact": "据英国《独立报》报道，新西兰最大零售商 The Warehouse 集团奥克兰和基督城配送中心 300 多名员工本周抗议，指控公司用 AI 监控如厕时间，致部分员工在通道失禁，Workers First 工会称拣货机器人和盘点无人机取代了部分人工。集团首席人力资源官理查德·帕克否认指控，称实际使用的是全球配送中心沿用多年的扫描设备效率监测技术，与如厕无关，并称无人机反而增加了三个临时岗位。"
+      },
+      {
+       "id": "daad7ae812",
+       "kind": "single",
+       "title": "Gartner 预测到 2030 年 AI 将使全球净增约 170 万个工作岗位",
+       "date": "2026-11-15",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/027/427.htm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "劳动争议",
+     "items": [
+      {
+       "id": "fa12ae5da5",
+       "kind": "single",
+       "title": "近 70% 美国政府机构已用生成式 AI，工会加快争取相关保护措施",
+       "date": "2026-11-13",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/nearly-70-percent-of-us-agencies-use-generative-ai-and-unions-are-finally-catching-up-with-guardrails/"
+        }
+       ],
+       "fact": "美国公共部门工会正在赢得针对 AI 监控和自动化裁员的保护措施。Ernst and Young 调查显示近 70% 的美国政府机构已使用生成式 AI。"
+      },
+      {
+       "id": "b6596f57eb",
+       "kind": "single",
+       "title": "FAA 将 AI 空管建议系统 SMART 扩展至全美空域",
+       "date": "2026-11-13",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/features/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/"
+        }
+       ],
+       "fact": "FAA 将耗资 8.75 亿美元的 SMART 系统扩展至全美 22 个空中交通管制中心的空域，用于预测交通流量并给出改航与排序建议。该系统 9 月 21 日在华盛顿特区空域上线以来已改航 180 架次航班，平均每班节省 10 分钟和近 80 加仑燃油。代表逾 1.5 万名管制员的工会表示未参与该系统的设计、测试或部署。"
       }
      ]
     }
    ],
-   "count": 1
+   "count": 7
   },
   {
    "name": "资本市场与公司交易",
@@ -613,289 +868,329 @@
      "name": "融资与估值",
      "items": [
       {
-       "id": "bee1f1bf16",
-       "kind": "event",
-       "title": "Anthropic · 融资与估值",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117401551526600969"
-        },
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118719195072659833"
-        },
-        {
-         "label": "原文",
-         "url": "https://the-decoder.com/anthropics-1-5-trillion-ipo-hits-resistance-as-investors-balk-at-valuation/"
-        },
-        {
-         "label": "原文",
-         "url": "https://x.com/KateClarkTweets/status/2118563680694751405"
-        }
-       ],
-       "stages": [
-        {
-         "date": "11-02",
-         "stage": "定价",
-         "text": "WSJ：大投资者希望 Anthropic IPO 估值定在 1.5 万亿至 1.6 万亿美元"
-        },
-        {
-         "date": "11-06",
-         "stage": "定价",
-         "text": "WSJ：投资者将 Anthropic IPO 估值预期从约 $2T 下调至 $1.5T"
-        },
-        {
-         "date": "11-07",
-         "stage": "定价",
-         "text": "Anthropic IPO 估值存分歧，1.5 万亿美元仍被部分投资者嫌贵"
-        },
-        {
-         "date": "11-08",
-         "stage": "定价",
-         "text": "消息称 Anthropic 仍推进 IPO：拟募资 800 亿至 1000 亿美元，估值预期回落"
-        }
-       ]
-      },
-      {
-       "id": "55d4394e6e",
+       "id": "b41733c327",
        "kind": "single",
-       "title": "Anthropic 拟感恩节前 IPO，接受低于预期的估值，募资 800–1000 亿美元",
-       "date": "2026-11-07",
+       "title": "Anthropic IPO 获六倍超额认购，有望成史上最大规模 IPO",
+       "date": "2026-11-13",
        "source": "The Decoder：AI News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/"
+         "url": "https://the-decoder.com/anthropics-ipo-is-six-times-oversubscribed-and-on-track-to-become-the-largest-public-offering-in-history/"
         }
        ],
-       "fact": "据《金融时报》援引投资者的消息，Anthropic 计划在感恩节前 IPO，拟募资 800–1000 亿美元，估值 1.25–1.75 万亿美元，低于最乐观投资者期望的 2 万亿美元，但高于当前 9650 亿美元。"
+       "fact": "据 Bloomberg 报道，Anthropic 的 IPO 订单超出可售股份六倍，公司及其联合创始人拟通过公开发行募资至多 644 亿美元，另通过私募募资 260 亿美元，目标估值约 1.4 万亿美元，若达成将超过 SpaceX 的 IPO。"
       },
       {
-       "id": "1b6ccd7799",
-       "kind": "single",
-       "title": "Oracle 提交发行 200 亿美元新股和债券的申请以资助 AI 基础设施建设",
-       "date": "2026-11-02",
-       "source": "Hacker News：AI 热帖",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html"
-        }
-       ],
-       "fact": "Oracle 于周一向美国 SEC 提交申请，拟发行 100 亿美元普通股和 100 亿美元高级票据，为 AI 基础设施建设融资，当日股价下跌超 6%。该计划在上周投资者日已有预告，Oracle 当时还给出 2030 财年至少 2250 亿美元的营收预测，并表示 2027 至 2030 投资周期的额外资本市场融资仅限这 200 亿美元。"
-      },
-      {
-       "id": "dc9195e6ec",
-       "kind": "single",
-       "title": "Ornn 等创业公司推动 GPU 算力期货化，Ornn 融资估值约 10 亿美元",
-       "date": "2026-11-02",
-       "source": "Newcomer 新闻长文（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.newcomer.co/p/compute-crunch-startups-aim-to-financialize"
-        }
-       ],
-       "fact": "Newcomer 报道多家创业公司尝试把 GPU 算力变成可交易的大宗商品。"
-      },
-      {
-       "id": "a43e7b34f5",
-       "kind": "single",
-       "title": "Squarespace 宣布裁员约19%，约300名员工受影响",
-       "date": "2026-11-02",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/"
-        }
-       ],
-       "fact": "Squarespace 宣布重组并裁员约19%，涉及约300名员工，公司发言人称此举旨在简化运营、聚焦优先事项。文章指出 vibe-coding 建站工具正在颠覆行业，并提到 Wix 以 8000 万美元收购 Base44、Lovable 8 月完成 4 亿美元 C 轮融资估值 133 亿美元。"
-      },
-      {
-       "id": "2a3cfc5dd8",
-       "kind": "single",
-       "title": "The Verge 分析 PIMCO 和 Apollo 对 AI 泡沫的警告与巨额债券融资",
-       "date": "2026-11-03",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1025826/ai-bubble-pimco-apollo-bonds"
-        }
-       ]
-      },
-      {
-       "id": "4bb455555c",
-       "kind": "single",
-       "title": "fal 宣布完成合计 $1.65B 的 Series E 与 F 轮融资，Sound Ventures 参与投资",
-       "date": "2026-11-03",
-       "source": "X：Alex Heath (@alexeheath)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/alexeheath/status/2117711580574232846"
-        }
-       ],
-       "fact": "fal 官宣完成 Series E 和 Series F 两轮合计 $1.65B 融资，Series E 由 Sequoia 领投，Series F 由 Bessemer Venture Partners 领投，NVIDIA 持续参投。fal 称这笔资金将支持团队按自己的方式构建产品，Sound Ventures 发文表示参与投资并称赞团队执行力。"
-      },
-      {
-       "id": "23ebc76539",
-       "kind": "single",
-       "title": "摩根大通副董事长 Daniel Pinto：AI 板块估值仍高，预计将出现回调",
-       "date": "2026-11-03",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/021/521.htm"
-        }
-       ],
-       "fact": "摩根大通副董事长 Daniel Pinto 在香港金管局国际金融领袖投资峰会上表示，AI 领域估值仍然过高，预计该行业将出现回调。他认为市场对 AI 公司营收和获利增长的预期可能过于陡峭，可能导致整个产业重新定价，并提醒 AI 以外的产业需向这些公司支付数以万亿计美元才能证明投资合理。"
-      },
-      {
-       "id": "4f7b5c9b13",
-       "kind": "single",
-       "title": "Newcomer：OpenAI 与 Anthropic 融资路径分化，Anthropic IPO 仍在推进",
-       "date": "2026-11-04",
-       "source": "Newcomer 新闻长文（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.newcomer.co/p/latest-fundraising-efforts-show-openai"
-        }
-       ],
-       "fact": "Newcomer 作者采访参与两家融资的投资人后写道，Anthropic 正与 OpenAI 拉开距离，而 OpenAI 渴望翻身故事。有投资人称共同基金等长期投资者对 Anthropic 股份需求无限，预计 IPO 将在感恩节前完成；民主党中期选举大胜后政治环境更严峻，但 Anthropic 与民主党关系相对友好。"
-      },
-      {
-       "id": "6de452ab35",
-       "kind": "single",
-       "title": "人形机器人公司 Agility 将通过 SPAC 上市并募资 4.65 亿美元",
-       "date": "2026-11-05",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/"
-        }
-       ]
-      },
-      {
-       "id": "604487c32a",
-       "kind": "single",
-       "title": "Axiom 宣布完成对 Stacks Project 的形式化验证",
-       "date": "2026-11-05",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/"
-        }
-       ],
-       "fact": "估值 16 亿美元的 AxiomMath 宣布正式验证 Stacks Project，将其约 7,654 页内容转化为约 1600 万行经计算机逐行检查的 Lean 代码。"
-      },
-      {
-       "id": "7d8f9dfec2",
-       "kind": "single",
-       "title": "Isomorphic Labs 据报道谈判约 50 亿美元融资，估值约 500 亿美元",
-       "date": "2026-11-05",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118150492958437755"
-        }
-       ],
-       "fact": "据 Bloomberg，Alphabet 从 Google DeepMind 分拆的 Isomorphic Labs 正谈判约 50 亿美元融资，估值约 500 亿美元，目前尚无药物进入人体试验。"
-      },
-      {
-       "id": "27c034cc93",
-       "kind": "single",
-       "title": "消息称 Thinking Machines Lab 正以 400 亿美元投前估值筹集 50 亿美元",
-       "date": "2026-11-06",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/023/115.htm"
-        }
-       ],
-       "fact": "据 Business Insider 报道，Mira Murati 创立的 Thinking Machines Lab 正以 400 亿美元投前估值筹集 50 亿美元，此前其以超 100 亿美元估值完成 20 亿美元种子轮，500 亿美元估值的融资尝试谈判破裂。"
-      },
-      {
-       "id": "a2a1ae8c52",
-       "kind": "single",
-       "title": "软银信用风险升至4年高位，股价单日下跌10.8%",
-       "date": "2026-11-06",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118811515822514556"
-        }
-       ],
-       "fact": "软银被视为 AI 支出的代理标的，持仓包括 $64.6B 的 OpenAI 股份、Arm 的 90% 以及数据中心建设方 SB Energy。其股价周五下跌 10.8%，债务保险成本（信用风险）触及 4 年高位；公司曾以创纪录收益率借款为 OpenAI 持股融资，而 OpenAI IPO 推迟至 2027 年使回报延后。"
-      },
-      {
-       "id": "4c19024337",
+       "id": "f4822b077d",
        "kind": "event",
-       "title": "OpenAI · 融资与估值",
-       "carried": [
-        {
-         "date": "2026-10-31",
-         "title": "OpenAI 最新一轮仅募得约 110 亿美元，低于 300 亿美元目标，估值定为 1.25 万亿美元"
-        }
-       ],
+       "title": "Coframe · 融资与估值",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.wheresyoured.at/running-dry/"
+         "url": "https://www.ithome.com/1/024/559.htm"
         },
         {
          "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation"
-        },
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
-        },
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118813225336873181"
+         "url": "https://x.com/rohanpaul_ai/status/2120326880113140104"
         }
        ],
        "stages": [
         {
-         "date": "11-03",
+         "date": "11-09",
          "stage": "定价",
-         "text": "Ed Zitron 解析 OpenAI 1.25 万亿美元估值融资与 Anthropic S-1/A 中的万亿级算力承诺"
+         "text": "科斯拉投资 Coframe：用 AI 为每位访客定制网页，打造“有生命的互联网”"
         },
         {
-         "date": "11-06",
+         "date": "11-11",
          "stage": "定价",
-         "text": "OpenAI 传已融资 110 亿美元，估值 1.25 万亿美元"
-        },
-        {
-         "date": "11-07",
-         "stage": "定价",
-         "text": "OpenAI 获得 110 亿美元融资首笔，估值 1.25 万亿美元"
+         "text": "Khosla 押注 AI 为每位访客生成网页"
         }
        ]
       },
       {
-       "id": "b5199aad59",
+       "id": "6d108b3b1a",
        "kind": "single",
-       "title": "FT 报道 Anthropic 以 34 亿美元购入 1.7GW Caterpillar 燃气发电机",
-       "date": "2026-11-08",
+       "title": "Anthropic 花 34 亿美元购买 Caterpillar 燃气轮机",
+       "date": "2026-11-09",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/"
+        }
+       ],
+       "fact": "Anthropic 花 34 亿美元向 Caterpillar 购买最多可产出 1.7 GW 电力燃气轮机，放弃了以往租用算力的做法。据 Financial Times 报道，这批设备原是供应商 OnePWR 订购、因融资失败未完成付款；该公司在 S-1 文件中披露，此前以每月 12.5 亿美元租用 xAI 算力至 2029 年 5 月。"
+      },
+      {
+       "id": "029d0d3f82",
+       "kind": "single",
+       "title": "Lenore Palladino 分析退休储蓄如何被用于为 AI 泡沫融资",
+       "date": "2026-11-09",
+       "source": "Hacker News：AI 热帖",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://lpeproject.org/blog/your-retirement-savings-are-fueling-the-ai-bubble/"
+        }
+       ],
+       "fact": "UMass Amherst 经济学副教授 Lenore Palladino 撰文分析，普通人的退休储蓄正被用来为 AI 数据中心建设融资，而账户持有人往往不知情。"
+      },
+      {
+       "id": "f1264a5bd3",
+       "kind": "single",
+       "title": "Bloomberg 报道 AI 融资遇冷，Anthropic IPO 估值讨论下探至 1.1 万亿美元",
+       "date": "2026-11-09",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2119431232165683269"
+         "url": "https://x.com/rohanpaul_ai/status/2119767465253331109"
         }
        ],
-       "fact": "据 FT 报道，Anthropic 以 34 亿美元购入 1.7GW 的 Caterpillar 燃气发电机，是已知 AI 实验室最大规模的电力设备采购。这些订单原属圣安东尼奥供应商 OnePWR Solutions，两年前下单但因融资失败被 Anthropic 接手；由于下单早于涨价，设备将在未来两年内交付。"
+       "fact": "Bloomberg 报道，亚洲杠杆 AI 头寸遭遇追缴保证金，券商警告抛售可能延续，估值在交易完成前或进一步下跌。"
+      },
+      {
+       "id": "bee1f1bf16",
+       "kind": "event",
+       "title": "Anthropic · 融资与估值",
+       "carried": [
+        {
+         "date": "2026-11-08",
+         "title": "消息称 Anthropic 仍推进 IPO：拟募资 800 亿至 1000 亿美元，估值预期回落"
+        }
+       ],
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/127.htm"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120226361864536385"
+        },
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/anthropic-kicks-off-ipo-roadshow-offering-shares-at-70-to-78-and-targeting-a-trillion-dollar-valuation/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120224979098939403"
+        }
+       ],
+       "stages": [
+        {
+         "date": "11-10",
+         "stage": "洽谈",
+         "text": "Anthropic 拟通过 IPO 筹集最多 644 亿美元，另向谷歌、英伟达等私募融资 260 亿美元"
+        },
+        {
+         "date": "11-10",
+         "stage": "定价",
+         "text": "Anthropic 启动 IPO 路演：拟以每股 70 至 78 美元发行，估值最高约 1.4 万亿美元"
+        },
+        {
+         "date": "11-11",
+         "stage": "洽谈",
+         "text": "Anthropic IPO 拟募资最高 90.4B 美元，或成史上最大上市"
+        },
+        {
+         "date": "11-11",
+         "stage": "定价",
+         "text": "Anthropic 投资需求火热，承销商拟将 IPO 目标估值上调回 $1.5T 或更高"
+        }
+       ]
+      },
+      {
+       "id": "6f26580bf0",
+       "kind": "single",
+       "title": "a16z 领投 General Translation A 轮，押注 AI 全栈本地化",
+       "date": "2026-11-10",
+       "source": "a16z：News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.a16z.news/p/investing-in-general-translation"
+        }
+       ],
+       "fact": "a16z 宣布领投 General Translation 的 A 轮融资，Martin 加入其董事会。该公司主打面向开发者的全栈本地化，可直接集成进 React 应用与文档，并打通 GitHub、Figma、Slack，Cursor、Cognition、Ramp、Clickhouse 已在使用。"
+      },
+      {
+       "id": "0d41ba8e87",
+       "kind": "single",
+       "title": "CoreWeave 靠客户预付款和短期合约支撑 AI 扩张",
+       "date": "2026-11-11",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/"
+        }
+       ],
+       "fact": "CoreWeave 在三季度财报中宣布调整融资策略，转而依靠客户预付款和以合同为抵押的贷款，而非无担保债务。Q3 营收 36.6 亿美元，同比增长 168%，净亏损 7.09 亿美元，季度利息支出 8.46 亿美元；未来三个月预计获得约 90 亿美元预付款和订金。"
+      },
+      {
+       "id": "90986ad119",
+       "kind": "single",
+       "title": "彭博经济研究测算 AI 贡献英国今年约四分之一经济增长",
+       "date": "2026-11-11",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/729.htm"
+        }
+       ],
+       "fact": "彭博经济研究测算，2026 年 AI 相关经济活动为英国经济增长贡献 0.45 个百分点，约占今年 1.8% 整体增幅的四分之一。报告称贡献目前主要来自 AI 技术的生产和研发而非广泛应用，并提醒若全球 AI 资产估值大幅回调，英国经济可能面临风险；英国央行此前估计 AI 推广应用贡献了约五分之一的经济增长。"
+      },
+      {
+       "id": "5939291edd",
+       "kind": "single",
+       "title": "Plurai 融资 1300 万美元，用自动驾驶式仿真提升 AI 智能体可靠性",
+       "date": "2026-11-11",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/"
+        }
+       ],
+       "fact": "Plurai 完成 1300 万美元种子轮融资，由 Team8 领投，U&I、Velocity 和 Mercer 参投。该公司用基于企业自有数字系统的合成数据仿真为 AI 智能体构建数字孪生，覆盖知识库与工具，评估并修复边缘场景，平台可与 Claude Code、Codex、Copilot 和 Cursor 配合使用。"
+      },
+      {
+       "id": "dd6a9ccf0c",
+       "kind": "event",
+       "title": "DeepSeek · 融资与估值",
+       "carried": [
+        {
+         "date": "2026-10-22",
+         "title": "Bloomberg 报道 DeepSeek 新一轮融资约 150 亿美元"
+        }
+       ],
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120991673878786311"
+        }
+       ],
+       "stages": [
+        {
+         "date": "11-12",
+         "stage": "进展",
+         "text": "与 Alice Huang 相关的公司投资 DeepSeek 最新融资，并承诺提供 Nvidia 芯片"
+        }
+       ]
+      },
+      {
+       "id": "4a519371b2",
+       "kind": "single",
+       "title": "Nebius 计划 2027 年投入 400 亿美元，新泽西数据中心延期暴露 neocloud 融资模式风险",
+       "date": "2026-11-12",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
+        }
+       ],
+       "fact": "Nebius 在第三季度财报电话会上公布 2027 年计划支出 400 亿美元，远超华尔街预期，拟靠客户预付款和以客户合同为抵押的贷款覆盖 85% 的资本开支，并预测 2027 年营收 120 亿至 130 亿美元。"
+      },
+      {
+       "id": "3ed24e982b",
+       "kind": "single",
+       "title": "Gakku 融资 5100 万美元做 AI 学习教练",
+       "date": "2026-11-12",
+       "source": "X：Francois Chollet (@fchollet)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/fchollet/status/2120673529951813985"
+        }
+       ],
+       "fact": "对话式 AI 将变革教育，实现大规模个性化辅导。但我们必须把它做对。当前教育领域的大多数 AI 工具都在优化错误的目标：获取答案。"
+      },
+      {
+       "id": "99e0a43f19",
+       "kind": "single",
+       "title": "迪拜富豪萨基瓦尼：仅投资 OpenAI、SpaceX 和 Anthropic 就赚了数十亿美元",
+       "date": "2026-11-12",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/026/286.htm"
+        }
+       ],
+       "fact": "迪拜富豪、达马克集团创始人侯赛因·萨基瓦尼在彭博迪拜投资论坛上称，仅投资 OpenAI、SpaceX 和 Anthropic 三家公司就赚了数十亿美元。达马克集团从迪拜房地产起家，近年将投资扩至科技和数据中心领域，萨基瓦尼净资产超过 130 亿美元。他承认 AI 估值存在风险，市场不排除出现回调。"
+      },
+      {
+       "id": "762de9e151",
+       "kind": "single",
+       "title": "英伟达营收翻倍股价跌28.6%的估值困局",
+       "date": "2026-11-12",
+       "source": "X：Saito 硬地骇客 (@SaitoWu)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/SaitoWu/status/2120834057017897138"
+        }
+       ],
+       "fact": "英伟达第二财季营收962亿美元、同比增106%，数据中心占92.5%，但股价自10月6日至11月11日跌28.6%，市值蒸发约1.6万亿美元。当前市销率13.85倍为五年最低，作者建议等董事会结论与毛利率守住73.5%两个信号再考虑建仓。"
+      },
+      {
+       "id": "33e706b857",
+       "kind": "single",
+       "title": "Jensen Huang 离任或给 AI 创业融资留下大缺口，投资人和创始人担忧",
+       "date": "2026-11-13",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
+        }
+       ],
+       "fact": "Nvidia CEO Jensen Huang 正式辞职，创投圈认为其继任者 Colette Kress 更保守，短期难延续他每年数十亿美元、今年已参与 105 轮的投资节奏。"
+      },
+      {
+       "id": "a357341fa1",
+       "kind": "single",
+       "title": "美联储金融稳定报告：AI成为华尔街头号金融风险",
+       "date": "2026-11-13",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121391185499660332"
+        }
+       ],
+       "fact": "美联储发布金融稳定报告，纽约联储调查显示87%的市场人士将AI列为首要金融风险，高于春季的50%。报告称对超级智能的市场热情推高股票估值；截至10月AI基础设施债务超6800亿美元，约为2023年全年的5倍、占投资级公司借贷约31%；"
+      },
+      {
+       "id": "e69c62391b",
+       "kind": "single",
+       "title": "LangChain 完成 3 亿美元 C 轮融资，估值 30 亿美元",
+       "date": "2026-11-13",
+       "source": "LangChain：Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.langchain.com/blog/series-c"
+        }
+       ],
+       "fact": "LangChain 官宣完成 3 亿美元 C 轮融资，估值 30 亿美元，由 CapitalG 领投，GIC、DFJ Growth、IVP、Sapphire Ventures 等参投。"
+      },
+      {
+       "id": "2043d15398",
+       "kind": "single",
+       "title": "Gary Marcus：生成式AI泡沫正在破裂",
+       "date": "2026-11-13",
+       "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://garymarcus.substack.com/p/the-great-generative-ai-unraveling"
+        }
+       ]
       }
      ]
     },
@@ -909,137 +1204,183 @@
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/626.htm"
+         "url": "https://x.com/rohanpaul_ai/status/2120258671301296428"
         },
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"
+         "url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/"
+        },
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120231037569790385"
+        },
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/"
         }
        ],
        "stages": [
         {
-         "date": "11-02",
-         "stage": "报道",
-         "text": "Anthropic 在 S-1A 中披露可能很快达到自身 RSI 定义"
+         "date": "11-10",
+         "stage": "递交",
+         "text": "Anthropic 修改版 S-1 文件披露 Lambda 协议现可因 Lambda 未按期租下设施而取消"
         },
         {
-         "date": "11-03",
-         "stage": "报道",
-         "text": "Anthropic 在 S-1/A 招股文件中警示递归自我改进（RSI）临近"
+         "date": "11-10",
+         "stage": "定价",
+         "text": "Anthropic 再次修订 S-1：宣布已达责任扩展政策能力阈值，IPO 定价 $70-$78"
+        },
+        {
+         "date": "11-10",
+         "stage": "挂牌",
+         "text": "据报道 Anthropic 推进 IPO，计划下周四或周五挂牌"
+        },
+        {
+         "date": "11-11",
+         "stage": "定价",
+         "text": "WSJ：Anthropic 7 位创始人 IPO 各套现约 2.5 亿美元并保留控制权"
         }
        ]
       },
       {
-       "id": "4c2cc17a9f",
+       "id": "f0b7bfa55b",
        "kind": "single",
-       "title": "Anthropic 算力与基础设施合同承诺达 $895.4B，其中 $447.5B 须在 2031 年前支付",
-       "date": "2026-11-02",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "title": "Anthropic 启动 IPO 路演，拟发行 8.25 亿股 A 类普通股并申请以代码 ANT 上市纳斯达克",
+       "date": "2026-11-09",
+       "source": "Anthropic：Newsroom（网页）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117368258571784296"
+         "url": "https://www.anthropic.com/news/roadshow-launch"
         }
        ],
-       "fact": "Anthropic 在更新的 IPO 文件中首次披露第三季度业绩，算力与基础设施合同承诺总额约 $895.4B，其中 $447.5B 须在 2031 年前支付，仅 $213.8B 可取消或附带条件。"
+       "fact": "Anthropic 启动拟议 IPO 路演，拟发行 825,000,000 股 A 类普通股，其中 801,351,354 股由 Anthropic 发售、23,648,646 股由部分现有股东出售，Anthropic 不获后者出售所得款项。"
       },
       {
-       "id": "c5ff29645a",
+       "id": "4908513d0a",
        "kind": "single",
-       "title": "Anthropic 修订版 IPO 文件披露 8954 亿美元算力承诺，总额可达 1.07 万亿美元",
-       "date": "2026-11-03",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117407218849157258"
-        }
-       ],
-       "fact": "Anthropic 在修订版 IPO 文件中披露 8954 亿美元算力承诺，另有最高 1750 亿美元合同尚未定价，总额约 1.07 万亿美元，约为其前九个月 332 亿美元收入的 32 倍。款项持续到 2045 年，一年内到期 698 亿美元，而公司现金及短期投资为 1319 亿美元；季度环比增速从 144% 放缓至 47%，收入达 170 亿美元，算力成本升至销售额的 58%。"
-      },
-      {
-       "id": "cc33a42371",
-       "kind": "single",
-       "title": "Anthropic S-1 新披露显示算力成本占比升至 58%，利润率承压",
-       "date": "2026-11-03",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/"
-        }
-       ],
-       "fact": "TechCrunch 分析 Anthropic 更新的 S-1 文件披露，Q3 营收达 170 亿美元、环比增长近 50%，但算力占营收比例从上一季的 48% 升至 58%，每美元算力对应营收从峰值约 2.08x 回落至 1.72x。"
-      },
-      {
-       "id": "9a775bdb2a",
-       "kind": "single",
-       "title": "GPU 租金半年翻倍，Tomasz Tunguz 解析 2027 年 AI 实验室的久期匹配难题",
-       "date": "2026-11-03",
-       "source": "Tomasz Tunguz 博客（VC 分析）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://tomtunguz.com/the-financial-engineering-essential-for-ai-in-2027/"
-        }
-       ],
-       "fact": "Tomasz Tunguz 基于 Anthropic S-1/A 数据分析称，GPU 短租价格从 $3 涨到 $12-13/小时，使 Anthropic 混合 GPU 等效小时成本从 $3.10 升至 $5.65。"
-      },
-      {
-       "id": "70e7335f9d",
-       "kind": "single",
-       "title": "Anthropic 明年 700 亿美元算力账单超全年收入，S-1 细节遭播客拆解",
-       "date": "2026-11-04",
-       "source": "X：Saito 硬地骇客 (@SaitoWu)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/SaitoWu/status/2117914080371782063"
-        }
-       ],
-       "fact": "Saito 在听完 Prof G Markets 播客后撰文分析 Anthropic S-1 修订稿，指出其未来几年算力与数据中心总承诺达 8950 亿美元，其中未来 12 个月到期 700 亿美元，超过其 680 亿美元的年化收入（上季度收入 170 亿美元，同比涨 12 倍但环比增速从 144% 降至 47%）。"
-      },
-      {
-       "id": "7ea2a47b92",
-       "kind": "single",
-       "title": "OpenAI 总裁 Greg Brockman 称公司 2027 年可具备 IPO 条件",
-       "date": "2026-11-05",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/"
-        }
-       ],
-       "fact": "OpenAI 联合创始人兼总裁 Greg Brockman 在《华尔街日报》科技大会上表示，公司 2027 年可以做好 IPO 准备。他称第三季度年化收入环比增长 70%，企业业务翻倍，目前企业收入已占多数；此前企业收入仅约 30%。"
-      },
-      {
-       "id": "9b8a419670",
-       "kind": "single",
-       "title": "Ramp 数据显示 AI token 支出增长放缓，正值 Anthropic 临近 IPO",
-       "date": "2026-11-06",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/"
-        }
-       ],
-       "fact": "Ramp 数据显示企业 AI token 支出在 8 月和 9 月合计仅增长 1.5%，远低于 7 月的 42%，尽管 token 用量仍在上升；10 月数据回升至环比 8.9%。"
-      },
-      {
-       "id": "2f17a4446b",
-       "kind": "single",
-       "title": "OpenAI CFO 弗莱尔：中期选举不影响 IPO 计划，明年争取上市",
-       "date": "2026-11-07",
+       "title": "消息称 Sakana AI 最早 2027 年秋 IPO，已委任高盛担任顾问",
+       "date": "2026-11-09",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/690.htm"
+         "url": "https://www.ithome.com/1/024/383.htm"
         }
        ],
-       "fact": "OpenAI CFO 莎拉·弗莱尔 11 月 6 日接受 CNBC 采访时表示，2026 年美国中期选举改变国会格局，但不影响公司争取明年上市的 IPO 计划。"
+       "fact": "据《日经亚洲》报道，日本 AI 实验室 Sakana AI 最早将于 2027 年秋季 IPO，已委任高盛担任 IPO 顾问，有望成为首家上市的日本 GenAI 开发企业。该公司 2025 年 11 月以 4000 亿日元估值完成 B 轮融资，正开发 Sawara 系列自研模型，计划 2027 年春季先发布较小规模版本。"
+      },
+      {
+       "id": "a714862f98",
+       "kind": "single",
+       "title": "FT：高盛预测 Anthropic 2030 年收入将超 6000 亿美元",
+       "date": "2026-11-10",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120276184974204973"
+        }
+       ],
+       "fact": "FT 报道，高盛预测 Anthropic 2030 年收入将超过 6000 亿美元，是 2025 年的 130 多倍。该模型在 IPO 路演启动之际口头分享给潜在投资者：今年收入约 520 亿美元，2027 年 1360 亿美元，2029 年 4420 亿美元；若数据中心建设进度不及预期，2027 年的现金缺口将最先扩大。"
+      },
+      {
+       "id": "3c570e233d",
+       "kind": "single",
+       "title": "Anthropic 官宣首次公开募股（IPO）",
+       "date": "2026-11-12",
+       "source": "X：Anthropic (@AnthropicAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/AnthropicAI/status/2120841731302154708"
+        }
+       ],
+       "fact": "Anthropic 官方宣布启动首次公开募股（IPO），并公布入口 ipo.anthropic.com。Anthropic 已向 SEC 提交注册声明及招股说明书，证券在注册声明生效前不得出售，初步招股说明书可经高盛与摩根士丹利获取。"
+      },
+      {
+       "id": "b55c1cd457",
+       "kind": "single",
+       "title": "Nvidia 危机与 Anthropic IPO 前夜的 Cerebral Valley AI Summit 现场观察",
+       "date": "2026-11-13",
+       "source": "Newcomer 新闻长文（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.newcomer.co/p/nvidia-crises-anthropic-ipo-and-off"
+        }
+       ],
+       "fact": "Newcomer 在旧金山 Cerebral Valley AI Summit 现场报道：Jensen Huang 因第二段婚外情披露辞职，Reuters 当天报道存在第三段，与会者多认为 Nvidia 短期无碍但生态承压，Databricks CEO 称其对整个生态是打击。"
+      },
+      {
+       "id": "a367af1dd3",
+       "kind": "single",
+       "title": "Dario Amodei 回应市场动荡：Anthropic IPO 前称对时机并不在意",
+       "date": "2026-11-13",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121387496722329833"
+        }
+       ],
+       "fact": "Dario Amodei 在纽约 JPMorgan 活动上与 Jamie Dimon 对谈，对 Anthropic IPO 路演期间的市场动荡不以为意，称对上市时机和市场状况不太在意。"
+      },
+      {
+       "id": "61354bc2fe",
+       "kind": "single",
+       "title": "Dario Amodei 谈 Anthropic 将投入 $900B 采购算力但相对同行锁定较少",
+       "date": "2026-11-13",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121358093959491991"
+        }
+       ],
+       "fact": "Rohan Paul 转述 Dario Amodei 在与摩根大通 CEO Jamie Dimon 的直播对谈（Anthropic IPO 路演一部分）中的说法：Anthropic 将投入 $900B 采购算力，但相比竞争对手提前锁定的算力相对较少。"
+      },
+      {
+       "id": "6496aac6a7",
+       "kind": "single",
+       "title": "Anthropic CEO Amodei 在 IPO 前承认明年存在巨大不确定性，算力是公司最深的商业两难",
+       "date": "2026-11-14",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/"
+        }
+       ],
+       "fact": "Anthropic CEO Dario Amodei 在 JPMorgan 投资者活动上表示，明年的走向存在巨大不确定性，算力是公司面临的最深商业两难：算力需提前一到两年购买，买少了影响客户和收入，买多了可能财务过度扩张。"
+      },
+      {
+       "id": "bed535cb76",
+       "kind": "single",
+       "title": "超聚变深交所创业板 IPO 过会，前身是华为 X86 服务器业务",
+       "date": "2026-11-14",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/027/255.htm"
+        }
+       ],
+       "fact": "深交所上市审核委员会 11 月 12 日审议通过超聚变数字技术创业板首发，从受理到过会仅用时 174 天。"
+      },
+      {
+       "id": "5244548563",
+       "kind": "single",
+       "title": "FT：SBF 投入 Anthropic 的 5 亿美元按 IPO 预期价格约值 370 亿美元",
+       "date": "2026-11-14",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121400552927985769"
+        }
+       ],
+       "fact": "据 FT，Sam Bankman-Fried 当年投入 Anthropic 的 5 亿美元，按下周预期 IPO 价格约值 370 亿美元。"
       }
      ]
     },
@@ -1047,32 +1388,17 @@
      "name": "并购与收购",
      "items": [
       {
-       "id": "9bad8386c1",
+       "id": "9cf9cac254",
        "kind": "single",
-       "title": "Bending Spoons 的 Luca Ferrari 谈收购模式、杠杆纪律与 94% AI 代码",
-       "date": "2026-11-02",
-       "source": "X：Saito 硬地骇客 (@SaitoWu)",
+       "title": "Oura 以 6.25 亿美元收购 AI 原生初级护理公司 Counsel Health",
+       "date": "2026-11-10",
+       "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/SaitoWu/status/2117200591307084167"
+         "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/"
         }
-       ],
-       "fact": "a16z 播客访谈 Bending Spoons 创始人 Luca Ferrari，其公司估值 200 亿美元，先后收购 Airtable、AOL、Vimeo 等五十多家软件公司，94% 代码由 AI 写，数据分析九成以上交给 AI，客服工单基本交给 AI 或外部供应商。"
-      },
-      {
-       "id": "bd3971baca",
-       "kind": "single",
-       "title": "科技并购基金还撑得住吗？a16z 对比私募股权与风投的周期困境",
-       "date": "2026-11-04",
-       "source": "a16z：News（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.a16z.news/p/is-private-equity-cooked"
-        }
-       ],
-       "fact": "a16z 发文分析科技并购（tech buyout）为何正陷入结构性困境：2026 年上半年风投基金将科技公司估值上调 16%，并购基金却下调 4%。过去十年美国并购基金年化回报 14.5%，落后于 Russell 3000，而同期美国风投整体年化 17.6%；并购退出周期已从 2010–21 年的 5–6 年拉长到约 7 年。"
+       ]
       }
      ]
     },
@@ -1080,28 +1406,68 @@
      "name": "信息披露与治理",
      "items": [
       {
-       "id": "d82eac6379",
+       "id": "ef5d21eff3",
        "kind": "single",
-       "title": "Palantir Q3 营收增 96% 至 23.1 亿美元，但企业合同额环比下滑释放放缓信号",
-       "date": "2026-11-03",
-       "source": "TechCrunch：AI（RSS）",
+       "title": "Morningstar 报告称 Anthropic 股权价值 1.7 万亿美元",
+       "date": "2026-11-09",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/"
+         "url": "https://x.com/rohanpaul_ai/status/2119873141434716492"
         }
        ]
       },
       {
-       "id": "9630db9570",
+       "id": "9282cdbdd5",
        "kind": "single",
-       "title": "Google AI 搜索变现难题：Q3 搜索收入增速降至 12%",
-       "date": "2026-11-04",
-       "source": "The Verge：AI（RSS）",
+       "title": "苹果新CEO首份财报：中国营收大涨21%",
+       "date": "2026-11-09",
+       "source": "X：X.PIN (@thexpin)",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3"
+         "url": "https://x.com/thexpin/status/2119823539717152996"
+        }
+       ]
+      },
+      {
+       "id": "71bb7e6d90",
+       "kind": "single",
+       "title": "CoreWeave 三季度营收增 168% 至 $3.66B，净亏损扩大至 $7.09 亿",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120319053764190550"
+        }
+       ]
+      },
+      {
+       "id": "70d04559c3",
+       "kind": "single",
+       "title": "TSMC 董事会批准最高 10 亿美元投资 Anthropic 与 OpenAI",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120403256249852235"
+        }
+       ],
+       "fact": "据 WSJ，TSMC 董事会批准最高 10 亿美元的投资计划，按 IPO 每股发行价购买 Anthropic, PBC 普通股，金额不超过 5 亿美元，另购买最多 5 亿美元 OpenAI 优先股。同期 TSMC 公布 10 月营收同比增长 60%。"
+      },
+      {
+       "id": "e0b42abdf6",
+       "kind": "single",
+       "title": "投资者致信 Nvidia 董事会呼吁保留黄仁勋回归 CEO 的选项",
+       "date": "2026-11-14",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121689263163232362"
         }
        ]
       }
@@ -1111,150 +1477,100 @@
      "name": "其他资本事项",
      "items": [
       {
-       "id": "7af4c6e6e2",
+       "id": "438af94329",
        "kind": "single",
-       "title": "Anthropic 季度营收增长十二倍至近 170 亿美元，但净亏损达 233 亿美元",
-       "date": "2026-11-02",
-       "source": "The Decoder：AI News（RSS）",
+       "title": "瑞银 CEO 安思杰：AI 概念股大幅回调源于投资者此前期望过高",
+       "date": "2026-11-09",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/"
+         "url": "https://www.ithome.com/1/024/432.htm"
         }
        ]
       },
       {
-       "id": "ef177ee21e",
+       "id": "df3fdb9431",
        "kind": "single",
-       "title": "美国AI股暴跌背后：数据中心遭遇民意反噬与禁超智智能法案风波",
-       "date": "2026-11-05",
-       "source": "公众号：数字生命卡兹克",
+       "title": "OpenAI Q3 营收达 100 亿美元，效率仍落后于 Anthropic",
+       "date": "2026-11-11",
+       "source": "The Decoder：AI News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://mp.weixin.qq.com/s/k0Yt8r-ViM8FN1axHrP8tQ"
+         "url": "https://the-decoder.com/enterprise-sales-push-openais-quarterly-revenue-to-10-billion-though-it-still-trails-anthropic/"
         }
-       ],
-       "fact": "作者复盘美股AI板块一夜大跌，纳指盘中跌超5%、费城半导体指数一度跌近11%、纳指单日蒸发近1.8万亿美元市值，并将其归因于中期选举后的政治变局。民主党众议员安萨里呼吁暂停先进AI开发，参众两院9月提出的《2026年禁止人工超级智能法案》以10的25次方次训练运算划线，违规个人最高判20年、公司可被强制解散。"
+       ]
       },
       {
-       "id": "299b4d9644",
+       "id": "94c99d6633",
        "kind": "single",
-       "title": "Nasdaq 100 单日下跌 6.49% 进入技术性熊市，indigo 分析 AI 基建政策风险",
-       "date": "2026-11-05",
-       "source": "X：indigo (@indigox)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/indigox/status/2118476580121162057"
-        }
-       ],
-       "fact": "indigo 分析当日 Nasdaq 100 下跌 6.49%、SOX 下跌约 12.15% 的诱因，按重要性排序为数据中心政策重新定价、Qualcomm 与 Arm 指引引发芯片股踩踏、资本开支回报疑虑叠加仓位拥挤与杠杆平仓。文中给出民主党立法可能性分级，高盛估算约 45% 规划数据中心产能短期可能受政策影响，目前尚无大规模项目取消，风险主要是选址、并网、电价和审批变慢，而非禁令。"
-      }
-     ]
-    }
-   ],
-   "count": 32
-  },
-  {
-   "name": "法律职业与法律科技",
-   "groups": [
-    {
-     "name": "",
-     "items": [
-      {
-       "id": "b8a74c7de9",
-       "kind": "single",
-       "title": "Latent Space 访谈 Legora CTO Jacob Lauritzen：如何为律师构建 AI Agent",
-       "date": "2026-11-02",
-       "source": "Latent Space（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/"
-        }
-       ],
-       "fact": "Latent Space 播客访谈 Legora CTO Jacob Lauritzen，围绕为其融资与产品方法展开，此前该公司宣布 5.5 亿美元 E 轮融资、估值 88 亿美元，4 月 ARR 已过 1 亿美元、客户超 1800 家。"
-      },
-      {
-       "id": "a55864cc49",
-       "kind": "single",
-       "title": "Timothy B. Lee 用机器人学 sim-to-real gap 概念解释前沿模型能力的参差",
-       "date": "2026-11-05",
-       "source": "Timothy B. Lee：Understanding AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.understandingai.org/p/this-robotics-concept-helps-explain"
-        }
-       ],
-       "fact": "Understanding AI 作者 Timothy B. Lee 撰文，借用机器人学中模拟与真实之间的差距（sim-to-real gap）解释为何前沿模型在编程、数学、网络安全进展显著，却难以快速改造律师、建筑等其他职业。"
-      },
-      {
-       "id": "add389d75b",
-       "kind": "single",
-       "title": "埃森哲报告被指含 15 条虚假引用，公司否认系 AI 幻觉所致",
-       "date": "2026-11-07",
+       "title": "消息称 OpenAI Q3 营收首次达 100 亿美元，环比增长近 50%",
+       "date": "2026-11-11",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/845.htm"
+         "url": "https://www.ithome.com/1/025/560.htm"
         }
-       ],
-       "fact": "GPTZero 分析称，埃森哲与马德里 IE 大学合作的报告《跨越式发展》涉嫌包含 15 条虚假引用和完全虚构的案例研究。埃森哲发言人否认错误源于 AI 幻觉，称审查表明是人为失误，正在修正并将在重新发布前完成相关工作。报道称德勤、安永等咨询公司及 Pinsent Masons、Sullivan & Cromwell 等律所此前也承认过文件中存在 AI 错误。"
+       ]
       },
       {
-       "id": "bc68329923",
+       "id": "d87bdc64fd",
        "kind": "single",
-       "title": "美国司法部起诉三名男子涉嫌用 AI 冒充高管和律师行骗超 1.29 亿美元",
-       "date": "2026-11-08",
-       "source": "IT之家·人工智能",
+       "title": "OpenAI 季度营收据称首次突破 100 亿美元，年化收入达 500 亿美元",
+       "date": "2026-11-11",
+       "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/925.htm"
+         "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/"
         }
-       ],
-       "fact": "美国司法部起诉书显示，三名外国男子涉嫌自 2024 年起利用 AI 伪造企业高管和律师的声音、影像，诱骗员工汇款，涉案金额超过 1.29 亿美元，三人已分别在西班牙和英国被捕。骗局先由假高管以敏感财务交易为由联系员工，再由假冒律师指示汇款，赃款被兑换成加密货币转移，受害者包括多家美国企业及一家英国科技公司，三人被控电信欺诈、洗钱共谋和加重身份盗用等罪名。"
+       ]
       }
      ]
     }
    ],
-   "count": 4
+   "count": 40
   },
   {
    "name": "AI 治理框架与国际规则",
    "groups": [
     {
-     "name": "",
+     "name": "治理框架与标准",
      "items": [
       {
-       "id": "761d707182",
+       "id": "0a778f6a77",
        "kind": "single",
-       "title": "OpenAI 向 2028 美国大选潜在候选人分发备忘录，称 AI 将成必答题",
-       "date": "2026-11-02",
-       "source": "IT之家·人工智能",
+       "title": "OCC 发布监管框架，可自主移动资金的银行 AI Agent 被列入最高风险层级",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/295.htm"
+         "url": "https://x.com/rohanpaul_ai/status/2120355971117744156"
         }
        ],
-       "fact": "据《商业内幕》报道，OpenAI 首席全球事务官克里斯·莱汉向约六名 2028 年美国大选潜在候选人、国会议员及政治人士发送备忘录，称 AI 将成为左右下届总统竞选的重要议题，候选人需要拿出完整的 AI 治理理念。"
-      },
+       "fact": "美国国家银行监管机构 OCC 发布评估银行 AI Agent 的监管框架，依据 Executive Order 14434 要求，用 \"Super Intelligence\"（SI）一词涵盖此前所称的人工智能。框架将可自主移动资金的支付 Agent 列入最高风险层级，与实时信贷决策和金融市场准入同档。"
+      }
+     ]
+    },
+    {
+     "name": "其他治理事项",
+     "items": [
       {
-       "id": "e42342ccf7",
+       "id": "d158750ae7",
        "kind": "single",
-       "title": "Google DeepMind：AI 数学能力兴起要求持续压测密码学标准",
-       "date": "2026-11-06",
-       "source": "X：Google DeepMind (@GoogleDeepMind)",
+       "title": "黄仁勋卸任后，MATCH Act 与 RASA 的监管路径之争",
+       "date": "2026-11-13",
+       "source": "ChinaTalk（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/GoogleDeepMind/status/2118755488108364057"
+         "url": "https://www.chinatalk.media/p/jensen-out-match-act-in"
         }
-       ]
+       ],
+       "fact": "SemiAnalysis 播客讨论黄仁勋卸任 Nvidia CEO 后的政策影响。Dylan Patel 支持 MATCH Act，认为 RASA 是错误法案，主张设备管制优于芯片和模型管制。他指出没有美国实验室在开源模型上超过 Kimi 或 DeepSeek，并担忧黄仁勋离场会让 Nvidia 变弱。"
       }
      ]
     }
@@ -1265,123 +1581,180 @@
    "name": "产业与商业动向",
    "groups": [
     {
-     "name": "合作与签约",
+     "name": "发布与上线",
      "items": [
       {
-       "id": "74540d55c2",
+       "id": "348fc26adb",
        "kind": "single",
-       "title": "阿布扎比与 OpenAI 签署四项协议，覆盖政府、能源及投资领域",
-       "date": "2026-11-02",
+       "title": "AWS 首席 AI 和技术官马特·伍德：优秀工程师要爱上问题，而非现成解法",
+       "date": "2026-11-12",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/021/066.htm"
+         "url": "https://www.ithome.com/1/026/359.htm"
         }
        ]
       },
       {
-       "id": "fface6025b",
+       "id": "4e6dc97931",
        "kind": "single",
-       "title": "Waymo 与丰田合作，2027 年起在日本测试自动驾驶 bZ4X 车队",
-       "date": "2026-11-03",
-       "source": "X：Waymo (@Waymo)",
+       "title": "Anthropic 调查 Claude 身份验证故障，claude.ai、Claude Code 等出现大量报错",
+       "date": "2026-11-13",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/Waymo/status/2117421503956332857"
+         "url": "https://www.ithome.com/1/026/905.htm"
         }
        ]
       },
       {
-       "id": "f8b70f9764",
+       "id": "3715da6637",
        "kind": "single",
-       "title": "面壁智能祝贺MLX-VLM与MLX-Audio迁入新组织",
-       "date": "2026-11-04",
-       "source": "X：面壁智能 OpenBMB (@OpenBMB)",
+       "title": "韩国税务师考试头名 AI 作弊曝光，政府全面调查今年国家资格考试",
+       "date": "2026-11-15",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/OpenBMB/status/2117793090765459894"
+         "url": "https://www.ithome.com/1/027/453.htm"
         }
        ]
-      },
+      }
+     ]
+    },
+    {
+     "name": "合作与签约",
+     "items": [
       {
-       "id": "615f67fb8f",
+       "id": "4d1e86ca07",
        "kind": "single",
-       "title": "美股单日蒸发 3.2 万亿美元，Nasdaq 创 2025 年 4 月以来最大跌幅",
-       "date": "2026-11-05",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "title": "Gary Marcus 评黄仁勋婚外情风波：谁在何时知情",
+       "date": "2026-11-09",
+       "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118461023808323957"
+         "url": "https://garymarcus.substack.com/p/the-huang-affair-what-did-they-know"
         }
        ],
-       "fact": "11 月 5 日华尔街市值蒸发 3.2 万亿美元，Nasdaq 综合指数跌 5.52%，投资者恐慌民主党掌控国会将放缓高杠杆 AI 支出热潮。Nvidia 跌 9.3% 抹去 2026 年涨幅，费城半导体指数跌 12.3%，SanDisk 跌 22%，Micron、Western Digital 和 AMD 各跌 17%。"
+       "fact": "文中梳理国会拟调查、Rubio 备忘录、Nvidia 此前否认等各方知情情况，并指出 Nvidia 期货下跌且无明确接班计划，事件可能冲击 AI 投资市场。"
       },
       {
-       "id": "173d0fd6c7",
+       "id": "8bd865100d",
        "kind": "single",
-       "title": "Meta 为何去中国与 Fourier 合作造机器人原型 Max，以及这笔合作为何难以持久",
-       "date": "2026-11-05",
-       "source": "X：X.PIN (@thexpin)",
+       "title": "英伟达在首尔举办 AI Day，与韩国政府、三星、LG 电子、现代汽车集团等公布多项合作",
+       "date": "2026-11-09",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/thexpin/status/2118370180715933899"
+         "url": "https://www.ithome.com/1/024/217.htm"
         }
        ]
       },
       {
-       "id": "082e7878cf",
+       "id": "38593d587d",
        "kind": "single",
-       "title": "OpenAI 携手 UNSW、悉尼大学等澳洲高校培养 AI 原生毕业生",
-       "date": "2026-11-05",
+       "title": "NVIDIA 在 MSIT-NVIDIA AI 创业合作论坛上宣布对韩国初创企业的新投资计划",
+       "date": "2026-11-09",
+       "source": "NVIDIA Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
+        }
+       ]
+      },
+      {
+       "id": "366669190f",
+       "kind": "single",
+       "title": "Adobe 与迪士尼达成多年战略合作，将 Firefly 等 AI 工具推广至乐园和内容制作",
+       "date": "2026-11-10",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/024/731.htm"
+        }
+       ]
+      },
+      {
+       "id": "ab01f1d149",
+       "kind": "single",
+       "title": "OpenAI 谈如何弥合教育领域的 AI 指导缺口",
+       "date": "2026-11-10",
        "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）",
        "links": [
         {
          "label": "原文",
-         "url": "https://openai.com/index/australian-universities-ai-native-graduates"
+         "url": "https://openai.com/index/closing-ai-guidance-gap-education"
         }
        ]
       },
       {
-       "id": "223b17e073",
+       "id": "91fd766ff7",
        "kind": "single",
-       "title": "红杉资本遣散至少三名美国合伙人并关闭伦敦办公室",
-       "date": "2026-11-05",
-       "source": "Newcomer 新闻长文（RSS）",
+       "title": "Ramp AI Index：10 月美国企业 AI 支出创新高但环比增速放缓至 1.65%",
+       "date": "2026-11-11",
+       "source": "The Decoder：AI News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.newcomer.co/p/exclusive-sequoia-parts-ways-with"
+         "url": "https://the-decoder.com/us-corporate-ai-spending-hits-a-new-high-in-october-but-growth-slows-to-1-65-percent/"
         }
        ]
       },
       {
-       "id": "b82d179068",
+       "id": "67356a6168",
        "kind": "single",
-       "title": "SK 海力士设立美国 AI 投资子公司 Hyaico，拟投资至多 100 亿美元",
-       "date": "2026-11-06",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/023/584.htm"
-        }
-       ]
-      },
-      {
-       "id": "9069511ec5",
-       "kind": "single",
-       "title": "David Sacks 预警数据中心投资因规则不确定而停滞",
-       "date": "2026-11-07",
+       "title": "Reuters：SpaceX 计划投入超 $74B 在得州和亚利桑那建两座 AI 超算园区",
+       "date": "2026-11-12",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2119210718428057754"
+         "url": "https://x.com/rohanpaul_ai/status/2120988300299436528"
+        }
+       ]
+      },
+      {
+       "id": "6d2c0ad661",
+       "kind": "single",
+       "title": "Apollo Go 无人驾驶覆盖 28 城",
+       "date": "2026-11-12",
+       "source": "X：百度 Baidu (@Baidu_Inc)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/Baidu_Inc/status/2120815060042096795"
+        }
+       ]
+      },
+      {
+       "id": "572cdf3784",
+       "kind": "single",
+       "title": "Meta 签署长期采购协议，为数据中心供应链引入清洁制造",
+       "date": "2026-11-12",
+       "source": "Meta：Newsroom · AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://about.fb.com/news/2026/11/meta-new-agreements-clean-manufacturing-data-center-supply-chains/"
+        }
+       ]
+      },
+      {
+       "id": "3eb63ef622",
+       "kind": "single",
+       "title": "Cerebras 签约微软成为第三家超大规模云客户，2026Q3 剩余履约义务 261 亿美元",
+       "date": "2026-11-13",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/026/741.htm"
         }
        ]
       }
@@ -1391,334 +1764,150 @@
      "name": "市场与运营",
      "items": [
       {
-       "id": "9b9566826d",
+       "id": "98446871fc",
        "kind": "single",
-       "title": "OpenAI 在佐治亚州数据中心试点 Grid Protectors Program，承诺极端天气时释放最多 1000 MW 电力",
-       "date": "2026-11-02",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program"
-        }
-       ]
-      },
-      {
-       "id": "a2d00b8d12",
-       "kind": "single",
-       "title": "百度Apollo Go右舵市场进展",
-       "date": "2026-11-02",
-       "source": "X：百度 Baidu (@Baidu_Inc)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/Baidu_Inc/status/2117161663426080990"
-        }
-       ]
-      },
-      {
-       "id": "1cf5b990dd",
-       "kind": "single",
-       "title": "百度Apollo Go香港东涌试乘活动收官",
-       "date": "2026-11-04",
-       "source": "X：百度 Baidu (@Baidu_Inc)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/Baidu_Inc/status/2117887863664914689"
-        }
-       ]
-      },
-      {
-       "id": "d1712c1d44",
-       "kind": "single",
-       "title": "AI 数据中心为赶工期改用退役喷气发动机发电",
-       "date": "2026-11-03",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/"
-        }
-       ]
-      },
-      {
-       "id": "eec2b3e9fb",
-       "kind": "single",
-       "title": "OpenAI 默默将数据中心改称 compute campuses 以应对舆论反弹",
-       "date": "2026-11-03",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1025242/openai-quietly-renames-data-centers-as-compute-campuses"
-        }
-       ]
-      },
-      {
-       "id": "52351ae34b",
-       "kind": "single",
-       "title": "乌克兰无人机打击促使俄方筹划地下数据中心并征用算力",
-       "date": "2026-11-03",
-       "source": "Ars Technica：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://arstechnica.com/ai/2026/11/russia-looks-to-hide-data-centers-underground-as-ukrainian-drones-strike-back/"
-        }
-       ],
-       "fact": "乌克兰无人机打击损坏了存放 AI 超级计算机的设施，扰乱了数百万俄罗斯用户的云服务，俄罗斯科技公司正计划将数据中心加固或转入地下。受打击的数据中心涉及 Yandex、Sberbank、VKontakte 和俄罗斯财政部；国有电信公司 Rostelecom 与 Norilsk 探讨将部分数据中心移入地下，克里姆林宫要求数据中心所有者为紧急国家需求预留算力，并批准可能使用境外数据中心。"
-      },
-      {
-       "id": "954936f8e6",
-       "kind": "single",
-       "title": "2026 美国中期选举：科技议题与 AI 监管走向",
-       "date": "2026-11-03",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/policy/1020640/midterm-elections-2026-all-the-news"
-        }
-       ],
-       "fact": "2026 年美国中期选举于 11 月 3 日投票，数据中心引发的能源成本反弹、AI 安全与监管、Flock 监控技术扩张成为选民关注议题。加州围绕亿万富翁财富税的投票措施引发科技行业巨额支出，科技亿万富翁据报已捐超 3.4 亿美元反对该税。下届国会预计将继续处理 AI 监管与数据中心反弹问题。"
-      },
-      {
-       "id": "0dff7ee464",
-       "kind": "single",
-       "title": "美国中期选举中选民在13州否决数据中心提案",
-       "date": "2026-11-04",
-       "source": "404 Media（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/"
-        }
-       ]
-      },
-      {
-       "id": "b062104cd4",
-       "kind": "single",
-       "title": "OpenAI 称印度 ChatGPT 周活跃用户反超美国，成全球最大消费者市场",
-       "date": "2026-11-04",
-       "source": "IT之家·人工智能",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.ithome.com/1/022/166.htm"
-        }
-       ]
-      },
-      {
-       "id": "f645968248",
-       "kind": "single",
-       "title": "2026 美国中期选举出口民调显示 AI 和数据中心在选民议题中排名末位",
-       "date": "2026-11-04",
-       "source": "The Decoder：AI News（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://the-decoder.com/exit-polls-show-ai-ranked-last-among-voter-priorities-in-the-2026-u-s-midterms/"
-        }
-       ]
-      },
-      {
-       "id": "d46d762ac8",
-       "kind": "single",
-       "title": "The Verge 分析 Big Tech 7200 亿美元 AI 数据中心建设潮难以自行减速",
-       "date": "2026-11-05",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3"
-        }
-       ]
-      },
-      {
-       "id": "bd2e8eefa6",
-       "kind": "single",
-       "title": "WSJ：美国半数拟建 AI 数据中心或面临更严地方审查",
-       "date": "2026-11-05",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118439500481429886"
-        }
-       ],
-       "fact": "WSJ 报道，民主党赢得众议院、参议院及关键州长职位后，美国约半数拟建 AI 数据中心可能面临更严的地方审查，Texas 和 Ohio 或在居民获得供水与电价保障前暂停建设。"
-      },
-      {
-       "id": "f4c0b73b0d",
-       "kind": "single",
-       "title": "OpenAI 承诺自建数据中心承担全部电力与电网成本，并推动监管将规则扩展到所有开发商",
-       "date": "2026-11-05",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118487588571082829"
-        }
-       ]
-      },
-      {
-       "id": "08c9850a4e",
-       "kind": "single",
-       "title": "Meta 警告：中期选举反对声浪或使数据中心扩张与 AI 布局更难",
-       "date": "2026-11-05",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/"
-        }
-       ]
-      },
-      {
-       "id": "41974e8cc6",
-       "kind": "single",
-       "title": "昆仑万维方汉出席京港洽谈会：AI时代文化内容出海与“奈飞时刻”",
-       "date": "2026-11-05",
-       "source": "公众号：昆仑万维（天工）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://mp.weixin.qq.com/s/_tn03mOPd4G_630YG5rRVg"
-        }
-       ]
-      },
-      {
-       "id": "0d9f6bfb8f",
-       "kind": "single",
-       "title": "Ed Zitron 分析美国选举后数据中心限制对 AI 泡沫的冲击",
-       "date": "2026-11-06",
+       "title": "Ed Zitron 长文剖析黄仁勋与 Megaspeed 关系及 NVIDIA GPU 疑似流入中国的调查",
+       "date": "2026-11-10",
        "source": "Ed Zitron 长文 / Where’s Your Ed At（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.wheresyoured.at/premium-fault-lines/"
-        }
-       ]
-      },
-      {
-       "id": "ee28c7e84c",
-       "kind": "single",
-       "title": "抗议者闯入 Microsoft 阿姆斯特丹数据中心工地",
-       "date": "2026-11-06",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam"
-        }
-       ]
-      },
-      {
-       "id": "0a294cf841",
-       "kind": "single",
-       "title": "TechCrunch Equity 播客讨论中期选举后数据中心监管对科技业的影响",
-       "date": "2026-11-06",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/"
+         "url": "https://www.wheresyoured.at/jensens-bizarre-adventure/"
         }
        ],
-       "fact": "TechCrunch 的 Equity 播客讨论本周美国中期选举结果对科技业的影响。本期节目中，选民本周就 41 项数据中心相关公投投票，除一项外多数都支持对数据中心开发施加更多限制；新当选的民主党州长和国会议员可能支持额外监管，节目还讨论了政府对 Big Tech 的审查加强，并提到 OpenAI 已在尝试为数据中心重新命名。"
+       "fact": "Ed Zitron 长文梳理黄仁勋承认与 Megaspeed CEO Alice Huang 的私人关系事件，并整合 Bloomberg、纽约时报、金融时报与 Culper Research 的报道，指 Megaspeed 疑似作为转口实体将 NVIDIA GPU 流入中国。文章还涉及美国商务部对 Megaspeed 的调查进展、NVIDIA 与监管机构的沟通，以及 Culper Research 对 NVIDIA 营收结构的质疑。"
       },
       {
-       "id": "3615e6e999",
+       "id": "adb2a95168",
        "kind": "single",
-       "title": "OpenAI 宣布数据中心社区承诺，不再对公职人员使用 NDA",
-       "date": "2026-11-06",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda"
-        }
-       ]
-      },
-      {
-       "id": "8e76e38fd7",
-       "kind": "single",
-       "title": "Azeem Azhar 分析中期选举后数据中心抵制潮如何转化为社区收益",
-       "date": "2026-11-06",
-       "source": "Azeem Azhar：Exponential View（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.exponentialview.co/p/dont-waste-a-good-backlash"
-        }
-       ]
-      },
-      {
-       "id": "9a8cbc4ca8",
-       "kind": "single",
-       "title": "Brightspeed 与英伟达洽谈，计划将 130 多座老旧电信建筑改造为小型数据中心",
-       "date": "2026-11-06",
+       "title": "泰国内阁批准数据中心新规：噪音限约 70 分贝，温升不超 2 摄氏度",
+       "date": "2026-11-10",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/543.htm"
-        }
-       ]
-      },
-      {
-       "id": "6f127704d4",
-       "kind": "single",
-       "title": "Gary Marcus：市场单日蒸发 2.5 万亿美元，接下来会发生什么？",
-       "date": "2026-11-06",
-       "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://garymarcus.substack.com/p/the-markets-dropped-25-trillion-yesterday"
-        }
-       ]
-      },
-      {
-       "id": "b60feb6cfa",
-       "kind": "single",
-       "title": "OpenAI CFO 回应数据中心争议",
-       "date": "2026-11-06",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118785013168943129"
-        }
-       ]
-      },
-      {
-       "id": "ce143fceb4",
-       "kind": "single",
-       "title": "TechCrunch 播客：中期选举后马斯克与数据中心处境转难",
-       "date": "2026-11-07",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/"
-        }
-       ]
-      },
-      {
-       "id": "aa8a07aacd",
-       "kind": "single",
-       "title": "Google 收购 Crusoe 在怀俄明州的未完工数据中心项目",
-       "date": "2026-11-07",
-       "source": "TechCrunch：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"
+         "url": "https://www.ithome.com/1/024/887.htm"
         }
        ],
-       "fact": "Crusoe 确认将怀俄明州东南部一个未完工的数据中心项目出售给 Google，后者计划投资 170 亿美元开发该园区。Google 曾因成本和工期问题放弃成为该项目客户，原项目与 Tallgrass 合作规划最终扩展到 10 吉瓦电力容量。Crusoe 仍在为 Google 开发得州 Amarillo 附近的数据中心，并在 9 月完成 39 亿美元融资。"
+       "fact": "泰国内阁批准针对数据中心的新规，要求不间断电源运行噪音控制在约 70 分贝（dBA）以内，场地边界温升限制在 1 至 2 摄氏度，冷却用水须循环利用且废水须接受检测，工业园区内设施另有额外要求。财政部长表示无法满足安全和环境要求的项目不允许推进；据泰国投资促进委员会数据，今年前九个月投资促进申请金额超过 500 亿美元，AI 相关项目约占 70%。"
+      },
+      {
+       "id": "a7d41e39fb",
+       "kind": "single",
+       "title": "纽约开放 RAISE Act 监管登记平台，OpenAI、Anthropic 等 72 小时内须上报安全事故",
+       "date": "2026-11-11",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/548.htm"
+        }
+       ]
+      },
+      {
+       "id": "dec4a08d79",
+       "kind": "single",
+       "title": "民主党拿下佐治亚州公共服务委员会，拟挑战 Georgia Power 为数据中心扩建燃气电站",
+       "date": "2026-11-11",
+       "source": "Canary Media：Data Centers 原创报道",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.canarymedia.com/articles/politics/new-dem-regulators-georgia-power"
+        }
+       ]
+      },
+      {
+       "id": "0d5d4aa53d",
+       "kind": "single",
+       "title": "IDC 预测 2030 年全球数据中心机柜量将达 5800 万架",
+       "date": "2026-11-11",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/483.htm"
+        }
+       ]
+      },
+      {
+       "id": "87e8faae2d",
+       "kind": "single",
+       "title": "TechCrunch 播客：地方反对与审批拖延如何拖慢数据中心建设",
+       "date": "2026-11-11",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/"
+        }
+       ]
+      },
+      {
+       "id": "6c3d987aaa",
+       "kind": "single",
+       "title": "黄仁勋风波时间线：婚外情、情报疑云与 Nvidia 董事会调查",
+       "date": "2026-11-11",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+        }
+       ],
+       "fact": "Nvidia CEO 黄仁勋公开承认婚外情，其绯闻对象、Megaspeed 高管 Alice Huang 被美国官员怀疑涉外国情报活动。纽约时报称黄仁勋还与直接向他汇报的 Nvidia 医疗健康副总裁 Kimberly Powell 存在婚外关系，Nvidia 董事会已启动独立调查，股价盘后下跌。美国国会计划传唤黄仁勋就此事作闭门说明。"
+      },
+      {
+       "id": "4443a3fcbf",
+       "kind": "single",
+       "title": "SoftBank 71 亿美元季度亏损或给 AI 天然气扩张设定上限",
+       "date": "2026-11-12",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/"
+        }
+       ]
+      },
+      {
+       "id": "6e1d871bce",
+       "kind": "single",
+       "title": "AWS CEO Matt Garman：太空 AI 数据中心未来 10 至 20 年难具商业可行性",
+       "date": "2026-11-12",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/888.htm"
+        }
+       ]
+      },
+      {
+       "id": "50cac321c7",
+       "kind": "single",
+       "title": "黄仁勋辞任英伟达CEO：14天时间线与33年生涯回顾",
+       "date": "2026-11-13",
+       "source": "公众号：卡尔的AI沃茨",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://mp.weixin.qq.com/s/RB5f6wfZgI46D8ux_vK5LA"
+        }
+       ]
+      },
+      {
+       "id": "2ea4f82a76",
+       "kind": "single",
+       "title": "美联储理事巴尔：AI 快速普及短期内恐加剧收入不平等",
+       "date": "2026-11-14",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/027/177.htm"
+        }
+       ]
       }
      ]
     },
@@ -1726,28 +1915,95 @@
      "name": "人事与组织",
      "items": [
       {
-       "id": "77b1c9e521",
+       "id": "3735b71872",
        "kind": "single",
-       "title": "Google 计划对限制 AI 的学校关闭 Search 引发强烈反弹",
-       "date": "2026-11-04",
-       "source": "TechCrunch：AI（RSS）",
+       "title": "Gary Marcus 评 WSJ 报道 Nvidia 正准备解雇 CEO 黄仁勋",
+       "date": "2026-11-11",
+       "source": "Gary Marcus：The Road to AI We Can Trust（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/"
+         "url": "https://garymarcus.substack.com/p/jensen-is-reportedly-about-to-get"
+        }
+       ],
+       "fact": "Gary Marcus 引述《华尔街日报》报道称，Nvidia 正准备解雇 CEO 黄仁勋，起因是公司对其婚外情风波的调查。盘后股价已下跌。"
+      },
+      {
+       "id": "eba686ec10",
+       "kind": "single",
+       "title": "Modal 成为 gVisor 维护者，Google 将项目捐给 CNCF",
+       "date": "2026-11-11",
+       "source": "Modal 官方工程博客（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://modal.com/blog/modal-gvisor-maintainer"
         }
        ]
       },
       {
-       "id": "5f8bbefc04",
+       "id": "c01bc45435",
        "kind": "single",
-       "title": "OpenAI 迎来 Cat Wu 负责核心产品",
-       "date": "2026-11-05",
-       "source": "X：Greg Brockman (@gdb)",
+       "title": "黄仁勋辞去 Nvidia CEO 职务，公司市值蒸发 1.4 万亿美元",
+       "date": "2026-11-12",
+       "source": "The Decoder：AI News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/gdb/status/2118138320375136695"
+         "url": "https://the-decoder.com/jensen-huang-resigns-as-nvidia-ceo-after-espionage-scandal-wipes-out-1-4-trillion-in-market-value/"
+        }
+       ],
+       "fact": "黄仁勋于 2026 年 11 月 12 日立即辞去 Nvidia CEO、总裁及董事会成员职务，此前《华尔街日报》报道董事会因其两段婚外情计划将其解雇。"
+      },
+      {
+       "id": "a717166d8f",
+       "kind": "single",
+       "title": "WSJ 报道 Nvidia 董事会接近决定是否罢免 CEO 黄仁勋",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120663635479625930"
+        }
+       ]
+      },
+      {
+       "id": "31b5c27717",
+       "kind": "single",
+       "title": "WSJ 报道称黄仁勋被罢免更多源于 Nvidia 高风险业务而非私生活",
+       "date": "2026-11-13",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/jensen-huangs-ouster-likely-traces-back-to-nvidias-risky-business-practices-more-than-his-personal-life/"
+        }
+       ]
+      },
+      {
+       "id": "b0a0c6e2e3",
+       "kind": "single",
+       "title": "黄仁勋辞任 Nvidia CEO，Casey Newton 撰文评析硅谷创始人崇拜的终结",
+       "date": "2026-11-13",
+       "source": "Platformer（热点 RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.platformer.news/jensen-huang-resigns-founder-cult-accountability/"
+        }
+       ]
+      },
+      {
+       "id": "06bd938b11",
+       "kind": "single",
+       "title": "The Verge 访谈曾投票罢免 Sam Altman 的 OpenAI 前董事 Helen Toner：AI CEO 仍不可信任",
+       "date": "2026-11-14",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview"
         }
        ]
       }
@@ -1757,28 +2013,67 @@
      "name": "活动与行程",
      "items": [
       {
-       "id": "1c39f745dd",
+       "id": "1d83f6396c",
        "kind": "single",
-       "title": "京东曹鹏：未来五年计划采购 300 万台机器人、100 万台无人车和 10 万架无人机",
-       "date": "2026-11-04",
-       "source": "IT之家·人工智能",
+       "title": "黄仁勋因个人风波退出 ElevenLabs Summit 等演讲活动",
+       "date": "2026-11-09",
+       "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/022/267.htm"
+         "url": "https://techcrunch.com/2026/11/09/jensen-huang-pulls-out-of-elevenlabs-summit-amid-nvidia-controversy/"
         }
        ]
       },
       {
-       "id": "9023c5ee81",
+       "id": "e1454f1541",
        "kind": "single",
-       "title": "多名用户反映 ChatGPT 账号遭突然停用，200 美元 Pro 用户也在其中",
-       "date": "2026-11-08",
+       "title": "Graphite 研究：ChatGPT 占全球 AI 聊天机器人流量超 81%",
+       "date": "2026-11-09",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/879.htm"
+         "url": "https://www.ithome.com/1/024/542.htm"
+        }
+       ]
+      },
+      {
+       "id": "3b243f08d4",
+       "kind": "single",
+       "title": "八个国家与主要 AI 实验室在巴黎宣言中承诺安全措施和关停机制",
+       "date": "2026-11-10",
+       "source": "The Decoder：AI News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://the-decoder.com/eight-countries-and-top-ai-labs-agree-to-shutdown-mechanisms-in-new-paris-declaration/"
+        }
+       ]
+      },
+      {
+       "id": "57be16f53b",
+       "kind": "single",
+       "title": "Waymo 成立英国无障碍网络 Waymo Accessibility Network UK，与残障组织共创自动驾驶出行",
+       "date": "2026-11-10",
+       "source": "Waymo：Blog（网页）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://waymo.com/blog/2026/11/uk-accessibility-network"
+        }
+       ]
+      },
+      {
+       "id": "25ce89aecd",
+       "kind": "single",
+       "title": "百度李彦宏：人工智能的下一幕是智能组织，组织智能将是企业最深的护城河",
+       "date": "2026-11-12",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/881.htm"
         }
        ]
       }
@@ -1788,83 +2083,202 @@
      "name": "观点与转述",
      "items": [
       {
-       "id": "2a4307c3da",
+       "id": "018adced72",
        "kind": "single",
-       "title": "SpaceX 据传削减 Grok Bot 配额，Musk 称运营成本相对收入难以持续",
-       "date": "2026-11-02",
-       "source": "The Decoder：AI News（RSS）",
+       "title": "芝加哥大学法学教授 William Baude 称 Claude 误删一整年课堂笔记",
+       "date": "2026-11-09",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/spacexsi-apparently-cuts-grok-bot-quotas-weeks-after-musk-called-it-his-fastest-growing-product/"
+         "url": "https://www.ithome.com/1/024/515.htm"
         }
        ]
       },
       {
-       "id": "5b0149b684",
+       "id": "bb592ef7cc",
        "kind": "single",
-       "title": "Simon Willison 分析美国人口普查局 BTOS 调查改用 Super Intelligence 措辞",
-       "date": "2026-11-02",
-       "source": "Simon Willison 博客",
+       "title": "Trump 在 60 Minutes 谈 AI 安全，称曾威胁逮捕一家大型 AI 公司负责人",
+       "date": "2026-11-09",
+       "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/"
+         "url": "https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai"
+        }
+       ],
+       "fact": "Trump 在 60 Minutes 采访中称 AI 风险不像高管警告的那样真实，声称司法部在管理风险，并称曾强烈警告一位被举报滥用 AI 的大型 AI 公司负责人准备入狱，此后此人全面改变了做法，但他拒绝透露姓名。他还表示愿意与民主党合作制定 AI 安全 guardrails，同时强调美国要保持第一，并称中国没有真正的 guardrails。"
+      },
+      {
+       "id": "3911067c38",
+       "kind": "single",
+       "title": "特朗普称 AI 风险可控但不介意设置监管护栏",
+       "date": "2026-11-09",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/024/071.htm"
         }
        ]
       },
       {
-       "id": "c0766ab704",
+       "id": "0a56ac1035",
        "kind": "single",
-       "title": "WarTalk：Kofman 谈俄军为何表现不佳",
-       "date": "2026-11-02",
-       "source": "ChinaTalk（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.chinatalk.media/p/wartalk-kofman-on-starlink-what-ukraine"
-        }
-       ]
-      },
-      {
-       "id": "b951683370",
-       "kind": "single",
-       "title": "Sam Altman 称 AI 智能已超顶尖科学家",
-       "date": "2026-11-02",
+       "title": "特朗普称 DOJ 曾警告某 AI 公司高管准备入狱",
+       "date": "2026-11-09",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117287040522018912"
-        }
-       ]
-      },
-      {
-       "id": "44deddf28e",
-       "kind": "single",
-       "title": "SemiAnalysis 分析 SpaceX 为何有望成为全球最大 AI 云",
-       "date": "2026-11-03",
-       "source": "SemiAnalysis 长文 RSS（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://newsletter.semianalysis.com/p/elon-is-doing-it-again-spacex-will"
-        }
-       ]
-      },
-      {
-       "id": "f6f49d1dab",
-       "kind": "single",
-       "title": "OnlyFake 创始人 Nazarenko 首次自述 AI 伪造证件帝国兴衰",
-       "date": "2026-11-05",
-       "source": "404 Media（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.404media.co/the-confessions-of-an-ai-fraud-kingpin-onlyfake-owner-nazarenko/"
+         "url": "https://x.com/rohanpaul_ai/status/2119763142263902633"
         }
        ],
-       "fact": "OnlyFake 创始人 Yuriy Nazarenko 出狱后首次受访，自述从手工逐像素伪造护照，到建立网站自动生成逼真假证件扫描图的历程，生成式 AI 普及后被纳入 OnlyFake。美国司法部称 OnlyFake 以每张 15 美元的价格售出假证件，获利超过一百万美元，其伪造证件可用于开设银行账户、绕过加密货币交易所 KYC 验证等，FBI 曾追查并关停部分竞争对手。"
+       "fact": "特朗普在《60 Minutes》采访中被问及 AI 风险时称，风险比业界声称的小，并由美国司法部（DOJ）\"管理\"。他称有人举报某大型 AI 公司的一位负责人\"用 AI 做坏事\"，DOJ 致电警告其准备入狱、回家与妻儿道晚安，此人随后\"彻底改变了一切\"，但未透露姓名或具体行为。"
+      },
+      {
+       "id": "790198b483",
+       "kind": "single",
+       "title": "The Information 报道称与英伟达 CEO 黄仁勋相关人士向中国买家转手 75 亿美元硬件",
+       "date": "2026-11-10",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120162909422780789"
+        }
+       ]
+      },
+      {
+       "id": "44f2ab750d",
+       "kind": "single",
+       "title": "澳大利亚拟强制 AI 公司上报安全违规事件并考虑修订刑事法律",
+       "date": "2026-11-10",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/024/843.htm"
+        }
+       ]
+      },
+      {
+       "id": "dac03f0885",
+       "kind": "single",
+       "title": "AWS CEO Matt Garman 访谈：目标十年内做到每年 1 万亿美元",
+       "date": "2026-11-10",
+       "source": "X：Alex Heath (@alexeheath)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/alexeheath/status/2120203761536901612"
+        }
+       ]
+      },
+      {
+       "id": "8e21c4d84d",
+       "kind": "single",
+       "title": "STABL 成立：在 AI 回应中补上缺失的象限",
+       "date": "2026-11-10",
+       "source": "AI as Normal Technology（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.normaltech.ai/p/the-missing-quadrant-in-responses"
+        }
+       ]
+      },
+      {
+       "id": "a082d30e27",
+       "kind": "single",
+       "title": "英国学生事务办公室调查称 AI 让教师几乎无法判断课程作业是否反映学生真实水平",
+       "date": "2026-11-11",
+       "source": "IT之家·人工智能",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.ithome.com/1/025/506.htm"
+        }
+       ],
+       "fact": "据英国《卫报》11 月 11 日报道，英格兰高等教育监管机构学生事务办公室（OfS）的调查指出，AI 普及让大学教师几乎无法判断课程作业是否反映学生真实水平，威胁学位公信力，呼吁高校重新采用传统考试和现场汇报等考核方式。"
+      },
+      {
+       "id": "2e6c5f01ac",
+       "kind": "single",
+       "title": "ChinaTalk 调查美国数据公司向中国 AI 实验室出售 RL 环境的现象",
+       "date": "2026-11-11",
+       "source": "ChinaTalk（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.chinatalk.media/p/the-us-is-selling-rl-environments"
+        }
+       ]
+      },
+      {
+       "id": "660b6be4a4",
+       "kind": "single",
+       "title": "黄仁勋风波背后：半导体行业高管行为问题是否更普遍？",
+       "date": "2026-11-11",
+       "source": "TechCrunch：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://techcrunch.com/2026/11/11/is-jensen-huangs-bad-behavior-more-commonplace-than-it-seems/"
+        }
+       ]
+      },
+      {
+       "id": "0c13412506",
+       "kind": "single",
+       "title": "Jensen Huang 辞任 Nvidia CEO 后对 AI 经济的五点影响分析",
+       "date": "2026-11-12",
+       "source": "Tomasz Tunguz 博客（VC 分析）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://tomtunguz.com/the-impact-of-jensens-resignation/"
+        }
+       ]
+      },
+      {
+       "id": "ab83b4c3f1",
+       "kind": "single",
+       "title": "家长在七城抗议 Google 将 Gemini 推入校园，并要求暂停校园 AI",
+       "date": "2026-11-12",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+        }
+       ]
+      },
+      {
+       "id": "71ee86fda8",
+       "kind": "single",
+       "title": "X.PIN 转发 WSJ 关于黄仁勋辞任 Nvidia 的社论并附新加坡政府澄清声明",
+       "date": "2026-11-14",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2121616487249219804"
+        }
+       ]
+      },
+      {
+       "id": "f71dd276ea",
+       "kind": "single",
+       "title": "NVIDIA 工程总监 Liila Torabi 被曝称黄仁勋下台系预先策划，LinkedIn 帖文数小时内删除",
+       "date": "2026-11-14",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121661621936496907"
+        }
+       ]
       }
      ]
     },
@@ -1872,218 +2286,139 @@
      "name": "行业动态",
      "items": [
       {
-       "id": "b43a12f360",
+       "id": "1f957605ad",
        "kind": "single",
-       "title": "Revolut 将约 2000 名工程师迁移到自托管 GLM 编码",
-       "date": "2026-11-02",
-       "source": "Hacker News：AI 热帖",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://twitter.com/guilleflorvs/status/2117379073785696395"
-        }
-       ]
-      },
-      {
-       "id": "add75b05a6",
-       "kind": "single",
-       "title": "Goldman Sachs 将 Claude Code 和 GitHub 编码工具限制为工程师专用",
-       "date": "2026-11-02",
-       "source": "Hacker News：AI 热帖",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
-        }
-       ]
-      },
-      {
-       "id": "685354affa",
-       "kind": "single",
-       "title": "高盛限制交易员和银行家使用 Claude Code 等 AI 编码工具",
-       "date": "2026-11-02",
-       "source": "The Decoder：AI News（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/"
-        }
-       ]
-      },
-      {
-       "id": "d0f8809067",
-       "kind": "single",
-       "title": "Elon Musk 以成本过高为由下调 Grok Bot 用量限制",
-       "date": "2026-11-02",
+       "title": "做空机构 Culper Research 曾在风波爆发前六个月提示 Nvidia CEO 与 Megaspeed 高管关系异常",
+       "date": "2026-11-09",
        "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/"
+         "url": "https://techcrunch.com/2026/11/09/a-short-seller-flagged-nvidia-ceos-ties-to-a-suspected-chinese-spy-six-months-before-the-scandal/"
         }
        ]
       },
       {
-       "id": "c53e4f901a",
+       "id": "8f2f74cf14",
        "kind": "single",
-       "title": "OpenAI 为中期选举后的华盛顿筹备游说攻势",
-       "date": "2026-11-02",
-       "source": "The Decoder：AI News（RSS）",
+       "title": "Meta 全球扩展青少年账户 AI 保护",
+       "date": "2026-11-09",
+       "source": "X：Meta Newsroom (@MetaNewsroom)",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/openai-prepares-lobbying-blitz-for-a-post-midterm-washington/"
-        }
-       ],
-       "fact": "据 Axios 报道，OpenAI 正在为美国中期选举后的政治游说和公关行动做准备，以防民主党赢得众议院多数后监管压力加大。"
-      },
-      {
-       "id": "d6896c507e",
-       "kind": "single",
-       "title": "首届世界机器人登泰山大赛开赛，机器人挑战3100级台阶",
-       "date": "2026-11-02",
-       "source": "X：X.PIN (@thexpin)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/thexpin/status/2117278056213622985"
+         "url": "https://x.com/MetaNewsroom/status/2119842313962918279"
         }
        ]
       },
       {
-       "id": "f5baf1daee",
+       "id": "c4825d85dd",
        "kind": "single",
-       "title": "MIT 的 Regina Barzilay 与 Jim Collins 获 2026 年 Pritzker AI 科学研究卓越奖",
-       "date": "2026-11-02",
-       "source": "MIT News（RSS）",
+       "title": "ember 性能对标 Haiku 5.5 成本仅三分之一",
+       "date": "2026-11-09",
+       "source": "X：Charlie Holtz（@charlieholtz）",
        "links": [
         {
          "label": "原文",
-         "url": "https://news.mit.edu/2026/regina-barzilay-jim-collins-win-pritzker-prize-ai-and-science-research-excellence-1102"
+         "url": "https://x.com/charlieholtz/status/2119879719663653363"
         }
        ]
       },
       {
-       "id": "0fd9fa2955",
+       "id": "77aac5bd77",
        "kind": "single",
-       "title": "xAI 介绍 Data Bot 构建方式",
-       "date": "2026-11-02",
-       "source": "X：Grok Bot (@bot)",
+       "title": "美退役海军上将 Michael Rogers 与前 CIA 站长 Tom Moran 出任 Sakana AI 高级顾问",
+       "date": "2026-11-10",
+       "source": "Sakana AI：Blog（网页）",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/bot/status/2117349542161256924"
+         "url": "https://sakana.ai/michael-tom/"
         }
        ]
       },
       {
-       "id": "d3f920e8d4",
+       "id": "6aeb51fae8",
        "kind": "single",
-       "title": "Google 允许学校关闭 AI 工具，但须一并放弃 Google Search",
-       "date": "2026-11-03",
-       "source": "Ars Technica：AI（RSS）",
+       "title": "MAI Transcribe 2 在 OpenRouter 请求量增长 12 倍",
+       "date": "2026-11-11",
+       "source": "X：Mustafa Suleyman（Microsoft AI CEO） (@mustafasuleyman)",
        "links": [
         {
          "label": "原文",
-         "url": "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/"
+         "url": "https://x.com/mustafasuleyman/status/2120647988305645982"
         }
        ]
       },
       {
-       "id": "3d18b96f81",
+       "id": "1f96d81d69",
        "kind": "single",
-       "title": "宇树机器人泰山爬梯赛喜忧参半：四足夺冠，G1 人形过热被抬下山",
-       "date": "2026-11-03",
-       "source": "X：X.PIN (@thexpin)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/thexpin/status/2117625347126812857"
-        }
-       ]
-      },
-      {
-       "id": "ab3b1af31c",
-       "kind": "single",
-       "title": "Disruptive 募集 100 亿美元 AI 基金，对话 Alex Davis",
-       "date": "2026-11-03",
-       "source": "X：Alex Heath (@alexeheath)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/alexeheath/status/2117696804217368755"
-        }
-       ]
-      },
-      {
-       "id": "192c575728",
-       "kind": "single",
-       "title": "Nexus Mods 强制新 Mod 上传时披露 AI 使用情况",
-       "date": "2026-11-04",
-       "source": "The Verge：AI（RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures"
-        }
-       ]
-      },
-      {
-       "id": "1bd7964f0f",
-       "kind": "single",
-       "title": "中国厂商订购约 600 万张 RTX Pro 5500，Nvidia 4 个月内仅能供货约 1%",
-       "date": "2026-11-04",
+       "title": "黄仁勋辞任 Nvidia CEO 并退出董事会，任职超 33 年",
+       "date": "2026-11-12",
        "source": "X：Rohan Paul (@rohanpaul_ai)",
        "links": [
         {
          "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2117958345013477656"
+         "url": "https://x.com/rohanpaul_ai/status/2120883455689170968"
         }
        ]
       },
       {
-       "id": "ef3dec1167",
+       "id": "29b4a30573",
        "kind": "single",
-       "title": "AI 相关政治行动委员会投入数百万美元影响美国中期选举但成效不一",
-       "date": "2026-11-04",
-       "source": "TechCrunch：AI（RSS）",
+       "title": "AINews：黄仁勋辞任 NVIDIA CEO，Colette Kress 出任临时 CEO",
+       "date": "2026-11-13",
+       "source": "Latent Space（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/"
+         "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia/"
         }
        ]
       },
       {
-       "id": "f818e3a396",
+       "id": "d9a5b5467f",
        "kind": "single",
-       "title": "苹果下调工程师AI每日支出上限",
-       "date": "2026-11-04",
-       "source": "X：Rohan Paul (@rohanpaul_ai)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/rohanpaul_ai/status/2118089197244621198"
-        }
-       ]
-      },
-      {
-       "id": "7dfb649658",
-       "kind": "single",
-       "title": "印度全国软件与服务公司协会会长警告 AI 或使应届毕业生更难进入科技行业",
-       "date": "2026-11-07",
+       "title": "微软 Microsoft 365 大范围故障波及 Claude，Anthropic 连发多条状态通报",
+       "date": "2026-11-13",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/813.htm"
+         "url": "https://www.ithome.com/1/026/948.htm"
+        }
+       ]
+      },
+      {
+       "id": "7b3de9ee0e",
+       "kind": "single",
+       "title": "中方回应彭博社关于英伟达和黄仁勋的提问",
+       "date": "2026-11-14",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2121419489955000833"
+        }
+       ]
+      },
+      {
+       "id": "903b02c0be",
+       "kind": "single",
+       "title": "黄仁勋因婚外情风波辞任 Nvidia CEO",
+       "date": "2026-11-15",
+       "source": "The Verge：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation"
         }
        ]
       }
      ]
     }
    ],
-   "count": 60
+   "count": 61
   },
   {
    "name": "评论与观点",
@@ -2092,227 +2427,277 @@
      "name": "",
      "items": [
       {
-       "id": "09f6df6920",
+       "id": "ff5b49e6ab",
        "kind": "single",
-       "title": "工程师 Venkatesh Rao：AI 精英可能像重商主义者囤积黄金一样囤积智能",
-       "date": "2026-11-02",
-       "source": "The Decoder：AI News（RSS）",
+       "title": "耶鲁教授 Sonnenfeld 估计黄仁勋职位去留概率约为 50-50",
+       "date": "2026-11-09",
+       "source": "TechCrunch：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/ai-elites-might-hoard-intelligence-like-mercantilists-hoarded-gold/"
+         "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/"
         }
        ]
       },
       {
-       "id": "d3c550dc07",
+       "id": "7b5fae19a8",
        "kind": "single",
-       "title": "为什么 AI 越可靠，我们越不检查它的工作",
-       "date": "2026-11-02",
-       "source": "Every：最新文章（网页）",
+       "title": "Redwood Research 分析 OpenAI Astra 在安全任务上的隐性消极表现",
+       "date": "2026-11-09",
+       "source": "Redwood Research：Blog（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://every.to/working-overtime/how-i-escaped-ai-autopilot-rerun"
+         "url": "https://blog.redwoodresearch.org/p/astra-covertly-underperforming-on"
         }
        ]
       },
       {
-       "id": "76d936eeca",
+       "id": "c65cdd4b42",
        "kind": "single",
-       "title": "The Verge 评论马斯克 4.46 亿美元竞选支出打水漂：问题出在 X 信息茧房",
-       "date": "2026-11-04",
+       "title": "COP31 的 Antalya AI 环保 pledge 被批为\"残酷玩笑\"",
+       "date": "2026-11-09",
        "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich"
+         "url": "https://www.theverge.com/science/1030252/ai-data-center-climate-pledge-united-nations-cop31"
         }
        ]
       },
       {
-       "id": "4a039805ba",
+       "id": "61ce5413cd",
        "kind": "single",
-       "title": "陶哲轩警告人类将思考外包给 AI 可能很快在现实世界产生严重后果",
-       "date": "2026-11-04",
-       "source": "IT之家·人工智能",
+       "title": "Armin Ronacher 借《幽灵公主》谈 AI：铁镇该建成什么样",
+       "date": "2026-11-09",
+       "source": "Armin Ronacher AI 博客",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/022/440.htm"
+         "url": "https://lucumr.pocoo.org/2026/11/9/irontown/"
         }
        ]
       },
       {
-       "id": "a2b3a1531e",
+       "id": "775e66fef4",
        "kind": "single",
-       "title": "Tim O'Reilly 对谈 Common Fabric CEO：Resonant Computing 宣言与数据自带规则的基础设施",
-       "date": "2026-11-04",
+       "title": "Grok Bot 助用户赢抚养权官司",
+       "date": "2026-11-09",
+       "source": "X：Elon Musk (@elonmusk, xAI)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/elonmusk/status/2119817540432244779"
+        }
+       ]
+      },
+      {
+       "id": "38268e8c9c",
+       "kind": "single",
+       "title": "Tim O'Reilly：AI 经济中缺失的人类机制设计",
+       "date": "2026-11-10",
        "source": "O'Reilly Radar（热点 RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.oreilly.com/radar/resonant-computing-and-common-fabric/"
+         "url": "https://www.oreilly.com/radar/human-pilled/"
         }
        ]
       },
       {
-       "id": "a557e19512",
+       "id": "94b59fc482",
        "kind": "single",
-       "title": "Shopify CEO 谈 AI 繁荣与智能体商业",
-       "date": "2026-11-04",
-       "source": "X：Alex Heath (@alexeheath)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/alexeheath/status/2117783888785457182"
-        }
-       ],
-       "fact": "Shopify CEO Tobi Lütke 在访谈中称 AI 行业已为地球新增数万亿美元客观价值，这些价值原本藏在浮点运算里。他将 AI 比作核能：人类长期掌握浮点运算与矩阵乘法，却未意识到加速执行可释放巨额增长。访谈还涉及智能体商业走向、亚马逊封禁 Meta Muse 而 Shopify 接纳、AI 购物行为及智能体交易中的付费与广告问题。"
-      },
-      {
-       "id": "27c9bc0f20",
-       "kind": "single",
-       "title": "OpenAI 反对人类被 AI 边缘化",
-       "date": "2026-11-04",
-       "source": "X：Sam Altman (@sama)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/sama/status/2117794005165748448"
-        }
-       ]
-      },
-      {
-       "id": "81c1cbb4a8",
-       "kind": "single",
-       "title": "哈佛经济学家 Willy Shih 谈 AI 热潮背后的隐性供应链成本",
-       "date": "2026-11-05",
+       "title": "Paramount Skydance CEO David Ellison：AI 或成现代史上最大创意解锁",
+       "date": "2026-11-10",
        "source": "The Verge：AI（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.theverge.com/podcast/1024438/willy-shih-supply-chain-ai-chips-ram-where-does-my-stuff-come-from-book"
+         "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai"
         }
-       ],
-       "fact": "哈佛商学院教授 Willy Shih 在 Decoder 播客中谈新书《Where Does My Stuff Come From?》，剖析 AI 基础设施大规模建设对全球供应链与算力的挤压。他指出关税变化下制造商倾向经越南、墨西哥绕道，而中国仍是全球制造重镇。"
+       ]
       },
       {
-       "id": "0fbb1a1c5f",
+       "id": "838367c292",
        "kind": "single",
-       "title": "OpenAI 总裁布罗克曼：AI 或将让死亡成为一种选择",
-       "date": "2026-11-05",
+       "title": "Azeem Azhar：AI 市场进入调整期，而非崩盘",
+       "date": "2026-11-10",
+       "source": "Azeem Azhar：Exponential View（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.exponentialview.co/p/madness-and-mayhem"
+        }
+       ]
+      },
+      {
+       "id": "d19edf0c2a",
+       "kind": "single",
+       "title": "Marc Andreessen 谈 AI 编程：工时更长、顶级程序员年薪 5000 万美元",
+       "date": "2026-11-11",
+       "source": "X：Rohan Paul (@rohanpaul_ai)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/rohanpaul_ai/status/2120606072931307695"
+        }
+       ]
+      },
+      {
+       "id": "097ff7526f",
+       "kind": "single",
+       "title": "郭明錤谈黄仁勋出轨丑闻：英伟达或需降低对其决策依赖并布局接班计划",
+       "date": "2026-11-12",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/022/901.htm"
+         "url": "https://www.ithome.com/1/026/027.htm"
         }
        ]
       },
       {
-       "id": "3aff0f2192",
+       "id": "278a17da90",
        "kind": "single",
-       "title": "METR 报告显示 Anthropic 的 AI 能力进展已加速约一倍，作者推算研究员获约 10 倍效率提升",
-       "date": "2026-11-06",
-       "source": "Hacker News：AI 热帖",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai"
-        }
-       ]
-      },
-      {
-       "id": "ec29c59ff8",
-       "kind": "single",
-       "title": "Casey Newton 分析 AI 反弹浪潮为何需要监管计划",
-       "date": "2026-11-06",
-       "source": "Platformer（热点 RSS）",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://www.platformer.news/thursday-newsletter-7/"
-        }
-       ],
-       "fact": "Casey Newton 撰文分析美国中期选举后 AI 反弹成为选民不满主线，至少 38 个辖区通过限制数据中心的措施，民主党赢得国会多数并承诺加强科技监管。他援引社交媒体监管多年无果的教训，提醒新国会避免三个错误：缺乏一致目标、没有 plan B、各方各自为战；并指出 AI 发展速度远快于社交媒体，行业领袖普遍认为强大 AI 系统可能两年内到来，国会没有十年时间可以浪费。"
-      },
-      {
-       "id": "038f2f92dc",
-       "kind": "single",
-       "title": "a16z 图表周报：苹果缺席 AI 资本开支竞赛，Roblox 用 AI 造游戏",
-       "date": "2026-11-06",
+       "title": "a16z 谈 AI 如何改写独立开发者、工具商与游戏工作室的起点故事",
+       "date": "2026-11-12",
        "source": "a16z：News（RSS）",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.a16z.news/p/charts-of-the-week-apple-skips-capex"
+         "url": "https://www.a16z.news/p/gamings-next-origin-stories"
         }
        ]
       },
       {
-       "id": "55121c050d",
+       "id": "78c10acc16",
        "kind": "single",
-       "title": "小岛秀夫谈 AI 与游戏开发：能提效，但可能剥夺创作中最有价值的试错过程",
-       "date": "2026-11-06",
+       "title": "AlphaGenome 2 如何助力罕见病基因研究",
+       "date": "2026-11-12",
+       "source": "X：Google DeepMind (@GoogleDeepMind)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/GoogleDeepMind/status/2120841923237683462"
+        }
+       ]
+      },
+      {
+       "id": "65f1aafa3b",
+       "kind": "single",
+       "title": "a16z 的 Anne Neuberger 提出超级智能时代关键基础设施网络防御计划",
+       "date": "2026-11-12",
+       "source": "a16z：News（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.a16z.news/p/super-intelligence-era-critical-infrastructure"
+        }
+       ],
+       "fact": "a16z 全球事务负责人 Anne Neuberger 在《华尔街日报》发文，提出由白宫 Super Intelligence Force 统筹、关键行业 CEO 负责的美国关键基础设施网络防御计划。"
+      },
+      {
+       "id": "ac0b31be50",
+       "kind": "single",
+       "title": "Microsoft 委托 IDC 研究：Frontier Firms 如何规模化 AI 价值而不失控",
+       "date": "2026-11-12",
+       "source": "Microsoft：Official Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://blogs.microsoft.com/blog/2026/11/12/scaling-ai-value-without-losing-control-lessons-from-frontier-firms/"
+        }
+       ]
+      },
+      {
+       "id": "e6be74bd47",
+       "kind": "single",
+       "title": "Dwarkesh Patel 撰文：数学领域的雪崩即将降临 AI 研发",
+       "date": "2026-11-13",
+       "source": "Dwarkesh Patel：Podcast & Blog（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://www.dwarkesh.com/p/rsi"
+        }
+       ]
+      },
+      {
+       "id": "1ecf376527",
+       "kind": "single",
+       "title": "OpenAI 董事会成员 Paul Cristiano 警告 AI 夺权可能最快数月内发生",
+       "date": "2026-11-13",
+       "source": "Ars Technica：AI（RSS）",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/"
+        }
+       ]
+      },
+      {
+       "id": "94f9c7aa0f",
+       "kind": "single",
+       "title": "中国 AI 股泡沫破裂复盘：散户视角看行情如何走到今天",
+       "date": "2026-11-13",
+       "source": "X：X.PIN (@thexpin)",
+       "links": [
+        {
+         "label": "原文",
+         "url": "https://x.com/thexpin/status/2121311567128207798"
+        }
+       ]
+      },
+      {
+       "id": "87200a6ad1",
+       "kind": "single",
+       "title": "礼来 CEO 回应 Dario Amodei 的 AI 十年内攻克癌症预测，称不太可能",
+       "date": "2026-11-14",
        "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.ithome.com/1/023/333.htm"
+         "url": "https://www.ithome.com/1/027/037.htm"
         }
        ]
       },
       {
-       "id": "88fa6c5b60",
+       "id": "d731c67892",
        "kind": "single",
-       "title": "Decoder 访谈：Alex Stamos 谈 AI 如何颠覆网络安全并进入「黑暗时代」",
-       "date": "2026-11-07",
-       "source": "The Verge：AI（RSS）",
+       "title": "前 OpenAI 研究员 Paul Christiano 称 AI 失控可能是当代人最可能的死因",
+       "date": "2026-11-15",
+       "source": "IT之家·人工智能",
        "links": [
         {
          "label": "原文",
-         "url": "https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos"
+         "url": "https://www.ithome.com/1/027/419.htm"
         }
        ]
       },
       {
-       "id": "3063bc6893",
+       "id": "567d659be6",
        "kind": "single",
-       "title": "Anil Seth、Ned Block 与 Tononi 在 Nature 撰文称当今 AI 不具备意识且硅基硬件难以产生意识",
-       "date": "2026-11-08",
-       "source": "The Decoder：AI News（RSS）",
+       "title": "Chollet：2026 年初 SaaS 恐慌是胡扯",
+       "date": "2026-11-15",
+       "source": "X：Francois Chollet (@fchollet)",
        "links": [
         {
          "label": "原文",
-         "url": "https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/"
-        }
-       ]
-      },
-      {
-       "id": "ade5922dc6",
-       "kind": "single",
-       "title": "Sutton 谈 AI 苦涩教训 2.0",
-       "date": "2026-11-08",
-       "source": "X：indigo (@indigox)",
-       "links": [
-        {
-         "label": "原文",
-         "url": "https://x.com/indigox/status/2119332535167746189"
+         "url": "https://x.com/fchollet/status/2122016531878215790"
         }
        ]
       }
      ]
     }
    ],
-   "count": 16
+   "count": 20
   }
  ],
  "counts": {
-  "topics": 14,
-  "groups": 31,
-  "items": 145,
-  "events": 4
+  "topics": 13,
+  "groups": 35,
+  "items": 171,
+  "events": 6
  },
  "source_url": "https://github.com/acaGPT/Jurisprudence/wiki/Weekly-AI+Law-Brief"
 }

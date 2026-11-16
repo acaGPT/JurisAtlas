@@ -1,108 +1,18 @@
 {
  "schema": "jurisatlas-weekly-series/v1",
- "week": "2026-W45",
+ "week": "2026-W46",
  "generated_from": "weekly.json",
  "params": {
   "min_phrase_len": 4,
   "max_phrase_df": 6
  },
  "counts": {
-  "series": 4,
-  "progression": 0,
+  "series": 6,
+  "progression": 2,
   "event": 4,
-  "items": 4
+  "items": 9
  },
  "series": [
-  {
-   "id": "srb4a15d6b",
-   "name": "Anthropic · 融资与估值",
-   "kind": "event",
-   "confidence": 1.0,
-   "ids": [
-    "bee1f1bf16"
-   ],
-   "topics": [
-    "资本市场与公司交易"
-   ],
-   "subjects": [
-    "anthropic"
-   ],
-   "nodes": [
-    {
-     "date": "11-02",
-     "ids": [
-      "bee1f1bf16"
-     ],
-     "count": 1,
-     "title": "WSJ：大投资者希望 Anthropic IPO 估值定在 1.5 万亿至 1.6 万亿美元"
-    },
-    {
-     "date": "11-06",
-     "ids": [
-      "bee1f1bf16"
-     ],
-     "count": 1,
-     "title": "WSJ：投资者将 Anthropic IPO 估值预期从约 $2T 下调至 $1.5T"
-    },
-    {
-     "date": "11-07",
-     "ids": [
-      "bee1f1bf16"
-     ],
-     "count": 1,
-     "title": "Anthropic IPO 估值存分歧，1.5 万亿美元仍被部分投资者嫌贵"
-    },
-    {
-     "date": "11-08",
-     "ids": [
-      "bee1f1bf16"
-     ],
-     "count": 1,
-     "title": "消息称 Anthropic 仍推进 IPO：拟募资 800 亿至 1000 亿美元，估值预期回落"
-    }
-   ]
-  },
-  {
-   "id": "sr07d461cd",
-   "name": "OpenAI · 融资与估值",
-   "kind": "event",
-   "confidence": 1.0,
-   "ids": [
-    "4c19024337"
-   ],
-   "topics": [
-    "资本市场与公司交易"
-   ],
-   "subjects": [
-    "openai"
-   ],
-   "nodes": [
-    {
-     "date": "11-03",
-     "ids": [
-      "4c19024337"
-     ],
-     "count": 1,
-     "title": "Ed Zitron 解析 OpenAI 1.25 万亿美元估值融资与 Anthropic S-1/A 中的万亿级算力承诺"
-    },
-    {
-     "date": "11-06",
-     "ids": [
-      "4c19024337"
-     ],
-     "count": 1,
-     "title": "OpenAI 传已融资 110 亿美元，估值 1.25 万亿美元"
-    },
-    {
-     "date": "11-07",
-     "ids": [
-      "4c19024337"
-     ],
-     "count": 1,
-     "title": "OpenAI 获得 110 亿美元融资首笔，估值 1.25 万亿美元"
-    }
-   ]
-  },
   {
    "id": "srd8184018",
    "name": "Anthropic · 上市与招股",
@@ -119,53 +29,230 @@
    ],
    "nodes": [
     {
-     "date": "11-02",
+     "date": "11-10",
      "ids": [
       "6a58fad123"
      ],
      "count": 1,
-     "title": "Anthropic 在 S-1A 中披露可能很快达到自身 RSI 定义"
+     "title": "Anthropic 修改版 S-1 文件披露 Lambda 协议现可因 Lambda 未按期租下设施而取消"
     },
     {
-     "date": "11-03",
+     "date": "11-10",
      "ids": [
       "6a58fad123"
      ],
      "count": 1,
-     "title": "Anthropic 在 S-1/A 招股文件中警示递归自我改进（RSI）临近"
+     "title": "Anthropic 再次修订 S-1：宣布已达责任扩展政策能力阈值，IPO 定价 $70-$78"
+    },
+    {
+     "date": "11-10",
+     "ids": [
+      "6a58fad123"
+     ],
+     "count": 1,
+     "title": "据报道 Anthropic 推进 IPO，计划下周四或周五挂牌"
+    },
+    {
+     "date": "11-11",
+     "ids": [
+      "6a58fad123"
+     ],
+     "count": 1,
+     "title": "WSJ：Anthropic 7 位创始人 IPO 各套现约 2.5 亿美元并保留控制权"
     }
    ]
   },
   {
-   "id": "sr3f5d83c3",
-   "name": "OpenAI · 其他管制事项",
+   "id": "srb4a15d6b",
+   "name": "Anthropic · 融资与估值",
    "kind": "event",
    "confidence": 1.0,
    "ids": [
-    "c617b75d33"
+    "bee1f1bf16"
+   ],
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "subjects": [
+    "anthropic"
+   ],
+   "nodes": [
+    {
+     "date": "11-10",
+     "ids": [
+      "bee1f1bf16"
+     ],
+     "count": 1,
+     "title": "Anthropic 拟通过 IPO 筹集最多 644 亿美元，另向谷歌、英伟达等私募融资 260 亿美元"
+    },
+    {
+     "date": "11-10",
+     "ids": [
+      "bee1f1bf16"
+     ],
+     "count": 1,
+     "title": "Anthropic 启动 IPO 路演：拟以每股 70 至 78 美元发行，估值最高约 1.4 万亿美元"
+    },
+    {
+     "date": "11-11",
+     "ids": [
+      "bee1f1bf16"
+     ],
+     "count": 1,
+     "title": "Anthropic IPO 拟募资最高 90.4B 美元，或成史上最大上市"
+    },
+    {
+     "date": "11-11",
+     "ids": [
+      "bee1f1bf16"
+     ],
+     "count": 1,
+     "title": "Anthropic 投资需求火热，承销商拟将 IPO 目标估值上调回 $1.5T 或更高"
+    }
+   ]
+  },
+  {
+   "id": "sr611c7646",
+   "name": "Coframe · 融资与估值",
+   "kind": "event",
+   "confidence": 1.0,
+   "ids": [
+    "f4822b077d"
+   ],
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "subjects": [],
+   "nodes": [
+    {
+     "date": "11-09",
+     "ids": [
+      "f4822b077d"
+     ],
+     "count": 1,
+     "title": "科斯拉投资 Coframe：用 AI 为每位访客定制网页，打造“有生命的互联网”"
+    },
+    {
+     "date": "11-11",
+     "ids": [
+      "f4822b077d"
+     ],
+     "count": 1,
+     "title": "Khosla 押注 AI 为每位访客生成网页"
+    }
+   ]
+  },
+  {
+   "id": "sr21bda598",
+   "name": "财政部 · 出口管制与制裁",
+   "kind": "event",
+   "confidence": 1.0,
+   "ids": [
+    "bf1685d6bf"
    ],
    "topics": [
     "出口管制、制裁与投资审查"
+   ],
+   "subjects": [
+    "treasury"
+   ],
+   "nodes": [
+    {
+     "date": "11-11",
+     "ids": [
+      "bf1685d6bf"
+     ],
+     "count": 1,
+     "title": "美财政部长 Bessent 就 Nvidia 客户 Megaspeed 未被列入黑名单质问商务部长 Lutnick"
+    },
+    {
+     "date": "11-12",
+     "ids": [
+      "bf1685d6bf"
+     ],
+     "count": 1,
+     "title": "Reuters：白宫考虑撤换商务部长 Lutnick，Nvidia 客户 Megaspeed 事件波及商务部"
+    }
+   ]
+  },
+  {
+   "id": "srb5227624",
+   "name": "OpenAI · 澳大利亚",
+   "kind": "progression",
+   "confidence": 0.72,
+   "evidence": "围绕「澳大利亚」，3 个时间点依次推进",
+   "ids": [
+    "167008b75e",
+    "44f2ab750d",
+    "a7d41e39fb"
+   ],
+   "topics": [
+    "产业与商业动向",
+    "立法与政策制定"
    ],
    "subjects": [
     "openai"
    ],
    "nodes": [
     {
-     "date": "11-02",
+     "date": "2026-11-10",
      "ids": [
-      "c617b75d33"
+      "44f2ab750d"
      ],
      "count": 1,
-     "title": "OpenAI 据报聘请前美国防部长 Mark Esper 扩展军事 AI 业务"
+     "title": "澳大利亚拟强制 AI 公司上报安全违规事件并考虑修订刑事法律"
     },
     {
-     "date": "11-03",
+     "date": "2026-11-11",
      "ids": [
-      "c617b75d33"
+      "a7d41e39fb"
      ],
      "count": 1,
-     "title": "OpenAI 聘请前美国陆军部长 Dan Driscoll 出任国家安全现代化高级顾问"
+     "title": "纽约开放 RAISE Act 监管登记平台，OpenAI、Anthropic 等 72 小时内须上报安全事故"
+    },
+    {
+     "date": "2026-11-12",
+     "ids": [
+      "167008b75e"
+     ],
+     "count": 1,
+     "title": "澳大利亚拟议 AI 安全法案将强制前沿模型接受独立测试"
+    }
+   ]
+  },
+  {
+   "id": "srbe89ab44",
+   "name": "商务部 · 国商务部",
+   "kind": "progression",
+   "confidence": 0.72,
+   "evidence": "围绕「国商务部」，2 个时间点依次推进",
+   "ids": [
+    "974546d1cf",
+    "a3b433bcbf"
+   ],
+   "topics": [
+    "出口管制、制裁与投资审查",
+    "监管执法与行政处罚"
+   ],
+   "subjects": [
+    "mofcom"
+   ],
+   "nodes": [
+    {
+     "date": "2026-11-11",
+     "ids": [
+      "a3b433bcbf"
+     ],
+     "count": 1,
+     "title": "FT 报道称美国商务部搁置将 Megaspeed 列入出口黑名单"
+    },
+    {
+     "date": "2026-11-12",
+     "ids": [
+      "974546d1cf"
+     ],
+     "count": 1,
+     "title": "The Information：美国商务部新规拟要求七国出口许可，限制中国 AI 公司租用 Nvidia Blackwell 等芯片"
     }
    ]
   }
