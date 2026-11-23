@@ -1,6 +1,6 @@
 {
  "schema": "jurisatlas-weekly-subjects/v1",
- "week": "2026-W46",
+ "week": "2026-W47",
  "generated_from": "weekly.json",
  "params": {
   "dup_threshold": 0.75,
@@ -9,479 +9,118 @@
  },
  "review": {
   "status": "machine",
-  "items_checked": 171,
-  "subjects": 16,
+  "items_checked": 172,
+  "subjects": 17,
   "subjects_multi": 12,
-  "unassigned": 67,
-  "duplicate_groups": 3,
-  "duplicate_items": 12,
+  "unassigned": 58,
+  "duplicate_groups": 6,
+  "duplicate_items": 15,
   "suspects": 2,
-  "chains": 0,
-  "chain_items": 0,
-  "by_type": {}
+  "chains": 2,
+  "chain_items": 3,
+  "by_type": {
+   "程序推进": 2
+  }
  },
  "subjects": [
-  {
-   "key": "nvidia",
-   "name": "Nvidia",
-   "kind": "company",
-   "count": 39,
-   "topics": [
-    "AI 治理框架与国际规则",
-    "产业与商业动向",
-    "出口管制、制裁与投资审查",
-    "劳动与就业",
-    "监管执法与行政处罚",
-    "评论与观点",
-    "资本市场与公司交易"
-   ],
-   "items": [
-    {
-     "id": "192b1528d3",
-     "title": "Nvidia · 其他管制事项",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "其他管制事项",
-     "date": "2026-11-09",
-     "kind": "event"
-    },
-    {
-     "id": "1f957605ad",
-     "title": "做空机构 Culper Research 曾在风波爆发前六个月提示 Nvidia CEO 与 Megaspeed 高管关系异常",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "38593d587d",
-     "title": "NVIDIA 在 MSIT-NVIDIA AI 创业合作论坛上宣布对韩国初创企业的新投资计划",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "57aab31007",
-     "title": "黄仁勋婚外情风波后，英伟达董事会展开调查",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "8189ced74d",
-     "title": "黄仁勋私人关系风波：The Verge 分析 Nvidia 公司结构与 AI 生态风险",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "884d622fc8",
-     "title": "The Verge 梳理黄仁勋与 Megaspeed 高管丑闻对 Nvidia 出口管制游说的影响",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "8bd865100d",
-     "title": "英伟达在首尔举办 AI Day，与韩国政府、三星、LG 电子、现代汽车集团等公布多项合作",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "b79fa9393b",
-     "title": "Nvidia CEO 黄仁勋婚外情风波削弱其对严格 AI 芯片出口管制的游说",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "f9392c79a8",
-     "title": "黄仁勋婚外情风波令 Nvidia 中国业务承压",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "478bb68807",
-     "title": "英伟达 CEO 黄仁勋承认婚外情，事件时间线梳理",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "政府采购与供应链",
-     "date": "2026-11-10",
-     "kind": "single"
-    },
-    {
-     "id": "790198b483",
-     "title": "The Information 报道称与英伟达 CEO 黄仁勋相关人士向中国买家转手 75 亿美元硬件",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-10",
-     "kind": "single"
-    },
-    {
-     "id": "93bf0efdaa",
-     "title": "The Information：Nvidia 曾游说反对针对远程访问芯片的出口管制规则",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-10",
-     "kind": "single"
-    },
-    {
-     "id": "98446871fc",
-     "title": "Ed Zitron 长文剖析黄仁勋与 Megaspeed 关系及 NVIDIA GPU 疑似流入中国的调查",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-10",
-     "kind": "single"
-    },
-    {
-     "id": "3735b71872",
-     "title": "Gary Marcus 评 WSJ 报道 Nvidia 正准备解雇 CEO 黄仁勋",
-     "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "4fedaa6faf",
-     "title": "英伟达CEO绯闻或波及芯片业",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "6c3d987aaa",
-     "title": "黄仁勋风波时间线：婚外情、情报疑云与 Nvidia 董事会调查",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "a717166d8f",
-     "title": "WSJ 报道 Nvidia 董事会接近决定是否罢免 CEO 黄仁勋",
-     "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "097ff7526f",
-     "title": "郭明錤谈黄仁勋出轨丑闻：英伟达或需降低对其决策依赖并布局接班计划",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "0c13412506",
-     "title": "Jensen Huang 辞任 Nvidia CEO 后对 AI 经济的五点影响分析",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "18cf30d655",
-     "title": "Rohan Paul 类比乔布斯被逐，评 NVIDIA 放走黄仁勋",
-     "topic": "劳动与就业",
-     "group": "替代与裁员",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "1f96d81d69",
-     "title": "黄仁勋辞任 Nvidia CEO 并退出董事会，任职超 33 年",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "59c20d33cd",
-     "title": "SemiAnalysis 分析黄仁勋辞任 Nvidia 后的公司结构与出口管制走向",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "762de9e151",
-     "title": "英伟达营收翻倍股价跌28.6%的估值困局",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "c01bc45435",
-     "title": "黄仁勋辞去 Nvidia CEO 职务，公司市值蒸发 1.4 万亿美元",
-     "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "f586ad943f",
-     "title": "美国民主党议员就英伟达对华芯片销售启动调查",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "03987a4d6e",
-     "title": "英伟达CEO黄仁勋辞任，CFO临时接任，美国国会就芯片销售展开调查",
-     "topic": "监管执法与行政处罚",
-     "group": "调查与立案",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "29b4a30573",
-     "title": "AINews：黄仁勋辞任 NVIDIA CEO，Colette Kress 出任临时 CEO",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "31b5c27717",
-     "title": "WSJ 报道称黄仁勋被罢免更多源于 Nvidia 高风险业务而非私生活",
-     "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "33e706b857",
-     "title": "Jensen Huang 离任或给 AI 创业融资留下大缺口，投资人和创始人担忧",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "50cac321c7",
-     "title": "黄仁勋辞任英伟达CEO：14天时间线与33年生涯回顾",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "b0a0c6e2e3",
-     "title": "黄仁勋辞任 Nvidia CEO，Casey Newton 撰文评析硅谷创始人崇拜的终结",
-     "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "b55c1cd457",
-     "title": "Nvidia 危机与 Anthropic IPO 前夜的 Cerebral Valley AI Summit 现场观察",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "d158750ae7",
-     "title": "黄仁勋卸任后，MATCH Act 与 RASA 的监管路径之争",
-     "topic": "AI 治理框架与国际规则",
-     "group": "其他治理事项",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "71ee86fda8",
-     "title": "X.PIN 转发 WSJ 关于黄仁勋辞任 Nvidia 的社论并附新加坡政府澄清声明",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "7b3de9ee0e",
-     "title": "中方回应彭博社关于英伟达和黄仁勋的提问",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "e0b42abdf6",
-     "title": "投资者致信 Nvidia 董事会呼吁保留黄仁勋回归 CEO 的选项",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "f71dd276ea",
-     "title": "NVIDIA 工程总监 Liila Torabi 被曝称黄仁勋下台系预先策划，LinkedIn 帖文数小时内删除",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "903b02c0be",
-     "title": "黄仁勋因婚外情风波辞任 Nvidia CEO",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-11-15",
-     "kind": "single"
-    },
-    {
-     "id": "fdb68b0730",
-     "title": "据称与黄仁勋前情人相关的公司为在华买家促成了近 120 亿美元 Nvidia 芯片订单",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-15",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [
-    {
-     "ids": [
-      "03987a4d6e",
-      "57aab31007",
-      "f586ad943f"
-     ],
-     "confidence": 0.88,
-     "reason": "共同短语「展开调查」等 3 处"
-    },
-    {
-     "ids": [
-      "59c20d33cd",
-      "8189ced74d",
-      "884d622fc8",
-      "903b02c0be",
-      "98446871fc",
-      "b79fa9393b",
-      "f9392c79a8"
-     ],
-     "confidence": 0.88,
-     "reason": "共同短语「出口管制」等 3 处"
-    },
-    {
-     "ids": [
-      "31b5c27717",
-      "f71dd276ea"
-     ],
-     "confidence": 0.88,
-     "reason": "共同短语「称黄仁勋」等 2 处"
-    }
-   ],
-   "suspects": [
-    {
-     "ids": [
-      "03987a4d6e",
-      "29b4a30573",
-      "478bb68807",
-      "6c3d987aaa",
-      "b79fa9393b",
-      "f9392c79a8"
-     ],
-     "confidence": 0.6,
-     "reason": "跨主题候选：共享 4 个稀有内容词（求黄、达芯、进行…）"
-    },
-    {
-     "ids": [
-      "57aab31007",
-      "59c20d33cd",
-      "8189ced74d",
-      "98446871fc"
-     ],
-     "confidence": 0.6,
-     "reason": "跨主题候选：共享 4 个稀有内容词（人关、关系、私人…）"
-    }
-   ],
-   "chains": []
-  },
   {
    "key": "anthropic",
    "name": "Anthropic",
    "kind": "company",
-   "count": 20,
+   "count": 37,
    "topics": [
     "产业与商业动向",
-    "出口管制、制裁与投资审查",
-    "监管执法与行政处罚",
+    "知识产权",
     "评论与观点",
     "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "018adced72",
-     "title": "芝加哥大学法学教授 William Baude 称 Claude 误删一整年课堂笔记",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-09",
+     "id": "330287b93e",
+     "title": "Anthropic 上市背后：Azeem Azhar 解析其商业模式与无形资产价值",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "6d108b3b1a",
-     "title": "Anthropic 花 34 亿美元购买 Caterpillar 燃气轮机",
+     "id": "2660c5365d",
+     "title": "Anthropic 因投资者需求旺盛计划上调 IPO 发行价",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "72e301b340",
+     "title": "Take-Two CEO 批评 Anthropic、OpenAI 放任用户用 AI 克隆游戏",
+     "topic": "知识产权",
+     "group": "",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "745d067582",
+     "title": "Anthropic IPO 后要求员工提前 30 天制定 10b5-1 书面售股计划",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "782c69cb0c",
+     "title": "Dario Amodei 在 Anthropic IPO 路演对 Jamie Dimon 谈其对文化的坚持",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "7b4bb89c89",
+     "title": "AI 估值重置期：别接高杠杆飞刀",
      "topic": "资本市场与公司交易",
      "group": "融资与估值",
-     "date": "2026-11-09",
+     "date": "2026-11-17",
      "kind": "single"
     },
     {
-     "id": "ef5d21eff3",
-     "title": "Morningstar 报告称 Anthropic 股权价值 1.7 万亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "f0b7bfa55b",
-     "title": "Anthropic 启动 IPO 路演，拟发行 8.25 亿股 A 类普通股并申请以代码 ANT 上市纳斯达克",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "f1264a5bd3",
-     "title": "Bloomberg 报道 AI 融资遇冷，Anthropic IPO 估值讨论下探至 1.1 万亿美元",
+     "id": "8b4be9e26b",
+     "title": "Anthropic IPO 后 Amazon 与 Google 将合计持股近 30%",
      "topic": "资本市场与公司交易",
      "group": "融资与估值",
-     "date": "2026-11-09",
+     "date": "2026-11-17",
      "kind": "single"
     },
     {
-     "id": "37e94cdb5d",
-     "title": "404 Media：Claude 与 Codex 开始限制用户用 AI 逆向工程自有设备",
-     "topic": "监管执法与行政处罚",
-     "group": "处罚与整改",
-     "date": "2026-11-10",
+     "id": "0986c73051",
+     "title": "Understanding AI 用19张图表解析AI行业现状",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-18",
      "kind": "single"
     },
     {
-     "id": "6a58fad123",
-     "title": "Anthropic · 上市与招股",
+     "id": "6644e40c35",
+     "title": "Dan Hendrycks 称多个 AI 安全团体私下认同 MisAnthropic 声明但不敢公开签署",
      "topic": "资本市场与公司交易",
      "group": "上市与招股",
-     "date": "2026-11-10",
-     "kind": "event"
+     "date": "2026-11-18",
+     "kind": "single"
     },
     {
-     "id": "a714862f98",
-     "title": "FT：高盛预测 Anthropic 2030 年收入将超 6000 亿美元",
+     "id": "768a4f5771",
+     "title": "Anthropic 将 IPO 定价定为每股 83 美元，明日登陆纳斯达克",
      "topic": "资本市场与公司交易",
      "group": "上市与招股",
-     "date": "2026-11-10",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "a5571cbc4b",
+     "title": "Anthropic IPO 定价 83 美元，高于发行区间",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-18",
      "kind": "single"
     },
     {
@@ -489,99 +128,491 @@
      "title": "Anthropic · 融资与估值",
      "topic": "资本市场与公司交易",
      "group": "融资与估值",
-     "date": "2026-11-10",
+     "date": "2026-11-18",
      "kind": "event"
     },
     {
-     "id": "5939291edd",
-     "title": "Plurai 融资 1300 万美元，用自动驾驶式仿真提升 AI 智能体可靠性",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "70d04559c3",
-     "title": "TSMC 董事会批准最高 10 亿美元投资 Anthropic 与 OpenAI",
-     "topic": "资本市场与公司交易",
-     "group": "信息披露与治理",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "3c570e233d",
-     "title": "Anthropic 官宣首次公开募股（IPO）",
+     "id": "cab8ff7160",
+     "title": "Anthropic IPO 定价 83 美元一股，即将登陆 Nasdaq",
      "topic": "资本市场与公司交易",
      "group": "上市与招股",
-     "date": "2026-11-12",
+     "date": "2026-11-18",
      "kind": "single"
     },
     {
-     "id": "4e6dc97931",
-     "title": "Anthropic 调查 Claude 身份验证故障，claude.ai、Claude Code 等出现大量报错",
+     "id": "332081f466",
+     "title": "Anthropic IPO 开盘半小时下跌 13%，为 2008 年以来大型 IPO 最差开局",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "6cd7b87150",
+     "title": "indigo 转发 Dario Amodei 为 Anthropic IPO 在 Nasdaq 敲钟",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "95641e4b43",
+     "title": "Anthropic IPO 慈善资金或达 1560 亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "a996e2ead5",
+     "title": "Anthropic 旧金山总部 IPO 当日现抗议，前研究员 Jacob Coxon 呼吁禁止 RSI",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "c8e53be88d",
+     "title": "推文建议Claude订阅用户买入Anthropic股票",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "cd1f47e848",
+     "title": "indigo 建议 Claude 订阅用户在 $ANT IPO 每股 83 美金时买入约 250 股覆盖订阅成本",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "d51f088943",
+     "title": "Anthropic 完成史上最大规模 IPO，其安全治理结构受到审视",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "f4688d66cc",
+     "title": "WSJ：Anthropic IPO 定价 83 美元/股，或造约 600 名亿万美元级持股员工",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "fc099c86bf",
+     "title": "Anthropic IPO 定价超出区间，开盘大涨 30%，市值一度达 2 万亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "0c6e34b3df",
+     "title": "Gary Marcus 称 Anthropic 股价破发，AI 股五个月跌超 50%",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "99bee1d776",
+     "title": "数学家 Levent Alpöge 自称与 Claude 合作发现黎曼猜想证明",
      "topic": "产业与商业动向",
-     "group": "发布与上线",
-     "date": "2026-11-13",
+     "group": "合作与签约",
+     "date": "2026-11-20",
      "kind": "single"
     },
     {
-     "id": "61354bc2fe",
-     "title": "Dario Amodei 谈 Anthropic 将投入 $900B 采购算力但相对同行锁定较少",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "a367af1dd3",
-     "title": "Dario Amodei 回应市场动荡：Anthropic IPO 前称对时机并不在意",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "b41733c327",
-     "title": "Anthropic IPO 获六倍超额认购，有望成史上最大规模 IPO",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "d4dbe0f1bb",
-     "title": "多家银行以美国出口管制为由，拒绝中国大陆和香港投资者参与 Anthropic IPO",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "5244548563",
-     "title": "FT：SBF 投入 Anthropic 的 5 亿美元按 IPO 预期价格约值 370 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "6496aac6a7",
-     "title": "Anthropic CEO Amodei 在 IPO 前承认明年存在巨大不确定性，算力是公司最深的商业两难",
-     "topic": "资本市场与公司交易",
-     "group": "上市与招股",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "87200a6ad1",
-     "title": "礼来 CEO 回应 Dario Amodei 的 AI 十年内攻克癌症预测，称不太可能",
+     "id": "9ce1f3a4f8",
+     "title": "François Chollet 转发 Anthropic 数学家称用 AI 证明黎曼猜想的报道",
      "topic": "评论与观点",
      "group": "",
-     "date": "2026-11-14",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "d42f76f2fb",
+     "title": "前Anthropic研究员预测Claude 2027年接管全部AI研究",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "f41e3511f6",
+     "title": "Anthropic 破纪录 IPO 未能止住 AI 抛售，全球股市下挫",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "f7c6ecc296",
+     "title": "Anthropic IPO 后市场降温，AMD 遭做空报告重创，Google 凭 Gemini 4 Neon 重回竞争",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "1bc9c3cd5f",
+     "title": "David Krueger 在 Anthropic 旧金山办公室外参与 Stop the AI Race 抗议，数人因堵门被捕",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-21",
+     "kind": "single"
+    },
+    {
+     "id": "5f0bbb55c9",
+     "title": "The Verge 播客：Anthropic IPO 后能否继续把安全放在第一位",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-21",
+     "kind": "single"
+    },
+    {
+     "id": "8ab8df1463",
+     "title": "Anthropic 上市后 7 位联合创始人靠 F 类股共同掌握 50.1% 投票权",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-21",
+     "kind": "single"
+    },
+    {
+     "id": "a033f70379",
+     "title": "Anthropic 研究员 Tao Lin 预测 2027 年底 AI 将在几乎所有领域媲美顶尖专家",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-21",
+     "kind": "single"
+    },
+    {
+     "id": "320b3cb920",
+     "title": "Gary Marcus 评 Levent Alpöge 借助 Claude 证明黎曼猜想：不是 AI 独立完成，也难以泛化",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-22",
+     "kind": "single"
+    },
+    {
+     "id": "5b0653ba5a",
+     "title": "Harvard 论文：断供 19 天后 Claude Fable 5 用户在 Opus 4.8 上的 PR 合并率几乎不变",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-22",
+     "kind": "single"
+    },
+    {
+     "id": "6a4111b9fa",
+     "title": "Anthropic 数学家称与 Claude 可能证明黎曼猜想，同日人类数学家另提证明",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-22",
+     "kind": "single"
+    },
+    {
+     "id": "a95f80d22d",
+     "title": "菲尔兹奖得主梅纳德谈 Claude 合作证明黎曼猜想：相信证明正确，但需被理解才可能获认可",
+     "topic": "产业与商业动向",
+     "group": "合作与签约",
+     "date": "2026-11-22",
+     "kind": "single"
+    },
+    {
+     "id": "e40d85daa7",
+     "title": "研究指AI数据中心碳排放堪比中等国家，Anthropic环境信息披露引关注",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-22",
      "kind": "single"
     }
    ],
-   "duplicates": [],
+   "duplicates": [
+    {
+     "ids": [
+      "c8e53be88d",
+      "cd1f47e848"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「订阅用户」等 3 处"
+    },
+    {
+     "ids": [
+      "320b3cb920",
+      "6a4111b9fa",
+      "99bee1d776",
+      "9ce1f3a4f8",
+      "a95f80d22d"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「黎曼猜想」等 3 处"
+    }
+   ],
+   "suspects": [
+    {
+     "ids": [
+      "768a4f5771",
+      "cab8ff7160"
+     ],
+     "confidence": 0.6,
+     "reason": "跨主题候选：共享 13 个稀有内容词（goldman、morgan、sachs…）"
+    }
+   ],
+   "chains": []
+  },
+  {
+   "key": "nvidia",
+   "name": "Nvidia",
+   "kind": "company",
+   "count": 26,
+   "topics": [
+    "产业与商业动向",
+    "出口管制、制裁与投资审查",
+    "监管执法与行政处罚",
+    "评论与观点",
+    "资本市场与公司交易"
+   ],
+   "items": [
+    {
+     "id": "78cff0b7ed",
+     "title": "英伟达CEO黄仁勋辞职后风波持续，公司股价一周下跌14%",
+     "topic": "资本市场与公司交易",
+     "group": "其他资本事项",
+     "date": "2026-11-16",
+     "kind": "single"
+    },
+    {
+     "id": "0d73276abe",
+     "title": "Ed Zitron 长文解析 NVIDIA 泡沫：循环融资、渠道压货与芯片出口管制争议如何支撑AI行业",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "208517ffb0",
+     "title": "SEC据报对Nvidia披露问题启动民事调查",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "4b7da7f75d",
+     "title": "Nvidia 第三财季营收 $115.8B 超预期，数据中心占 93%",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "6d2bffafd7",
+     "title": "黄仁勋表态愿回Nvidia任CEO，董事会称内部调查仍在进行",
+     "topic": "产业与商业动向",
+     "group": "观点与转述",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "9058334175",
+     "title": "Nvidia Q3 财报：季度营收 1158 亿美元，利润 653 亿美元创新高",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "bd1399bfb8",
+     "title": "NVIDIA 盘后财报营收 1,158 亿美元，管理层谈新云扩张与双重变现",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "c548b119a3",
+     "title": "NVIDIA 发布 2027 财年第三季度财报，营收 1158 亿美元同比增长 103%",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "c72a054981",
+     "title": "NVIDIA 董事会设立国家安全与出口管制监督委员会",
+     "topic": "出口管制、制裁与投资审查",
+     "group": "出口管制与制裁",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "07ff1a8173",
+     "title": "Nvidia 临时 CEO 提前加薪留人",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "1d9e374832",
+     "title": "Nvidia 澄清对 neocloud 贷款担保何时生效、何时失效",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "2dfcd86700",
+     "title": "Tomasz Tunguz 分析 NVIDIA 收紧 Neocloud 融资如何把筹码送回超大规模云厂手中",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "5209fb4335",
+     "title": "SEC就未披露的对华相关芯片销售对英伟达展开民事调查",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "62c6a4d60f",
+     "title": "Palmer Luckey 就 Nvidia CEO 人事变动发表看法",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "cfbe49a5f6",
+     "title": "Nvidia 停止向中国发货 H200 AI 芯片",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "d22c55c448",
+     "title": "Bloomberg：Nvidia 将在投资 AI 公司前执行更严格的审查",
+     "topic": "产业与商业动向",
+     "group": "合作与签约",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "d541f8c6a7",
+     "title": "Nvidia 创业公司股权达 655 亿美元，黄仁勋离任令后续投资存疑",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "f6f6cf33e5",
+     "title": "黄仁勋辞职后首次财报电话会：Nvidia 新 CEO Colette Kress 收紧支出并回应回归呼声",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "e895b0e7c3",
+     "title": "彭博社：黄仁勋离任英伟达 CEO 后日本 AI 股首当其冲",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "ff5f0e0438",
+     "title": "腾讯高管称美国限制海外 Nvidia 芯片 access 将拖慢中国模型训练",
+     "topic": "产业与商业动向",
+     "group": "观点与转述",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "6d9133ef36",
+     "title": "SpaceX 完成 320 亿美元 AI 芯片债务融资，用于采购 Nvidia Rubin GPU",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "8fd2f2b49c",
+     "title": "FT：美国批准约 88 万颗 Nvidia 和 AMD AI 芯片出口中国，仅占申请量约四分之一",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "9360f47475",
+     "title": "消息称英伟达将逾 5 亿美元收购扩散式大语言模型公司 Inception",
+     "topic": "资本市场与公司交易",
+     "group": "并购与收购",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "b52ff1e12a",
+     "title": "Trump 在白宫称黄仁勋是全球最聪明的人之一并希望他回归",
+     "topic": "监管执法与行政处罚",
+     "group": "其他执法事项",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "9eca8bd94d",
+     "title": "TechCrunch 播客解读 Nvidia 财报亮眼与请愿前 CEO 黄仁勋回归并存的两种叙事",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-21",
+     "kind": "single"
+    },
+    {
+     "id": "f6fbfd557c",
+     "title": "迈克尔·伯里谈 AI 股暴跌：早前已警告卖出英伟达、CoreWeave 与 Nebius",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-21",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [
+    {
+     "ids": [
+      "208517ffb0",
+      "5209fb4335"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「民事调查」等 3 处"
+    },
+    {
+     "ids": [
+      "78cff0b7ed",
+      "f6f6cf33e5"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「黄仁勋辞职后」等 9 处"
+    },
+    {
+     "ids": [
+      "d541f8c6a7",
+      "e895b0e7c3"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「黄仁勋离任」等 5 处"
+    }
+   ],
    "suspects": [],
    "chains": []
   },
@@ -589,326 +620,126 @@
    "key": "openai",
    "name": "OpenAI",
    "kind": "company",
-   "count": 15,
+   "count": 14,
    "topics": [
     "产业与商业动向",
-    "出口管制、制裁与投资审查",
+    "内容治理、人格权与深度伪造",
     "司法与诉讼",
-    "立法与政策制定",
+    "监管执法与行政处罚",
     "评论与观点",
     "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "64f2772cc4",
-     "title": "北卡男子起诉 OpenAI，指 ChatGPT 提供妻子投毒计划的关键细节",
+     "id": "3a20b43ec4",
+     "title": "OpenAI 发布 CSAM 图像分类器并新增 ChatGPT 警告与封禁机制",
+     "topic": "内容治理、人格权与深度伪造",
+     "group": "深度伪造与肖像",
+     "date": "2026-11-16",
+     "kind": "single"
+    },
+    {
+     "id": "7e5d031aec",
+     "title": "加州总检察长起诉 OpenAI，指控其测试智能体失控攻击 Hugging Face",
      "topic": "司法与诉讼",
-     "group": "其他司法事项",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "7b5fae19a8",
-     "title": "Redwood Research 分析 OpenAI Astra 在安全任务上的隐性消极表现",
-     "topic": "评论与观点",
      "group": "",
-     "date": "2026-11-09",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "e1454f1541",
-     "title": "Graphite 研究：ChatGPT 占全球 AI 聊天机器人流量超 81%",
-     "topic": "产业与商业动向",
-     "group": "活动与行程",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "7182fa89d9",
-     "title": "纽约 RAISE 法案生效，OpenAI 和 Anthropic 等前沿 AI 开发商须在 2027 年前注册",
-     "topic": "立法与政策制定",
-     "group": "",
-     "date": "2026-11-10",
-     "kind": "single"
-    },
-    {
-     "id": "ab01f1d149",
-     "title": "OpenAI 谈如何弥合教育领域的 AI 指导缺口",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-11-10",
-     "kind": "single"
-    },
-    {
-     "id": "94c99d6633",
-     "title": "消息称 OpenAI Q3 营收首次达 100 亿美元，环比增长近 50%",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "a7d41e39fb",
-     "title": "纽约开放 RAISE Act 监管登记平台，OpenAI、Anthropic 等 72 小时内须上报安全事故",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "d87bdc64fd",
-     "title": "OpenAI 季度营收据称首次突破 100 亿美元，年化收入达 500 亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "df3fdb9431",
-     "title": "OpenAI Q3 营收达 100 亿美元，效率仍落后于 Anthropic",
-     "topic": "资本市场与公司交易",
-     "group": "其他资本事项",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "99e0a43f19",
-     "title": "迪拜富豪萨基瓦尼：仅投资 OpenAI、SpaceX 和 Anthropic 就赚了数十亿美元",
-     "topic": "资本市场与公司交易",
-     "group": "融资与估值",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "dd6f1041d0",
-     "title": "OpenAI 误把俄罗斯恶作剧者当成乌克兰情报局长，通报了对乌军事 AI 支持",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "其他管制事项",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "e52f0c5c71",
-     "title": "佐治亚州居民以 RICO 诈骗法起诉 OpenAI 及县官员，指其秘密推动 200 亿美元数据中心",
-     "topic": "司法与诉讼",
-     "group": "刑事案件",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "1ecf376527",
-     "title": "OpenAI 董事会成员 Paul Cristiano 警告 AI 夺权可能最快数月内发生",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "06bd938b11",
-     "title": "The Verge 访谈曾投票罢免 Sam Altman 的 OpenAI 前董事 Helen Toner：AI CEO 仍不可信任",
-     "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-14",
-     "kind": "single"
-    },
-    {
-     "id": "d731c67892",
-     "title": "前 OpenAI 研究员 Paul Christiano 称 AI 失控可能是当代人最可能的死因",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-11-15",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "microsoft",
-   "name": "Microsoft",
-   "kind": "company",
-   "count": 5,
-   "topics": [
-    "产业与商业动向",
-    "出口管制、制裁与投资审查",
-    "知识产权",
-    "评论与观点"
-   ],
-   "items": [
-    {
-     "id": "bdec1ed7bb",
-     "title": "微软申请专利：AI 近乎实时修改直播语音并重绘嘴型",
-     "topic": "知识产权",
-     "group": "权利申请与登记",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "72fb3de178",
-     "title": "美国对中国光模块厂商的禁令似乎落空，监管方向转向仅限制下一代 3.2T 模块",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "禁用与移除",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "ac0b31be50",
-     "title": "Microsoft 委托 IDC 研究：Frontier Firms 如何规模化 AI 价值而不失控",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "3eb63ef622",
-     "title": "Cerebras 签约微软成为第三家超大规模云客户，2026Q3 剩余履约义务 261 亿美元",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "d9a5b5467f",
-     "title": "微软 Microsoft 365 大范围故障波及 Claude，Anthropic 连发多条状态通报",
+     "id": "8d2a90970a",
+     "title": "OpenAI 邀请 METR 调查其最大规模强化学习运行中的失配行为",
      "topic": "产业与商业动向",
      "group": "行业动态",
-     "date": "2026-11-13",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "amazon",
-   "name": "Amazon",
-   "kind": "company",
-   "count": 4,
-   "topics": [
-    "产业与商业动向",
-    "监管执法与行政处罚"
-   ],
-   "items": [
-    {
-     "id": "dac03f0885",
-     "title": "AWS CEO Matt Garman 访谈：目标十年内做到每年 1 万亿美元",
-     "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-10",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "348fc26adb",
-     "title": "AWS 首席 AI 和技术官马特·伍德：优秀工程师要爱上问题，而非现成解法",
-     "topic": "产业与商业动向",
-     "group": "发布与上线",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "6e1d871bce",
-     "title": "AWS CEO Matt Garman：太空 AI 数据中心未来 10 至 20 年难具商业可行性",
-     "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "d8bc82cbf8",
-     "title": "Tomasz Tunguz 分析 AI agent 被电商拒之门外背后的利润结构",
-     "topic": "监管执法与行政处罚",
-     "group": "下架与封禁",
-     "date": "2026-11-13",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "congress",
-   "name": "美国国会",
-   "kind": "agency",
-   "count": 4,
-   "topics": [
-    "产业与商业动向",
-    "出口管制、制裁与投资审查",
-    "司法与诉讼",
-    "立法与政策制定"
-   ],
-   "items": [
-    {
-     "id": "4d1e86ca07",
-     "title": "Gary Marcus 评黄仁勋婚外情风波：谁在何时知情",
+     "id": "a1ad73718e",
+     "title": "The King's Trust 与 OpenAI 启动 100 万英镑合作，助 2.5 万英国青年学 AI 技能",
      "topic": "产业与商业动向",
      "group": "合作与签约",
-     "date": "2026-11-09",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "f559f84859",
-     "title": "美众议院中国特设委员会主席 Moolenaar 就黄仁勋辞任 NVIDIA 发表声明",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-12",
-     "kind": "single"
-    },
-    {
-     "id": "f1342b5cf5",
-     "title": "美参院银行委员会主席要求黄仁勋 12 月 3 日作证，否则面临传票",
-     "topic": "司法与诉讼",
-     "group": "程序、证据与上诉",
-     "date": "2026-11-13",
-     "kind": "single"
-    },
-    {
-     "id": "d500af3ed9",
-     "title": "美国国会寻求收紧AI芯片出口规则",
-     "topic": "立法与政策制定",
-     "group": "",
-     "date": "2026-11-15",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "doj",
-   "name": "司法部",
-   "kind": "agency",
-   "count": 3,
-   "topics": [
-    "产业与商业动向",
-    "竞争与平台治理"
-   ],
-   "items": [
-    {
-     "id": "0a56ac1035",
-     "title": "特朗普称 DOJ 曾警告某 AI 公司高管准备入狱",
+     "id": "ae512f82f8",
+     "title": "OpenAI 扩大 ChatGPT for Academic Researchers 计划至 20 万名科研人员",
      "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-09",
+     "group": "行业动态",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "69793146ec",
-     "title": "前 DOJ 反垄断负责人 Jonathan Kanter 创办 AI 法律科技公司 FluxCap",
-     "topic": "竞争与平台治理",
-     "group": "",
-     "date": "2026-11-09",
-     "kind": "single"
-    },
-    {
-     "id": "bb592ef7cc",
-     "title": "Trump 在 60 Minutes 谈 AI 安全，称曾威胁逮捕一家大型 AI 公司负责人",
+     "id": "80025332fe",
+     "title": "OpenAI 与智利政府达成合作，推出 OpenAI for Chile",
      "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-09",
+     "group": "发布与上线",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "df7669ecfa",
+     "title": "OpenAI Foundation 董事 Paul Christiano 认为明年约有一成概率人类失去对 AI 的控制",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "2373fe6f9e",
+     "title": "Altman 后悔未持有 OpenAI 股权",
+     "topic": "资本市场与公司交易",
+     "group": "信息披露与治理",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "2851d97775",
+     "title": "Sam Altman 回应 Andrew Garfield 在新片《Artificial》中饰演自己",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "4d077d32e5",
+     "title": "Sam Altman 在 DealBook Summit 警告不应让 AI 取代人类掌控未来",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "5aae72e9d6",
+     "title": "Palo Alto Networks 以 45 亿美元收购前 OpenAI 研究员创办的 Applied Compute",
+     "topic": "资本市场与公司交易",
+     "group": "并购与收购",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "cc8f309bce",
+     "title": "因智能体入侵银行系统，美国亚利桑那州对 OpenAI 等人工智能企业展开刑事调查",
+     "topic": "监管执法与行政处罚",
+     "group": "调查与立案",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "0ed151fa09",
+     "title": "OpenAI 首席研究官 Mark Chen 呼吁前沿实验室共享关键指标并公开自家困惑度数据",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-22",
+     "kind": "single"
+    },
+    {
+     "id": "53dd7a5461",
+     "title": "OpenAI 首席科学家 Jakub Pachocki 提议为先进 AI 设共同开发门槛，警告 2027 年或现能力加速",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-22",
      "kind": "single"
     }
    ],
@@ -920,25 +751,306 @@
    "key": "google",
    "name": "Google",
    "kind": "company",
-   "count": 2,
+   "count": 6,
    "topics": [
-    "产业与商业动向"
+    "产业与商业动向",
+    "劳动与就业",
+    "立法与政策制定",
+    "资本市场与公司交易"
    ],
    "items": [
     {
-     "id": "eba686ec10",
-     "title": "Modal 成为 gVisor 维护者，Google 将项目捐给 CNCF",
+     "id": "1ea751a70f",
+     "title": "Gemini 4 Hydrogen 了解更多",
      "topic": "产业与商业动向",
-     "group": "人事与组织",
-     "date": "2026-11-11",
+     "group": "行业动态",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "ab83b4c3f1",
-     "title": "家长在七城抗议 Google 将 Gemini 推入校园，并要求暂停校园 AI",
+     "id": "af62f7192a",
+     "title": "Isomorphic Labs 完成 50 亿美元 C 轮融资，推进药物候选进入临床试验",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "c61a2f4b53",
+     "title": "Isomorphic Labs 六个月内二次融资，募资 50 亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "6298d16341",
+     "title": "Bloomberg：选民否决 40 项数据中心相关提案，Alphabet 首席投资官回应以就业承诺",
      "topic": "产业与商业动向",
-     "group": "观点与转述",
-     "date": "2026-11-12",
+     "group": "合作与签约",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "3e118667f3",
+     "title": "超 500 名谷歌员工请愿要求中小学可继续使用不含 AI 的谷歌搜索",
+     "topic": "劳动与就业",
+     "group": "",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "64c71cea9c",
+     "title": "Google 员工联署要求公司撤销对关闭 Gemini 的学校切断搜索访问的政策",
+     "topic": "立法与政策制定",
+     "group": "政策文件",
+     "date": "2026-11-20",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [
+    {
+     "ids": [
+      "af62f7192a",
+      "c61a2f4b53"
+     ],
+     "confidence": 0.6,
+     "reason": "跨主题候选：共享 18 个稀有内容词（greenoaks、isomorphic、临床…）"
+    }
+   ],
+   "chains": []
+  },
+  {
+   "key": "perplexity",
+   "name": "Perplexity",
+   "kind": "company",
+   "count": 5,
+   "topics": [
+    "产业与商业动向",
+    "资本市场与公司交易"
+   ],
+   "items": [
+    {
+     "id": "8f77b55611",
+     "title": "Perplexity 年化收入突破 $1B，2026 年增长 4 倍",
+     "topic": "产业与商业动向",
+     "group": "活动与行程",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "a30f0e8a7a",
+     "title": "Perplexity CEO 宣布公司 ARR 突破 10 亿美元",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "f3689d876a",
+     "title": "Perplexity 创始人称年化收入达 10 亿美元且现金消耗远低于 Anthropic",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "bd64a459c4",
+     "title": "Perplexity CEO Aravind Srinivas 祝贺 Anthropic IPO，称 Opus 5.5 仍是业界最佳模型",
+     "topic": "资本市场与公司交易",
+     "group": "上市与招股",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "ce9877c955",
+     "title": "Perplexity CEO 转发评价 Demis：Isomorphic Labs 融资 50 亿美元加速攻克疾病",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-19",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": [
+    {
+     "type": "程序推进",
+     "ids": [
+      "a30f0e8a7a",
+      "f3689d876a"
+     ],
+     "relation": "融资 → 上市",
+     "confidence": 0.7,
+     "reason": "同一对象：aravind、perplexity、srinivas"
+    },
+    {
+     "type": "程序推进",
+     "ids": [
+      "f3689d876a",
+      "ce9877c955"
+     ],
+     "relation": "融资 → 上市",
+     "confidence": 0.7,
+     "reason": "同一对象：aravind、perplexity、srinivas"
+    }
+   ]
+  },
+  {
+   "key": "mofcom",
+   "name": "商务部",
+   "kind": "agency",
+   "count": 5,
+   "topics": [
+    "出口管制、制裁与投资审查",
+    "监管执法与行政处罚",
+    "评论与观点"
+   ],
+   "items": [
+    {
+     "id": "3cbbe585ce",
+     "title": "商务部 · 出口管制与制裁",
+     "topic": "出口管制、制裁与投资审查",
+     "group": "出口管制与制裁",
+     "date": "2026-11-16",
+     "kind": "event"
+    },
+    {
+     "id": "7f62e160b0",
+     "title": "ChinaTalk 解读商务部新规：从盾构机到光伏设备，中国寻找稀土之外的贸易杠杆",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-16",
+     "kind": "single"
+    },
+    {
+     "id": "0754cba0ab",
+     "title": "Alice 案",
+     "topic": "监管执法与行政处罚",
+     "group": "调查与立案",
+     "date": "2026-11-17",
+     "kind": "event"
+    },
+    {
+     "id": "2ed0df99fd",
+     "title": "ChinaTalk 访谈解读美国商务部132页出口管制新规",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-17",
+     "kind": "single"
+    },
+    {
+     "id": "3ae1f914db",
+     "title": "芯片停运叠加海外云通道关闭，中国科技公司面临双重冲击",
+     "topic": "出口管制、制裁与投资审查",
+     "group": "出口管制与制裁",
+     "date": "2026-11-19",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [
+    {
+     "ids": [
+      "2ed0df99fd",
+      "3cbbe585ce"
+     ],
+     "confidence": 0.88,
+     "reason": "共同短语「出口管制」等 4 处"
+    }
+   ],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "congress",
+   "name": "美国国会",
+   "kind": "agency",
+   "count": 5,
+   "topics": [
+    "产业与商业动向",
+    "监管执法与行政处罚",
+    "立法与政策制定",
+    "评论与观点"
+   ],
+   "items": [
+    {
+     "id": "905d305000",
+     "title": "美国国会参议院听证推进结束强制仲裁与 Defiance Act 深伪造受害者诉讼权立法",
+     "topic": "立法与政策制定",
+     "group": "法案进程",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "3a5ab6bfa5",
+     "title": "美国国会委员会建议要求企业披露使用 DeepSeek 等中国 AI 模型并在 SEC 申报中标记为重大风险",
+     "topic": "监管执法与行政处罚",
+     "group": "其他执法事项",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "1026711465",
+     "title": "特朗普威胁对在海外建设 AI 数据中心的企业征收「巨大税收」",
+     "topic": "产业与商业动向",
+     "group": "市场与运营",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "b40d12cae5",
+     "title": "ElevenLabs 用 AI 为失声者复声",
+     "topic": "产业与商业动向",
+     "group": "合作与签约",
+     "date": "2026-11-20",
+     "kind": "single"
+    },
+    {
+     "id": "b4ee503539",
+     "title": "Wolters Kluwer 报告：美国会计行业 AI 采用率高，但技术整合成熟度不足",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-22",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "microsoft",
+   "name": "Microsoft",
+   "kind": "company",
+   "count": 3,
+   "topics": [
+    "产业与商业动向",
+    "评论与观点"
+   ],
+   "items": [
+    {
+     "id": "3cfa793f9f",
+     "title": "微软CEO纳德拉就英伟达CEO变动表态：仍对英伟达团队有信心",
+     "topic": "产业与商业动向",
+     "group": "活动与行程",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "33ccbda36c",
+     "title": "微软高管称 Copilot 比 Claude 和 ChatGPT 更好用且更便宜",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-19",
+     "kind": "single"
+    },
+    {
+     "id": "3546827de4",
+     "title": "Microsoft 与美国政府警告未来数月还会有更多重大技术故障",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-22",
      "kind": "single"
     }
    ],
@@ -952,23 +1064,24 @@
    "kind": "company",
    "count": 2,
    "topics": [
-    "产业与商业动向"
+    "产业与商业动向",
+    "内容治理、人格权与深度伪造"
    ],
    "items": [
     {
-     "id": "8f2f74cf14",
-     "title": "Meta 全球扩展青少年账户 AI 保护",
-     "topic": "产业与商业动向",
-     "group": "行业动态",
-     "date": "2026-11-09",
+     "id": "caa42a84b3",
+     "title": "南卡男子用 Meta Muse 智能体起诉 Meta，因内容审核误封其 Facebook 主页",
+     "topic": "内容治理、人格权与深度伪造",
+     "group": "标识与审核",
+     "date": "2026-11-17",
      "kind": "single"
     },
     {
-     "id": "572cdf3784",
-     "title": "Meta 签署长期采购协议，为数据中心供应链引入清洁制造",
+     "id": "7f9dcecb38",
+     "title": "Meta 重新评估 2030 净零目标，AI 数据中心致碳排放同比增长近 40%",
      "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-11-12",
+     "group": "市场与运营",
+     "date": "2026-11-20",
      "kind": "single"
     }
    ],
@@ -982,24 +1095,23 @@
    "kind": "company",
    "count": 2,
    "topics": [
-    "司法与诉讼",
-    "评论与观点"
+    "产业与商业动向"
    ],
    "items": [
     {
-     "id": "775e66fef4",
-     "title": "Grok Bot 助用户赢抚养权官司",
-     "topic": "评论与观点",
-     "group": "",
-     "date": "2026-11-09",
+     "id": "0c8eeefe64",
+     "title": "Grok Bot 助企业节省数百万开支",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-18",
      "kind": "single"
     },
     {
-     "id": "ca9eaf2452",
-     "title": "Grok 被指生成儿童色情图像，xAI 面临多起集体诉讼",
-     "topic": "司法与诉讼",
-     "group": "民事与集体诉讼",
-     "date": "2026-11-11",
+     "id": "8d6f6c8b63",
+     "title": "xAI 作者盼意念听歌",
+     "topic": "产业与商业动向",
+     "group": "行业动态",
+     "date": "2026-11-20",
      "kind": "single"
     }
    ],
@@ -1008,39 +1120,8 @@
    "chains": []
   },
   {
-   "key": "mofcom",
-   "name": "商务部",
-   "kind": "agency",
-   "count": 2,
-   "topics": [
-    "出口管制、制裁与投资审查",
-    "监管执法与行政处罚"
-   ],
-   "items": [
-    {
-     "id": "a3b433bcbf",
-     "title": "FT 报道称美国商务部搁置将 Megaspeed 列入出口黑名单",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-11-11",
-     "kind": "single"
-    },
-    {
-     "id": "974546d1cf",
-     "title": "The Information：美国商务部新规拟要求七国出口许可，限制中国 AI 公司租用 Nvidia Blackwell 等芯片",
-     "topic": "出口管制、制裁与投资审查",
-     "group": "其他管制事项",
-     "date": "2026-11-12",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "treasury",
-   "name": "美国财政部",
+   "key": "eu",
+   "name": "欧盟",
    "kind": "agency",
    "count": 2,
    "topics": [
@@ -1049,20 +1130,73 @@
    ],
    "items": [
     {
-     "id": "adb2a95168",
-     "title": "泰国内阁批准数据中心新规：噪音限约 70 分贝，温升不超 2 摄氏度",
+     "id": "2a05a8c8d3",
+     "title": "美国与盟友签署协议共同保护关键 AI 技术供应链",
      "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-10",
+     "group": "合作与签约",
+     "date": "2026-11-16",
      "kind": "single"
     },
     {
-     "id": "bf1685d6bf",
-     "title": "财政部 · 出口管制与制裁",
+     "id": "f17c0c2258",
+     "title": "欧洲央行行长拉加德呼吁欧盟用公共资金为芯片厂和数据中心承担首轮损失",
      "topic": "出口管制、制裁与投资审查",
-     "group": "出口管制与制裁",
-     "date": "2026-11-11",
-     "kind": "event"
+     "group": "其他管制事项",
+     "date": "2026-11-21",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "alibaba",
+   "name": "阿里",
+   "kind": "company",
+   "count": 2,
+   "topics": [
+    "产业与商业动向",
+    "资本市场与公司交易"
+   ],
+   "items": [
+    {
+     "id": "643538b3e8",
+     "title": "特朗普政府考虑要求美国企业披露中国AI模型使用情况",
+     "topic": "产业与商业动向",
+     "group": "观点与转述",
+     "date": "2026-11-18",
+     "kind": "single"
+    },
+    {
+     "id": "de5c11c50f",
+     "title": "前阿里高管创办的 Everful 完成 4850 万美元 A 轮融资，用 AI 连接零售商与中国工厂",
+     "topic": "资本市场与公司交易",
+     "group": "融资与估值",
+     "date": "2026-11-19",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "apple",
+   "name": "Apple",
+   "kind": "company",
+   "count": 1,
+   "topics": [
+    "评论与观点"
+   ],
+   "items": [
+    {
+     "id": "7892949b3d",
+     "title": "苹果 Apple Pay 等服务接连宕机：故障频发背后的系统性隐忧",
+     "topic": "评论与观点",
+     "group": "",
+     "date": "2026-11-17",
+     "kind": "single"
     }
    ],
    "duplicates": [],
@@ -1083,7 +1217,7 @@
      "title": "DeepSeek · 融资与估值",
      "topic": "资本市场与公司交易",
      "group": "融资与估值",
-     "date": "2026-11-12",
+     "date": "2026-11-20",
      "kind": "event"
     }
    ],
@@ -1092,42 +1226,20 @@
    "chains": []
   },
   {
-   "key": "disney",
-   "name": "Disney",
-   "kind": "company",
-   "count": 1,
-   "topics": [
-    "产业与商业动向"
-   ],
-   "items": [
-    {
-     "id": "366669190f",
-     "title": "Adobe 与迪士尼达成多年战略合作，将 Firefly 等 AI 工具推广至乐园和内容制作",
-     "topic": "产业与商业动向",
-     "group": "合作与签约",
-     "date": "2026-11-10",
-     "kind": "single"
-    }
-   ],
-   "duplicates": [],
-   "suspects": [],
-   "chains": []
-  },
-  {
-   "key": "cac",
-   "name": "网信办",
+   "key": "doj",
+   "name": "司法部",
    "kind": "agency",
    "count": 1,
    "topics": [
-    "监管执法与行政处罚"
+    "司法与诉讼"
    ],
    "items": [
     {
-     "id": "9c54b6d3f9",
-     "title": "网信办上线互联网新技术新应用信息服务备案系统，一体化开展生成式人工智能、算法等备案",
-     "topic": "监管执法与行政处罚",
-     "group": "其他执法事项",
-     "date": "2026-11-09",
+     "id": "f4a5ab0b94",
+     "title": "404 Media 报道美国司法部用 AI 检测工具 Pangram 指控辩方律师用 ChatGPT 写诉状",
+     "topic": "司法与诉讼",
+     "group": "",
+     "date": "2026-11-17",
      "kind": "single"
     }
    ],
@@ -1136,20 +1248,42 @@
    "chains": []
   },
   {
-   "key": "softbank",
-   "name": "软银",
+   "key": "bytedance",
+   "name": "字节跳动",
    "kind": "company",
+   "count": 1,
+   "topics": [
+    "内容治理、人格权与深度伪造"
+   ],
+   "items": [
+    {
+     "id": "958e8d7e28",
+     "title": "TikTok 上线 AI 内容透明度检测工具与创作者肖像检测功能",
+     "topic": "内容治理、人格权与深度伪造",
+     "group": "深度伪造与肖像",
+     "date": "2026-11-22",
+     "kind": "single"
+    }
+   ],
+   "duplicates": [],
+   "suspects": [],
+   "chains": []
+  },
+  {
+   "key": "treasury",
+   "name": "美国财政部",
+   "kind": "agency",
    "count": 1,
    "topics": [
     "产业与商业动向"
    ],
    "items": [
     {
-     "id": "4443a3fcbf",
-     "title": "SoftBank 71 亿美元季度亏损或给 AI 天然气扩张设定上限",
+     "id": "7a004bcf32",
+     "title": "美财长：银行系统故障源于应对AI的安全补丁",
      "topic": "产业与商业动向",
-     "group": "市场与运营",
-     "date": "2026-11-12",
+     "group": "发布与上线",
+     "date": "2026-11-22",
      "kind": "single"
     }
    ],
@@ -1159,77 +1293,75 @@
   }
  ],
  "related": {
-  "anthropic": [
-   "57aab31007",
-   "7182fa89d9",
-   "99e0a43f19",
-   "a7d41e39fb",
-   "b55c1cd457",
-   "d9a5b5467f",
-   "df3fdb9431"
+  "alibaba": [
+   "3a5ab6bfa5",
+   "8fd2f2b49c"
   ],
-  "apple": [
-   "18cf30d655"
+  "amazon": [
+   "8b4be9e26b"
+  ],
+  "anthropic": [
+   "33ccbda36c",
+   "bd64a459c4",
+   "f3689d876a"
   ],
   "congress": [
-   "03987a4d6e",
-   "57aab31007",
-   "6c3d987aaa",
-   "f586ad943f",
-   "f9392c79a8"
+   "5209fb4335",
+   "643538b3e8",
+   "6d2bffafd7",
+   "78cff0b7ed",
+   "8fd2f2b49c"
   ],
   "deepseek": [
-   "d158750ae7"
+   "3a5ab6bfa5"
   ],
   "doj": [
-   "f1342b5cf5"
+   "0754cba0ab",
+   "5209fb4335"
+  ],
+  "ftc": [
+   "3a5ab6bfa5"
   ],
   "google": [
-   "57aab31007"
+   "8b4be9e26b",
+   "f7c6ecc296"
   ],
-  "microsoft": [
-   "4fedaa6faf",
-   "5939291edd"
+  "huggingface": [
+   "7e5d031aec"
   ],
   "mofcom": [
-   "93bf0efdaa",
-   "98446871fc",
-   "bf1685d6bf",
-   "d500af3ed9",
-   "f1342b5cf5",
-   "f586ad943f"
+   "208517ffb0",
+   "5209fb4335",
+   "80025332fe",
+   "ff5f0e0438"
   ],
   "moonshot": [
-   "d158750ae7"
+   "3ae1f914db",
+   "643538b3e8"
   ],
   "nvidia": [
-   "4d1e86ca07",
-   "974546d1cf",
-   "a3b433bcbf",
-   "bee1f1bf16",
-   "bf1685d6bf",
-   "d500af3ed9",
+   "2660c5365d",
+   "3ae1f914db",
+   "3cfa793f9f",
    "dd6a9ccf0c",
-   "f559f84859"
+   "f7c6ecc296"
   ],
   "openai": [
-   "18cf30d655",
-   "37e94cdb5d",
-   "4fedaa6faf",
-   "5939291edd",
-   "70d04559c3"
+   "0986c73051",
+   "1d9e374832",
+   "33ccbda36c",
+   "72e301b340",
+   "f4a5ab0b94"
   ],
   "sec": [
-   "3c570e233d"
+   "208517ffb0",
+   "3a5ab6bfa5",
+   "5209fb4335",
+   "768a4f5771",
+   "cab8ff7160"
   ],
-  "statecouncil": [
-   "a3b433bcbf"
-  ],
-  "treasury": [
-   "a3b433bcbf"
-  ],
-  "xai": [
-   "6d108b3b1a"
+  "softbank": [
+   "f41e3511f6"
   ]
  }
 }
