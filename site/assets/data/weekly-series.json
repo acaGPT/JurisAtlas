@@ -1,67 +1,18 @@
 {
  "schema": "jurisatlas-weekly-series/v1",
- "week": "2026-W46",
+ "week": "2026-W47",
  "generated_from": "weekly.json",
  "params": {
   "min_phrase_len": 4,
   "max_phrase_df": 6
  },
  "counts": {
-  "series": 6,
-  "progression": 2,
+  "series": 4,
+  "progression": 0,
   "event": 4,
-  "items": 9
+  "items": 4
  },
  "series": [
-  {
-   "id": "srd8184018",
-   "name": "Anthropic · 上市与招股",
-   "kind": "event",
-   "confidence": 1.0,
-   "ids": [
-    "6a58fad123"
-   ],
-   "topics": [
-    "资本市场与公司交易"
-   ],
-   "subjects": [
-    "anthropic"
-   ],
-   "nodes": [
-    {
-     "date": "11-10",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic 修改版 S-1 文件披露 Lambda 协议现可因 Lambda 未按期租下设施而取消"
-    },
-    {
-     "date": "11-10",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "Anthropic 再次修订 S-1：宣布已达责任扩展政策能力阈值，IPO 定价 $70-$78"
-    },
-    {
-     "date": "11-10",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "据报道 Anthropic 推进 IPO，计划下周四或周五挂牌"
-    },
-    {
-     "date": "11-11",
-     "ids": [
-      "6a58fad123"
-     ],
-     "count": 1,
-     "title": "WSJ：Anthropic 7 位创始人 IPO 各套现约 2.5 亿美元并保留控制权"
-    }
-   ]
-  },
   {
    "id": "srb4a15d6b",
    "name": "Anthropic · 融资与估值",
@@ -78,160 +29,105 @@
    ],
    "nodes": [
     {
-     "date": "11-10",
+     "date": "11-18",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "Anthropic 拟通过 IPO 筹集最多 644 亿美元，另向谷歌、英伟达等私募融资 260 亿美元"
+     "title": "Jeff Dean 祝贺前实习生、Anthropic 联合创始人 Chris Olah"
     },
     {
-     "date": "11-10",
+     "date": "11-19",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "Anthropic 启动 IPO 路演：拟以每股 70 至 78 美元发行，估值最高约 1.4 万亿美元"
+     "title": "Anthropic 登陆纳斯达克，开盘价 111 美元较发行价高出 33%"
     },
     {
-     "date": "11-11",
+     "date": "11-19",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "Anthropic IPO 拟募资最高 90.4B 美元，或成史上最大上市"
+     "title": "Anthropic IPO 融资 810 亿美元后，八个思考看后续挑战"
     },
     {
-     "date": "11-11",
+     "date": "11-19",
      "ids": [
       "bee1f1bf16"
      ],
      "count": 1,
-     "title": "Anthropic 投资需求火热，承销商拟将 IPO 目标估值上调回 $1.5T 或更高"
+     "title": "Anthropic CEO Dario Amodei 与联合创始人 Daniela Amodei 参与 Nasdaq 开市敲钟"
+    },
+    {
+     "date": "11-20",
+     "ids": [
+      "bee1f1bf16"
+     ],
+     "count": 1,
+     "title": "Anthropic 纳斯达克上市首日收涨 17%，市值约 1.76 万亿美元"
+    },
+    {
+     "date": "11-20",
+     "ids": [
+      "bee1f1bf16"
+     ],
+     "count": 1,
+     "title": "Tomasz Tunguz 分析 Anthropic 与 SpaceX 的 10x 估值之墙"
     }
    ]
   },
   {
-   "id": "sr611c7646",
-   "name": "Coframe · 融资与估值",
+   "id": "sra158ffd5",
+   "name": "商务部 · 出口管制与制裁",
    "kind": "event",
    "confidence": 1.0,
    "ids": [
-    "f4822b077d"
-   ],
-   "topics": [
-    "资本市场与公司交易"
-   ],
-   "subjects": [],
-   "nodes": [
-    {
-     "date": "11-09",
-     "ids": [
-      "f4822b077d"
-     ],
-     "count": 1,
-     "title": "科斯拉投资 Coframe：用 AI 为每位访客定制网页，打造“有生命的互联网”"
-    },
-    {
-     "date": "11-11",
-     "ids": [
-      "f4822b077d"
-     ],
-     "count": 1,
-     "title": "Khosla 押注 AI 为每位访客生成网页"
-    }
-   ]
-  },
-  {
-   "id": "sr21bda598",
-   "name": "财政部 · 出口管制与制裁",
-   "kind": "event",
-   "confidence": 1.0,
-   "ids": [
-    "bf1685d6bf"
+    "3cbbe585ce"
    ],
    "topics": [
     "出口管制、制裁与投资审查"
    ],
    "subjects": [
-    "treasury"
+    "mofcom"
    ],
    "nodes": [
     {
-     "date": "11-11",
+     "date": "11-16",
      "ids": [
-      "bf1685d6bf"
+      "3cbbe585ce"
      ],
      "count": 1,
-     "title": "美财政部长 Bessent 就 Nvidia 客户 Megaspeed 未被列入黑名单质问商务部长 Lutnick"
+     "title": "美国拟收紧规则，限制中国远程租用数据中心AI芯片"
     },
     {
-     "date": "11-12",
+     "date": "11-17",
      "ids": [
-      "bf1685d6bf"
+      "3cbbe585ce"
      ],
      "count": 1,
-     "title": "Reuters：白宫考虑撤换商务部长 Lutnick，Nvidia 客户 Megaspeed 事件波及商务部"
+     "title": "美国拟收紧远程算力出口管制，路透社揭示中国模型蒸馏产业应对芯片短缺"
+    },
+    {
+     "date": "11-18",
+     "ids": [
+      "3cbbe585ce"
+     ],
+     "count": 1,
+     "title": "美国商务部新规管制AI芯片远程访问，马来西亚等五国需申领出口许可"
     }
    ]
   },
   {
-   "id": "srb5227624",
-   "name": "OpenAI · 澳大利亚",
-   "kind": "progression",
-   "confidence": 0.72,
-   "evidence": "围绕「澳大利亚」，3 个时间点依次推进",
+   "id": "sre0b925b4",
+   "name": "Alice 案",
+   "kind": "event",
+   "confidence": 1.0,
    "ids": [
-    "167008b75e",
-    "44f2ab750d",
-    "a7d41e39fb"
+    "0754cba0ab"
    ],
    "topics": [
-    "产业与商业动向",
-    "立法与政策制定"
-   ],
-   "subjects": [
-    "openai"
-   ],
-   "nodes": [
-    {
-     "date": "2026-11-10",
-     "ids": [
-      "44f2ab750d"
-     ],
-     "count": 1,
-     "title": "澳大利亚拟强制 AI 公司上报安全违规事件并考虑修订刑事法律"
-    },
-    {
-     "date": "2026-11-11",
-     "ids": [
-      "a7d41e39fb"
-     ],
-     "count": 1,
-     "title": "纽约开放 RAISE Act 监管登记平台，OpenAI、Anthropic 等 72 小时内须上报安全事故"
-    },
-    {
-     "date": "2026-11-12",
-     "ids": [
-      "167008b75e"
-     ],
-     "count": 1,
-     "title": "澳大利亚拟议 AI 安全法案将强制前沿模型接受独立测试"
-    }
-   ]
-  },
-  {
-   "id": "srbe89ab44",
-   "name": "商务部 · 国商务部",
-   "kind": "progression",
-   "confidence": 0.72,
-   "evidence": "围绕「国商务部」，2 个时间点依次推进",
-   "ids": [
-    "974546d1cf",
-    "a3b433bcbf"
-   ],
-   "topics": [
-    "出口管制、制裁与投资审查",
     "监管执法与行政处罚"
    ],
    "subjects": [
@@ -239,20 +135,53 @@
    ],
    "nodes": [
     {
-     "date": "2026-11-11",
+     "date": "11-17",
      "ids": [
-      "a3b433bcbf"
+      "0754cba0ab"
      ],
      "count": 1,
-     "title": "FT 报道称美国商务部搁置将 Megaspeed 列入出口黑名单"
+     "title": "美国商务部和司法部就 Megaspeed 调查发布联合声明"
     },
     {
-     "date": "2026-11-12",
+     "date": "11-18",
      "ids": [
-      "974546d1cf"
+      "0754cba0ab"
      ],
      "count": 1,
-     "title": "The Information：美国商务部新规拟要求七国出口许可，限制中国 AI 公司租用 Nvidia Blackwell 等芯片"
+     "title": "黄仁勋相关传闻核查：美商务部与司法部就Megaspeed发联合声明，未认定违规芯片销售"
+    }
+   ]
+  },
+  {
+   "id": "sr2278f851",
+   "name": "DeepSeek · 融资与估值",
+   "kind": "event",
+   "confidence": 1.0,
+   "ids": [
+    "dd6a9ccf0c"
+   ],
+   "topics": [
+    "资本市场与公司交易"
+   ],
+   "subjects": [
+    "deepseek"
+   ],
+   "nodes": [
+    {
+     "date": "11-20",
+     "ids": [
+      "dd6a9ccf0c"
+     ],
+     "count": 1,
+     "title": "DeepSeek 完成第二轮融资 融资 140-150 亿美元 投后估值约 860 亿美元"
+    },
+    {
+     "date": "11-22",
+     "ids": [
+      "dd6a9ccf0c"
+     ],
+     "count": 1,
+     "title": "美国扩大芯片管制、DeepSeek 融资股权结构曝光、腾讯 AI 投入成本揭晓"
     }
    ]
   }
